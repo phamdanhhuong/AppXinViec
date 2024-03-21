@@ -1,0 +1,79 @@
+﻿<UserControl x:Class="AppXinViecWPF.View.Employer.UCManageCV"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AppXinViecWPF.View.Employer"
+             xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="250"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" Orientation="Horizontal">
+                <!--Thanh tim kiem-->
+                <StackPanel>
+                    <TextBlock Text="Tìm kiếm"/>
+                    <TextBox Margin="10,0,0,0" 
+                         Style="{StaticResource textBox}"
+                         Width="200" Height="30" BorderThickness="0,0,0,2"/>
+                </StackPanel>
+                <!--button Find-->
+                <Button x:Name="btnFind"
+                    BorderBrush="Transparent" 
+                    Style="{StaticResource btnNormal}"
+                    Width="20">
+                    <StackPanel>
+                        <fa:IconImage Icon="MagnifyingGlass"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Orientation="Vertical">
+                <TextBlock Text="Mã bài viết"/>
+                <ComboBox x:Name="txtIdPost"
+                        FontSize="15"
+                        FontFamily="Monterrat"
+                        FontWeight="Medium"
+                        Foreground="{StaticResource plainTextColor1}"
+                        Height="28"
+                        Width="150"
+                        HorizontalAlignment="Left">
+                    <ComboBoxItem Content="#1234"/>
+                    <ComboBoxItem Content="#1234"/>
+                    <ComboBoxItem Content="#1234"/>
+                    <ComboBoxItem Content="#1234"/>
+                </ComboBox> 
+            </StackPanel>
+            <StackPanel Grid.Column="2" Orientation="Vertical">
+                <TextBlock Text="Trạng thái CV"/>
+                <ComboBox x:Name="txtStatus"
+                        FontSize="15"
+                        FontFamily="Monterrat"
+                        FontWeight="Medium"
+                        Foreground="{StaticResource plainTextColor1}"
+                        Height="28"
+                        Width="200"
+                        HorizontalAlignment="Left">
+                    <ComboBoxItem Content="Đã duyệt"/>
+                    <ComboBoxItem Content="Chưa duyệt"/>
+                </ComboBox>
+            </StackPanel>
+        </Grid>
+        <!--Content-->
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Row="1">
+            <StackPanel>
+                <ItemsControl x:Name="icMain" Padding="10">
+                </ItemsControl>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

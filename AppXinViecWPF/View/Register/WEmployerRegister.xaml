@@ -1,0 +1,469 @@
+﻿<Window x:Class="AppXinViecWPF.View.Register.WEmployerRegister"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppXinViecWPF.View.Register"
+        xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
+        mc:Ignorable="d"
+        Title="WEmployerRegister" Height="1000" Width="600"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"  
+        Background="Transparent"
+        ResizeMode="NoResize"
+        AllowsTransparency="True">
+    <Border CornerRadius="20" Background="Gray">
+
+        <Border CornerRadius="20" BorderThickness="2" Opacity="0.85">
+            <Border.BorderBrush>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="{StaticResource primaryBackColor2}" Offset="0"/>
+                    <GradientStop Color="{StaticResource secondaryBackColor2}" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.BorderBrush>
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+                    <GradientStop Color="{StaticResource secondaryBackColor2}" Offset="0"/>
+                    <GradientStop Color="{StaticResource primaryBackColor2}" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <!--thanh dieu huong-->
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="300"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <StackPanel x:Name="pnlControlBar"
+                                Grid.Row="0"
+                                Orientation="Horizontal"
+                                FlowDirection="RightToLeft"
+                                Background="Transparent"
+                                Margin="0,0,5,0"
+                                MouseLeftButtonDown="Window_MouseDown">
+                    <Button x:Name="btnClose" 
+                                Style="{StaticResource btnControl}"
+                                Tag="{StaticResource plainTextColor1}"
+                                Click="btnClose_Click">
+                        <fa:IconImage Icon="Xmark" Style="{StaticResource controlButtonIcon}"/>
+                    </Button>
+                    <Button x:Name="btnMinimize" 
+                                Style="{StaticResource btnControl}"
+                                Tag="{StaticResource plainTextColor1}"
+                                Click="btnMinimize_Click">
+                        <fa:IconImage Icon="WindowMinimize" Width="12" Style="{StaticResource controlButtonIcon}"/>
+                    </Button>
+                </StackPanel>
+                <StackPanel Grid.Row="1" Orientation="Vertical" Margin="0,5,0,0" Width="270">
+                    <fa:IconImage Width="50" Height="50" Icon="UserCircle"/>
+                    <TextBlock Text="Register" Foreground="{StaticResource plainTextColor1}" FontSize="25" FontFamily="Monterrat" FontWeight="Medium" HorizontalAlignment="Center"/>
+                    <TextBlock Text="Username" Foreground="{StaticResource plainTextColor1}" FontSize="15" FontFamily="Monterrat" FontWeight="Medium" HorizontalAlignment="Left"/>
+                    <StackPanel Orientation="Horizontal">
+                        <fa:IconImage Icon="User" Width="20"/>
+                        <TextBox x:Name="txtUser"
+                                 FontSize="15"
+                                 Background="Transparent"
+                                 FontFamily="Monterrat"
+                                 FontWeight="Medium"
+                                 Foreground="White"
+                                 CaretBrush="LightGray"
+                                 BorderBrush="DarkGray"
+                                 BorderThickness="0,0,0,2"
+                                 Height="28"
+                                 VerticalAlignment="Center"
+                                 Margin="0,5,0,0"
+                                 Padding="20,0,0,0"
+                                 Width="200">
+                        </TextBox>
+                    </StackPanel>
+                    <TextBlock Text="Email" Foreground="{StaticResource plainTextColor1}" FontSize="15" FontFamily="Monterrat" FontWeight="Medium" HorizontalAlignment="Left"/>
+                    <StackPanel Orientation="Horizontal">
+                        <fa:IconImage Icon="Envelope" Width="20"/>
+                        <TextBox x:Name="txtEmail"
+                                 FontSize="15"
+                                 Background="Transparent"
+                                 FontFamily="Monterrat"
+                                 FontWeight="Medium"
+                                 Foreground="White"
+                                 CaretBrush="LightGray"
+                                 BorderBrush="DarkGray"
+                                 BorderThickness="0,0,0,2"
+                                 Height="28"
+                                 VerticalAlignment="Center"
+                                 Margin="0,5,0,0"
+                                 Padding="20,0,0,0"
+                                 Width="200">
+                        </TextBox>
+                    </StackPanel>
+                    <TextBlock Text="Nhập Password" Foreground="{StaticResource plainTextColor1}" FontSize="15" FontFamily="Monterrat" FontWeight="Medium" HorizontalAlignment="Left"/>
+                    <StackPanel Orientation="Horizontal">
+                        <fa:IconImage Icon="Key" Width="20"/>
+                        <PasswordBox x:Name="txtPass"
+                                 FontSize="15"
+                                 Background="Transparent"
+                                 FontFamily="Monterrat"
+                                 FontWeight="Medium"
+                                 Foreground="White"
+                                 CaretBrush="LightGray"
+                                 BorderBrush="DarkGray"
+                                 BorderThickness="0,0,0,2"
+                                 Height="28"
+                                 VerticalAlignment="Center"
+                                 Margin="0,5,0,0"
+                                 Padding="20,0,0,0"
+                                 Width="200">
+                        </PasswordBox>
+                    </StackPanel>
+                    <TextBlock Text="Nhập lại Password" Foreground="{StaticResource plainTextColor1}" FontSize="15" FontFamily="Monterrat" FontWeight="Medium" HorizontalAlignment="Left"/>
+                    <StackPanel Orientation="Horizontal">
+                        <fa:IconImage Icon="Key" Width="20"/>
+                        <PasswordBox x:Name="txtPassAgain"
+                                 FontSize="15"
+                                 Background="Transparent"
+                                 FontFamily="Monterrat"
+                                 FontWeight="Medium"
+                                 Foreground="White"
+                                 CaretBrush="LightGray"
+                                 BorderBrush="DarkGray"
+                                 BorderThickness="0,0,0,2"
+                                 Height="28"
+                                 VerticalAlignment="Center"
+                                 Margin="0,5,0,0"
+                                 Padding="20,0,0,0"
+                                 Width="200">
+                        </PasswordBox>
+                    </StackPanel>
+                </StackPanel>
+                <!--thong tin nha tuyen dung-->
+                <Grid Grid.Row="3" HorizontalAlignment="Center" Width="500">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition />
+                        <RowDefinition Height="100"/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" Margin="20,0,0,0">
+                            <TextBlock Text="Họ và Tên" Foreground="{StaticResource plainTextColor1}" FontSize="15" FontFamily="Monterrat" FontWeight="Medium" HorizontalAlignment="Left"/>
+                            <StackPanel Orientation="Horizontal">
+                                <fa:IconImage Icon="User" Width="20"/>
+                                <TextBox x:Name="txtName"
+                                 FontSize="15"
+                                 Background="Transparent"
+                                 FontFamily="Monterrat"
+                                 FontWeight="Medium"
+                                 Foreground="White"
+                                 CaretBrush="LightGray"
+                                 BorderBrush="DarkGray"
+                                 BorderThickness="0,0,0,2"
+                                 Height="28"
+                                 VerticalAlignment="Center"
+                                 Margin="0,5,0,0"
+                                 Padding="20,0,0,0"
+                                 Width="200">
+                                </TextBox>
+                            </StackPanel>
+                        </StackPanel>
+                        <StackPanel Grid.Column="1" Margin="20,0,0,0">
+                            <TextBlock Text="Giới tính" Foreground="{StaticResource plainTextColor1}" FontSize="15" FontFamily="Monterrat" FontWeight="Medium" HorizontalAlignment="Left"/>
+                            <StackPanel Orientation="Horizontal">
+                                <ComboBox x:Name="cboGender"
+                                         FontSize="15"
+                                         FontFamily="Monterrat"
+                                         FontWeight="Medium"
+                                         Foreground="{StaticResource plainTextColor1}"
+                                         Height="28"
+                                         Margin="0,5,0,0"
+                                         Width="90">
+                                    <ComboBoxItem Content="Nam"/>
+                                    <ComboBoxItem Content="Nữ"/>
+                                </ComboBox>
+                            </StackPanel>
+                        </StackPanel>
+                    </Grid>
+                    <Grid Grid.Row="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" Margin="20,0,0,0">
+                            <TextBlock Text="Số điện thoại" Foreground="{StaticResource plainTextColor1}" FontSize="15" FontFamily="Monterrat" FontWeight="Medium" HorizontalAlignment="Left"/>
+                            <StackPanel Orientation="Horizontal">
+                                <fa:IconImage Icon="Phone" Width="20"/>
+                                <TextBox x:Name="txtPhone"
+                                 FontSize="15"
+                                 Background="Transparent"
+                                 FontFamily="Monterrat"
+                                 FontWeight="Medium"
+                                 Foreground="White"
+                                 CaretBrush="LightGray"
+                                 BorderBrush="DarkGray"
+                                 BorderThickness="0,0,0,2"
+                                 Height="28"
+                                 VerticalAlignment="Center"
+                                 Margin="0,5,0,0"
+                                 Padding="20,0,0,0"
+                                 Width="200">
+                                </TextBox>
+                            </StackPanel>
+                        </StackPanel>
+                        <StackPanel Grid.Column="1" Margin="20,0,0,0">
+                            <TextBlock Text="Chức vụ trong công ty" Foreground="{StaticResource plainTextColor1}" FontSize="15" FontFamily="Monterrat" FontWeight="Medium" HorizontalAlignment="Left"/>
+                            <StackPanel Orientation="Horizontal">
+                                <fa:IconImage Icon="Suitcase" Width="20"/>
+                                <TextBox x:Name="txtPosition"
+                                 FontSize="15"
+                                 Background="Transparent"
+                                 FontFamily="Monterrat"
+                                 FontWeight="Medium"
+                                 Foreground="White"
+                                 CaretBrush="LightGray"
+                                 BorderBrush="DarkGray"
+                                 BorderThickness="0,0,0,2"
+                                 Height="28"
+                                 VerticalAlignment="Center"
+                                 Margin="0,5,0,0"
+                                 Padding="20,0,0,0"
+                                 Width="200">
+                                </TextBox>
+                            </StackPanel>
+                        </StackPanel>
+                    </Grid>
+                    <Grid Grid.Row="3">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" Margin="20,0,0,0">
+                            <TextBlock Text="Tên công ty" Foreground="{StaticResource plainTextColor1}" FontSize="15" FontFamily="Monterrat" FontWeight="Medium" HorizontalAlignment="Left"/>
+                            <StackPanel Orientation="Horizontal">
+                                <fa:IconImage Icon="Building" Width="20"/>
+                                <TextBox x:Name="txtNameCompany"
+                                 FontSize="15"
+                                 Background="Transparent"
+                                 FontFamily="Monterrat"
+                                 FontWeight="Medium"
+                                 Foreground="White"
+                                 CaretBrush="LightGray"
+                                 BorderBrush="DarkGray"
+                                 BorderThickness="0,0,0,2"
+                                 Height="28"
+                                 VerticalAlignment="Center"
+                                 Margin="0,5,0,0"
+                                 Padding="20,0,0,0"
+                                 Width="200">
+                                </TextBox>
+                            </StackPanel>
+                        </StackPanel>
+                        <StackPanel Grid.Column="1" Margin="20,0,0,0">
+                            <TextBlock Text="Địa chỉ công ty" Foreground="{StaticResource plainTextColor1}" FontSize="15" FontFamily="Monterrat" FontWeight="Medium" HorizontalAlignment="Left"/>
+                            <StackPanel Orientation="Horizontal">
+                                <fa:IconImage Icon="LocationDot" Width="20"/>
+                                <TextBox x:Name="txtAddress"
+                                 FontSize="15"
+                                 Background="Transparent"
+                                 FontFamily="Monterrat"
+                                 FontWeight="Medium"
+                                 Foreground="White"
+                                 CaretBrush="LightGray"
+                                 BorderBrush="DarkGray"
+                                 BorderThickness="0,0,0,2"
+                                 Height="28"
+                                 VerticalAlignment="Center"
+                                 Margin="0,5,0,0"
+                                 Padding="20,0,0,0"
+                                 Width="200">
+                                </TextBox>
+                            </StackPanel>
+                        </StackPanel>
+                    </Grid>
+                    <Grid Grid.Row="4">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" Margin="20,0,0,0">
+                            <TextBlock Text="Website" Foreground="{StaticResource plainTextColor1}" FontSize="15" FontFamily="Monterrat" FontWeight="Medium" HorizontalAlignment="Left"/>
+                            <StackPanel Orientation="Horizontal">
+                                <fa:IconImage Icon="Globe" Width="20"/>
+                                <TextBox x:Name="txtWebsite"
+                                 FontSize="15"
+                                 Background="Transparent"
+                                 FontFamily="Monterrat"
+                                 FontWeight="Medium"
+                                 Foreground="White"
+                                 CaretBrush="LightGray"
+                                 BorderBrush="DarkGray"
+                                 BorderThickness="0,0,0,2"
+                                 Height="28"
+                                 VerticalAlignment="Center"
+                                 Margin="0,5,0,0"
+                                 Padding="20,0,0,0"
+                                 Width="200">
+                                </TextBox>
+                            </StackPanel>
+                        </StackPanel>
+                        <StackPanel Grid.Column="1" Margin="20,0,0,0">
+                            <TextBlock Text="Mã số thuế" Foreground="{StaticResource plainTextColor1}" FontSize="15" FontFamily="Monterrat" FontWeight="Medium" HorizontalAlignment="Left"/>
+                            <StackPanel Orientation="Horizontal">
+                                <fa:IconImage Icon="CashRegister" Width="20"/>
+                                <TextBox x:Name="txtIdTax"
+                                 FontSize="15"
+                                 Background="Transparent"
+                                 FontFamily="Monterrat"
+                                 FontWeight="Medium"
+                                 Foreground="White"
+                                 CaretBrush="LightGray"
+                                 BorderBrush="DarkGray"
+                                 BorderThickness="0,0,0,2"
+                                 Height="28"
+                                 VerticalAlignment="Center"
+                                 Margin="0,5,0,0"
+                                 Padding="20,0,0,0"
+                                 Width="200">
+                                </TextBox>
+                            </StackPanel>
+                        </StackPanel>
+                    </Grid>
+                    <Grid Grid.Row="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" Margin="20,0,0,0">
+                            <TextBlock Text="Hotline công ty" Foreground="{StaticResource plainTextColor1}" FontSize="15" FontFamily="Monterrat" FontWeight="Medium" HorizontalAlignment="Left"/>
+                            <StackPanel Orientation="Horizontal">
+                                <fa:IconImage Icon="Tty" Width="20"/>
+                                <TextBox x:Name="txtHotline"
+                                 FontSize="15"
+                                 Background="Transparent"
+                                 FontFamily="Monterrat"
+                                 FontWeight="Medium"
+                                 Foreground="White"
+                                 CaretBrush="LightGray"
+                                 BorderBrush="DarkGray"
+                                 BorderThickness="0,0,0,2"
+                                 Height="28"
+                                 VerticalAlignment="Center"
+                                 Margin="0,5,0,0"
+                                 Padding="20,0,0,0"
+                                 Width="200">
+                                </TextBox>
+                            </StackPanel>
+                        </StackPanel>
+                        <StackPanel Grid.Column="1" Margin="20,0,0,0">
+                            <TextBlock Text="Email công ty" Foreground="{StaticResource plainTextColor1}" FontSize="15" FontFamily="Monterrat" FontWeight="Medium" HorizontalAlignment="Left"/>
+                            <StackPanel Orientation="Horizontal">
+                                <fa:IconImage Icon="Envelope" Width="20"/>
+                                <TextBox x:Name="txtEmailCompany"
+                                 FontSize="15"
+                                 Background="Transparent"
+                                 FontFamily="Monterrat"
+                                 FontWeight="Medium"
+                                 Foreground="White"
+                                 CaretBrush="LightGray"
+                                 BorderBrush="DarkGray"
+                                 BorderThickness="0,0,0,2"
+                                 Height="28"
+                                 VerticalAlignment="Center"
+                                 Margin="0,5,0,0"
+                                 Padding="20,0,0,0"
+                                 Width="200">
+                                </TextBox>
+                            </StackPanel>
+                        </StackPanel>
+                    </Grid>
+                    <Grid Grid.Row="6">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" Margin="20,0,0,0">
+                            <TextBlock Text=" Quy mô công ty" Foreground="{StaticResource plainTextColor1}" FontSize="15" FontFamily="Monterrat" FontWeight="Medium" HorizontalAlignment="Left"/>
+                            <StackPanel Orientation="Horizontal">
+                                <ComboBox x:Name="cboScale"
+                                         FontSize="15"
+                                         FontFamily="Monterrat"
+                                         FontWeight="Medium"
+                                         Foreground="{StaticResource plainTextColor1}"
+                                         Height="28"
+                                         Margin="0,5,0,0"
+                                         Width="150">
+                                    <ComboBoxItem Content="50-100 người"/>
+                                    <ComboBoxItem Content="100-300 người"/>
+                                    <ComboBoxItem Content="300-500 người"/>
+                                    <ComboBoxItem Content="500-1000 người"/>
+                                    <ComboBoxItem Content="trên 1000 người"/>
+                                </ComboBox>
+                            </StackPanel>
+                        </StackPanel>
+                    </Grid>
+                    <Grid Grid.Row="7">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="250"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="0" Orientation="Horizontal">
+                                <fa:IconImage Icon="Medal" Style="{StaticResource controlButtonIcon}" Width="25"/>
+                                <Button x:Name="btnImgCertificate"
+                                    Style="{StaticResource btnControl}"
+                                    Width="150"
+                                    Height="50"
+                                    HorizontalAlignment="Left"
+                                    Click="btnImgCertificate_Click"
+                                    Tag="{StaticResource plainTextColor2}">
+                                    Nhập chứng chỉ kinh doanh
+                                </Button>
+                            </StackPanel>
+                            <Grid Grid.Column="1">
+                                <Image x:Name="imgCertificate"/>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                    <Grid Grid.Row="8">
+                        <Button x:Name="btnRegister" 
+                            BorderThickness="0"
+                            Content="Register"
+                            FontSize="16"
+                            Foreground="White"
+                            FontFamily="Monterrat"
+                            Cursor="Hand"
+                            Grid.Column="2"
+                            Click="btnRegister_Click">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Background" Value="{StaticResource panelColor1}"/>
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="{StaticResource panelActiveColor}"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Width="150" Height="40"
+                                        CornerRadius="20"
+                                        Background="{TemplateBinding Background}">
+                                        <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Border>
+    </Border>
+</Window>

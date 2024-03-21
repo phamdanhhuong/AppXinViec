@@ -1,0 +1,132 @@
+﻿<UserControl x:Class="AppXinViecWPF.View.Employer.UCMiniPost"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AppXinViecWPF.View.Employer"
+             xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="700">
+    <Border CornerRadius="10" Margin="0,0,0,10">
+        <Border.Background>
+            <SolidColorBrush Color="{StaticResource secondaryBackColor1}"/>
+        </Border.Background>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" Orientation="Vertical">
+                <TextBlock x:Name="txtNameJob" 
+                           Style="{StaticResource tbNormal}" 
+                           Text="Nhân viên bán hàng"
+                           HorizontalAlignment="Left"
+                           Margin="20,10,50,0"/>
+                <TextBlock x:Name="txtIdPost" 
+                           Style="{StaticResource tbNormal}" 
+                           Text="#1234"
+                           HorizontalAlignment="Left"
+                           FontWeight="Normal"
+                           Margin="20,0,0,0"/>
+                <TextBlock x:Name="txtStatus" 
+                           Style="{StaticResource tbNormal}" 
+                           Text="Đang hiển thị"
+                           HorizontalAlignment="Left"
+                           FontWeight="Normal"
+                           Background="LightGray"
+                           Margin="20,0,0,0"/>
+            </StackPanel>
+            <Border Grid.Column="1" BorderThickness="2,0,2,0" BorderBrush="Gray">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0" Orientation="Vertical" VerticalAlignment="Center">
+                        <Button x:Name="btnEdit"
+                                BorderBrush="Transparent" 
+                                Style="{StaticResource btnNormal}"
+                                Width="20" Height="20">
+                            <StackPanel >
+                                <fa:IconImage Icon="Pen"/>
+                            </StackPanel>
+                        </Button>
+                        <TextBlock Text="Chỉnh sửa" 
+                                       Style="{StaticResource tbNormal}"
+                                       Foreground="Black"
+                                   FontSize="10"
+                                   TextAlignment="Center"
+                                   TextWrapping="Wrap"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="1" Orientation="Vertical" VerticalAlignment="Center">
+                        <Button x:Name="btnView"
+                                BorderBrush="Transparent" 
+                                Style="{StaticResource btnNormal}"
+                                Width="20" Height="20"
+                                Click="btnView_Click">
+                            <StackPanel >
+                                <fa:IconImage Icon="Eye"/>
+                            </StackPanel>
+                        </Button>
+                        <TextBlock Text="Xem" 
+                                       Style="{StaticResource tbNormal}"
+                                       Foreground="Black"
+                                   TextAlignment="Center"
+                                   FontSize="10"
+                                   HorizontalAlignment="Center"
+                                   TextWrapping="Wrap"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="2" Orientation="Vertical" VerticalAlignment="Center">
+                        <Button x:Name="btnPause"
+                                BorderBrush="Transparent" 
+                                Style="{StaticResource btnNormal}"
+                                Width="20" Height="20">
+                            <StackPanel >
+                                <fa:IconImage Icon="Pause"/>
+                            </StackPanel>
+                        </Button>
+                        <TextBlock Text="Ngưng hiển thị" 
+                                       Style="{StaticResource tbNormal}"
+                                       Foreground="Black"
+                                   TextAlignment="Center"
+                                   FontSize="10"
+                                   HorizontalAlignment="Center"
+                                   TextWrapping="Wrap"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="3" Orientation="Vertical" VerticalAlignment="Center">
+                        <Button x:Name="btnDelete"
+                                BorderBrush="Transparent" 
+                                Style="{StaticResource btnNormal}"
+                                Width="20" Height="20">
+                            <StackPanel >
+                                <fa:IconImage Icon="Cancel"/>
+                            </StackPanel>
+                        </Button>
+                        <TextBlock Text="Xóa" 
+                                       Style="{StaticResource tbNormal}"
+                                       Foreground="Black"
+                                   TextAlignment="Center"
+                                   FontSize="10"
+                                   HorizontalAlignment="Center"
+                                   TextWrapping="Wrap"/>
+                    </StackPanel>
+
+
+                </Grid>
+            </Border>
+            <StackPanel Grid.Column="2" Orientation="Horizontal">
+                <TextBlock Style="{StaticResource tbNormal}" 
+                           Text="Ngày hết hạn:"/>
+                <TextBlock x:Name="txtExpireDate" 
+                           Style="{StaticResource tbNormal}" 
+                           Text="20/3/2024"
+                           HorizontalAlignment="Left"
+                           FontWeight="Normal"
+                           Margin="20,0,0,0"/>
+            </StackPanel>
+        </Grid>
+    </Border>
+</UserControl>

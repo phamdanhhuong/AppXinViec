@@ -1,4 +1,5 @@
 ﻿using AppXinViecWPF.DAO;
+using AppXinViecWPF.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +26,9 @@ namespace AppXinViecWPF.View.Employer
         {
             InitializeComponent();
         }
+        int[] idPosts;
+
+        public int[] IdPosts { get => idPosts; set => idPosts = value; }
 
         private void btnNewPost_Click(object sender, RoutedEventArgs e)
         {
@@ -36,7 +40,80 @@ namespace AppXinViecWPF.View.Employer
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
             icMain.Items.Clear();
-            int[] IdPosts = PostDAO.Instance.GetAllIdPostById(AccountDAO.UserID);
+            IdPosts = PostDAO.Instance.GetAllIdPostById(AccountDAO.UserID);
+            foreach (int IdPost in IdPosts)
+            {
+                icMain.Items.Add(new UCMiniPost(IdPost));
+            }
+        }
+
+        private void btnAll_Click(object sender, RoutedEventArgs e)
+        {
+            icMain.Items.Clear();
+            foreach (int IdPost in IdPosts)
+            {
+                icMain.Items.Add(new UCMiniPost(IdPost));
+            }
+        }
+
+        private void btnDisplay_Click(object sender, RoutedEventArgs e)
+        {
+            List<int> search = new List<int>();
+            foreach (int IdPost in IdPosts)
+            {
+                PostDTO Post = PostDAO.Instance.GetPostById(IdPost);
+                if (Post.Status == 1)
+                {
+                    search.Add(IdPost);
+                }
+            }
+            icMain.Items.Clear();
+            foreach (int IdPost in search)
+            {
+                icMain.Items.Add(new UCMiniPost(IdPost));
+            }
+        }
+
+        private void btnExpire_Click(object sender, RoutedEventArgs e)
+        {
+            List<int> search = new List<int>();
+            foreach (int IdPost in IdPosts)
+            {
+                PostDTO Post = PostDAO.Instance.GetPostById(IdPost);
+                if (Post.ExpireDate < DateTime.Now)
+                {
+                    search.Add(IdPost);
+                }
+            }
+            icMain.Items.Clear();
+            foreach (int IdPost in search)
+            {
+                icMain.Items.Add(new UCMiniPost(IdPost));
+            }
+        }
+
+        private void btnNotDisplay_Click(object sender, RoutedEventArgs e)
+        {
+            List<int> search = new List<int>();
+            foreach (int IdPost in IdPosts)
+            {
+                PostDTO Post = PostDAO.Instance.GetPostById(IdPost);
+                if (Post.Status != 1)
+                {
+                    search.Add(IdPost);
+                }
+            }
+            icMain.Items.Clear();
+            foreach (int IdPost in search)
+            {
+                icMain.Items.Add(new UCMiniPost(IdPost));
+            }
+        }
+
+        private void btnFind_Click(object sender, RoutedEventArgs e)
+        {
+            IdPosts = PostDAO.Instance.SearchPostByName(txtSearch.Text);
+            icMain.Items.Clear();
             foreach (int IdPost in IdPosts)
             {
                 icMain.Items.Add(new UCMiniPost(IdPost));

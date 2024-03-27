@@ -1,5 +1,6 @@
 ﻿using AppXinViecWPF.DTO;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -111,6 +112,20 @@ namespace AppXinViecWPF.DAO
 
             }
             query += "AND TrangThai = 1";
+            DataTable dataTable = DataProvider.Instance.ExecuteQuery(query);
+            result = new int[dataTable.Rows.Count];
+            int index = 0;
+            foreach (DataRow row in dataTable.Rows)
+            {
+                result[index] = (int)row["Id"];
+                index++;
+            }
+            return result;
+        }
+        public int[] SearchPostByName(string Name)
+        {
+            int[] result = null;
+            string query = string.Format("SELECT * FROM Post WHERE TenCongViec LIKE N'%{0}%' AND IdEmployer = {1}",Name,AccountDAO.UserID);
             DataTable dataTable = DataProvider.Instance.ExecuteQuery(query);
             result = new int[dataTable.Rows.Count];
             int index = 0;

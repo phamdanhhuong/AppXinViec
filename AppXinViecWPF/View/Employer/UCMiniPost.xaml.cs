@@ -31,9 +31,8 @@ namespace AppXinViecWPF.View.Employer
             InitializeComponent();
             IdPost = idPost;
             Post = PostDAO.Instance.GetPostById(IdPost);
+            DataContext = post;
             txtExpireDate.Text = post.ExpireDate.ToString();
-            txtIdPost.Text = post.IdPost.ToString();
-            txtNameJob.Text = post.NameJob.ToString();
             if(post.Status == 0) 
             {
                 txtStatus.Text = "Không hiển thị";

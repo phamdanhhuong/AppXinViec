@@ -74,7 +74,7 @@
                                     <RowDefinition Height="50"/>
                                 </Grid.RowDefinitions>
                                 <Grid Grid.Row="0">
-                                    <TextBlock x:Name="txtNameJob" Text="Giáo Viên IELTS Dạy Online (Part Time)" FontSize="20" FontWeight="SemiBold"/>
+                                        <TextBlock x:Name="txtNameJob" Text="{Binding Path = NameJob }"  FontSize="20" FontWeight="SemiBold"/>
                                 </Grid>
                                 <Grid Grid.Row="1">
                                     <Grid.ColumnDefinitions>
@@ -96,7 +96,7 @@
                                             </Label>
                                             <StackPanel Orientation="Vertical">
                                                 <TextBlock Text="Mức lương" Margin="3 0 0 0"/>
-                                                <TextBlock x:Name="txtSalary" Text="3 - 10 triệu" FontWeight="SemiBold" Margin="3 0 0 0"/>
+                                                    <TextBlock x:Name="txtSalary" Text="{Binding Path = Salary }" FontWeight="SemiBold" Margin="3 0 0 0"/>
                                             </StackPanel>
                                         </StackPanel>
                                     </Grid>
@@ -114,7 +114,7 @@
                                             </Label>
                                             <StackPanel Orientation="Vertical">
                                                 <TextBlock Text="Địa điểm" Margin="3 0 0 0"/>
-                                                <TextBlock x:Name="txtLocation" Text="Toàn Quốc" FontWeight="SemiBold" Margin="3 0 0 0"/>
+                                                    <TextBlock x:Name="txtLocation" Text="{Binding Path = Location }" FontWeight="SemiBold" Margin="3 0 0 0"/>
                                             </StackPanel>
                                         </StackPanel>
                                     </Grid>
@@ -132,7 +132,7 @@
                                             </Label>
                                             <StackPanel Orientation="Vertical">
                                                 <TextBlock Text="Kinh nghiệm" Margin="3 0 0 0"/>
-                                                <TextBlock x:Name="txtExperience" Text="Dưới 1 năm" FontWeight="SemiBold" Margin="3 0 0 0"/>
+                                                    <TextBlock x:Name="txtExperience" Text="{Binding Path = Experience }" FontWeight="SemiBold" Margin="3 0 0 0"/>
                                             </StackPanel>
                                         </StackPanel>
                                     </Grid>
@@ -189,19 +189,19 @@
                                     <TextBlock TextWrapping="Wrap">
                                         <Run FontWeight="Bold" FontSize="20">Mô tả công việc</Run>
                                         <LineBreak />
-                                        <Run FontSize="16" x:Name="txtJd"/>
+                                        <Run FontSize="16" Text="{Binding Path = Jd }" x:Name="txtJd"/>
                                         <LineBreak />
                                         <Run FontWeight="Bold" FontSize="20">Yêu cầu ứng viên</Run>
                                         <LineBreak />
-                                        <Run FontSize="16" x:Name="txtRequire"/>
+                                        <Run FontSize="16" Text="{Binding Path = Requirement }" x:Name="txtRequire"/>
                                         <LineBreak />
                                         <Run FontWeight="Bold" FontSize="20">Quyền lợi</Run>
                                         <LineBreak />
-                                        <Run FontSize="16" x:Name="txtInterest"/>
+                                        <Run FontSize="16" Text="{Binding Path = Interest }" x:Name="txtInterest"/>
                                         <LineBreak />
                                         <Run FontWeight="Bold" FontSize="20">Địa điểm làm việc</Run>
                                         <LineBreak />
-                                        <Run FontSize="16" x:Name="txtAddress"/>
+                                        <Run FontSize="16" Text="{Binding Path = Address }" x:Name="txtAddress"/>
                                     </TextBlock>
                                 </Grid>
                             </Grid>
@@ -249,7 +249,7 @@
                                     <Grid Grid.Row="1">
                                         <StackPanel Orientation="Horizontal">
                                             <fa:IconImage Icon="Location" Foreground="Gray" Margin="5"/>
-                                            <TextBlock x:Name="txtLocationR" Text="Địa điểm: Hà Nội" FontWeight="Light" FontSize="12" Margin="5"/>
+                                            <TextBlock x:Name="txtLocationR" Text="{Binding Path = Location }" FontWeight="Light" FontSize="12" Margin="5"/>
                                         </StackPanel>
                                     </Grid>
                                 </Grid>
@@ -298,7 +298,7 @@
                                         </Label>
                                         <StackPanel Orientation="Vertical">
                                             <TextBlock Text="Cấp bậc" Margin="5 0 0 0"/>
-                                            <TextBlock x:Name="txtPosition" Text="Nhân viên" FontWeight="Bold" FontSize="12" Margin="5 0 0 0"/>
+                                            <TextBlock x:Name="txtPosition" Text="{Binding Path = Position }" FontWeight="Bold" FontSize="12" Margin="5 0 0 0"/>
                                         </StackPanel>
                                     </StackPanel>
                                 </Grid>
@@ -316,7 +316,7 @@
                                         </Label>
                                         <StackPanel Orientation="Vertical">
                                             <TextBlock Text="Số lượng tuyển" Margin="5 0 0 0"/>
-                                            <TextBlock x:Name="txtQuantity" Text="5 người" FontWeight="Bold" FontSize="12" Margin="5 0 0 0"/>
+                                            <TextBlock x:Name="txtQuantity" Text="{Binding Path = Quantity }" FontWeight="Bold" FontSize="12" Margin="5 0 0 0"/>
                                         </StackPanel>
                                     </StackPanel>
                                 </Grid>
@@ -334,7 +334,7 @@
                                         </Label>
                                         <StackPanel Orientation="Vertical">
                                             <TextBlock Text="Hình thức làm việc" Margin="5 0 0 0"/>
-                                            <TextBlock x:Name="txtWorkMode" Text="Toàn thời gian" FontWeight="Bold" FontSize="12" Margin="5 0 0 0"/>
+                                            <TextBlock x:Name="txtWorkMode" Text="{Binding Path = WorkMode }" FontWeight="Bold" FontSize="12" Margin="5 0 0 0"/>
                                         </StackPanel>
                                     </StackPanel>
                                 </Grid>
@@ -352,7 +352,7 @@
                                         </Label>
                                         <StackPanel Orientation="Vertical">
                                             <TextBlock Text="Giới tính" Margin="5 0 0 0"/>
-                                            <TextBlock x:Name="txtGender" Text="Không yêu cầu" FontWeight="Bold" FontSize="12" Margin="5 0 0 0"/>
+                                            <TextBlock x:Name="txtGender" Text="{Binding Path = Gender }" FontWeight="Bold" FontSize="12" Margin="5 0 0 0"/>
                                         </StackPanel>
                                     </StackPanel>
                                 </Grid>

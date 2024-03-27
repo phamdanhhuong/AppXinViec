@@ -33,23 +33,10 @@ namespace AppXinViecWPF.View.Applicant
             InitializeComponent();
             IdPost = idPost;
             post = PostDAO.Instance.GetPostById(idPost);
+            DataContext = post;
             Emp = EmployerDAO.Instance.GetInfoById(post.IdEmployer);
-            txtNameJob.Text = post.NameJob;
-            txtSalary.Text = post.Salary;
-            txtLocation.Text = post.Location;
-            txtExperience.Text = post.Experience;
-            txtJd.Text = post.Jd;
-            txtRequire.Text = post.Requirement;
-            txtInterest.Text = post.Interest;
-            txtAddress.Text = post.Address;
-            txtPosition.Text = post.Position;
-            txtQuantity.Text = post.Quantity;
-            txtWorkMode.Text = post.WorkMode;
-            txtGender.Text = post.Gender;
             txtExpireDate.Text = post.ExpireDate.ToString();
             txtHumanScale.Text = Emp.HumanScale;
-            txtLocationR.Text = post.Location;
-            ///
             if (AccountDAO.Instance.IsEmployerById(AccountDAO.UserID))
             {
                 btnApply.Visibility = Visibility.Collapsed;

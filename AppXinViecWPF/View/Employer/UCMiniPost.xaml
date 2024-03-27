@@ -20,12 +20,12 @@
             <StackPanel Grid.Column="0" Orientation="Vertical">
                 <TextBlock x:Name="txtNameJob" 
                            Style="{StaticResource tbNormal}" 
-                           Text="Nhân viên bán hàng"
+                           Text="{Binding Path = NameJob }"
                            HorizontalAlignment="Left"
                            Margin="20,10,50,0"/>
                 <TextBlock x:Name="txtIdPost" 
                            Style="{StaticResource tbNormal}" 
-                           Text="#1234"
+                           Text="{Binding Path = IdPost }"
                            HorizontalAlignment="Left"
                            FontWeight="Normal"
                            Margin="20,0,0,0"/>

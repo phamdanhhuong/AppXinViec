@@ -17,7 +17,7 @@
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="0">
                 <Border BorderBrush="Gray" BorderThickness="2" CornerRadius="8">
-                    <!--<Image Source="D:\sample.jpg" Stretch="Uniform"/>-->
+                    <Image x:Name="imgLogo" Stretch="Uniform"/>
                 </Border>
             </Grid>
             <Grid Grid.Column="1" Margin="10 0 10 0">

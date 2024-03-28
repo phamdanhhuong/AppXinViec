@@ -54,83 +54,83 @@
                         <fa:IconImage Icon="WindowMinimize" Width="12" Style="{StaticResource controlButtonIcon}"/>
                     </Button>
                 </StackPanel>
-                <StackPanel Grid.Row="1" Orientation="Vertical" Margin="0,5,0,0" Width="270">
+                <StackPanel HorizontalAlignment="Center" Grid.Row="1" Orientation="Vertical" Margin="0,5,0,0" Width="270">
                     <fa:IconImage Width="50" Height="50" Icon="UserCircle"/>
                     <TextBlock Text="Register" Foreground="{StaticResource plainTextColor1}" FontSize="25" FontFamily="Monterrat" FontWeight="Medium" HorizontalAlignment="Center"/>
                     <TextBlock Text="Username" Foreground="{StaticResource plainTextColor1}" FontSize="15" FontFamily="Monterrat" FontWeight="Medium" HorizontalAlignment="Left"/>
                     <StackPanel Orientation="Horizontal">
                         <fa:IconImage Icon="User" Width="20"/>
                         <TextBox x:Name="txtUser"
-                                 FontSize="15"
-                                 Background="Transparent"
-                                 FontFamily="Monterrat"
-                                 FontWeight="Medium"
-                                 Foreground="White"
-                                 CaretBrush="LightGray"
-                                 BorderBrush="DarkGray"
-                                 BorderThickness="0,0,0,2"
-                                 Height="28"
-                                 VerticalAlignment="Center"
-                                 Margin="0,5,0,0"
-                                 Padding="20,0,0,0"
-                                 Width="200">
+             FontSize="15"
+             Background="Transparent"
+             FontFamily="Monterrat"
+             FontWeight="Medium"
+             Foreground="White"
+             CaretBrush="LightGray"
+             BorderBrush="DarkGray"
+             BorderThickness="0,0,0,2"
+             Height="28"
+             VerticalAlignment="Center"
+             Margin="0,5,0,0"
+             Padding="20,0,0,0"
+             Width="200">
                         </TextBox>
                     </StackPanel>
                     <TextBlock Text="Email" Foreground="{StaticResource plainTextColor1}" FontSize="15" FontFamily="Monterrat" FontWeight="Medium" HorizontalAlignment="Left"/>
                     <StackPanel Orientation="Horizontal">
                         <fa:IconImage Icon="Envelope" Width="20"/>
                         <TextBox x:Name="txtEmail"
-                                 FontSize="15"
-                                 Background="Transparent"
-                                 FontFamily="Monterrat"
-                                 FontWeight="Medium"
-                                 Foreground="White"
-                                 CaretBrush="LightGray"
-                                 BorderBrush="DarkGray"
-                                 BorderThickness="0,0,0,2"
-                                 Height="28"
-                                 VerticalAlignment="Center"
-                                 Margin="0,5,0,0"
-                                 Padding="20,0,0,0"
-                                 Width="200">
+             FontSize="15"
+             Background="Transparent"
+             FontFamily="Monterrat"
+             FontWeight="Medium"
+             Foreground="White"
+             CaretBrush="LightGray"
+             BorderBrush="DarkGray"
+             BorderThickness="0,0,0,2"
+             Height="28"
+             VerticalAlignment="Center"
+             Margin="0,5,0,0"
+             Padding="20,0,0,0"
+             Width="200">
                         </TextBox>
                     </StackPanel>
                     <TextBlock Text="Nhập Password" Foreground="{StaticResource plainTextColor1}" FontSize="15" FontFamily="Monterrat" FontWeight="Medium" HorizontalAlignment="Left"/>
                     <StackPanel Orientation="Horizontal">
                         <fa:IconImage Icon="Key" Width="20"/>
                         <PasswordBox x:Name="txtPass"
-                                 FontSize="15"
-                                 Background="Transparent"
-                                 FontFamily="Monterrat"
-                                 FontWeight="Medium"
-                                 Foreground="White"
-                                 CaretBrush="LightGray"
-                                 BorderBrush="DarkGray"
-                                 BorderThickness="0,0,0,2"
-                                 Height="28"
-                                 VerticalAlignment="Center"
-                                 Margin="0,5,0,0"
-                                 Padding="20,0,0,0"
-                                 Width="200">
+             FontSize="15"
+             Background="Transparent"
+             FontFamily="Monterrat"
+             FontWeight="Medium"
+             Foreground="White"
+             CaretBrush="LightGray"
+             BorderBrush="DarkGray"
+             BorderThickness="0,0,0,2"
+             Height="28"
+             VerticalAlignment="Center"
+             Margin="0,5,0,0"
+             Padding="20,0,0,0"
+             Width="200">
                         </PasswordBox>
                     </StackPanel>
                     <TextBlock Text="Nhập lại Password" Foreground="{StaticResource plainTextColor1}" FontSize="15" FontFamily="Monterrat" FontWeight="Medium" HorizontalAlignment="Left"/>
                     <StackPanel Orientation="Horizontal">
                         <fa:IconImage Icon="Key" Width="20"/>
                         <PasswordBox x:Name="txtPassAgain"
-                                 FontSize="15"
-                                 Background="Transparent"
-                                 FontFamily="Monterrat"
-                                 FontWeight="Medium"
-                                 Foreground="White"
-                                 CaretBrush="LightGray"
-                                 BorderBrush="DarkGray"
-                                 BorderThickness="0,0,0,2"
-                                 Height="28"
-                                 VerticalAlignment="Center"
-                                 Margin="0,5,0,0"
-                                 Padding="20,0,0,0"
-                                 Width="200">
+             FontSize="15"
+             Background="Transparent"
+             FontFamily="Monterrat"
+             FontWeight="Medium"
+             Foreground="White"
+             CaretBrush="LightGray"
+             BorderBrush="DarkGray"
+             BorderThickness="0,0,0,2"
+             Height="28"
+             VerticalAlignment="Center"
+             Margin="0,5,0,0"
+             Padding="20,0,0,0"
+             Width="200">
                         </PasswordBox>
                     </StackPanel>
                 </StackPanel>
@@ -142,8 +142,8 @@
                         <RowDefinition/>
                         <RowDefinition/>
                         <RowDefinition />
-                        <RowDefinition Height="100"/>
                         <RowDefinition/>
+                        <RowDefinition Height="150"/>
                         <RowDefinition/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
@@ -406,6 +406,26 @@
                                 </ComboBox>
                             </StackPanel>
                         </StackPanel>
+                        <Grid Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                            <StackPanel>
+                                <Button Style="{StaticResource btnNormal}" 
+                                    Height="40" Width="150"
+                                    Background="LightGray"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Bottom"
+                                    x:Name="btnLogo"
+                                    Click="btnLogo_Click">
+                                    <TextBlock Text="Logo công ty" FontFamily="Monterrat" FontSize="20" Foreground="Black"/>
+                                </Button>
+                                <Border Width="100" Height="100" CornerRadius="50" BorderThickness="2" BorderBrush="gray">
+                                    <Border.Clip>
+                                        <EllipseGeometry Center="50,50" RadiusX="48" RadiusY="48"/>
+                                    </Border.Clip>
+                                    <!-- avatar -->
+                                    <Image x:Name="imgLogo" Source="/Image/no_avatar.jpg" Stretch="UniformToFill" HorizontalAlignment="Center"/>
+                                </Border>
+                            </StackPanel>
+                        </Grid>
                     </Grid>
                     <Grid Grid.Row="7">
                         <Grid>

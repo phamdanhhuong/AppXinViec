@@ -79,6 +79,9 @@
     <Compile Include="View\Applicant\UCSearchJobs.xaml.cs">
       <DependentUpon>UCSearchJobs.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Applicant\WCompanyInfo.xaml.cs">
+      <DependentUpon>WCompanyInfo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Applicant\WJobInfo.xaml.cs">
       <DependentUpon>WJobInfo.xaml</DependentUpon>
     </Compile>
@@ -151,6 +154,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Applicant\UCSearchJobs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Applicant\WCompanyInfo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

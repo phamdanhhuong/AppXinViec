@@ -53,3 +53,5 @@ F:\HK2\Lap trinh window\Đồ án\AppXinViecWPF\AppXinViecWPF\obj\Debug\View\Emp
 F:\HK2\Lap trinh window\Đồ án\AppXinViecWPF\AppXinViecWPF\obj\Debug\View\Employer\WCreateNewPost.baml
 F:\HK2\Lap trinh window\Đồ án\AppXinViecWPF\AppXinViecWPF\bin\Debug\System.Data.SqlClient.dll
 F:\HK2\Lap trinh window\Đồ án\AppXinViecWPF\AppXinViecWPF\bin\Debug\System.Data.SqlClient.xml
+F:\HK2\Lap trinh window\Đồ án\AppXinViecWPF\AppXinViecWPF\obj\Debug\View\Applicant\WCompanyInfo.g.cs
+F:\HK2\Lap trinh window\Đồ án\AppXinViecWPF\AppXinViecWPF\obj\Debug\View\Applicant\WCompanyInfo.baml

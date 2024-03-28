@@ -32,8 +32,8 @@ namespace AppXinViecWPF.DAO
             string sqlStrGetId = string.Format("SELECT Max(Id) as LastID FROM Account");
             Id = DataProvider.Instance.ExecuteScalar(sqlStrGetId);
             //// them thong tin
-            string sqlStr = string.Format("INSERT INTO  EmployerInfo (Id,Ten,GioiTinh,SDT,ChucVu,TenCongTy,DiaChiCongTy,Website,MSThue,SDTCongTY,EmailCongTY,QuyMo) VALUES ( @Id , @Ten , @GioiTinh , @SDT , @ChucVu , @TenCongTy , @DiaChiCongTy , @Website , @MSThue , @SDTCongTY , @EmailCongTY , @QuyMo )");
-            DataProvider.Instance.ExecuteNonQuery(sqlStr, new object[] { int.Parse(Id.ToString()), employer.Name, employer.Gender, employer.Phone, employer.Position, employer.NameCompany, employer.AddressCompany, employer.Website, employer.TaxCode, employer.PhoneCompany, employer.EmailCompany, employer.HumanScale });
+            string sqlStr = string.Format("INSERT INTO  EmployerInfo (Id,Ten,GioiTinh,SDT,ChucVu,TenCongTy,DiaChiCongTy,Website,MSThue,SDTCongTY,EmailCongTY,QuyMo,ChungChi,Logo) VALUES ( @Id , @Ten , @GioiTinh , @SDT , @ChucVu , @TenCongTy , @DiaChiCongTy , @Website , @MSThue , @SDTCongTY , @EmailCongTY , @QuyMo , @ChungChi , @Logo )");
+            DataProvider.Instance.ExecuteNonQuery(sqlStr, new object[] { int.Parse(Id.ToString()), employer.Name, employer.Gender, employer.Phone, employer.Position, employer.NameCompany, employer.AddressCompany, employer.Website, employer.TaxCode, employer.PhoneCompany, employer.EmailCompany, employer.HumanScale , employer.CertificatePath, employer.LogoPath});
         }
         public EmployerDTO GetInfoById(int id) 
         {

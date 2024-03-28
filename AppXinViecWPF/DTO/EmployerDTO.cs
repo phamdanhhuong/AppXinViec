@@ -20,6 +20,8 @@ namespace AppXinViecWPF.DTO
         string phoneCompany;
         string emailCompany;
         string humanScale;
+        string certificatePath;
+        string logoPath;
 
         public string Name { get => name; set => name = value; }
         public string Gender { get => gender; set => gender = value; }
@@ -32,8 +34,10 @@ namespace AppXinViecWPF.DTO
         public string PhoneCompany { get => phoneCompany; set => phoneCompany = value; }
         public string EmailCompany { get => emailCompany; set => emailCompany = value; }
         public string HumanScale { get => humanScale; set => humanScale = value; }
+        public string CertificatePath { get => certificatePath; set => certificatePath = value; }
+        public string LogoPath { get => logoPath; set => logoPath = value; }
 
-        public EmployerDTO(string name, string gender, string phone, string position, string nameCompany, string addressCompany, string website, string taxCode, string phoneCompany, string emailCompany, string humanScale)
+        public EmployerDTO(string name, string gender, string phone, string position, string nameCompany, string addressCompany, string website, string taxCode, string phoneCompany, string emailCompany, string humanScale,string certificatePath, string logoPath)
         {
             Name = name;
             Gender = gender;
@@ -46,6 +50,8 @@ namespace AppXinViecWPF.DTO
             PhoneCompany = phoneCompany;
             EmailCompany = emailCompany;
             HumanScale = humanScale;
+            CertificatePath = certificatePath;
+            LogoPath = logoPath;
         }
         public EmployerDTO(DataTable data)
         {
@@ -59,7 +65,9 @@ namespace AppXinViecWPF.DTO
             TaxCode = data.Rows[0]["MSThue"].ToString(); ;
             PhoneCompany = data.Rows[0]["SDTCongTY"].ToString(); ;
             EmailCompany = data.Rows[0]["EmailCongTY"].ToString(); ;
-            HumanScale = data.Rows[0]["QuyMo"].ToString(); ;
+            HumanScale = data.Rows[0]["QuyMo"].ToString(); 
+            CertificatePath = data.Rows[0]["ChungChi"].ToString();
+            LogoPath = data.Rows[0]["Logo"].ToString();
         }
 
     }

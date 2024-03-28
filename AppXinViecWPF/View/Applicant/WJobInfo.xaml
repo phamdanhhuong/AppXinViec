@@ -254,7 +254,7 @@
                                     </Grid>
                                 </Grid>
                                 <Grid Grid.Row="2">
-                                    <Button Cursor="Hand" Margin="5">
+                                    <Button Cursor="Hand" Margin="5" x:Name="btnCompanyDetail" Click="btnCompanyDetail_Click">
                                         <Button.Template>
                                             <ControlTemplate>
                                                 <Grid>
@@ -351,7 +351,7 @@
                                             </Label.Template>
                                         </Label>
                                         <StackPanel Orientation="Vertical">
-                                            <TextBlock Text="Giới tính" Margin="5 0 0 0"/>
+                                            <TextBlock Text="Yêu cầu giới tính" Margin="5 0 0 0"/>
                                             <TextBlock x:Name="txtGender" Text="{Binding Path = Gender }" FontWeight="Bold" FontSize="12" Margin="5 0 0 0"/>
                                         </StackPanel>
                                     </StackPanel>

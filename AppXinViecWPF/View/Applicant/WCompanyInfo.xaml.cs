@@ -1,6 +1,4 @@
-﻿using AppXinViecWPF.DAO;
-using AppXinViecWPF.DTO;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,32 +15,15 @@ using System.Windows.Shapes;
 namespace AppXinViecWPF.View.Applicant
 {
     /// <summary>
-    /// Interaction logic for WJobInfo.xaml
+    /// Interaction logic for WCompanyInfo.xaml
     /// </summary>
-    public partial class WJobInfo : Window
+    public partial class WCompanyInfo : Window
     {
-        int idPost;
-        PostDTO post;
-        EmployerDTO emp;
-        public int IdPost { get => idPost; set => idPost = value; }
-        internal PostDTO Post { get => post; set => post = value; }
-        internal EmployerDTO Emp { get => emp; set => emp = value; }
-
-        public WJobInfo(int idPost)
+        public WCompanyInfo()
         {
             InitializeComponent();
-            IdPost = idPost;
-            post = PostDAO.Instance.GetPostById(idPost);
-            DataContext = post;
-            Emp = EmployerDAO.Instance.GetInfoById(post.IdEmployer);
-            txtExpireDate.Text = post.ExpireDate.ToString();
-            txtHumanScale.Text = Emp.HumanScale;
-            if (AccountDAO.Instance.IsEmployerById(AccountDAO.UserID))
-            {
-                btnApply.Visibility = Visibility.Collapsed;
-                btnSavePost.Visibility = Visibility.Collapsed;
-            }
         }
+
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed)
@@ -67,12 +48,6 @@ namespace AppXinViecWPF.View.Applicant
         private void btnMinimize_Click(object sender, RoutedEventArgs e)
         {
             WindowState = WindowState.Minimized;
-        }
-
-        private void btnCompanyDetail_Click(object sender, RoutedEventArgs e)
-        {
-            WCompanyInfo wCompanyInfo = new WCompanyInfo();
-            wCompanyInfo.Show();
         }
     }
 }

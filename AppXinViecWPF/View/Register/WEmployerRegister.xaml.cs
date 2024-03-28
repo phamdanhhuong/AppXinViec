@@ -26,6 +26,12 @@ namespace AppXinViecWPF.View.Register
         {
             InitializeComponent();
         }
+        string logo;
+        string certificate;
+
+        public string Logo { get => logo; set => logo = value; }
+        public string Certificate { get => certificate; set => certificate = value; }
+
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed)
@@ -52,6 +58,7 @@ namespace AppXinViecWPF.View.Register
             if (open.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 imgCertificate.Source = new BitmapImage(new Uri(open.FileName));
+                Certificate = open.FileName;
             }
         }
 
@@ -60,10 +67,22 @@ namespace AppXinViecWPF.View.Register
             if(txtPass.Password==txtPassAgain.Password)
             {
                 AccountDAO.Instance.CreateAccount(txtUser.Text, txtPass.Password, 1);
-                EmployerDTO employer = new EmployerDTO(txtName.Text,cboGender.Text,txtPhone.Text,txtPosition.Text,txtNameCompany.Text,txtAddress.Text,txtWebsite.Text,txtIdTax.Text,txtHotline.Text,txtEmailCompany.Text,cboScale.Text);
+                EmployerDTO employer = new EmployerDTO(txtName.Text,cboGender.Text,txtPhone.Text,txtPosition.Text,txtNameCompany.Text,txtAddress.Text,txtWebsite.Text,txtIdTax.Text,txtHotline.Text,txtEmailCompany.Text,cboScale.Text,certificate,logo);
                 EmployerDAO.Instance.Add(employer);
                 System.Windows.MessageBox.Show("Đăng ký thành công");
                 this.Close();
+            }
+        }
+
+        private void btnLogo_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            open.Filter = "Image files|*.bmp;*.png;*.jpg";
+            open.FilterIndex = 1;
+            if (open.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                imgLogo.Source = new BitmapImage(new Uri(open.FileName));
+                Logo = open.FileName;
             }
         }
     }

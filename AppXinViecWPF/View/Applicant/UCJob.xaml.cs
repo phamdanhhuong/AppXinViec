@@ -49,7 +49,11 @@ namespace AppXinViecWPF.View.Applicant
             txtNameCompany.Text = emp.NameCompany;
             txtSalary.Text = post.Salary;
             txtLocation.Text = post.Location;
-            if(GetExpDays().Days > 0) 
+            if (Emp.LogoPath !="")
+            {
+                imgLogo.Source = new BitmapImage(new Uri(Emp.LogoPath));
+            }
+            if (GetExpDays().Days > 0) 
             {
                 txtExpire.Text = "Còn " + GetExpDays().Days+ " ngày "+ GetExpDays().Hours+ " giờ " + "để ứng tuyển";
             }

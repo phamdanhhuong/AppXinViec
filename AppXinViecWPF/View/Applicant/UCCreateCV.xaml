@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:AppXinViecWPF.View.Applicant"
              xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
+             xmlns:customControl="clr-namespace:AppXinViecWPF.View.Custom"
              mc:Ignorable="d" 
              d:DesignHeight="1900" d:DesignWidth="800">
     <Grid>
@@ -15,17 +16,12 @@
         <Border Background="White" Grid.Row="0">
             <Grid Grid.Row="0" Margin="20">
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                    <TextBox>
-                        <TextBox.Template>
-                            <ControlTemplate>
-                                <Border CornerRadius="2" BorderThickness="1" BorderBrush="Gray">
-                                    <Grid>
-                                        <TextBox Text="CV chưa đặt tên" FontWeight="Light" BorderThickness="0" TextAlignment="Left"/>
-                                    </Grid>
-                                </Border>
-                            </ControlTemplate>
-                        </TextBox.Template>
-                    </TextBox>
+                    <Grid Margin="5">
+                        <Border BorderBrush="LightGray" BorderThickness="1" CornerRadius="5"/>
+                        <StackPanel>
+                            <customControl:TextBoxCustom Height="40" PlaceHolder="Nhập tên của CV" FontWeight="Light" BorderThickness="0"/>
+                        </StackPanel>
+                    </Grid>
                 </StackPanel>
                 <StackPanel HorizontalAlignment="Right">
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
@@ -89,8 +85,8 @@
                         </Border>
                         <Grid Grid.Column="1" Margin="10">
                             <StackPanel Orientation="Vertical">
-                                <TextBox TextWrapping="Wrap" Text="Lê Đăng Hiếu" FontWeight="Bold" FontSize="35" BorderThickness="0"/>
-                                <TextBox TextWrapping="Wrap" Text="Nhân viên kinh doanh" FontWeight="Light" FontSize="24" BorderThickness="0"/>
+                                <customControl:TextBoxCustom Height="48" PlaceHolder="Nhập họ tên" FontWeight="Bold" BorderThickness="0" FontSize="35"/>
+                                <customControl:TextBoxCustom Height="32" PlaceHolder="Vị trí ứng tuyển" FontWeight="Light" FontSize="24" BorderThickness="0"/>
                             </StackPanel>
                         </Grid>
                         <Grid Grid.Column="2">
@@ -120,7 +116,7 @@
                                     </Label>
                                 </StackPanel>
                                 <StackPanel Grid.Column="1">
-                                    <TextBlock Text="(012) 4567 890" FontSize="20" FontWeight="Light" TextAlignment="Left" Margin="10"/>
+                                    <customControl:TextBoxCustom Height="48" PlaceHolder="0123 456 789" FontSize="20" FontWeight="Light" BorderThickness="0" Margin="10 5 0 0"/>
                                 </StackPanel>
                             </Grid>
                             <Grid Grid.Row="1">
@@ -141,7 +137,7 @@
                                     </Label>
                                 </StackPanel>
                                 <StackPanel Grid.Column="1">
-                                    <TextBlock Text="Nam" FontSize="20" FontWeight="Light" TextAlignment="Left" Margin="10"/>
+                                    <customControl:TextBoxCustom Height="48" PlaceHolder="Nam/Nữ" FontSize="20" FontWeight="Light" BorderThickness="0" Margin="10 5 0 0"/>
                                 </StackPanel>
                             </Grid>
                             <Grid Grid.Row="2">
@@ -162,7 +158,7 @@
                                     </Label>
                                 </StackPanel>
                                 <StackPanel Grid.Column="1">
-                                    <TextBlock Text="abcd@gmail.com" FontSize="20" FontWeight="Light" TextAlignment="Left" Margin="10"/>
+                                    <customControl:TextBoxCustom Height="48" PlaceHolder="ten@example.com" FontSize="20" FontWeight="Light" BorderThickness="0" Margin="10 5 0 0"/>
                                 </StackPanel>
                             </Grid>
                             <Grid Grid.Row="3">
@@ -183,7 +179,7 @@
                                     </Label>
                                 </StackPanel>
                                 <StackPanel Grid.Column="1">
-                                    <TextBlock Text="26/10/2004" FontSize="20" FontWeight="Light" TextAlignment="Left" Margin="10"/>
+                                    <customControl:TextBoxCustom Height="48" PlaceHolder="DD/MM/YYYY" FontSize="20" FontWeight="Light" BorderThickness="0" Margin="10 5 0 0"/>
                                 </StackPanel>
                             </Grid>
                             <Grid Grid.Row="4">
@@ -204,7 +200,7 @@
                                     </Label>
                                 </StackPanel>
                                 <StackPanel Grid.Column="1">
-                                    <TextBlock Text="https://fb.com/abc" FontSize="20" FontWeight="Light" TextAlignment="Left" Margin="10"/>
+                                    <customControl:TextBoxCustom Height="48" PlaceHolder="facebook.com/ten.vn" FontSize="20" FontWeight="Light" BorderThickness="0" Margin="10 5 0 0"/>
                                 </StackPanel>
                             </Grid>
                             <Grid Grid.Row="5">
@@ -225,7 +221,7 @@
                                     </Label>
                                 </StackPanel>
                                 <StackPanel Grid.Column="1">
-                                    <TextBlock Text="Hồ Chí Minh" FontSize="20" FontWeight="Light" TextAlignment="Left" Margin="10"/>
+                                    <customControl:TextBoxCustom Height="48" PlaceHolder="Quận 1, Tp Hồ Chí Minh" FontSize="20" FontWeight="Light" BorderThickness="0" Margin="10 5 0 0"/>
                                 </StackPanel>
                             </Grid>
                         </Grid>

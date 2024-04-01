@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
         xmlns:local="clr-namespace:AppXinViecWPF.View.Applicant"
+        xmlns:customControl="clr-namespace:AppXinViecWPF.View.Custom"
         mc:Ignorable="d"
         Title="WJobInfo" Height="950" Width="800"
         WindowStyle="None"
@@ -74,7 +75,7 @@
                                     <RowDefinition Height="50"/>
                                 </Grid.RowDefinitions>
                                 <Grid Grid.Row="0">
-                                        <TextBlock x:Name="txtNameJob" Text="{Binding Path = NameJob }"  FontSize="20" FontWeight="SemiBold"/>
+                                    <TextBlock x:Name="txtNameJob" Text="{Binding Path = NameJob }" Panel.ZIndex="1" MouseLeftButtonDown="txtNameJob_MouseLeftButtonDown" FontSize="20" FontWeight="SemiBold"/>
                                 </Grid>
                                 <Grid Grid.Row="1">
                                     <Grid.ColumnDefinitions>

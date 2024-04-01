@@ -72,8 +72,9 @@
                                     <RowDefinition/>
                                     <RowDefinition Height="30"/>
                                 </Grid.RowDefinitions>
-                                <Grid Grid.Row="0">
-                                    <TextBox x:Name="txtNameJob" Text="" FontSize="20" FontWeight="SemiBold"/>
+                                <Grid Grid.Row="0" Background="White">
+                                    <TextBox x:Name="txtNameJob" Text="" Panel.ZIndex="1" Background="Transparent" FontSize="20" FontWeight="SemiBold" BorderThickness="0" TextChanged="txtInput_TextChanged" VerticalAlignment="Center"/>
+                                    <TextBlock x:Name="tbPlaceHolder" Text="Nhập tên công việc" Panel.ZIndex="0" HorizontalAlignment="Left" FontSize="18" Margin="10 0 0 0" FontWeight="Light" Foreground="DarkGray" VerticalAlignment="Center" Width="230"/>
                                 </Grid>
                                 <Grid Grid.Row="1">
                                     <Grid.ColumnDefinitions>
@@ -95,7 +96,7 @@
                                             </Label>
                                             <StackPanel Orientation="Vertical">
                                                 <TextBlock Text="Mức lương" Margin="3 0 0 0"/>
-                                                <ComboBox x:Name="cboSalary" FontWeight="SemiBold" Margin="3 0 0 0">
+                                                <ComboBox x:Name="cboSalary" Style="{StaticResource ComboBoxFlatStyle}" Width="100">
                                                     <ComboBoxItem Content="3-5 triệu"/>
                                                     <ComboBoxItem Content="5-7 triệu"/>
                                                     <ComboBoxItem Content="10-15 triệu"/>
@@ -119,7 +120,7 @@
                                             </Label>
                                             <StackPanel Orientation="Vertical">
                                                 <TextBlock Text="Địa điểm" Margin="3 0 0 0"/>
-                                                <ComboBox x:Name="cboLocation" FontWeight="SemiBold" Margin="3 0 0 0">
+                                                <ComboBox x:Name="cboLocation" Style="{StaticResource ComboBoxFlatStyle}" Width="100">
                                                     <ComboBoxItem Content="An Giang"/>
                                                     <ComboBoxItem Content="Bà Rịa - Vũng Tàu"/>
                                                     <ComboBoxItem Content="Bạc Liêu"/>
@@ -201,7 +202,7 @@
                                             </Label>
                                             <StackPanel Orientation="Vertical">
                                                 <TextBlock Text="Kinh nghiệm" Margin="3 0 0 0"/>
-                                                <ComboBox x:Name="cboExp" FontWeight="SemiBold" Margin="3 0 0 0">
+                                                <ComboBox x:Name="cboExp" Style="{StaticResource ComboBoxFlatStyle}" Width="100">
                                                     <ComboBoxItem Content="Không yêu cầu"/>
                                                     <ComboBoxItem Content="trên 1 năm"/>
                                                     <ComboBoxItem Content="trên 2 năm"/>
@@ -319,7 +320,7 @@
                                         </Label>
                                         <StackPanel Orientation="Vertical">
                                             <TextBlock Text="Cấp bậc" Margin="5 0 0 0"/>
-                                            <ComboBox x:Name="cboPosition" FontWeight="SemiBold" Margin="3 0 0 0">
+                                            <ComboBox x:Name="cboPosition" Style="{StaticResource ComboBoxFlatStyle}" Width="100">
                                                 <ComboBoxItem Content="Nhân viên"/>
                                                 <ComboBoxItem Content="Trưởng nhóm"/>
                                                 <ComboBoxItem Content="Trưởng/Phó phòng"/>
@@ -338,14 +339,14 @@
                                                 <ControlTemplate>
                                                     <Grid>
                                                         <Ellipse Fill="#00a46e" Margin="4"/>
-                                                        <fa:IconImage Icon="PeopleGroup" Foreground="White" Margin="10"/>
+                                                        <fa:IconImage Icon="PeopleGroup" Width="18" Foreground="White" Margin="10"/>
                                                     </Grid>
                                                 </ControlTemplate>
                                             </Label.Template>
                                         </Label>
                                         <StackPanel Orientation="Vertical">
                                             <TextBlock Text="Số lượng tuyển" Margin="5 0 0 0"/>
-                                            <TextBox x:Name="txtQuantity" FontWeight="Bold" FontSize="12" Margin="5 0 0 0"/>
+                                            <TextBox x:Name="txtQuantity" FontWeight="Bold" FontSize="12" Margin="0 0 0 0" Width="100"/>
                                         </StackPanel>
                                     </StackPanel>
                                 </Grid>
@@ -363,7 +364,7 @@
                                         </Label>
                                         <StackPanel Orientation="Vertical">
                                             <TextBlock Text="Hình thức làm việc" Margin="5 0 0 0"/>
-                                            <ComboBox x:Name="cboWorkMode" FontWeight="SemiBold" Margin="3 0 0 0">
+                                            <ComboBox x:Name="cboWorkMode" Style="{StaticResource ComboBoxFlatStyle}" Width="100">
                                                 <ComboBoxItem Content="Toàn thời gian"/>
                                                 <ComboBoxItem Content="Bán thời gian"/>
                                                 <ComboBoxItem Content="Thực tập"/>
@@ -385,7 +386,7 @@
                                         </Label>
                                         <StackPanel Orientation="Vertical">
                                             <TextBlock Text="Yêu cầu giới tính" Margin="5 0 0 0"/>
-                                            <ComboBox x:Name="cboGender" FontWeight="SemiBold" Margin="3 0 0 0">
+                                            <ComboBox x:Name="cboGender" Style="{StaticResource ComboBoxFlatStyle}" Width="100">
                                                 <ComboBoxItem Content="Nam"/>
                                                 <ComboBoxItem Content="Nữ"/>
                                                 <ComboBoxItem Content="Không yêu cầu"/>

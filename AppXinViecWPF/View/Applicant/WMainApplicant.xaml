@@ -6,162 +6,102 @@
         xmlns:local="clr-namespace:AppXinViecWPF.View.Applicant"
         xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
         mc:Ignorable="d"
-        Title="WMainApplicant" Height="1000" Width="1300"
+        Title="WMainApplicant" Height="800" Width="1300"
         WindowStyle="None"
         WindowStartupLocation="CenterScreen" 
-        Background="Transparent"
         AllowsTransparency="True">
-    <Border CornerRadius="20">
-        <Border CornerRadius="20" BorderThickness="2">
-            <Border.Background>
-                <SolidColorBrush Color="{StaticResource primaryBackColor1}"/>
-            </Border.Background>
-            <Grid>
-                <Grid.RowDefinitions>
-                    <!--thanh dieu huong-->
-                    <RowDefinition Height="25"/>
-                    <RowDefinition Height="50"/>
-                    <!--content-->
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
-                <!--thanh dieu huong-->
-                <Border Grid.Row="0" CornerRadius="20,20,0,0" Background="{StaticResource panelOverColor}">
-                    <StackPanel x:Name="pnlControlBar"                               
-                                Orientation="Horizontal"
-                                FlowDirection="RightToLeft"
-                                Background="Transparent"
-                                Margin="0,0,5,0"
-                                MouseLeftButtonDown="Window_MouseDown">
-                        <Button x:Name="btnClose" 
-                                Style="{StaticResource btnControl}"
-                                Tag="{StaticResource plainTextColor1}"
-                                Click="btnClose_Click"
-                                Width="20"
-                                Foreground="{StaticResource plainTextColor1}">
-                            <fa:IconImage Icon="Xmark" Style="{StaticResource controlButtonIcon}"/>
+    <Border CornerRadius="10 10 10 10">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Border CornerRadius="10 0 0 10" Grid.Column="0">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#1c4943" Offset="0"/>
+                        <GradientStop Color="#22c76c" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Grid Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="160"/>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="150" x:Name="gridSearchJob"/>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="150" x:Name="gridMyCV"/>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="100" x:Name="gridCompany"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Border Grid.Row="0" Margin="20" CornerRadius="10" Background="White">
+                        <StackPanel Grid.Row="0" Orientation="Horizontal">
+                            <Grid Margin="20">
+                                <Ellipse Width="80" Stroke="Gray" Height="80" Fill="White"/>
+                                <Image x:Name="imgApplicant" Width="80" Height="80" Stretch="UniformToFill">
+                                    <Image.OpacityMask>
+                                        <VisualBrush Stretch="Fill" Visual="{Binding ElementName=ellipse}" />
+                                    </Image.OpacityMask>
+                                </Image>
+                            </Grid>
+                            <TextBlock Text="Lê Đăng Hiếu" FontWeight="SemiBold" FontSize="20" TextAlignment="Left" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Border>
+                    <Border Grid.Row="0" BorderThickness="0 0 0 3" BorderBrush="White" Margin="20 0 20 0"/>
+                    <Grid Grid.Row="1">
+                        <Button x:Name="btnSearchJobs" Cursor="Hand" Click="btnSearchJobs_Click">
+                            <Button.Template>
+                                <ControlTemplate>
+                                    <Grid>
+                                        <Border CornerRadius="5" Background="#00b14f" Margin="15">
+                                            <StackPanel Orientation="Horizontal">
+                                                <fa:IconImage Icon="ScrewdriverWrench" Height="25" HorizontalAlignment="Left" Foreground="White" Margin="20 10 5 10"/>
+                                                <TextBlock Text="Việc làm" Foreground="White" FontSize="24" FontWeight="SemiBold" TextAlignment="Center"  VerticalAlignment="Center" Margin="35 0 0 0"/>
+                                            </StackPanel>
+                                        </Border>
+                                    </Grid>
+                                </ControlTemplate>
+                            </Button.Template>
                         </Button>
-                        <Button x:Name="btnMaximize" 
-                                Style="{StaticResource btnControl}"
-                                Tag="{StaticResource plainTextColor1}"
-                                Click="btnMaximize_Click"
-                                Width="20" Foreground="{StaticResource plainTextColor1}">
-                            <fa:IconImage Icon="WindowMaximize" Style="{StaticResource controlButtonIcon}"/>
-                        </Button>
-                        <Button x:Name="btnMinimize" 
-                                Style="{StaticResource btnControl}"
-                                Tag="{StaticResource plainTextColor1}"
-                                Click="btnMinimize_Click"
-                                Width="20" Foreground="{StaticResource plainTextColor1}">
-                            <fa:IconImage Icon="WindowMinimize" Width="12" Style="{StaticResource controlButtonIcon}"/>
-                        </Button>
-                    </StackPanel>
-                </Border>
-                <Border Grid.Row ="1" Background="{StaticResource panelColor2}">
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="250"/>
-                            <ColumnDefinition Width="150"/>
-                            <ColumnDefinition Width="150"/>
-                            <ColumnDefinition Width="150"/>
-                            <ColumnDefinition/>
-                        </Grid.ColumnDefinitions>
-                        <TextBlock Text="CV" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="45" FontWeight="Medium" Foreground="{StaticResource plainTextColor2}"/>
-                        <Grid Grid.Column="1">
-                            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                                <Menu Style="{StaticResource menuItem}">
-                                    <MenuItem Header="Việc làm" FontSize="24">
-                                        <MenuItem Header="Tìm việc làm" Foreground="Black" Click="btnTimViecLam_Click">
-                                            <MenuItem.Icon>
-                                                <fa:IconImage Icon="MagnifyingGlass"/>
-                                            </MenuItem.Icon>
-                                        </MenuItem>
-                                        <MenuItem Header="Việc làm đã ứng tuyển" Foreground="Black">
-                                            <MenuItem.Icon>
-                                                <fa:IconImage Icon="Briefcase"/>
-                                            </MenuItem.Icon>
-                                        </MenuItem>
-                                        <MenuItem Header="Việc làm đã lưu" Foreground="Black">
-                                            <MenuItem.Icon>
-                                                <fa:IconImage Icon="Heart"/>
-                                            </MenuItem.Icon>
-                                        </MenuItem>
-                                    </MenuItem>
-                                </Menu>
-                            </StackPanel>
-                        </Grid>
-                        <Grid Grid.Column="2">
-                            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                                <Menu Style="{StaticResource menuItem}">
-                                    <MenuItem Header="Hồ sơ và CV " FontSize="24">
-                                        <MenuItem Header="Quản lý CV" Foreground="Black">
-                                            <MenuItem.Icon>
-                                                <fa:IconImage Icon="FilePen"/>
-                                            </MenuItem.Icon>
-                                        </MenuItem>
-                                        <MenuItem Header="Tải CV lên" Foreground="Black" Click="btnUploadCV_Click">
-                                            <MenuItem.Icon>
-                                                <fa:IconImage Icon="Upload"/>
-                                            </MenuItem.Icon>
-                                        </MenuItem>
-                                        <MenuItem Header="Mẫu CV" Foreground="Black" Click="btnCreateCV_Click">
-                                            <MenuItem.Icon>
-                                                <fa:IconImage Icon="File"/>
-                                            </MenuItem.Icon>
-                                        </MenuItem>
-                                    </MenuItem>
-                                </Menu>
-                            </StackPanel>
-                        </Grid>
-                        <Grid Grid.Column="3">
-                            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                                <Menu Style="{StaticResource menuItem}">
-                                    <MenuItem Header="Công ty" FontSize="24">
-                                        <MenuItem Header="Danh sách công ty" Foreground="Black">
-                                            <MenuItem.Icon>
-                                                <fa:IconImage Icon="Building"/>
-                                            </MenuItem.Icon>
-                                        </MenuItem>
-                                        <MenuItem Header="Top công ty" Foreground="Black">
-                                            <MenuItem.Icon>
-                                                <fa:IconImage Icon="RankingStar"/>
-                                            </MenuItem.Icon>
-                                        </MenuItem>
-                                    </MenuItem>
-                                </Menu>
-                            </StackPanel>
-                        </Grid>
-                        <StackPanel Grid.Column="4" HorizontalAlignment="Right" Orientation="Horizontal">
-                            <Button Style="{StaticResource NoficationButtonStyle}"/>
-                            <Button Style="{StaticResource MessageButtonStyle}"/>
-                            <Button>
+                    </Grid>
+                    <Grid Grid.Row="2">
+                        <StackPanel x:Name="pnlJobSearch" Grid.Row="2">
+                            <Button x:Name="btnSeachJobs" Click="btnSeachJobs_Click" Cursor="Hand">
                                 <Button.Template>
                                     <ControlTemplate>
                                         <Grid>
-                                            <Border CornerRadius="20" Background="Transparent">
-                                                <StackPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                                    <TextBlock Text="Lê Đăng Hiếu" Foreground="White" Margin="10" FontSize="15" FontWeight="SemiBold"/>
-                                                    <Menu Style="{StaticResource menuItem}">
-                                                        <MenuItem Height="30" VerticalAlignment="Center" HorizontalAlignment="Center">
-                                                            <MenuItem.Icon>
-                                                                <fa:IconImage Icon="Bars" Foreground="#12b35b" Height="20" Width="20" />
-                                                            </MenuItem.Icon>
-                                                            <MenuItem Header="Thông tin cá nhân" Foreground="Black" Click="btnUserInfo_Click">
-                                                                <MenuItem.Icon>
-                                                                    <fa:IconImage Icon="Gear"/>
-                                                                </MenuItem.Icon>
-                                                            </MenuItem>
-                                                            <MenuItem Header="Đổi mật khẩu" Foreground="Black">
-                                                                <MenuItem.Icon>
-                                                                    <fa:IconImage Icon="Key"/>
-                                                                </MenuItem.Icon>
-                                                            </MenuItem>
-                                                            <MenuItem Header="Đăng xuất" Foreground="Black">
-                                                                <MenuItem.Icon>
-                                                                    <fa:IconImage Icon="RightFromBracket"/>
-                                                                </MenuItem.Icon>
-                                                            </MenuItem>
-                                                        </MenuItem>
-                                                    </Menu>
+                                            <Border CornerRadius="5"  Margin="30 0 15 0">
+                                                <StackPanel Orientation="Horizontal">
+                                                    <fa:IconImage Icon="MagnifyingGlass" Height="25" HorizontalAlignment="Left" Foreground="White" Margin="20 10 5 10"/>
+                                                    <TextBlock Text="Tìm kiếm" Foreground="White" FontSize="24" FontWeight="SemiBold" TextAlignment="Center"  VerticalAlignment="Center" Margin="25 0 0 0"/>
+                                                </StackPanel>
+                                            </Border>
+                                        </Grid>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                            <Button x:Name="btnSavedJobs" Click="btnSavedJobs_Click" Cursor="Hand">
+                                <Button.Template>
+                                    <ControlTemplate>
+                                        <Grid>
+                                            <Border CornerRadius="5"  Margin="30 0 15 0">
+                                                <StackPanel Orientation="Horizontal">
+                                                    <fa:IconImage Icon="Gratipay" Height="25" HorizontalAlignment="Left" Foreground="White" Margin="20 10 5 10"/>
+                                                    <TextBlock Text="Việc làm đã lưu" Foreground="White" FontSize="24" FontWeight="SemiBold" TextAlignment="Center"  VerticalAlignment="Center" Margin="25 0 0 0"/>
+                                                </StackPanel>
+                                            </Border>
+                                        </Grid>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                            <Button x:Name="btnAppliedJobs" Click="btnAppliedJobs_Click" Cursor="Hand">
+                                <Button.Template>
+                                    <ControlTemplate>
+                                        <Grid>
+                                            <Border CornerRadius="5"  Margin="30 0 15 0">
+                                                <StackPanel Orientation="Horizontal">
+                                                    <fa:IconImage Icon="ClockRotateLeft" Height="25" HorizontalAlignment="Left" Foreground="White" Margin="20 10 5 10"/>
+                                                    <TextBlock Text="Việc làm ứng tuyển" Foreground="White" FontSize="24" FontWeight="SemiBold" TextAlignment="Center"  VerticalAlignment="Center" Margin="25 0 0 0"/>
                                                 </StackPanel>
                                             </Border>
                                         </Grid>
@@ -170,12 +110,143 @@
                             </Button>
                         </StackPanel>
                     </Grid>
-                </Border>
-                <!--Content-->
-                <ContentControl x:Name="ccMain" Content="{}"
-                                Grid.Row="2"
-                                Margin="25"/>
+                    <Border Grid.Row="2" BorderThickness="0 0 0 3" BorderBrush="White" Margin="20 0 20 0"/>
+                    <Grid Grid.Row="3">
+                        <Button x:Name="btnMyCV" Click="btnMyCV_Click" Cursor="Hand">
+                            <Button.Template>
+                                <ControlTemplate>
+                                    <Grid>
+                                        <Border CornerRadius="5" Background="#00b14f" Margin="15">
+                                            <StackPanel Orientation="Horizontal">
+                                                <fa:IconImage Icon="Paste" Height="25" HorizontalAlignment="Left" Foreground="White" Margin="20 10 5 10"/>
+                                                <TextBlock Text="Hồ sơ và CV" Foreground="White" FontSize="24" FontWeight="SemiBold" TextAlignment="Center"  VerticalAlignment="Center" Margin="35 0 0 0"/>
+                                            </StackPanel>
+                                        </Border>
+                                    </Grid>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                    </Grid>
+                    <Grid Grid.Row="4">
+                        <StackPanel x:Name="pnlMyCV">
+                            <Button x:Name="btnManegeCVs" Click="btnManegeCVs_Click" Cursor="Hand">
+                                <Button.Template>
+                                    <ControlTemplate>
+                                        <Grid>
+                                            <Border CornerRadius="5"  Margin="30 0 15 0">
+                                                <StackPanel Orientation="Horizontal">
+                                                    <fa:IconImage Icon="Paperclip" Height="25" HorizontalAlignment="Left" Foreground="White" Margin="20 10 5 10"/>
+                                                    <TextBlock Text="Quản lý CV" Foreground="White" FontSize="24" FontWeight="SemiBold" TextAlignment="Center"  VerticalAlignment="Center" Margin="25 0 0 0"/>
+                                                </StackPanel>
+                                            </Border>
+                                        </Grid>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                            <Button x:Name="btnUploadCVs" Click="btnUploadCVs_Click" Cursor="Hand">
+                                <Button.Template>
+                                    <ControlTemplate>
+                                        <Grid>
+                                            <Border CornerRadius="5"  Margin="30 0 15 0">
+                                                <StackPanel Orientation="Horizontal">
+                                                    <fa:IconImage Icon="Upload" Height="25" HorizontalAlignment="Left" Foreground="White" Margin="20 10 5 10"/>
+                                                    <TextBlock Text="Tải lên CV" Foreground="White" FontSize="24" FontWeight="SemiBold" TextAlignment="Center"  VerticalAlignment="Center" Margin="25 0 0 0"/>
+                                                </StackPanel>
+                                            </Border>
+                                        </Grid>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                            <Button x:Name="btnSampleCVs" Click="btnSampleCVs_Click" Cursor="Hand">
+                                <Button.Template>
+                                    <ControlTemplate>
+                                        <Grid>
+                                            <Border CornerRadius="5"  Margin="30 0 15 0">
+                                                <StackPanel Orientation="Horizontal">
+                                                    <fa:IconImage Icon="FileCode" Height="25" HorizontalAlignment="Left" Foreground="White" Margin="20 10 5 10"/>
+                                                    <TextBlock Text="Mẫu CV" Foreground="White" FontSize="24" FontWeight="SemiBold" TextAlignment="Center"  VerticalAlignment="Center" Margin="25 0 0 0"/>
+                                                </StackPanel>
+                                            </Border>
+                                        </Grid>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                        </StackPanel>
+                    </Grid>
+                    <Border Grid.Row="4" BorderThickness="0 0 0 3" BorderBrush="White" Margin="20 0 20 0"/>
+                    <Grid Grid.Row="5">
+                        <Button x:Name="btnCompany" Click="btnCompany_Click" Cursor="Hand">
+                            <Button.Template>
+                                <ControlTemplate>
+                                    <Grid>
+                                        <Border CornerRadius="5" Background="#00b14f" Margin="15">
+                                            <StackPanel Orientation="Horizontal">
+                                                <fa:IconImage Icon="Building" Height="25" HorizontalAlignment="Left" Foreground="White" Margin="20 10 5 10"/>
+                                                <TextBlock Text="Công ty" Foreground="White" FontSize="24" FontWeight="SemiBold" TextAlignment="Center"  VerticalAlignment="Center" Margin="35 0 0 0"/>
+                                            </StackPanel>
+                                        </Border>
+                                    </Grid>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                    </Grid>
+                    <Grid Grid.Row="6">
+                        <StackPanel x:Name="pnlCompany">
+                            <Button x:Name="btnListCompany" Click="btnListCompany_Click" Cursor="Hand">
+                                <Button.Template>
+                                    <ControlTemplate>
+                                        <Grid>
+                                            <Border CornerRadius="5"  Margin="30 0 15 0">
+                                                <StackPanel Orientation="Horizontal">
+                                                    <fa:IconImage Icon="Paperclip" Height="25" HorizontalAlignment="Left" Foreground="White" Margin="20 10 5 10"/>
+                                                    <TextBlock Text="Danh sách công ty" Foreground="White" FontSize="24" FontWeight="SemiBold" TextAlignment="Center"  VerticalAlignment="Center" Margin="25 0 0 0"/>
+                                                </StackPanel>
+                                            </Border>
+                                        </Grid>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                            <Button x:Name="btnTopCompany" Click="btnTopCompany_Click" Cursor="Hand">
+                                <Button.Template>
+                                    <ControlTemplate>
+                                        <Grid>
+                                            <Border CornerRadius="5"  Margin="30 0 15 0">
+                                                <StackPanel Orientation="Horizontal">
+                                                    <fa:IconImage Icon="Upload" Height="25" HorizontalAlignment="Left" Foreground="White" Margin="20 10 5 10"/>
+                                                    <TextBlock Text="Top công ty" Foreground="White" FontSize="24" FontWeight="SemiBold" TextAlignment="Center"  VerticalAlignment="Center" Margin="25 0 0 0"/>
+                                                </StackPanel>
+                                            </Border>
+                                        </Grid>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                        </StackPanel>
+                    </Grid>
+                    <Grid Grid.Row="7">
+                        <StackPanel VerticalAlignment="Bottom">
+                            <Button x:Name="btnExit" Cursor="Hand">
+                                <Button.Template>
+                                    <ControlTemplate>
+                                        <Grid>
+                                            <Border CornerRadius="5" Background="#00b14f" Margin="15">
+                                                <StackPanel Orientation="Horizontal">
+                                                    <fa:IconImage Icon="LeftLong" Height="25" HorizontalAlignment="Left" Foreground="White" Margin="20 10 5 10"/>
+                                                    <TextBlock Text="Thoát" Foreground="White" FontSize="24" FontWeight="SemiBold" TextAlignment="Center"  VerticalAlignment="Center" Margin="35 0 0 0"/>
+                                                </StackPanel>
+                                            </Border>
+                                        </Grid>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                        </StackPanel>
+                    </Grid>
+                </Grid>
+            </Border>
+            <Grid Grid.Column="1">
+                <ContentControl x:Name="ccMain">
+                    
+                </ContentControl>
             </Grid>
-        </Border>
+        </Grid>
     </Border>
 </Window>

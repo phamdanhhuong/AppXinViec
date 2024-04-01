@@ -71,8 +71,13 @@ namespace AppXinViecWPF.View.Applicant
 
         private void btnCompanyDetail_Click(object sender, RoutedEventArgs e)
         {
-            WCompanyInfo wCompanyInfo = new WCompanyInfo();
-            wCompanyInfo.Show();
+            UCCompanyInfomation uCCompanyInfomation = new UCCompanyInfomation();
+            uCCompanyInfomation.ShowDialog();
+        }
+
+        private void txtNameJob_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+
         }
     }
 }

@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -45,8 +46,8 @@ namespace AppXinViecWPF.View.Applicant
         {
             string khuVuc = cboSearchLocation.Text;
             string luong = cboSalarySearch.Text;
-            string kinhNghiem = cboExperienceSearch.Text;
-            string tenCongViec = txtNameJob.Text;
+            string kinhNghiem = cboExperienceSearch.Text.ToString();
+            string tenCongViec = txtNameJob.txtInput.Text;
             if (string.IsNullOrWhiteSpace(tenCongViec) && string.IsNullOrEmpty(khuVuc) && string.IsNullOrEmpty(luong) && string.IsNullOrEmpty(kinhNghiem))
             {
                 ListPost = PostDAO.Instance.GetAllIdNotPause();
@@ -63,6 +64,11 @@ namespace AppXinViecWPF.View.Applicant
         {
             ListPost = PostDAO.Instance.GetAllIdNotPause();
             UserControl_Loaded(sender, e);
+        }
+
+        private void btnApplySalaryReturn_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

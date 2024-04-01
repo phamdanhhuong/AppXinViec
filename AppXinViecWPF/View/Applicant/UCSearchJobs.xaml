@@ -5,20 +5,27 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
              xmlns:local="clr-namespace:AppXinViecWPF.View.Applicant"
+             xmlns:customControl="clr-namespace:AppXinViecWPF.View.Custom"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800"
+             d:DesignHeight="700" d:DesignWidth="1330"
              Loaded="UserControl_Loaded">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="120"/>
+            <RowDefinition Height="140"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#1c4943" Offset="0"/>
+                    <GradientStop Color="#02a74e" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
             <Grid.RowDefinitions>
-                <RowDefinition Height="60"/>
+                <RowDefinition Height="70"/>
                 <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
-            <Border Grid.Row="0" Padding="10" Background="#1a4c42">
+            <Border Grid.Row="0" Padding="10">
                 <Grid Grid.Row="0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="2*"/>
@@ -26,122 +33,142 @@
                         <ColumnDefinition/>
                         <ColumnDefinition Width="0.75*"/>
                     </Grid.ColumnDefinitions>
-                    <Border Grid.Column="0" CornerRadius="15" Padding="5" Margin="0 0 10 0" Background="White">
+                    <Border Grid.Column="0" CornerRadius="5" Padding="5" Margin="0 0 10 0" Background="White">
                         <Grid Grid.Column="0">
-                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
-                                <fa:IconImage Icon="MagnifyingGlass" Style="{StaticResource Iconfa}" Margin="0 0 5 0"/>
-                                <TextBox x:Name="txtNameJob" Width="100" BorderThickness="0,0,0,2" />
-                                <fa:IconImage Icon="LocationDot" Style="{StaticResource Iconfa}" Margin="0 0 5 0"/>
-                                <ComboBox x:Name="cboSearchLocation" Width="150" BorderThickness="0">
-                                    <ComboBoxItem Content=""/>
-                                    <ComboBoxItem Content="An Giang"/>
-                                    <ComboBoxItem Content="Bà Rịa - Vũng Tàu"/>
-                                    <ComboBoxItem Content="Bạc Liêu"/>
-                                    <ComboBoxItem Content="Bắc Kạn"/>
-                                    <ComboBoxItem Content="Bắc Giang"/>
-                                    <ComboBoxItem Content="Bắc Ninh"/>
-                                    <ComboBoxItem Content="Bến Tre"/>
-                                    <ComboBoxItem Content="Bình Dương"/>
-                                    <ComboBoxItem Content="Bình Định"/>
-                                    <ComboBoxItem Content="Bình Phước"/>
-                                    <ComboBoxItem Content="Bình Thuận"/>
-                                    <ComboBoxItem Content="Cà Mau"/>
-                                    <ComboBoxItem Content="Cao Bằng"/>
-                                    <ComboBoxItem Content="Cần Thơ"/>
-                                    <ComboBoxItem Content="Đà Nẵng"/>
-                                    <ComboBoxItem Content="Đắk Lắk"/>
-                                    <ComboBoxItem Content="Đắk Nông"/>
-                                    <ComboBoxItem Content="Điện Biên"/>
-                                    <ComboBoxItem Content="Đồng Nai"/>
-                                    <ComboBoxItem Content="Đồng Tháp"/>
-                                    <ComboBoxItem Content="Gia Lai"/>
-                                    <ComboBoxItem Content="Hà Giang"/>
-                                    <ComboBoxItem Content="Hà Nam"/>
-                                    <ComboBoxItem Content="Hà Nội"/>
-                                    <ComboBoxItem Content="Hà Tĩnh"/>
-                                    <ComboBoxItem Content="Hải Dương"/>
-                                    <ComboBoxItem Content="Hải Phòng"/>
-                                    <ComboBoxItem Content="Hậu Giang"/>
-                                    <ComboBoxItem Content="Hòa Bình"/>
-                                    <ComboBoxItem Content="Hưng Yên"/>
-                                    <ComboBoxItem Content="Thành phố Hồ Chí Minh"/>
-                                    <ComboBoxItem Content="Khánh Hòa"/>
-                                    <ComboBoxItem Content="Kiên Giang"/>
-                                    <ComboBoxItem Content="Kon Tum"/>
-                                    <ComboBoxItem Content="Lai Châu"/>
-                                    <ComboBoxItem Content="Lâm Đồng"/>
-                                    <ComboBoxItem Content="Lạng Sơn"/>
-                                    <ComboBoxItem Content="Lào Cai"/>
-                                    <ComboBoxItem Content="Long An"/>
-                                    <ComboBoxItem Content="Nam Định"/>
-                                    <ComboBoxItem Content="Nghệ An"/>
-                                    <ComboBoxItem Content="Ninh Bình"/>
-                                    <ComboBoxItem Content="Ninh Thuận"/>
-                                    <ComboBoxItem Content="Phú Thọ"/>
-                                    <ComboBoxItem Content="Phú Yên"/>
-                                    <ComboBoxItem Content="Quảng Bình"/>
-                                    <ComboBoxItem Content="Quảng Nam"/>
-                                    <ComboBoxItem Content="Quảng Ngãi"/>
-                                    <ComboBoxItem Content="Quảng Ninh"/>
-                                    <ComboBoxItem Content="Quảng Trị"/>
-                                    <ComboBoxItem Content="Sóc Trăng"/>
-                                    <ComboBoxItem Content="Sơn La"/>
-                                    <ComboBoxItem Content="Tây Ninh"/>
-                                    <ComboBoxItem Content="Thái Bình"/>
-                                    <ComboBoxItem Content="Thái Nguyên"/>
-                                    <ComboBoxItem Content="Thanh Hóa"/>
-                                    <ComboBoxItem Content="Thừa Thiên Huế"/>
-                                    <ComboBoxItem Content="Tiền Giang"/>
-                                    <ComboBoxItem Content="Trà Vinh"/>
-                                    <ComboBoxItem Content="Tuyên Quang"/>
-                                    <ComboBoxItem Content="Vĩnh Long"/>
-                                    <ComboBoxItem Content="Vĩnh Phúc"/>
-                                    <ComboBoxItem Content="Yên Bái"/>
-                                </ComboBox>
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="10 0 0 0" Height="50">
+                                <Grid Margin="5">
+                                    <StackPanel Orientation="Horizontal">
+                                        <fa:IconImage Icon="MagnifyingGlass" Foreground="LightGray" Margin="10 10 0 10"/>
+                                        <customControl:TextBoxCustom x:Name="txtNameJob" Width="250" PlaceHolder="Tên công việc, vị trí ứng tuyển..." Margin="0 5 5 5"/>
+                                    </StackPanel>
+                                </Grid>
+                                <Border BorderThickness="1 0 0 0" BorderBrush="LightGray" Height="20"/>
+                                <Grid Margin="5" Width="184">
+                                    <fa:IconImage Icon="LocationDot" Foreground="LightGray" Margin="14 10 0 10" HorizontalAlignment="Left" Panel.ZIndex="3"/>
+                                    <ComboBox x:Name="cboSearchLocation" Style="{StaticResource ComboBoxFlatStyle}" Height="36" Margin="5 2 5 2" FontWeight="SemiBold" SelectedIndex="0">
+                                        <ComboBoxItem Content="Tất cả địa điểm"/>
+                                        <ComboBoxItem Content="An Giang"/>
+                                        <ComboBoxItem Content="Bà Rịa - Vũng Tàu"/>
+                                        <ComboBoxItem Content="Bạc Liêu"/>
+                                        <ComboBoxItem Content="Bắc Kạn"/>
+                                        <ComboBoxItem Content="Bắc Giang"/>
+                                        <ComboBoxItem Content="Bắc Ninh"/>
+                                        <ComboBoxItem Content="Bến Tre"/>
+                                        <ComboBoxItem Content="Bình Dương"/>
+                                        <ComboBoxItem Content="Bình Định"/>
+                                        <ComboBoxItem Content="Bình Phước"/>
+                                        <ComboBoxItem Content="Bình Thuận"/>
+                                        <ComboBoxItem Content="Cà Mau"/>
+                                        <ComboBoxItem Content="Cao Bằng"/>
+                                        <ComboBoxItem Content="Cần Thơ"/>
+                                        <ComboBoxItem Content="Đà Nẵng"/>
+                                        <ComboBoxItem Content="Đắk Lắk"/>
+                                        <ComboBoxItem Content="Đắk Nông"/>
+                                        <ComboBoxItem Content="Điện Biên"/>
+                                        <ComboBoxItem Content="Đồng Nai"/>
+                                        <ComboBoxItem Content="Đồng Tháp"/>
+                                        <ComboBoxItem Content="Gia Lai"/>
+                                        <ComboBoxItem Content="Hà Giang"/>
+                                        <ComboBoxItem Content="Hà Nam"/>
+                                        <ComboBoxItem Content="Hà Nội"/>
+                                        <ComboBoxItem Content="Hà Tĩnh"/>
+                                        <ComboBoxItem Content="Hải Dương"/>
+                                        <ComboBoxItem Content="Hải Phòng"/>
+                                        <ComboBoxItem Content="Hậu Giang"/>
+                                        <ComboBoxItem Content="Hòa Bình"/>
+                                        <ComboBoxItem Content="Hưng Yên"/>
+                                        <ComboBoxItem Content="Thành phố Hồ Chí Minh"/>
+                                        <ComboBoxItem Content="Khánh Hòa"/>
+                                        <ComboBoxItem Content="Kiên Giang"/>
+                                        <ComboBoxItem Content="Kon Tum"/>
+                                        <ComboBoxItem Content="Lai Châu"/>
+                                        <ComboBoxItem Content="Lâm Đồng"/>
+                                        <ComboBoxItem Content="Lạng Sơn"/>
+                                        <ComboBoxItem Content="Lào Cai"/>
+                                        <ComboBoxItem Content="Long An"/>
+                                        <ComboBoxItem Content="Nam Định"/>
+                                        <ComboBoxItem Content="Nghệ An"/>
+                                        <ComboBoxItem Content="Ninh Bình"/>
+                                        <ComboBoxItem Content="Ninh Thuận"/>
+                                        <ComboBoxItem Content="Phú Thọ"/>
+                                        <ComboBoxItem Content="Phú Yên"/>
+                                        <ComboBoxItem Content="Quảng Bình"/>
+                                        <ComboBoxItem Content="Quảng Nam"/>
+                                        <ComboBoxItem Content="Quảng Ngãi"/>
+                                        <ComboBoxItem Content="Quảng Ninh"/>
+                                        <ComboBoxItem Content="Quảng Trị"/>
+                                        <ComboBoxItem Content="Sóc Trăng"/>
+                                        <ComboBoxItem Content="Sơn La"/>
+                                        <ComboBoxItem Content="Tây Ninh"/>
+                                        <ComboBoxItem Content="Thái Bình"/>
+                                        <ComboBoxItem Content="Thái Nguyên"/>
+                                        <ComboBoxItem Content="Thanh Hóa"/>
+                                        <ComboBoxItem Content="Thừa Thiên Huế"/>
+                                        <ComboBoxItem Content="Tiền Giang"/>
+                                        <ComboBoxItem Content="Trà Vinh"/>
+                                        <ComboBoxItem Content="Tuyên Quang"/>
+                                        <ComboBoxItem Content="Vĩnh Long"/>
+                                        <ComboBoxItem Content="Vĩnh Phúc"/>
+                                        <ComboBoxItem Content="Yên Bái"/>
+                                    </ComboBox>
+                                </Grid>
                             </StackPanel>
                         </Grid>
                     </Border>
-                    <Border Grid.Column="1" CornerRadius="15" Padding="5" Margin="0 0 10 0" Background="White">
+                    <Border Grid.Column="1" CornerRadius="5" Padding="5" Margin="0 0 10 0" Background="White">
                         <Grid Grid.Column="1">
-                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                                <fa:IconImage Icon="Hourglass2" Style="{StaticResource Iconfa}" Margin="0 0 5 0"/>
-                                <ComboBox x:Name="cboExperienceSearch" Width="100" BorderThickness="0">
-                                    <ComboBoxItem Content=""/>
-                                    <ComboBoxItem Content="Không yêu cầu"/>
-                                    <ComboBoxItem Content="trên 1 năm"/>
-                                    <ComboBoxItem Content="trên 2 năm"/>
-                                    <ComboBoxItem Content="trên 3 năm"/>
-                                    <ComboBoxItem Content="trên 5 năm"/>
-                                    <ComboBoxItem Content="trên 10 năm"/>
-                                </ComboBox>
-                            </StackPanel>
+                            <Ellipse Fill="Transparent" Stroke="Gray" Panel.ZIndex="1" Height="24" Width="24" HorizontalAlignment="Left" Margin="23 0 0 0"/>
+                            <fa:IconImage Icon="Hourglass" Panel.ZIndex="1" Foreground="Gray" Height="18" HorizontalAlignment="Left" Margin="28 0 0 0"/>
+                            <ComboBox x:Name="cboExperienceSearch" Style="{StaticResource ComboBoxFlatStyle}" Width="230" Height="36" Margin="5 2 5 2" FontWeight="SemiBold" SelectedIndex="0">
+                                <ComboBoxItem Content="Tất cả kinh nghiệm"/>
+                                <ComboBoxItem Content="Chưa có kinh nghiệm"/>
+                                <ComboBoxItem Content="Dưới 1 năm"/>
+                                <ComboBoxItem Content="1 năm"/>
+                                <ComboBoxItem Content="2 năm"/>
+                                <ComboBoxItem Content="3 năm"/>
+                                <ComboBoxItem Content="4 năm"/>
+                                <ComboBoxItem Content="5 năm"/>
+                                <ComboBoxItem Content="Trên 5 năm"/>
+                            </ComboBox>
                         </Grid>
                     </Border>
-                    <Border Grid.Column="2" CornerRadius="15" Padding="5" Margin="0 0 10 0" Background="White">
+                    <Border Grid.Column="2" CornerRadius="5" Padding="5" Margin="0 0 10 0" Background="White">
                         <Grid Grid.Column="2">
-                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                                <fa:IconImage Icon="Coins" Style="{StaticResource Iconfa}" Margin="0 0 5 0"/>
-                                <ComboBox x:Name="cboSalarySearch" Width="120">
-                                    <ComboBoxItem Content=""/>
-                                    <ComboBoxItem Content="3-5 triệu"/>
-                                    <ComboBoxItem Content="5-7 triệu"/>
-                                    <ComboBoxItem Content="10-15 triệu"/>
-                                    <ComboBoxItem Content="15-20 triệu"/>
-                                    <ComboBoxItem Content="20-25 triệu"/>
-                                </ComboBox>
-                            </StackPanel>
+                            <Ellipse Fill="Transparent" Stroke="Gray" Panel.ZIndex="1" Height="24" Width="24" HorizontalAlignment="Left" Margin="22 0 0 0"/>
+                            <fa:IconImage Icon="Coins" Panel.ZIndex="1" Foreground="Gray" Height="18" HorizontalAlignment="Left" Margin="25 0 0 0"/>
+                            <ComboBox x:Name="cboSalarySearch" Style="{StaticResource ComboBoxFlatStyle}" Width="230" Height="30" Margin="5 2 5 2" FontWeight="SemiBold" SelectedIndex="0">
+                                <ComboBoxItem Content="Tất cả mức lương"/>
+                                <ComboBoxItem Content="Dưới 10 triệu"/>
+                                <ComboBoxItem Content="10 - 15 triệu"/>
+                                <ComboBoxItem Content="15 - 20 triệu"/>
+                                <ComboBoxItem Content="20 - 25 triệu"/>
+                                <ComboBoxItem Content="25 - 30 triệu"/>
+                                <ComboBoxItem Content="30 - 50 triệu"/>
+                                <ComboBoxItem Content="Trên 50 triệu"/>
+                                <ComboBoxItem Content="Thỏa thuận"/>
+                            </ComboBox>
                         </Grid>
                     </Border>
-                    <Border Grid.Column="3" CornerRadius="15" Padding="5">
+                    <Border Grid.Column="3">
                         <Grid Grid.Column="3">
                             <StackPanel Grid.Column="3" Orientation="Horizontal" HorizontalAlignment="Center">
-                                <Button x:Name="btnSearch" Style="{StaticResource ButtonStyle}" Content="Tìm kiếm" Cursor="Hand" Click="btnSearch_Click"/>
+                                <Button x:Name="btnApplySalaryReturn" Content="Tìm kiếm" Cursor="Hand" Click="btnApplySalaryReturn_Click">
+                                    <Button.Template>
+                                        <ControlTemplate>
+                                            <Grid>
+                                                <Border CornerRadius="5" Background="#00c056" Width="80" Height="35">
+                                                    <TextBlock Text="Áp dụng" FontWeight="SemiBold" TextAlignment="Center"  VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                                </Border>
+                                            </Grid>
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                </Button>
                             </StackPanel>
                         </Grid>
                     </Border>
                 </Grid>
             </Border>
-            <Border Grid.Row="1" Background="#1a4c42">
+            <Border Grid.Row="1">
                 <Grid Grid.Row="1" Margin="10 10 0 10">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="120"/>
@@ -149,7 +176,7 @@
                         <ColumnDefinition/>
                         <ColumnDefinition Width="180"/>
                     </Grid.ColumnDefinitions>
-                    <Border CornerRadius="15" Background="#156046">
+                    <Border CornerRadius="5" Background="#155f45">
                         <Grid Grid.Column="0">
                             <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
                                 <TextBlock Text="Tổng " Foreground="White" FontWeight="SemiBold"/>
@@ -158,15 +185,19 @@
                             </StackPanel>
                         </Grid>
                     </Border>
-                    <Button x:Name="btnReset"
-                            VerticalAlignment="Center"
-                            HorizontalAlignment="Right"
-                            Grid.Column="2" 
-                            Style="{StaticResource btnNormal}"
-                            Background="Green"
-                            Width="50" Height="50"
-                                Click="btnReset_Click">
-                        <TextBlock Text="RESET" FontFamily="Monterrat" FontSize="14" Foreground="{StaticResource plainTextColor2}"/>
+                    <Button x:Name="btnReset" Content="Tìm kiếm" Cursor="Hand" Click="btnSearch_Click" Grid.Column="2" HorizontalAlignment="Right" Margin="0 0 10 0">
+                        <Button.Template>
+                            <ControlTemplate>
+                                <Grid>
+                                    <Border CornerRadius="5" Background="#00b14f" Width="100" Height="45">
+                                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                            <fa:IconImage Icon="ArrowRotateBack" Height="16" Margin="5" Foreground="White"/>
+                                            <TextBlock Text="Xóa bộ lọc" FontWeight="SemiBold" Foreground="White" TextAlignment="Center" Margin="0 0 5 0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                        </StackPanel>
+                                    </Border>
+                                </Grid>
+                            </ControlTemplate>
+                        </Button.Template>
                     </Button>
                     <Border Grid.Column="3">
                         <Grid Margin="0 0 20 0">
@@ -174,11 +205,11 @@
                                 <Button.Template>
                                     <ControlTemplate>
                                         <Grid>
-                                            <Border CornerRadius="15" BorderThickness="1" BorderBrush="#12b35b">
+                                            <Border CornerRadius="5" BorderThickness="1" Background="#00c056" Height="45">
                                                 <StackPanel Margin="0 0 10 0"  HorizontalAlignment="Right" VerticalAlignment="Center" Orientation="Horizontal">
-                                                    <fa:IconImage Icon="Filter" Style="{StaticResource Iconfa}" Margin="0 0 5 0"/>
+                                                    <fa:IconImage Icon="Filter" Style="{StaticResource Iconfa}" Margin="0 0 5 0" Foreground="White"/>
                                                     <TextBlock Text="Lọc nâng cao" FontWeight="SemiBold" Foreground="White" Width="80" TextAlignment="Center"/>
-                                                    <fa:IconImage Icon="ArrowDown" Style="{StaticResource Iconfa}" Margin="0 0 5 0"/>
+                                                    <fa:IconImage Icon="ChevronDown" Style="{StaticResource Iconfa}" Margin="0 0 5 0" Foreground="White"/>
                                                 </StackPanel>
                                             </Border>
                                         </Grid>
@@ -209,7 +240,7 @@
                 </ContentControl>
                 <ScrollViewer  VerticalScrollBarVisibility="Hidden">
                     <ItemsControl x:Name="menuJobs">
-                        
+
                     </ItemsControl>
                 </ScrollViewer>
             </Grid>

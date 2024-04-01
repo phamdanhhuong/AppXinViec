@@ -6,7 +6,8 @@
              xmlns:local="clr-namespace:AppXinViecWPF.View.Employer"
              xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="800"
+             Background="White">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>

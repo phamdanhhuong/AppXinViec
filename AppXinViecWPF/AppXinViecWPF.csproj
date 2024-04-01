@@ -38,6 +38,7 @@
     <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationFramework.Aero2" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.SqlClient, Version=4.6.1.6, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -70,23 +71,35 @@
     <Compile Include="DTO\ApplicantDTO.cs" />
     <Compile Include="DTO\EmployerDTO.cs" />
     <Compile Include="DTO\PostDTO.cs" />
+    <Compile Include="View\Applicant\UCCompanyInfomation.xaml.cs">
+      <DependentUpon>UCCompanyInfomation.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Applicant\UCCreateCV.xaml.cs">
       <DependentUpon>UCCreateCV.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Applicant\UCJob.xaml.cs">
       <DependentUpon>UCJob.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Applicant\UCSavedJobs.xaml.cs">
+      <DependentUpon>UCSavedJobs.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Applicant\UCSearchJobs.xaml.cs">
       <DependentUpon>UCSearchJobs.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\Applicant\WCompanyInfo.xaml.cs">
-      <DependentUpon>WCompanyInfo.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Applicant\WJobInfo.xaml.cs">
       <DependentUpon>WJobInfo.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Applicant\WMainApplicant.xaml.cs">
       <DependentUpon>WMainApplicant.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Custom\ComboBoxCustom.xaml.cs">
+      <DependentUpon>ComboBoxCustom.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Custom\TextBoxCustom.xaml.cs">
+      <DependentUpon>TextBoxCustom.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Custom\UCBorder.xaml.cs">
+      <DependentUpon>UCBorder.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Employer\UCAccount.xaml.cs">
       <DependentUpon>UCAccount.xaml</DependentUpon>
@@ -145,6 +158,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Applicant\UCCompanyInfomation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Applicant\UCCreateCV.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -153,11 +170,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Applicant\UCSearchJobs.xaml">
+    <Page Include="View\Applicant\UCSavedJobs.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Applicant\WCompanyInfo.xaml">
+    <Page Include="View\Applicant\UCSearchJobs.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -166,6 +183,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Applicant\WMainApplicant.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Custom\ComboBoxCustom.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Custom\TextBoxCustom.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Custom\UCBorder.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

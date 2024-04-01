@@ -62,5 +62,17 @@ namespace AppXinViecWPF.View.Employer
             MessageBox.Show("Đăng bài thành công");
             this.Close();
         }
+
+        private void txtInput_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtNameJob.Text))
+            {
+                tbPlaceHolder.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                tbPlaceHolder.Visibility = Visibility.Hidden;
+            }
+        }
     }
 }

@@ -7,7 +7,7 @@
              xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
              mc:Ignorable="d" 
              d:DesignHeight="140" d:DesignWidth="800"
-             Loaded="UserControl_Loaded">
+             Loaded="UserControl_Loaded" Padding="10">
     <Border CornerRadius="12" BorderThickness="1" Background="White">
         <Grid Margin="10">
             <Grid.ColumnDefinitions>

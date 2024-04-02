@@ -34,8 +34,58 @@ namespace AppXinViecWPF.View.Custom
                 tbPlaceHolder.Text = placeHolder;
             }
         }
-
-
+        private string txtText;
+        public string TxtText
+        {
+            get { return txtText; }
+            set
+            {
+                txtText = value;
+                txtInput.Text = txtText;
+            }
+        }
+        private Brush backGroundCustom;
+        public Brush BackGroundCustom
+        {
+            get { return backGroundCustom; }
+            set
+            {
+                backGroundCustom = value;
+                main.Background = backGroundCustom;
+            }
+        }
+        private TextAlignment placeHolderAlignment;
+        public TextAlignment PlaceHolderAlignment
+        {
+            get { return placeHolderAlignment; }
+            set
+            {
+                placeHolderAlignment = value;
+                tbPlaceHolder.TextAlignment = placeHolderAlignment;
+            }
+        }
+        private int heightCustom;
+        public int HeightCustom
+        {
+            get { return heightCustom; }
+            set
+            {
+                heightCustom = value;
+                tbPlaceHolder.Height = heightCustom;
+                txtInput.Height = heightCustom;
+            }
+        }
+        private int widthtCustom;
+        public int WidthtCustom
+        {
+            get { return heightCustom; }
+            set
+            {
+                widthtCustom = value;
+                tbPlaceHolder.Width = widthtCustom;
+                txtInput.Width = widthtCustom;
+            }
+        }
         private void txtInput_TextChanged(object sender, TextChangedEventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtInput.Text))
@@ -45,6 +95,86 @@ namespace AppXinViecWPF.View.Custom
             else
             {
                 tbPlaceHolder.Visibility = Visibility.Hidden;
+            }
+        }
+        private int inputFSize;
+        public int InputFSize
+        {
+            get { return inputFSize; }
+            set
+            {
+                inputFSize = value;
+                txtInput.FontSize = inputFSize;
+            }
+        }
+        private int placeHolderFSize;
+        public int PlaceHolderFSize
+        {
+            get { return placeHolderFSize; }
+            set
+            {
+                placeHolderFSize = value;
+                tbPlaceHolder.FontSize = placeHolderFSize;
+            }
+        }
+        private FontWeight inputFWeight;
+        public FontWeight InputFWeight
+        {
+            get { return inputFWeight; }
+            set
+            {
+                inputFWeight = value;
+                txtInput.FontWeight = inputFWeight;
+            }
+        }
+        private FontWeight placeHolderFWeight;
+        public FontWeight PlaceHolderFWeight
+        {
+            get { return placeHolderFWeight; }
+            set
+            {
+                placeHolderFWeight = value;
+                tbPlaceHolder.FontWeight = placeHolderFWeight;
+            }
+        }
+        private Brush inputFColor;
+        public Brush InputFColor
+        {
+            get { return inputFColor; }
+            set
+            {
+                inputFColor = value;
+                txtInput.Foreground= inputFColor;
+            }
+        }
+        private Brush placeHolderFColor;
+        public Brush PlaceHolderFColor
+        {
+            get { return placeHolderFColor; }
+            set
+            {
+                placeHolderFColor = value;
+                tbPlaceHolder.Foreground = placeHolderFColor;
+            }
+        }
+        private Style inputStyle;
+        public Style InputStyle
+        {
+            get { return inputStyle; }
+            set
+            {
+                inputStyle = value;
+                txtInput.Style = inputStyle;
+            }
+        }
+        private Style placeholderStyle;
+        public Style PlaceholderStyle
+        {
+            get { return placeholderStyle; }
+            set
+            {
+                placeholderStyle = value;
+                tbPlaceHolder.Style = placeholderStyle;
             }
         }
     }

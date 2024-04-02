@@ -38,7 +38,7 @@
                             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="10 0 0 0" Height="50">
                                 <Grid Margin="5">
                                     <StackPanel Orientation="Horizontal">
-                                        <fa:IconImage Icon="MagnifyingGlass" Foreground="LightGray" Margin="10 10 0 10"/>
+                                        <fa:IconImage Icon="MagnifyingGlass" Foreground="LightGray" Margin="10 10 10 10"/>
                                         <customControl:TextBoxCustom x:Name="txtNameJob" Width="250" PlaceHolder="Tên công việc, vị trí ứng tuyển..." Margin="0 5 5 5"/>
                                     </StackPanel>
                                 </Grid>

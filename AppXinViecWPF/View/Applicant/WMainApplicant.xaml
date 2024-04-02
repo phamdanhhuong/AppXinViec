@@ -6,10 +6,11 @@
         xmlns:local="clr-namespace:AppXinViecWPF.View.Applicant"
         xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
         mc:Ignorable="d"
-        Title="WMainApplicant" Height="800" Width="1300"
+        Title="WMainApplicant" Height="800" Width="1600"
         WindowStyle="None"
         WindowStartupLocation="CenterScreen" 
-        AllowsTransparency="True">
+        AllowsTransparency="True"
+        Background="Transparent">
     <Border CornerRadius="10 10 10 10">
         <Grid>
             <Grid.ColumnDefinitions>
@@ -242,11 +243,11 @@
                     </Grid>
                 </Grid>
             </Border>
-            <Grid Grid.Column="1">
-                <ContentControl x:Name="ccMain">
-                    
+            <Border Grid.Column="1" Background="LightGray" CornerRadius="0 10 10 0" >
+                <ContentControl x:Name="ccMain" Margin="10">
+                    <Border CornerRadius="10" Background="White"/>
                 </ContentControl>
-            </Grid>
+            </Border>
         </Grid>
     </Border>
 </Window>

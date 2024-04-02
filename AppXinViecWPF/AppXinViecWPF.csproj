@@ -71,20 +71,32 @@
     <Compile Include="DTO\ApplicantDTO.cs" />
     <Compile Include="DTO\EmployerDTO.cs" />
     <Compile Include="DTO\PostDTO.cs" />
+    <Compile Include="View\Applicant\UCAppliedJobs.xaml.cs">
+      <DependentUpon>UCAppliedJobs.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Applicant\UCCompanyInfomation.xaml.cs">
       <DependentUpon>UCCompanyInfomation.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Applicant\UCCreateCV.xaml.cs">
       <DependentUpon>UCCreateCV.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Applicant\UCIconCV.xaml.cs">
+      <DependentUpon>UCIconCV.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Applicant\UCJob.xaml.cs">
       <DependentUpon>UCJob.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Applicant\UCManageCVs.xaml.cs">
+      <DependentUpon>UCManageCVs.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Applicant\UCSavedJobs.xaml.cs">
       <DependentUpon>UCSavedJobs.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Applicant\UCSearchJobs.xaml.cs">
       <DependentUpon>UCSearchJobs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Applicant\UCUploadCVs.xaml.cs">
+      <DependentUpon>UCUploadCVs.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Applicant\WJobInfo.xaml.cs">
       <DependentUpon>WJobInfo.xaml</DependentUpon>
@@ -158,6 +170,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Applicant\UCAppliedJobs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Applicant\UCCompanyInfomation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -166,7 +182,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Applicant\UCIconCV.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Applicant\UCJob.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Applicant\UCManageCVs.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -175,6 +199,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Applicant\UCSearchJobs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Applicant\UCUploadCVs.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

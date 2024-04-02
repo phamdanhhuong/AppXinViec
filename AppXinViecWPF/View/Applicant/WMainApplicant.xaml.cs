@@ -22,7 +22,6 @@ namespace AppXinViecWPF.View.Applicant
         public WMainApplicant()
         {
             InitializeComponent();
-            pnlJobSearch.Visibility = Visibility.Collapsed;
             gridSearchJob.Height = new GridLength(0);
             gridMyCV.Height = new GridLength(0);
             gridCompany.Height = new GridLength(0);
@@ -66,10 +65,6 @@ namespace AppXinViecWPF.View.Applicant
             ccMain.Content = uCSearchJobs;
         }
 
-        private void btnUploadCV_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
 
         private void btnCreateCV_Click(object sender, RoutedEventArgs e)
         {
@@ -143,17 +138,20 @@ namespace AppXinViecWPF.View.Applicant
 
         private void btnAppliedJobs_Click(object sender, RoutedEventArgs e)
         {
-            
+            UCAppliedJobs uCAppliedJobs = new UCAppliedJobs();
+            ccMain.Content= uCAppliedJobs;
         }
 
         private void btnManegeCVs_Click(object sender, RoutedEventArgs e)
         {
-
+            UCManageCVs uCManageCVs = new UCManageCVs();
+            ccMain.Content= uCManageCVs;
         }
 
         private void btnUploadCVs_Click(object sender, RoutedEventArgs e)
         {
-
+            UCUploadCVs uCUploadCVs = new UCUploadCVs();
+            ccMain.Content = uCUploadCVs;
         }
 
         private void btnSampleCVs_Click(object sender, RoutedEventArgs e)

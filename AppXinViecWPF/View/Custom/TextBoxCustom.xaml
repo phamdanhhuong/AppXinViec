@@ -8,8 +8,8 @@
              mc:Ignorable="d" 
              d:DesignHeight="40" d:DesignWidth="250">
 
-    <Grid Background="White">
-        <TextBox x:Name="txtInput" TextChanged="txtInput_TextChanged" Text="{Binding TxtText}" Background="Transparent" BorderThickness="0" VerticalAlignment="Center" VerticalContentAlignment="Center" FontSize="18" Width="230"/>
-        <TextBlock x:Name="tbPlaceHolder" Text="{Binding Placeholder}" Panel.ZIndex="-1" FontSize="18" FontWeight="Light" Foreground="DarkGray" VerticalAlignment="Center" Width="230"/>
+    <Grid x:Name="main" Background="{Binding BackGroundCustom}">
+        <TextBox x:Name="txtInput" TextChanged="txtInput_TextChanged" Text="{Binding TxtText}" Width="{Binding WidthCustom}" Height="{Binding HeightCustom}" FontSize="{Binding InputFSize}" Background="Transparent" FontWeight="{Binding InputFWeight}" Foreground="{Binding InputFColor}" FontStyle="{Binding InputStyle}" BorderThickness="0" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
+        <TextBlock x:Name="tbPlaceHolder" TextAlignment="{Binding PlaceHolderAlignment}" Width="{Binding WidthCustom}" Height="{Binding HeightCustom}" Text="{Binding Placeholder}" Panel.ZIndex="-1" FontSize="{Binding PlaceHolderFSize}" FontWeight="{Binding PlaceHolderFWeight}" Foreground="{Binding PlaceHolderFColor}" FontStyle="Italic" TextWrapping="Wrap" VerticalAlignment="Center"/>
     </Grid>
 </UserControl>

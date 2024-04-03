@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AppXinViecWPF.DAO;
+using AppXinViecWPF.DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,14 @@ namespace AppXinViecWPF.View.Applicant
     /// </summary>
     public partial class UCIconCV : UserControl
     {
-        public UCIconCV()
+        public UCIconCV(int id)
         {
             InitializeComponent();
+            GetCv = CVDAO.Instance.GetCvById(id);
+            DataContext = GetCv;
         }
+
+        CV getCv;
+        internal CV GetCv { get => getCv; set => getCv = value; }
     }
 }

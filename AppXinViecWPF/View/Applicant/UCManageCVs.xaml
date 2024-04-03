@@ -23,7 +23,7 @@
                 <Grid Grid.Row="0" Margin="20" VerticalAlignment="Center">
                     <TextBlock Text="CV đã tạo" FontWeight="Bold" FontSize="30" Margin="5 0 0 0"/>
                     <StackPanel HorizontalAlignment="Right">
-                        <Button Cursor="Hand">
+                        <Button x:Name="btnCreate" Cursor="Hand" Click="btnCreate_Click">
                             <Button.Template>
                                 <ControlTemplate>
                                     <Grid>
@@ -41,9 +41,8 @@
                 </Grid>
                 <Grid Grid.Row="1">
                     <ScrollViewer VerticalScrollBarVisibility="Hidden">
-                        <ItemsControl Margin="20 0 20 0">
-                            <local:UCIconCV/>
-                            <local:UCIconCV/>
+                        <ItemsControl x:Name="icMain" Margin="20 0 20 0">
+
                         </ItemsControl>
                     </ScrollViewer>
                 </Grid>

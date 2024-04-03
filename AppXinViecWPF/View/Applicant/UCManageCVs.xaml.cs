@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppXinViecWPF.DAO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,16 @@ namespace AppXinViecWPF.View.Applicant
         public UCManageCVs()
         {
             InitializeComponent();
+            int[] ids = CVDAO.Instance.GetAllIdCvById(AccountDAO.UserID);
+            foreach (int id in ids)
+            {
+                icMain.Items.Add(new UCIconCV(id));
+            }
+        }
+
+        private void btnCreate_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

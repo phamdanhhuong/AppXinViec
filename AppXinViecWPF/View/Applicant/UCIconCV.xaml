@@ -37,7 +37,7 @@
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="0">
                 <Border BorderThickness="0 0 1 0" BorderBrush="LightGray" Margin="0 40 0 40"/>
-                <TextBlock Text="Lập trình viên" FontSize="20" FontWeight="SemiBold" VerticalAlignment="Center" Margin="20 10 10 10"/>
+                <TextBlock Text="{Binding Path = TenCV }" FontSize="20" FontWeight="SemiBold" VerticalAlignment="Center" Margin="20 10 10 10"/>
             </Grid>
             <Grid Grid.Column="1">
                 <Border BorderThickness="0 0 1 0" BorderBrush="LightGray" Margin="0 40 0 40"/>

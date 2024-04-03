@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="ConnectSTR" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=XinViec;Integrated Security=True;</Value>
+      <Value Profile="(Default)">Data Source=MSI;Initial Catalog=XinViec;Integrated Security=True;Encrypt=False</Value>
     </Setting>
   </Settings>
 </SettingsFile>

@@ -37,7 +37,7 @@ namespace AppXinViecWPF.View.Custom
         private string txtText;
         public string TxtText
         {
-            get { return txtText; }
+            get { return txtInput.Text; }
             set
             {
                 txtText = value;

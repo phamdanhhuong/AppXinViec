@@ -65,10 +65,12 @@
     </ApplicationDefinition>
     <Compile Include="DAO\AccountDAO.cs" />
     <Compile Include="DAO\ApplicantDAO.cs" />
+    <Compile Include="DAO\CVDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\EmployerDAO.cs" />
     <Compile Include="DAO\PostDAO.cs" />
     <Compile Include="DTO\ApplicantDTO.cs" />
+    <Compile Include="DTO\CV.cs" />
     <Compile Include="DTO\EmployerDTO.cs" />
     <Compile Include="DTO\PostDTO.cs" />
     <Compile Include="View\Applicant\UCAppliedJobs.xaml.cs">

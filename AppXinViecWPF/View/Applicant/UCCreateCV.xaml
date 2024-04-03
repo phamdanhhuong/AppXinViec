@@ -21,7 +21,7 @@
                     <Grid Margin="5">
                         <Border BorderBrush="LightGray" BorderThickness="0 0 0 1" CornerRadius="0"/>
                         <StackPanel>
-                            <customControl:TextBoxCustom Height="40" PlaceHolder="Nhập tên của CV" PlaceHolderFSize="24" InputFSize="24" PlaceHolderFColor="Gray" PlaceHolderFWeight="Light" BorderThickness="0"/>
+                            <customControl:TextBoxCustom x:Name="txtNameCV" Height="40" PlaceHolder="Nhập tên của CV" PlaceHolderFSize="24" InputFSize="24" PlaceHolderFColor="Gray" PlaceHolderFWeight="Light" BorderThickness="0"/>
                         </StackPanel>
                     </Grid>
                 </StackPanel>
@@ -60,7 +60,7 @@
                             </Button>
                         </StackPanel>
                         <StackPanel HorizontalAlignment="Right">
-                            <Button Grid.Column="0" Cursor="Hand" Margin="5">
+                            <Button x:Name="btnSave" Grid.Column="0" Cursor="Hand" Margin="5" Click="btnSave_Click">
                                 <Button.Template>
                                     <ControlTemplate>
                                         <Grid>
@@ -104,13 +104,31 @@
                         </Grid.ColumnDefinitions>
                         <Border Grid.Column="0" BorderThickness="1" BorderBrush="Gray">
                             <Grid>
-                                <Image Source="D:/sample.jpg"/>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition Height="60"/>
+                                </Grid.RowDefinitions>
+                                <Image Grid.Row="0" x:Name="imgAvatar" Source="D:/sample.jpg"/>
+                                <Button Grid.Row="1" Cursor="Hand" Margin="5" x:Name="btnUploadAvt" Click="btnUploadAvt_Click">
+                                    <Button.Template>
+                                        <ControlTemplate>
+                                            <Grid>
+                                                <Border CornerRadius="15" BorderThickness="1"  Background="#e5f7ed">
+                                                    <StackPanel Margin="0 0 10 0"  HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+                                                        <fa:IconImage Icon="Image" Foreground="#12b35b" Margin="10"/>
+                                                        <TextBlock Text="Tải ảnh lên" FontWeight="SemiBold" FontSize="20" Foreground="#12b35b" Width="100" TextAlignment="Center" Margin="10"/>
+                                                    </StackPanel>
+                                                </Border>
+                                            </Grid>
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                </Button>
                             </Grid>
                         </Border>
                         <Grid Grid.Column="1" Margin="10">
                             <StackPanel Orientation="Vertical">
-                                <customControl:TextBoxCustom Height="48" PlaceHolder="Nhập họ tên" InputFSize="35" PlaceHolderFSize="35" PlaceHolderFColor="Gray" PlaceHolderFWeight="Light" BorderThickness="0"/>
-                                <customControl:TextBoxCustom Height="32" PlaceHolder="Vị trí ứng tuyển" InputFSize="21" PlaceHolderFSize="21" PlaceHolderFColor="Gray" PlaceHolderFWeight="Light" BorderThickness="0"/>
+                                <customControl:TextBoxCustom x:Name="txtFullName" Height="48" PlaceHolder="Nhập họ tên" InputFSize="35" PlaceHolderFSize="35" PlaceHolderFColor="Gray" PlaceHolderFWeight="Light" BorderThickness="0"/>
+                                <customControl:TextBoxCustom x:Name="txtApplyPosition" Height="32" PlaceHolder="Vị trí ứng tuyển" InputFSize="21" PlaceHolderFSize="21" PlaceHolderFColor="Gray" PlaceHolderFWeight="Light" BorderThickness="0"/>
                             </StackPanel>
                         </Grid>
                         <Grid Grid.Column="2">
@@ -140,7 +158,7 @@
                                     </Label>
                                 </StackPanel>
                                 <StackPanel Grid.Column="1">
-                                    <customControl:TextBoxCustom Height="48" PlaceHolder="0123 456 789" InputFSize="20" PlaceHolderFSize="20" PlaceHolderFColor="Gray" PlaceHolderFWeight="Light" BorderThickness="0" Margin="10 5 0 0"/>
+                                    <customControl:TextBoxCustom x:Name="txtPhone" Height="48" PlaceHolder="0123 456 789" InputFSize="20" PlaceHolderFSize="20" PlaceHolderFColor="Gray" PlaceHolderFWeight="Light" BorderThickness="0" Margin="10 5 0 0"/>
                                 </StackPanel>
                             </Grid>
                             <Grid Grid.Row="1">
@@ -161,7 +179,7 @@
                                     </Label>
                                 </StackPanel>
                                 <StackPanel Grid.Column="1">
-                                    <customControl:TextBoxCustom Height="48" PlaceHolder="Nam/Nữ" InputFSize="20" PlaceHolderFSize="20" PlaceHolderFColor="Gray" PlaceHolderFWeight="Light" BorderThickness="0" Margin="10 5 0 0"/>
+                                    <customControl:TextBoxCustom x:Name="txtGender" Height="48" PlaceHolder="Nam/Nữ" InputFSize="20" PlaceHolderFSize="20" PlaceHolderFColor="Gray" PlaceHolderFWeight="Light" BorderThickness="0" Margin="10 5 0 0"/>
                                 </StackPanel>
                             </Grid>
                             <Grid Grid.Row="2">
@@ -182,7 +200,7 @@
                                     </Label>
                                 </StackPanel>
                                 <StackPanel Grid.Column="1">
-                                    <customControl:TextBoxCustom Height="48" PlaceHolder="ten@example.com" InputFSize="20" PlaceHolderFSize="20" PlaceHolderFColor="Gray" PlaceHolderFWeight="Light" BorderThickness="0" Margin="10 5 0 0"/>
+                                    <customControl:TextBoxCustom x:Name="txtEmail" Height="48" PlaceHolder="ten@example.com" InputFSize="20" PlaceHolderFSize="20" PlaceHolderFColor="Gray" PlaceHolderFWeight="Light" BorderThickness="0" Margin="10 5 0 0"/>
                                 </StackPanel>
                             </Grid>
                             <Grid Grid.Row="3">
@@ -203,7 +221,7 @@
                                     </Label>
                                 </StackPanel>
                                 <StackPanel Grid.Column="1">
-                                    <customControl:TextBoxCustom Height="48" PlaceHolder="DD/MM/YYYY" InputFSize="20" PlaceHolderFSize="20" PlaceHolderFColor="Gray" PlaceHolderFWeight="Light" BorderThickness="0" Margin="10 5 0 0"/>
+                                    <customControl:TextBoxCustom x:Name="txtBirth" Height="48" PlaceHolder="DD/MM/YYYY" InputFSize="20" PlaceHolderFSize="20" PlaceHolderFColor="Gray" PlaceHolderFWeight="Light" BorderThickness="0" Margin="10 5 0 0"/>
                                 </StackPanel>
                             </Grid>
                             <Grid Grid.Row="4">
@@ -224,7 +242,7 @@
                                     </Label>
                                 </StackPanel>
                                 <StackPanel Grid.Column="1">
-                                    <customControl:TextBoxCustom Height="48" PlaceHolder="facebook.com/ten.vn" InputFSize="20" PlaceHolderFSize="20" PlaceHolderFColor="Gray" PlaceHolderFWeight="Light" BorderThickness="0" Margin="10 5 0 0"/>
+                                    <customControl:TextBoxCustom x:Name="txtLink" Height="48" PlaceHolder="facebook.com/ten.vn" InputFSize="20" PlaceHolderFSize="20" PlaceHolderFColor="Gray" PlaceHolderFWeight="Light" BorderThickness="0" Margin="10 5 0 0"/>
                                 </StackPanel>
                             </Grid>
                             <Grid Grid.Row="5">
@@ -245,7 +263,7 @@
                                     </Label>
                                 </StackPanel>
                                 <StackPanel Grid.Column="1">
-                                    <customControl:TextBoxCustom Height="48" PlaceHolder="Quận 1, Tp Hồ Chí Minh" InputFSize="20" PlaceHolderFSize="20" PlaceHolderFColor="Gray" PlaceHolderFWeight="Light" BorderThickness="0" Margin="10 5 0 0"/>
+                                    <customControl:TextBoxCustom x:Name="txtAddress" Height="48" PlaceHolder="Quận 1, Tp Hồ Chí Minh" InputFSize="20" PlaceHolderFSize="20" PlaceHolderFColor="Gray" PlaceHolderFWeight="Light" BorderThickness="0" Margin="10 5 0 0"/>
                                 </StackPanel>
                             </Grid>
                         </Grid>
@@ -270,10 +288,10 @@
                                     <ColumnDefinition/>
                                 </Grid.ColumnDefinitions>
                                 <Grid Grid.Column="0" Margin="10">
-                                    <customControl:TextBoxCustom InputFColor="#609c14" InputFWeight="Bold" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Height="48" PlaceHolder="Ngành học / Môn học" InputFSize="20" PlaceHolderFSize="20" PlaceHolderFColor="#95bb65" PlaceHolderFWeight="Light" BorderThickness="0" Margin="10 5 10 0"/>
+                                    <customControl:TextBoxCustom x:Name="txtMajor" InputFColor="#609c14" InputFWeight="Bold" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Height="48" PlaceHolder="Ngành học / Môn học" InputFSize="20" PlaceHolderFSize="20" PlaceHolderFColor="#95bb65" PlaceHolderFWeight="Light" BorderThickness="0" Margin="10 5 10 0"/>
                                 </Grid>
                                 <Grid Grid.Column="1" Margin="10">
-                                    <customControl:TextBoxCustom InputFColor="#609c14" InputFWeight="Bold" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Height="48" PlaceHolder="Tên trường học" InputFSize="20" PlaceHolderFSize="20" PlaceHolderFColor="#95bb65" PlaceHolderFWeight="Light" BorderThickness="0" Margin="10 5 10 0"/>
+                                    <customControl:TextBoxCustom x:Name="txtNameSchool" InputFColor="#609c14" InputFWeight="Bold" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Height="48" PlaceHolder="Tên trường học" InputFSize="20" PlaceHolderFSize="20" PlaceHolderFColor="#95bb65" PlaceHolderFWeight="Light" BorderThickness="0" Margin="10 5 10 0"/>
                                 </Grid>
                             </Grid>
                             <Grid Grid.Row="1">
@@ -282,10 +300,10 @@
                                     <ColumnDefinition/>
                                 </Grid.ColumnDefinitions>
                                 <Grid Grid.Column="0" Margin="10">
-                                    <customControl:TextBoxCustom InputFColor="White" PlaceHolderAlignment="Left" VerticalContentAlignment="Top" Height="100" BackGroundCustom="#95bb65" PlaceHolder=" Bắt đầu - Kết thúc" InputFSize="20" PlaceHolderFSize="20" PlaceHolderFColor="#c6dbab" PlaceHolderFWeight="Light" BorderThickness="0" Margin="10 5 180 0"/>
+                                    <customControl:TextBoxCustom x:Name="txtSchoolDay" InputFColor="White" PlaceHolderAlignment="Left" VerticalContentAlignment="Top" Height="100" BackGroundCustom="#95bb65" PlaceHolder=" Bắt đầu - Kết thúc" InputFSize="20" PlaceHolderFSize="20" PlaceHolderFColor="#c6dbab" PlaceHolderFWeight="Light" BorderThickness="0" Margin="10 5 180 0"/>
                                 </Grid>
                                 <Grid Grid.Column="1" Margin="10">
-                                    <customControl:TextBoxCustom HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Height="100" PlaceHolder="Mô tả thành tích học tập của bạn" InputFSize="20" PlaceHolderFSize="20" PlaceHolderFColor="Gray" PlaceHolderFWeight="Light" BorderThickness="0" Margin="10 5 10 0"/>
+                                    <customControl:TextBoxCustom x:Name="txtSchoolAchive" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Height="100" PlaceHolder="Mô tả thành tích học tập của bạn" InputFSize="20" PlaceHolderFSize="20" PlaceHolderFColor="Gray" PlaceHolderFWeight="Light" BorderThickness="0" Margin="10 5 10 0"/>
                                 </Grid>
                             </Grid>
                         </Grid>
@@ -310,10 +328,10 @@
                                     <ColumnDefinition/>
                                 </Grid.ColumnDefinitions>
                                 <Grid Grid.Column="0" Margin="10">
-                                    <customControl:TextBoxCustom InputFColor="#609c14" InputFWeight="Bold" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Height="48" PlaceHolder="Vị trí công việc" InputFSize="20" PlaceHolderFSize="20" PlaceHolderFColor="#95bb65" PlaceHolderFWeight="Light" BorderThickness="0" Margin="10 5 10 0"/>
+                                    <customControl:TextBoxCustom x:Name="txtNameLastJob" InputFColor="#609c14" InputFWeight="Bold" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Height="48" PlaceHolder="Tên công việc" InputFSize="20" PlaceHolderFSize="20" PlaceHolderFColor="#95bb65" PlaceHolderFWeight="Light" BorderThickness="0" Margin="10 5 10 0"/>
                                 </Grid>
                                 <Grid Grid.Column="1" Margin="10">
-                                    <customControl:TextBoxCustom InputFColor="#609c14" InputFWeight="Bold" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Height="48" PlaceHolder="Tên công ty" InputFSize="20" PlaceHolderFSize="20" PlaceHolderFColor="#95bb65" PlaceHolderFWeight="Light" BorderThickness="0" Margin="10 5 10 0"/>
+                                    <customControl:TextBoxCustom x:Name="txtNameLastCompany" InputFColor="#609c14" InputFWeight="Bold" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Height="48" PlaceHolder="Tên công ty" InputFSize="20" PlaceHolderFSize="20" PlaceHolderFColor="#95bb65" PlaceHolderFWeight="Light" BorderThickness="0" Margin="10 5 10 0"/>
                                 </Grid>
                             </Grid>
                             <Grid Grid.Row="1">
@@ -322,10 +340,10 @@
                                     <ColumnDefinition/>
                                 </Grid.ColumnDefinitions>
                                 <Grid Grid.Column="0" Margin="10">
-                                    <customControl:TextBoxCustom InputFColor="White" PlaceHolderAlignment="Left" VerticalContentAlignment="Top" Height="100" BackGroundCustom="#95bb65" PlaceHolder=" Bắt đầu - Kết thúc" InputFSize="20" PlaceHolderFSize="20" PlaceHolderFColor="#c6dbab" PlaceHolderFWeight="Light" BorderThickness="0" Margin="10 5 180 0"/>
+                                    <customControl:TextBoxCustom x:Name="txtWorkDay" InputFColor="White" PlaceHolderAlignment="Left" VerticalContentAlignment="Top" Height="100" BackGroundCustom="#95bb65" PlaceHolder=" Bắt đầu - Kết thúc" InputFSize="20" PlaceHolderFSize="20" PlaceHolderFColor="#c6dbab" PlaceHolderFWeight="Light" BorderThickness="0" Margin="10 5 180 0"/>
                                 </Grid>
                                 <Grid Grid.Column="1" Margin="10">
-                                    <customControl:TextBoxCustom HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Height="100" PlaceHolder="Mô tả kinh nghiệm làm việc của bạn" InputFSize="20" PlaceHolderFSize="20" PlaceHolderFColor="Gray" PlaceHolderFWeight="Light" BorderThickness="0" Margin="10 5 10 0"/>
+                                    <customControl:TextBoxCustom x:Name="txtDescriptionExp" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Height="100" PlaceHolder="Mô tả kinh nghiệm làm việc của bạn" InputFSize="20" PlaceHolderFSize="20" PlaceHolderFColor="Gray" PlaceHolderFWeight="Light" BorderThickness="0" Margin="10 5 10 0"/>
                                 </Grid>
                             </Grid>
                         </Grid>
@@ -350,10 +368,10 @@
                                     <ColumnDefinition/>
                                 </Grid.ColumnDefinitions>
                                 <Grid Grid.Column="0" Margin="10">
-                                    <customControl:TextBoxCustom InputFColor="#609c14" InputFWeight="Bold" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Height="48" PlaceHolder="Tên hoạt động, dự án" InputFSize="20" PlaceHolderFSize="20" PlaceHolderFColor="#95bb65" PlaceHolderFWeight="Light" BorderThickness="0" Margin="10 5 10 0"/>
+                                    <customControl:TextBoxCustom x:Name="txtProjectName" InputFColor="#609c14" InputFWeight="Bold" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Height="48" PlaceHolder="Tên hoạt động, dự án" InputFSize="20" PlaceHolderFSize="20" PlaceHolderFColor="#95bb65" PlaceHolderFWeight="Light" BorderThickness="0" Margin="10 5 10 0"/>
                                 </Grid>
                                 <Grid Grid.Column="1" Margin="10">
-                                    <customControl:TextBoxCustom InputFColor="#609c14" InputFWeight="Bold" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Height="48" PlaceHolder="Vị trí công việc" InputFSize="20" PlaceHolderFSize="20" PlaceHolderFColor="#95bb65" PlaceHolderFWeight="Light" BorderThickness="0" Margin="10 5 10 0"/>
+                                    <customControl:TextBoxCustom x:Name="txtProjectPosition" InputFColor="#609c14" InputFWeight="Bold" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Height="48" PlaceHolder="Vị trí công việc" InputFSize="20" PlaceHolderFSize="20" PlaceHolderFColor="#95bb65" PlaceHolderFWeight="Light" BorderThickness="0" Margin="10 5 10 0"/>
                                 </Grid>
                             </Grid>
                             <Grid Grid.Row="1">
@@ -362,10 +380,10 @@
                                     <ColumnDefinition/>
                                 </Grid.ColumnDefinitions>
                                 <Grid Grid.Column="0" Margin="10">
-                                    <customControl:TextBoxCustom InputFColor="White" PlaceHolderAlignment="Left" VerticalContentAlignment="Top" Height="100" BackGroundCustom="#95bb65" PlaceHolder=" Bắt đầu - Kết thúc" InputFSize="20" PlaceHolderFSize="20" PlaceHolderFColor="#c6dbab" PlaceHolderFWeight="Light" BorderThickness="0" Margin="10 5 180 0"/>
+                                    <customControl:TextBoxCustom x:Name="txtProjectDay" InputFColor="White" PlaceHolderAlignment="Left" VerticalContentAlignment="Top" Height="100" BackGroundCustom="#95bb65" PlaceHolder=" Bắt đầu - Kết thúc" InputFSize="20" PlaceHolderFSize="20" PlaceHolderFColor="#c6dbab" PlaceHolderFWeight="Light" BorderThickness="0" Margin="10 5 180 0"/>
                                 </Grid>
                                 <Grid Grid.Column="1" Margin="10">
-                                    <customControl:TextBoxCustom HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Height="100" PlaceHolder="Mô tả hoạt động" InputFSize="20" PlaceHolderFSize="20" PlaceHolderFColor="Gray" PlaceHolderFWeight="Light" BorderThickness="0" Margin="10 5 10 0"/>
+                                    <customControl:TextBoxCustom x:Name="txtProjectDescription" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Height="100" PlaceHolder="Mô tả hoạt động" InputFSize="20" PlaceHolderFSize="20" PlaceHolderFColor="Gray" PlaceHolderFWeight="Light" BorderThickness="0" Margin="10 5 10 0"/>
                                 </Grid>
                             </Grid>
                         </Grid>
@@ -386,7 +404,7 @@
                                 <TextBlock Text="Mục tiêu nghề nghiệp" Foreground="#95bb65" FontSize="22" FontWeight="Bold" Margin="20"/>
                             </Grid>
                             <Grid Grid.Row="1">
-                                <customControl:TextBoxCustom HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Height="120" PlaceHolder="Mô tả mục tiêu nghề nghiệp của bạn, bao gồm ngắn hạn và dài hạn" InputFSize="20" PlaceHolderFSize="20" PlaceHolderFColor="Gray" PlaceHolderFWeight="Light" BorderThickness="0" Margin="20"/>
+                                <customControl:TextBoxCustom x:Name="txtTarget" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Height="120" PlaceHolder="Mô tả mục tiêu nghề nghiệp của bạn, bao gồm ngắn hạn và dài hạn" InputFSize="20" PlaceHolderFSize="20" PlaceHolderFColor="Gray" PlaceHolderFWeight="Light" BorderThickness="0" Margin="20"/>
                             </Grid>
                         </Grid>
                         <Grid Grid.Column="1">
@@ -399,7 +417,7 @@
                                 <TextBlock Text="Các kĩ năng" Foreground="#95bb65" FontSize="22" FontWeight="Bold" Margin="20"/>
                             </Grid>
                             <Grid Grid.Row="1">
-                                <customControl:TextBoxCustom HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Height="120" PlaceHolder="Tên kĩ năng - Mô tả kĩ năng" InputFSize="20" PlaceHolderFSize="20" PlaceHolderFColor="Gray" PlaceHolderFWeight="Light" BorderThickness="0" Margin="20"/>
+                                <customControl:TextBoxCustom x:Name="txtSkill" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Height="120" PlaceHolder="Tên kĩ năng - Mô tả kĩ năng" InputFSize="20" PlaceHolderFSize="20" PlaceHolderFColor="Gray" PlaceHolderFWeight="Light" BorderThickness="0" Margin="20"/>
                             </Grid>
                         </Grid>
                         <Grid Grid.Column="2">
@@ -412,7 +430,7 @@
                                 <TextBlock Text="Chứng chỉ" Foreground="#95bb65" FontSize="22" FontWeight="Bold" Margin="20"/>
                             </Grid>
                             <Grid Grid.Row="1">
-                                <customControl:TextBoxCustom HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Height="120" PlaceHolder="Thời gian - Tên chứng chỉ" InputFSize="20" PlaceHolderFSize="20" PlaceHolderFColor="Gray" PlaceHolderFWeight="Light" BorderThickness="0" Margin="20"/>
+                                <customControl:TextBoxCustom x:Name="txtCertificate" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Height="120" PlaceHolder="Thời gian - Tên chứng chỉ" InputFSize="20" PlaceHolderFSize="20" PlaceHolderFColor="Gray" PlaceHolderFWeight="Light" BorderThickness="0" Margin="20"/>
                             </Grid>
                         </Grid>
                     </Grid>
@@ -431,7 +449,7 @@
                                 <TextBlock Text="Sở thích" Foreground="#95bb65" FontSize="22" FontWeight="Bold" Margin="20"/>
                             </Grid>
                             <Grid Grid.Row="1">
-                                <customControl:TextBoxCustom HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Height="120" PlaceHolder="Điền các sở thích của bạn" InputFSize="20" PlaceHolderFSize="20" PlaceHolderFColor="Gray" PlaceHolderFWeight="Light" BorderThickness="0" Margin="20"/>
+                                <customControl:TextBoxCustom x:Name="txtFav" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Height="120" PlaceHolder="Điền các sở thích của bạn" InputFSize="20" PlaceHolderFSize="20" PlaceHolderFColor="Gray" PlaceHolderFWeight="Light" BorderThickness="0" Margin="20"/>
                             </Grid>
                         </Grid>
                         <Grid Grid.Column="1">
@@ -444,7 +462,7 @@
                                 <TextBlock Text="Thông tin thêm" Foreground="#95bb65" FontSize="22" FontWeight="Bold" Margin="20"/>
                             </Grid>
                             <Grid Grid.Row="1">
-                                <customControl:TextBoxCustom HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Height="120" PlaceHolder="Điền các thông tin khác (nếu có)" InputFSize="20" PlaceHolderFSize="20" PlaceHolderFColor="Gray" PlaceHolderFWeight="Light" BorderThickness="0" Margin="20"/>
+                                <customControl:TextBoxCustom x:Name="txtExtra" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Height="120" PlaceHolder="Điền các thông tin khác (nếu có)" InputFSize="20" PlaceHolderFSize="20" PlaceHolderFColor="Gray" PlaceHolderFWeight="Light" BorderThickness="0" Margin="20"/>
                             </Grid>
                         </Grid>
                     </Grid>

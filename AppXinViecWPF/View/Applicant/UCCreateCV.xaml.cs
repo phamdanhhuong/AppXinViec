@@ -45,13 +45,18 @@ namespace AppXinViecWPF.View.Applicant
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-            //DateTime dateTime = DateTime.ParseExact(txtBirth.TxtText, "dd/MM/yyyy",null);
             CV cV = new CV(AccountDAO.UserID, txtNameCV.TxtText,txtFullName.TxtText,txtApplyPosition.TxtText,ImgAvt,
-                txtPhone.TxtText,txtGender.TxtText,txtEmail.TxtText, DateTime.ParseExact(txtBirth.TxtText, "dd/MM/yyyy", null)
-                ,txtLink.TxtText,txtAddress.TxtText,txtMajor.TxtText,txtNameSchool.TxtText,txtSchoolDay.TxtText,txtSchoolAchive.TxtText,
+                txtPhone.TxtText,txtGender.TxtText,txtEmail.TxtText, DateTime.Parse(txtBirth.TxtText)
+                , txtLink.TxtText,txtAddress.TxtText,txtMajor.TxtText,txtNameSchool.TxtText,txtSchoolDay.TxtText,txtSchoolAchive.TxtText,
                 txtNameLastJob.TxtText,txtNameLastCompany.TxtText,txtWorkDay.TxtText,txtDescriptionExp.TxtText,txtProjectName.TxtText,txtProjectPosition.TxtText,
                 txtProjectDay.TxtText,txtProjectDescription.TxtText,txtTarget.TxtText,txtSkill.TxtText,txtCertificate.TxtText,txtFav.TxtText,txtExtra.TxtText);
             CVDAO.Instance.CreateCV(cV);
+            UserControl_Loaded(sender, e);
+        }
+
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }

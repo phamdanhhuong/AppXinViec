@@ -47,5 +47,10 @@ namespace AppXinViecWPF.View.Employer
             WJobInfo jobInfo = new WJobInfo(IdPost);
             jobInfo.ShowDialog();
         }
+
+        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            PostDAO.Instance.DeletePostById(IdPost);
+        }
     }
 }

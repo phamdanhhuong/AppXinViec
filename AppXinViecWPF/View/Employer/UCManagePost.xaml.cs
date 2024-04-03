@@ -43,7 +43,9 @@ namespace AppXinViecWPF.View.Employer
             IdPosts = PostDAO.Instance.GetAllIdPostById(AccountDAO.UserID);
             foreach (int IdPost in IdPosts)
             {
-                icMain.Items.Add(new UCMiniPost(IdPost));
+                UCMiniPost p = new UCMiniPost(IdPost);
+                p.btnDelete.Click += UserControl_Loaded;
+                icMain.Items.Add(p);
             }
         }
 

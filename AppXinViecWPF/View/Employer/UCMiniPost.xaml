@@ -100,7 +100,8 @@
                         <Button x:Name="btnDelete"
                                 BorderBrush="Transparent" 
                                 Style="{StaticResource btnNormal}"
-                                Width="20" Height="20">
+                                Width="20" Height="20"
+                                Click="btnDelete_Click">
                             <StackPanel >
                                 <fa:IconImage Icon="Cancel"/>
                             </StackPanel>

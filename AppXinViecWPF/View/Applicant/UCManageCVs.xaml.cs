@@ -24,16 +24,23 @@ namespace AppXinViecWPF.View.Applicant
         public UCManageCVs()
         {
             InitializeComponent();
-            int[] ids = CVDAO.Instance.GetAllIdCvById(AccountDAO.UserID);
-            foreach (int id in ids)
-            {
-                icMain.Items.Add(new UCIconCV(id));
-            }
         }
 
         private void btnCreate_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            icMain.Items.Clear();
+            int[] ids = CVDAO.Instance.GetAllIdCvById(AccountDAO.UserID);
+            foreach (int id in ids)
+            {
+                UCIconCV uc = new UCIconCV(id);
+                uc.btnDelete.Click += UserControl_Loaded;
+                icMain.Items.Add(uc);
+            }
         }
     }
 }

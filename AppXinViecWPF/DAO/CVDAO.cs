@@ -53,5 +53,10 @@ namespace AppXinViecWPF.DAO
             CV dt = new CV(dataTable);
             return dt;
         }
+        public void DeleteCvById(int id)
+        {
+            string query = string.Format("DELETE FROM Cv WHERE Id = {0}", id);
+            DataProvider.Instance.ExecuteNonQuery(query);
+        }
     }
 }

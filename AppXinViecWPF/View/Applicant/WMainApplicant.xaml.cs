@@ -157,6 +157,8 @@ namespace AppXinViecWPF.View.Applicant
         private void btnSampleCVs_Click(object sender, RoutedEventArgs e)
         {
             UCCreateCV uCCreateCV = new UCCreateCV();
+            uCCreateCV.btnSave.Click += btnSampleCVs_Click;
+            uCCreateCV.btnClear.Click += btnSampleCVs_Click;
             ccMain.Content = uCCreateCV;
         }
 

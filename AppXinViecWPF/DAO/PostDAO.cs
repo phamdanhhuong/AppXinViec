@@ -136,6 +136,13 @@ namespace AppXinViecWPF.DAO
             }
             return result;
         }
+        public void DeletePostById(int id)
+        {
+            string query = string.Format("DELETE FROM PostDetail WHERE Id = {0}", id);
+            DataProvider.Instance.ExecuteNonQuery(query);
+            query = string.Format("DELETE FROM Post WHERE Id = {0}", id);
+            DataProvider.Instance.ExecuteNonQuery(query);
+        }
     }
 }
 

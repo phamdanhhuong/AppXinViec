@@ -50,21 +50,54 @@
             <Grid Grid.Column="3">
                 <Border BorderThickness="0 0 1 0" BorderBrush="LightGray" Margin="0 40 0 40"/>
                 <Grid>
-                    <Ellipse Fill="LightGray" Height="38" Width="38"/>
-                    <fa:IconImage Icon="Pencil" Foreground="White" Margin="0" Height="18" Width="18"/>
+                    <Button x:Name="btnEdit" Height="50" Grid.Column="0" Cursor="Hand" Margin="5" Click="btnEdit_Click">
+                        <Button.Template>
+                            <ControlTemplate>
+                                <Grid>
+                                    <Border CornerRadius="100" BorderThickness="1"  Background="LightGray">
+                                        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+                                            <fa:IconImage Icon="Pencil" Foreground="White" Margin="0" Height="18" Width="18"/>
+                                        </StackPanel>
+                                    </Border>
+                                </Grid>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
                 </Grid>
             </Grid>
             <Grid Grid.Column="4">
                 <Border BorderThickness="0 0 1 0" BorderBrush="LightGray" Margin="0 40 0 40"/>
                 <Grid>
-                    <Ellipse Fill="LightGray" Height="38" Width="38"/>
-                    <fa:IconImage Icon="Eye" Foreground="White" Margin="0" Height="18" Width="18"/>
+                    <Button x:Name="btnView" Height="50" Grid.Column="0" Cursor="Hand" Margin="5" Click="btnView_Click">
+                        <Button.Template>
+                            <ControlTemplate>
+                                <Grid>
+                                    <Border CornerRadius="100" BorderThickness="1"  Background="LightGray">
+                                        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+                                            <fa:IconImage Icon="Eye" Foreground="White" Margin="0" Height="18" Width="18"/>
+                                        </StackPanel>
+                                    </Border>
+                                </Grid>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
                 </Grid>
             </Grid>
             <Grid Grid.Column="5">
                 <Grid>
-                    <Ellipse Fill="LightGray" Height="38" Width="38"/>
-                    <fa:IconImage Icon="TrashCan" Foreground="White" Margin="0" Height="18" Width="18"/>
+                    <Button x:Name="btnDelete" Height="50" Grid.Column="0" Cursor="Hand" Margin="5" Click="btnDelete_Click">
+                        <Button.Template>
+                            <ControlTemplate>
+                                <Grid>
+                                    <Border CornerRadius="100" BorderThickness="1"  Background="LightGray">
+                                        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+                                            <fa:IconImage Icon="TrashCan" Foreground="White" Margin="0" Height="18" Width="18"/>
+                                        </StackPanel>
+                                    </Border>
+                                </Grid>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
                 </Grid>
             </Grid>
         </Grid>

@@ -7,7 +7,8 @@
              mc:Ignorable="d" 
              d:DesignHeight="800" d:DesignWidth="800" Background="#f1f2f6"
             xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
-            xmlns:customControl="clr-namespace:AppXinViecWPF.View.Custom">
+            xmlns:customControl="clr-namespace:AppXinViecWPF.View.Custom"
+             Loaded="UserControl_Loaded">
 
     <Grid>
         <Grid.RowDefinitions>

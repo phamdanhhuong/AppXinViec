@@ -31,5 +31,20 @@ namespace AppXinViecWPF.View.Applicant
 
         CV getCv;
         internal CV GetCv { get => getCv; set => getCv = value; }
+
+        public void btnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            CVDAO.Instance.DeleteCvById(GetCv.Id);
+        }
+
+        private void btnView_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnEdit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

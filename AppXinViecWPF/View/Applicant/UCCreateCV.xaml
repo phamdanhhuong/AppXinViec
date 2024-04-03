@@ -8,7 +8,8 @@
              xmlns:customControl="clr-namespace:AppXinViecWPF.View.Custom"
              mc:Ignorable="d" 
              d:DesignHeight="1900" d:DesignWidth="900" Padding="10"
-             Background="LightGray">
+             Background="LightGray"
+             Loaded="UserControl_Loaded">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
@@ -28,7 +29,7 @@
                 <StackPanel HorizontalAlignment="Right">
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                         <StackPanel HorizontalAlignment="Right">
-                            <Button Grid.Column="0" Cursor="Hand" Margin="5">
+                            <Button x:Name="btnClear" Grid.Column="0" Cursor="Hand" Margin="5">
                                 <Button.Template>
                                     <ControlTemplate>
                                         <Grid>

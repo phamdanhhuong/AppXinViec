@@ -27,6 +27,8 @@ namespace AppXinViecWPF.View.Applicant
             InitializeComponent();
             GetCv = CVDAO.Instance.GetCvById(id);
             DataContext = GetCv;
+            txtCreatDay.Text += GetCv.NgayTao.ToString();
+            txtEditDay.Text += GetCv.NgaySua.ToString();
         }
 
         CV getCv;

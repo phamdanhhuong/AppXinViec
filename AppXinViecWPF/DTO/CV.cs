@@ -108,6 +108,40 @@ namespace AppXinViecWPF.DTO
             ThongTinThem = thongTinThem;
         }
 
+        public CV(int id,int idApplicant, string tenCV, string hoVaTen, string viTriUngTuyen, string avatar, string sDT, string gioiTinh, string email, DateTime ngaySinh, string trangCaNhan, string diaChi, string nganhHoc, string tenTruong, string thoiGianHoc, string thanhTich, string congViecCu, string congTyCu, string thoiGianLamViec, string moTaKinhNghiem, string tenDuAn, string viTriTrongDuAn, string thoiGianLamDuAn, string moTaHoatDong, string mucTieu, string kyNang, string chungChi, string soThich, string thongTinThem)
+        {
+            Id = id;    
+            IdApplicant = idApplicant;
+            NgayTao = DateTime.Now;
+            NgaySua = DateTime.Now;
+            TenCV = tenCV;
+            HoVaTen = hoVaTen;
+            ViTriUngTuyen = viTriUngTuyen;
+            Avatar = avatar;
+            SDT = sDT;
+            GioiTinh = gioiTinh;
+            Email = email;
+            NgaySinh = ngaySinh;
+            TrangCaNhan = trangCaNhan;
+            DiaChi = diaChi;
+            NganhHoc = nganhHoc;
+            TenTruong = tenTruong;
+            ThoiGianHoc = thoiGianHoc;
+            ThanhTich = thanhTich;
+            CongViecCu = congViecCu;
+            CongTyCu = congTyCu;
+            ThoiGianLamViec = thoiGianLamViec;
+            MoTaKinhNghiem = moTaKinhNghiem;
+            TenDuAn = tenDuAn;
+            ViTriTrongDuAn = viTriTrongDuAn;
+            ThoiGianLamDuAn = thoiGianLamDuAn;
+            MoTaHoatDong = moTaHoatDong;
+            MucTieu = mucTieu;
+            KyNang = kyNang;
+            ChungChi = chungChi;
+            SoThich = soThich;
+            ThongTinThem = thongTinThem;
+        }
         public CV(DataTable data)
         {
             Id = int.Parse(data.Rows[0]["Id"].ToString());

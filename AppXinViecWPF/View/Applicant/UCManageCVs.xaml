@@ -89,6 +89,7 @@
                             </Label.Template>
                         </Label>
                     </StackPanel>
+                    <Button x:Name="btnEdit" Visibility="Collapsed" Click="btnEdit_Click"></Button>
                 </Grid>
             </Grid>
         </Border>

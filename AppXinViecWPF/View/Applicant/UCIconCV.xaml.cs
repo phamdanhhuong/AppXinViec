@@ -46,7 +46,8 @@ namespace AppXinViecWPF.View.Applicant
 
         private void btnEdit_Click(object sender, RoutedEventArgs e)
         {
-
+            WMainApplicant.uCCCV = new UCCreateCV(GetCv.Id);
+            WMainApplicant.uCManageCVs.TriggerButtonClick();
         }
     }
 }

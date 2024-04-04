@@ -27,9 +27,49 @@ namespace AppXinViecWPF.View.Applicant
         {
             InitializeComponent();
         }
+        public UCCreateCV(int id)
+        {
+            InitializeComponent();
+            Id = id;
+            IsCreate = false;
+            GetCV = CVDAO.Instance.GetCvById(Id);
+            txtNameCV.TxtText = GetCV.TenCV;
+            txtFullName.TxtText = GetCV.HoVaTen;
+            txtApplyPosition.TxtText = GetCV.ViTriUngTuyen;
+            imgAvatar.Source = new BitmapImage(new Uri(GetCV.Avatar));
+            imgAvt = GetCV.Avatar;
+            txtPhone.TxtText = GetCV.SDT;
+            txtGender.TxtText = GetCV.GioiTinh;
+            txtEmail.TxtText = GetCV.Email;
+            txtBirth.TxtText = GetCV.NgaySinh.Date.ToString();
+            txtLink.TxtText = GetCV.TrangCaNhan;
+            txtAddress.TxtText = GetCV.DiaChi;
+            txtMajor.TxtText = GetCV.NganhHoc;
+            txtNameSchool.TxtText = GetCV.TenTruong;
+            txtSchoolDay.TxtText = GetCV.ThoiGianHoc;
+            txtSchoolAchive.TxtText = GetCV.ThanhTich;
+            txtNameLastJob.TxtText = GetCV.CongViecCu;
+            txtNameLastCompany.TxtText = GetCV.CongTyCu;
+            txtWorkDay.TxtText = GetCV.ThoiGianLamViec;
+            txtDescriptionExp.TxtText = GetCV.MoTaKinhNghiem;
+            txtProjectName.TxtText = GetCV.TenDuAn;
+            txtProjectPosition.TxtText = GetCV.ViTriTrongDuAn;
+            txtProjectDay.TxtText = GetCV.ThoiGianLamDuAn;
+            txtProjectDescription.TxtText = GetCV.MoTaHoatDong;
+            txtTarget.TxtText = GetCV.MucTieu;
+            txtSkill.TxtText = GetCV.KyNang;
+            txtCertificate.TxtText = GetCV.ChungChi;
+            txtFav.TxtText = GetCV.SoThich;
+            txtExtra.TxtText = GetCV.ThongTinThem;
+        }
         string imgAvt;
+        int id;
+        CV getCV;
+        bool IsCreate=true;
 
         public string ImgAvt { get => imgAvt; set => imgAvt = value; }
+        public int Id { get => id; set => id = value; }
+        internal CV GetCV { get => getCV; set => getCV = value; }
 
         private void btnUploadAvt_Click(object sender, RoutedEventArgs e)
         {
@@ -45,13 +85,34 @@ namespace AppXinViecWPF.View.Applicant
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-            CV cV = new CV(AccountDAO.UserID, txtNameCV.TxtText,txtFullName.TxtText,txtApplyPosition.TxtText,ImgAvt,
-                txtPhone.TxtText,txtGender.TxtText,txtEmail.TxtText, DateTime.Parse(txtBirth.TxtText)
-                , txtLink.TxtText,txtAddress.TxtText,txtMajor.TxtText,txtNameSchool.TxtText,txtSchoolDay.TxtText,txtSchoolAchive.TxtText,
-                txtNameLastJob.TxtText,txtNameLastCompany.TxtText,txtWorkDay.TxtText,txtDescriptionExp.TxtText,txtProjectName.TxtText,txtProjectPosition.TxtText,
-                txtProjectDay.TxtText,txtProjectDescription.TxtText,txtTarget.TxtText,txtSkill.TxtText,txtCertificate.TxtText,txtFav.TxtText,txtExtra.TxtText);
+            if (IsCreate)
+            {
+                AddCv();
+            }
+            else
+            {
+                EditCv();
+            }
+        }
+
+        private void AddCv()
+        {
+            CV cV = new CV(AccountDAO.UserID, txtNameCV.TxtText, txtFullName.TxtText, txtApplyPosition.TxtText, ImgAvt,
+                txtPhone.TxtText, txtGender.TxtText, txtEmail.TxtText, DateTime.Parse(txtBirth.TxtText)
+                , txtLink.TxtText, txtAddress.TxtText, txtMajor.TxtText, txtNameSchool.TxtText, txtSchoolDay.TxtText, txtSchoolAchive.TxtText,
+                txtNameLastJob.TxtText, txtNameLastCompany.TxtText, txtWorkDay.TxtText, txtDescriptionExp.TxtText, txtProjectName.TxtText, txtProjectPosition.TxtText,
+                txtProjectDay.TxtText, txtProjectDescription.TxtText, txtTarget.TxtText, txtSkill.TxtText, txtCertificate.TxtText, txtFav.TxtText, txtExtra.TxtText);
             CVDAO.Instance.CreateCV(cV);
-            UserControl_Loaded(sender, e);
+        }
+
+        private void EditCv()
+        {
+            CV cV = new CV(Id,AccountDAO.UserID, txtNameCV.TxtText, txtFullName.TxtText, txtApplyPosition.TxtText, ImgAvt,
+                txtPhone.TxtText, txtGender.TxtText, txtEmail.TxtText, DateTime.Parse(txtBirth.TxtText)
+                , txtLink.TxtText, txtAddress.TxtText, txtMajor.TxtText, txtNameSchool.TxtText, txtSchoolDay.TxtText, txtSchoolAchive.TxtText,
+                txtNameLastJob.TxtText, txtNameLastCompany.TxtText, txtWorkDay.TxtText, txtDescriptionExp.TxtText, txtProjectName.TxtText, txtProjectPosition.TxtText,
+                txtProjectDay.TxtText, txtProjectDescription.TxtText, txtTarget.TxtText, txtSkill.TxtText, txtCertificate.TxtText, txtFav.TxtText, txtExtra.TxtText);
+            CVDAO.Instance.EditCV(cV);
         }
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)

@@ -39,8 +39,18 @@ namespace AppXinViecWPF.View.Applicant
             {
                 UCIconCV uc = new UCIconCV(id);
                 uc.btnDelete.Click += UserControl_Loaded;
+                //uc.btnEdit.Click += TriggerButtonClick;
                 icMain.Items.Add(uc);
             }
+        }
+
+        private void btnEdit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        public void TriggerButtonClick()
+        {
+            btnEdit.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
         }
     }
 }

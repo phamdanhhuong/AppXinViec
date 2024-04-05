@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Button = System.Windows.Controls.Button;
 
 namespace AppXinViecWPF.View.Applicant
 {
@@ -26,6 +27,7 @@ namespace AppXinViecWPF.View.Applicant
         public UCCreateCV()
         {
             InitializeComponent();
+            btnData.Visibility = Visibility.Collapsed;
         }
         public UCCreateCV(int id)
         {
@@ -33,34 +35,7 @@ namespace AppXinViecWPF.View.Applicant
             Id = id;
             IsCreate = false;
             GetCV = CVDAO.Instance.GetCvById(Id);
-            txtNameCV.TxtText = GetCV.TenCV;
-            txtFullName.TxtText = GetCV.HoVaTen;
-            txtApplyPosition.TxtText = GetCV.ViTriUngTuyen;
-            imgAvatar.Source = new BitmapImage(new Uri(GetCV.Avatar));
-            imgAvt = GetCV.Avatar;
-            txtPhone.TxtText = GetCV.SDT;
-            txtGender.TxtText = GetCV.GioiTinh;
-            txtEmail.TxtText = GetCV.Email;
-            txtBirth.TxtText = GetCV.NgaySinh.Date.ToString();
-            txtLink.TxtText = GetCV.TrangCaNhan;
-            txtAddress.TxtText = GetCV.DiaChi;
-            txtMajor.TxtText = GetCV.NganhHoc;
-            txtNameSchool.TxtText = GetCV.TenTruong;
-            txtSchoolDay.TxtText = GetCV.ThoiGianHoc;
-            txtSchoolAchive.TxtText = GetCV.ThanhTich;
-            txtNameLastJob.TxtText = GetCV.CongViecCu;
-            txtNameLastCompany.TxtText = GetCV.CongTyCu;
-            txtWorkDay.TxtText = GetCV.ThoiGianLamViec;
-            txtDescriptionExp.TxtText = GetCV.MoTaKinhNghiem;
-            txtProjectName.TxtText = GetCV.TenDuAn;
-            txtProjectPosition.TxtText = GetCV.ViTriTrongDuAn;
-            txtProjectDay.TxtText = GetCV.ThoiGianLamDuAn;
-            txtProjectDescription.TxtText = GetCV.MoTaHoatDong;
-            txtTarget.TxtText = GetCV.MucTieu;
-            txtSkill.TxtText = GetCV.KyNang;
-            txtCertificate.TxtText = GetCV.ChungChi;
-            txtFav.TxtText = GetCV.SoThich;
-            txtExtra.TxtText = GetCV.ThongTinThem;
+            btnClear.Click += btnClear_Click_2;
         }
         string imgAvt;
         int id;
@@ -107,7 +82,7 @@ namespace AppXinViecWPF.View.Applicant
 
         private void EditCv()
         {
-            CV cV = new CV(Id,AccountDAO.UserID, txtNameCV.TxtText, txtFullName.TxtText, txtApplyPosition.TxtText, ImgAvt,
+            CV cV = new CV(Id, AccountDAO.UserID, txtNameCV.TxtText, txtFullName.TxtText, txtApplyPosition.TxtText, ImgAvt,
                 txtPhone.TxtText, txtGender.TxtText, txtEmail.TxtText, DateTime.Parse(txtBirth.TxtText)
                 , txtLink.TxtText, txtAddress.TxtText, txtMajor.TxtText, txtNameSchool.TxtText, txtSchoolDay.TxtText, txtSchoolAchive.TxtText,
                 txtNameLastJob.TxtText, txtNameLastCompany.TxtText, txtWorkDay.TxtText, txtDescriptionExp.TxtText, txtProjectName.TxtText, txtProjectPosition.TxtText,
@@ -118,6 +93,49 @@ namespace AppXinViecWPF.View.Applicant
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
             
+        }
+
+        private void btnData_Click(object sender, RoutedEventArgs e)
+        {
+            txtNameCV.TxtText = GetCV.TenCV;
+            txtFullName.TxtText = GetCV.HoVaTen;
+            txtApplyPosition.TxtText = GetCV.ViTriUngTuyen;
+            imgAvatar.Source = new BitmapImage(new Uri(GetCV.Avatar));
+            imgAvt = GetCV.Avatar;
+            txtPhone.TxtText = GetCV.SDT;
+            txtGender.TxtText = GetCV.GioiTinh;
+            txtEmail.TxtText = GetCV.Email;
+            txtBirth.TxtText = GetCV.NgaySinh.Date.ToString();
+            txtLink.TxtText = GetCV.TrangCaNhan;
+            txtAddress.TxtText = GetCV.DiaChi;
+            txtMajor.TxtText = GetCV.NganhHoc;
+            txtNameSchool.TxtText = GetCV.TenTruong;
+            txtSchoolDay.TxtText = GetCV.ThoiGianHoc;
+            txtSchoolAchive.TxtText = GetCV.ThanhTich;
+            txtNameLastJob.TxtText = GetCV.CongViecCu;
+            txtNameLastCompany.TxtText = GetCV.CongTyCu;
+            txtWorkDay.TxtText = GetCV.ThoiGianLamViec;
+            txtDescriptionExp.TxtText = GetCV.MoTaKinhNghiem;
+            txtProjectName.TxtText = GetCV.TenDuAn;
+            txtProjectPosition.TxtText = GetCV.ViTriTrongDuAn;
+            txtProjectDay.TxtText = GetCV.ThoiGianLamDuAn;
+            txtProjectDescription.TxtText = GetCV.MoTaHoatDong;
+            txtTarget.TxtText = GetCV.MucTieu;
+            txtSkill.TxtText = GetCV.KyNang;
+            txtCertificate.TxtText = GetCV.ChungChi;
+            txtFav.TxtText = GetCV.SoThich;
+            txtExtra.TxtText = GetCV.ThongTinThem;
+        }
+
+        private void btnClear_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnClear_Click_2(object sender, RoutedEventArgs e)
+        {
+            WMainApplicant.uCCCV = new UCCreateCV(Id);
+            WMainApplicant.uCManageCVs.TriggerButtonClick();
         }
     }
 }

@@ -10,6 +10,6 @@
 
     <Grid x:Name="main" Background="{Binding BackGroundCustom}">
         <TextBox x:Name="txtInput" TextChanged="txtInput_TextChanged" Text="{Binding TxtText}" Width="{Binding WidthCustom}" Height="{Binding HeightCustom}" FontSize="{Binding InputFSize}" Background="Transparent" FontWeight="{Binding InputFWeight}" Foreground="{Binding InputFColor}" FontStyle="{Binding InputStyle}" BorderThickness="0" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
-        <TextBlock x:Name="tbPlaceHolder" TextAlignment="{Binding PlaceHolderAlignment}" Width="{Binding WidthCustom}" Height="{Binding HeightCustom}" Text="{Binding Placeholder}" Panel.ZIndex="-1" FontSize="{Binding PlaceHolderFSize}" FontWeight="{Binding PlaceHolderFWeight}" Foreground="{Binding PlaceHolderFColor}" FontStyle="Italic" TextWrapping="Wrap" VerticalAlignment="Center"/>
+        <TextBlock x:Name="tbPlaceHolder" TextAlignment="{Binding PlaceHolderAlignment}" Width="{Binding WidthCustom}" Height="{Binding HeightCustom}" Text="{Binding Placeholder}" Panel.ZIndex="-2" FontSize="{Binding PlaceHolderFSize}" FontWeight="{Binding PlaceHolderFWeight}" Foreground="{Binding PlaceHolderFColor}" FontStyle="Italic" TextWrapping="Wrap" VerticalAlignment="Center"/>
     </Grid>
 </UserControl>

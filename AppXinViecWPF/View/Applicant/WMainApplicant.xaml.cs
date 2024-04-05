@@ -156,7 +156,6 @@ namespace AppXinViecWPF.View.Applicant
         public void Edit(object sender, RoutedEventArgs e)
         {
             uCCCV.btnSave.Click += btnManegeCVs_Click;
-            uCCCV.btnClear.Click += btnSampleCVs_Click;
             ccMain.Content = uCCCV;
         }
 

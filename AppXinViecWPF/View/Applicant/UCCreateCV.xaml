@@ -29,7 +29,7 @@
                 <StackPanel HorizontalAlignment="Right">
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                         <StackPanel HorizontalAlignment="Right">
-                            <Button x:Name="btnClear" Grid.Column="0" Cursor="Hand" Margin="5">
+                            <Button x:Name="btnClear" Grid.Column="0" Cursor="Hand" Margin="5" Click="btnClear_Click">
                                 <Button.Template>
                                     <ControlTemplate>
                                         <Grid>
@@ -44,15 +44,15 @@
                                 </Button.Template>
                             </Button>
                         </StackPanel>
-                        <StackPanel HorizontalAlignment="Right">
-                            <Button Grid.Column="0" Cursor="Hand" Margin="5">
+                        <StackPanel x:Name="pnlData" HorizontalAlignment="Right">
+                            <Button x:Name="btnData" Click="btnData_Click" Grid.Column="0" Cursor="Hand" Margin="5">
                                 <Button.Template>
                                     <ControlTemplate>
                                         <Grid>
                                             <Border CornerRadius="15" BorderThickness="1"  Background="#e5f7ed">
                                                 <StackPanel Margin="0 0 10 0"  HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
-                                                    <fa:IconImage Icon="Eye" Foreground="#12b35b" Margin="10"/>
-                                                    <TextBlock Text="Xem trước" FontWeight="SemiBold" FontSize="20" Foreground="#12b35b" Width="100" TextAlignment="Center" Margin="10"/>
+                                                    <fa:IconImage Icon="SdCard" Foreground="#12b35b" Margin="10"/>
+                                                    <TextBlock Text="Thông tin cũ" FontWeight="SemiBold" FontSize="15" Foreground="#12b35b" Width="100" TextAlignment="Center" Margin="10"/>
                                                 </StackPanel>
                                             </Border>
                                         </Grid>

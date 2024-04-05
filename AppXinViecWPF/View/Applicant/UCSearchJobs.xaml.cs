@@ -45,8 +45,20 @@ namespace AppXinViecWPF.View.Applicant
         private void btnSearch_Click(object sender, RoutedEventArgs e)
         {
             string khuVuc = cboSearchLocation.Text;
+            if (cboSearchLocation.Text is "Tất cả địa điểm")
+            {
+                khuVuc = null;
+            }
             string luong = cboSalarySearch.Text;
+            if (cboSalarySearch.Text is "Tất cả mức lương")
+            {
+                luong = null;
+            }
             string kinhNghiem = cboExperienceSearch.Text.ToString();
+            if (cboExperienceSearch.Text is "Tất cả kinh nghiệm")
+            {
+                kinhNghiem = null;
+            }
             string tenCongViec = txtNameJob.txtInput.Text;
             if (string.IsNullOrWhiteSpace(tenCongViec) && string.IsNullOrEmpty(khuVuc) && string.IsNullOrEmpty(luong) && string.IsNullOrEmpty(kinhNghiem))
             {

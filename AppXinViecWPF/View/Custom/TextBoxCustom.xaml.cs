@@ -24,6 +24,7 @@ namespace AppXinViecWPF.View.Custom
         {
             InitializeComponent();
         }
+
         private string placeHolder;
         public string PlaceHolder
         {
@@ -41,7 +42,7 @@ namespace AppXinViecWPF.View.Custom
             set
             {
                 txtText = value;
-                txtInput.Text = txtText;
+                txtInput.Text = txtText;               
             }
         }
         private Brush backGroundCustom;

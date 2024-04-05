@@ -150,7 +150,7 @@ namespace AppXinViecWPF.DTO
             NgaySua = DateTime.Parse(data.Rows[0]["NgaySua"].ToString()); ;
             TenCV = data.Rows[0]["TenCV"].ToString();
             HoVaTen = data.Rows[0]["HoVaTen"].ToString();
-            ViTriUngTuyen = viTriUngTuyen;
+            ViTriUngTuyen = data.Rows[0]["ViTriUngTuyen"].ToString();
             Avatar = data.Rows[0]["Avatar"].ToString();
             SDT = data.Rows[0]["SDT"].ToString();
             GioiTinh = data.Rows[0]["GioiTinh"].ToString();

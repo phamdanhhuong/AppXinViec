@@ -152,7 +152,7 @@
                     <Border Grid.Column="3">
                         <Grid Grid.Column="3">
                             <StackPanel Grid.Column="3" Orientation="Horizontal" HorizontalAlignment="Center">
-                                <Button x:Name="btnApplySalaryReturn" Content="Tìm kiếm" Cursor="Hand" Click="btnApplySalaryReturn_Click">
+                                <Button x:Name="btnSearch" Content="Tìm kiếm" Cursor="Hand" Click="btnSearch_Click">
                                     <Button.Template>
                                         <ControlTemplate>
                                             <Grid>

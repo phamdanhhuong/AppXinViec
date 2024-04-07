@@ -1,5 +1,6 @@
 ﻿using AppXinViecWPF.DAO;
 using AppXinViecWPF.DTO;
+using FontAwesome.Sharp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -66,6 +67,19 @@ namespace AppXinViecWPF.View.Applicant
         {
             TimeSpan timeSpan = post.ExpireDate.Subtract(DateTime.Now);
             return timeSpan;
+        }
+
+        private void btnLike_Click(object sender, RoutedEventArgs e)
+        {
+            var btnLike_Icon = btnLike.Template.FindName("btnLike_Icon", btnLike) as IconImage;
+            if (btnLike_Icon.Icon == IconChar.Heart)
+            {
+                btnLike_Icon.Icon = IconChar.HeartCircleCheck;
+            }
+            else
+            {
+                btnLike_Icon.Icon = IconChar.Heart;
+            }
         }
     }
 }

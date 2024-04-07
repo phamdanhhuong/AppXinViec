@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AppXinViecWPF.DAO;
+using AppXinViecWPF.DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +21,57 @@ namespace AppXinViecWPF.View.Applicant
     /// </summary>
     public partial class UCCompanyInfomation : Window
     {
-        public UCCompanyInfomation()
+        public UCCompanyInfomation(int id)
         {
             InitializeComponent();
+            Id=id;
+            Emp = EmployerDAO.Instance.GetInfoById(id);
+            DataContext = Emp;
+            imgLogoCompany.Source = new BitmapImage(new Uri(Emp.LogoPath));
+            ListPost = PostDAO.Instance.GetAllIdNotPause();
+            icMain.Items.Clear();
+            foreach (int idpost in ListPost)
+            {
+                if (idpost == Id)
+                {
+                    icMain.Items.Add(new UCJob(idpost));
+                }
+            }
         }
+
+        int[] listPost;
+        int id;
+        EmployerDTO emp;
+
+        public int[] ListPost { get => listPost; set => listPost = value; }
+        public int Id { get => id; set => id = value; }
+        internal EmployerDTO Emp { get => emp; set => emp = value; }
+
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                DragMove();
+            }
+        }
+
+        private void btnClose_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnMaximize_Click(object sender, RoutedEventArgs e)
+        {
+            if (this.WindowState == WindowState.Normal)
+                this.WindowState = WindowState.Maximized;
+            else
+                this.WindowState = WindowState.Normal;
+        }
+
+        private void btnMinimize_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
+
     }
 }

@@ -7,201 +7,250 @@
         xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
         xmlns:customControl="clr-namespace:AppXinViecWPF.View.Custom"
         mc:Ignorable="d"
-        Background="#f3f5f7"
-        Title="UCCompanyInfomation" Height="950" Width="900">
-
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="220"/>
-            <RowDefinition Height="20"/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <Border Grid.Row="0" CornerRadius="5"/>
-        <Grid Grid.Row="0" Margin="5">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition Width="3*"/>
-            </Grid.ColumnDefinitions>
-            <Grid Grid.Column="0" Margin="0 20 0 0">
-                <Grid>
-                    <Ellipse Width="150" Height="150" Fill="White"/>
-                    <Image x:Name="imgLogoCompany" Width="150" Height="150" Stretch="UniformToFill">
-                        <Image.OpacityMask>
-                            <VisualBrush Stretch="Fill" Visual="{Binding ElementName=ellipse}" />
-                        </Image.OpacityMask>
-                    </Image>
-                </Grid>
-            </Grid>
-            <Grid Grid.Column="1">
+        Background="Transparent"
+        AllowsTransparency="True"
+        Title="UCCompanyInfomation" Height="950" Width="900"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen" >
+    <Border CornerRadius="20">
+        <Border CornerRadius="20" BorderThickness="2" BorderBrush="Gray">
+            <Border.Background>
+                <SolidColorBrush Color="{StaticResource primaryBackColor1}"/>
+            </Border.Background>
+            <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition/>
+                    <!--thanh dieu huong-->
+                    <RowDefinition Height="25"/>
+                    <!--content-->
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <Grid Grid.Row="1">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="2*"/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
-                    <Grid Grid.Column="0">
-                        <Grid.RowDefinitions>
-                            <RowDefinition/>
-                            <RowDefinition/>
-                        </Grid.RowDefinitions>
-                        <Grid Grid.Row="0">
-                            <TextBlock x:Name="nameCompany" Text="Hệ thống trung tâm Anh Ngữ 10X English" Margin="10 0 10 0" FontWeight="Bold" FontSize="18" VerticalAlignment="Center"/>
-                        </Grid>
-                        <Grid Grid.Row="1">
-                            <StackPanel Orientation="Horizontal" Margin="10 0 10 0">
-                                <fa:IconImage Icon="Earth" Height="18" Margin="0 0 10 0" Foreground="#60b57b"/>
-                                <TextBlock Text="https://10xenglish.edu.vn" Margin="0 0 10 0" VerticalAlignment="Center"/>
-                                <fa:IconImage Icon="Building" Height="18" Margin="0 0 10 0" Foreground="#60b57b"/>
-                                <TextBlock Text="25 - 29 nhân viên" Margin="0 0 10 0" VerticalAlignment="Center"/>
-                            </StackPanel>
-                        </Grid>
-                    </Grid>
-                    <Grid Grid.Column="1">
-                        <Button Margin="20" Height="40">
-                            <Button.Template>
-                                <ControlTemplate>
-                                    <Border CornerRadius="5" Background="White">
-                                        <Grid>
-                                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                                <fa:IconImage Icon="Add" Height="18" Margin="0 0 10 0" Foreground="#60b57b"/>
-                                                <TextBlock Text="Theo dõi công ty" Foreground="#60b57b" FontSize="14" FontWeight="SemiBold"/>
-                                            </StackPanel>
-                                        </Grid>
-                                    </Border>
-                                </ControlTemplate>
-                            </Button.Template>
+                <!--thanh dieu huong-->
+                <Border Grid.Row="0" CornerRadius="20,20,0,0" Background="{StaticResource panelOverColor}">
+                    <StackPanel x:Name="pnlControlBar"                               
+                                Orientation="Horizontal"
+                                FlowDirection="RightToLeft"
+                                Background="Transparent"
+                                Margin="0,0,5,0"
+                                MouseLeftButtonDown="Window_MouseDown">
+                        <Button x:Name="btnClose" 
+                                Style="{StaticResource btnControl}"
+                                Tag="{StaticResource plainTextColor1}"
+                                Click="btnClose_Click"
+                                Width="20"
+                                Foreground="{StaticResource plainTextColor1}">
+                            <fa:IconImage Icon="Xmark" Style="{StaticResource controlButtonIcon}"/>
                         </Button>
-                    </Grid>
-                </Grid>
-            </Grid>
-        </Grid>
-        <Grid Grid.Row="2">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="2.5*"/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <Grid Grid.Column="0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="180"/>
-                    <RowDefinition Height="380"/>
-                </Grid.RowDefinitions>
-                <Grid Grid.Row="0" Margin="10">
+                        <Button x:Name="btnMaximize" 
+                                Style="{StaticResource btnControl}"
+                                Tag="{StaticResource plainTextColor1}"
+                                Click="btnMaximize_Click"
+                                Width="20" Foreground="{StaticResource plainTextColor1}">
+                            <fa:IconImage Icon="WindowMaximize" Style="{StaticResource controlButtonIcon}"/>
+                        </Button>
+                        <Button x:Name="btnMinimize" 
+                                Style="{StaticResource btnControl}"
+                                Tag="{StaticResource plainTextColor1}"
+                                Click="btnMinimize_Click"
+                                Width="20" Foreground="{StaticResource plainTextColor1}">
+                            <fa:IconImage Icon="WindowMinimize" Width="12" Style="{StaticResource controlButtonIcon}"/>
+                        </Button>
+                    </StackPanel>
+                </Border>
+                <Grid Grid.Row="1">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="50"/>
-                        <RowDefinition Height="2.5*"/>
+                        <RowDefinition Height="220"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <Border Grid.Row="0" CornerRadius="10 10 0 0">
-                        <Border.Background>
-                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                                <GradientStop Color="#1c4943" Offset="0"/>
-                                <GradientStop Color="#22c76c" Offset="1"/>
-                            </LinearGradientBrush>
-                        </Border.Background>
-                        <StackPanel VerticalAlignment="Center">
-                            <TextBlock Text="Giới thiệu công ty" FontSize="16" FontWeight="SemiBold" Foreground="White" Margin="10 0 0 0"/>
-                        </StackPanel>
-                    </Border>
-                    <Border Grid.Row="1" CornerRadius="0 0 10 10" Background="White">
-                        <TextBox TextWrapping="Wrap" Text="Discover a new world of English learning at our cutting-edge Teaching Center. Our system goes beyond traditional methods, embracing technology, tailored curricula, and a vibrant community. Join us to experience personalized learning, expert educators, and a global network that opens doors to success. Your journey to English fluency starts with us." Foreground="Black" FontSize="15"  Margin="10" BorderThickness="0"/>
-                    </Border>
-                </Grid>
-                <Grid Grid.Row="1" Margin="10">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="50"/>
-                        <RowDefinition Height="2.5*"/>
-                    </Grid.RowDefinitions>
-                    <Border Grid.Row="0" CornerRadius="10 10 0 0">
-                        <Border.Background>
-                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                                <GradientStop Color="#1c4943" Offset="0"/>
-                                <GradientStop Color="#22c76c" Offset="1"/>
-                            </LinearGradientBrush>
-                        </Border.Background>
-                        <StackPanel VerticalAlignment="Center">
-                            <TextBlock Text="Tuyển dụng" FontSize="16" FontWeight="SemiBold" Foreground="White" Margin="10 0 0 0"/>
-                        </StackPanel>
-                    </Border>
-                    <Border Grid.Row="1" Background="White" CornerRadius="0 0 10 10"/>
-                    <Grid Grid.Row="1" Background="White">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="60"/>
-                            <RowDefinition/>
-                        </Grid.RowDefinitions>
-                        <Grid Grid.Row="0">
-                            <StackPanel Orientation="Horizontal"  VerticalAlignment="Center" Margin="10 0 0 0" Height="50">
-                                <Grid Margin="5">
-                                    <Border BorderBrush="LightGray" BorderThickness="1" CornerRadius="5"/>
-                                    <StackPanel Orientation="Horizontal">
-                                        <fa:IconImage Icon="MagnifyingGlass" Foreground="LightGray" Margin="10 10 0 10"/>
-                                        <customControl:TextBoxCustom Width="250" PlaceHolder="Tên công việc, vị trí ứng tuyển..." Margin="0 5 5 5"/>
-                                    </StackPanel>
-                                </Grid>
-                                <Grid Margin="5">
-                                    <Border BorderBrush="LightGray" BorderThickness="1" CornerRadius="5"/>
-                                    <fa:IconImage Icon="LocationDot" Foreground="LightGray" Margin="10 10 0 10" HorizontalAlignment="Left" Panel.ZIndex="2"/>
-                                    <ComboBox Style="{StaticResource ComboBoxFlatStyle}" Width="150" Margin="5 5 5 5"/>
-                                </Grid>
-                                <Button Content="Tìm kiếm" Cursor="Hand">
-                                    <Button.Template>
-                                        <ControlTemplate>
-                                            <Grid>
-                                                <Border CornerRadius="5" Background="#00b14f" Width="90" Height="35">
-                                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                                                        <fa:IconImage Icon="MagnifyingGlass" Foreground="White" Margin="0 10 5 10"/>
-                                                        <TextBlock Text="Áp dụng" Foreground="White" FontWeight="SemiBold" TextAlignment="Center"  VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                                                    </StackPanel>
-                                                </Border>
-                                            </Grid>
-                                        </ControlTemplate>
-                                    </Button.Template>
-                                </Button>
-                            </StackPanel>
+                    <Border Grid.Row="0" CornerRadius="5"/>
+                    <Grid Grid.Row="0" Margin="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0" Margin="0 20 0 0">
+                            <Border Width="150" Height="150" CornerRadius="50" BorderThickness="2" BorderBrush="gray">
+                                <Border.Clip>
+                                    <EllipseGeometry Center="75,75" RadiusX="70" RadiusY="70"/>
+                                </Border.Clip>
+                                <!-- avatar -->
+                                <Image x:Name="imgLogoCompany" Source="/Image/no_avatar.jpg" Stretch="Uniform" HorizontalAlignment="Center"/>
+                            </Border>
                         </Grid>
-                        <Border Grid.Row="1">
-                            <ScrollViewer VerticalScrollBarVisibility="Hidden">
-                                <ItemsControl>
-                                    
-                                </ItemsControl>
-                            </ScrollViewer>
-                        </Border>
+                        <Grid Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid Grid.Column="0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <Grid Grid.Row="0">
+                                        <TextBlock x:Name="nameCompany" Text="{Binding Path= NameCompany}" Margin="10 0 10 0" FontWeight="Bold" FontSize="18" VerticalAlignment="Center"/>
+                                    </Grid>
+                                    <Grid Grid.Row="1">
+                                        <StackPanel Orientation="Horizontal" Margin="10 0 10 0">
+                                            <fa:IconImage Icon="Earth" Height="18" Margin="0 0 10 0" Foreground="#60b57b"/>
+                                            <TextBlock x:Name="txtWeb" Text="{Binding Path= Website}" Margin="0 0 10 0" VerticalAlignment="Center"/>
+                                            <fa:IconImage Icon="Building" Height="18" Margin="0 0 10 0" Foreground="#60b57b"/>
+                                            <TextBlock x:Name="txtScale" Text="{Binding Path= HumanScale}" Margin="0 0 10 0" VerticalAlignment="Center"/>
+                                        </StackPanel>
+                                    </Grid>
+                                </Grid>
+                                <Grid Grid.Column="1">
+                                    <Button Margin="20" Height="40">
+                                        <Button.Template>
+                                            <ControlTemplate>
+                                                <Border CornerRadius="5" Background="White">
+                                                    <Grid>
+                                                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                                            <fa:IconImage Icon="Add" Height="18" Margin="0 0 10 0" Foreground="#60b57b"/>
+                                                            <TextBlock Text="Theo dõi công ty" Foreground="#60b57b" FontSize="14" FontWeight="SemiBold"/>
+                                                        </StackPanel>
+                                                    </Grid>
+                                                </Border>
+                                            </ControlTemplate>
+                                        </Button.Template>
+                                    </Button>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                    <Grid Grid.Row="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2.5*"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="180"/>
+                                <RowDefinition Height="380"/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0" Margin="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="2.5*"/>
+                                </Grid.RowDefinitions>
+                                <Border Grid.Row="0" CornerRadius="10 10 0 0">
+                                    <Border.Background>
+                                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                            <GradientStop Color="#1c4943" Offset="0"/>
+                                            <GradientStop Color="#22c76c" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Border.Background>
+                                    <StackPanel VerticalAlignment="Center">
+                                        <TextBlock Text="Giới thiệu công ty" FontSize="16" FontWeight="SemiBold" Foreground="White" Margin="10 0 0 0"/>
+                                    </StackPanel>
+                                </Border>
+                                <Border Grid.Row="1" CornerRadius="0 0 10 10" Background="White">
+                                    <TextBox TextWrapping="Wrap" Text="Discover a new world of English learning at our cutting-edge Teaching Center. Our system goes beyond traditional methods, embracing technology, tailored curricula, and a vibrant community. Join us to experience personalized learning, expert educators, and a global network that opens doors to success. Your journey to English fluency starts with us." Foreground="Black" FontSize="15"  Margin="10" BorderThickness="0"/>
+                                </Border>
+                            </Grid>
+                            <Grid Grid.Row="1" Margin="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="2.5*"/>
+                                </Grid.RowDefinitions>
+                                <Border Grid.Row="0" CornerRadius="10 10 0 0">
+                                    <Border.Background>
+                                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                            <GradientStop Color="#1c4943" Offset="0"/>
+                                            <GradientStop Color="#22c76c" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Border.Background>
+                                    <StackPanel VerticalAlignment="Center">
+                                        <TextBlock Text="Tuyển dụng" FontSize="16" FontWeight="SemiBold" Foreground="White" Margin="10 0 0 0"/>
+                                    </StackPanel>
+                                </Border>
+                                <Border Grid.Row="1" Background="White" CornerRadius="0 0 10 10"/>
+                                <Grid Grid.Row="1" Background="White">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="60"/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <Grid Grid.Row="0">
+                                        <StackPanel Orientation="Horizontal"  VerticalAlignment="Center" Margin="10 0 0 0" Height="50">
+                                            <Grid Margin="5">
+                                                <Border BorderBrush="LightGray" BorderThickness="1" CornerRadius="5"/>
+                                                <StackPanel Orientation="Horizontal">
+                                                    <fa:IconImage Icon="MagnifyingGlass" Foreground="LightGray" Margin="10 10 0 10"/>
+                                                    <customControl:TextBoxCustom Width="250" PlaceHolder="Tên công việc, vị trí ứng tuyển..." Margin="0 5 5 5"/>
+                                                </StackPanel>
+                                            </Grid>
+                                            <Grid Margin="5">
+                                                <Border BorderBrush="LightGray" BorderThickness="1" CornerRadius="5"/>
+                                                <fa:IconImage Icon="LocationDot" Foreground="LightGray" Margin="10 10 0 10" HorizontalAlignment="Left" Panel.ZIndex="2"/>
+                                                <ComboBox Style="{StaticResource ComboBoxFlatStyle}" Width="150" Margin="5 5 5 5"/>
+                                            </Grid>
+                                            <Button Content="Tìm kiếm" Cursor="Hand">
+                                                <Button.Template>
+                                                    <ControlTemplate>
+                                                        <Grid>
+                                                            <Border CornerRadius="5" Background="#00b14f" Width="90" Height="35">
+                                                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                                                    <fa:IconImage Icon="MagnifyingGlass" Foreground="White" Margin="0 10 5 10"/>
+                                                                    <TextBlock Text="Áp dụng" Foreground="White" FontWeight="SemiBold" TextAlignment="Center"  VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                                                </StackPanel>
+                                                            </Border>
+                                                        </Grid>
+                                                    </ControlTemplate>
+                                                </Button.Template>
+                                            </Button>
+                                        </StackPanel>
+                                    </Grid>
+                                    <Border Grid.Row="1">
+                                        <ScrollViewer VerticalScrollBarVisibility="Hidden">
+                                            <ItemsControl x:Name="icMain">
+
+                                            </ItemsControl>
+                                        </ScrollViewer>
+                                    </Border>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                        <Grid Grid.Column="1" Margin="5">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Border Grid.Row="0" CornerRadius="10 10 0 0">
+                                <Border.Background>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                        <GradientStop Color="#1c4943" Offset="0"/>
+                                        <GradientStop Color="#22c76c" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Border.Background>
+                                <StackPanel VerticalAlignment="Center">
+                                    <TextBlock Text="Thông tin liên hệ" FontSize="16" FontWeight="SemiBold" Foreground="White" Margin="10 0 0 0"/>
+                                </StackPanel>
+                            </Border>
+                            <Border Grid.Row="1" CornerRadius="0 0 10 10">
+                                <StackPanel Background="White">
+                                    <StackPanel Orientation="Horizontal" Height="50" VerticalAlignment="Center" Margin="10 0 0 0">
+                                        <fa:IconImage Icon="LocationDot" Foreground="#00b14f" Margin="10"/>
+                                        <TextBlock Text="Địa chỉ công ty" Margin="10" FontSize="18" FontWeight="SemiBold"/>
+                                    </StackPanel>
+                                    <TextBlock x:Name="txtAddress" Text="{Binding Path= AddressCompany}" FontSize="16" Margin="20 0 20 0" TextWrapping="Wrap"/>
+                                    <Border BorderBrush="LightGray" Margin="20 10 20 5" BorderThickness=" 0 0 0 1"/>
+                                    <StackPanel Orientation="Horizontal" Height="50" VerticalAlignment="Center" Margin="10 0 0 0">
+                                        <fa:IconImage Icon="Phone" Foreground="#00b14f" Margin="10"/>
+                                        <TextBlock  Text="Hotline" Margin="10" FontSize="18" FontWeight="SemiBold"/>
+                                    </StackPanel>
+                                    <TextBlock x:Name="txtPhone" Text="{Binding Path= PhoneCompany}" Margin="20 0 20 0" TextWrapping="Wrap" FontSize="16"/>
+                                </StackPanel>
+                            </Border>
+                        </Grid>
                     </Grid>
                 </Grid>
             </Grid>
-            <Grid Grid.Column="1" Margin="5">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="50"/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
-                <Border Grid.Row="0" CornerRadius="10 10 0 0">
-                    <Border.Background>
-                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                            <GradientStop Color="#1c4943" Offset="0"/>
-                            <GradientStop Color="#22c76c" Offset="1"/>
-                        </LinearGradientBrush>
-                    </Border.Background>
-                    <StackPanel VerticalAlignment="Center">
-                        <TextBlock Text="Thông tin liên hệ" FontSize="16" FontWeight="SemiBold" Foreground="White" Margin="10 0 0 0"/>
-                    </StackPanel>
-                </Border>
-                <Border Grid.Row="1" CornerRadius="0 0 10 10">
-                    <StackPanel Background="White">
-                        <StackPanel Orientation="Horizontal" Height="50" VerticalAlignment="Center" Margin="10 0 0 0">
-                            <fa:IconImage Icon="LocationDot" Foreground="#00b14f" Margin="10"/>
-                            <TextBlock Text="Địa chỉ công ty" Margin="10" FontSize="18" FontWeight="SemiBold"/>
-                        </StackPanel>
-                        <TextBlock Text="Số 138, đường D8 , khu 11, KDC Chánh Nghĩa , Phường Chánh Nghĩa, Thành phố Thủ Dầu Một, Tỉnh Bình Dương, Việt Nam" FontSize="16" Margin="20 0 20 0" TextWrapping="Wrap"/>
-                        <Border BorderBrush="LightGray" Margin="20 10 20 5" BorderThickness=" 0 0 0 1"/>
-                        <StackPanel Orientation="Horizontal" Height="50" VerticalAlignment="Center" Margin="10 0 0 0">
-                            <fa:IconImage Icon="Phone" Foreground="#00b14f" Margin="10"/>
-                            <TextBlock Text="Hotline" Margin="10" FontSize="18" FontWeight="SemiBold"/>
-                        </StackPanel>
-                        <TextBlock Text="077-1234-654" Margin="20 0 20 0" TextWrapping="Wrap" FontSize="16"/>
-                    </StackPanel>
-                </Border>
-            </Grid>
-        </Grid>
-    </Grid>
+        </Border>
+    </Border>
+
 </Window>

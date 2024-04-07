@@ -143,7 +143,7 @@
                                         <ColumnDefinition Width="4*"/>
                                         <ColumnDefinition/>
                                     </Grid.ColumnDefinitions>
-                                    <Button x:Name="btnApply" Grid.Column="0" Cursor="Hand" Margin="5">
+                                    <Button x:Name="btnApply" Grid.Column="0" Cursor="Hand" Margin="5" Click="btnApply_Click">
                                         <Button.Template>
                                             <ControlTemplate>
                                                 <Grid>

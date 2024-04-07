@@ -25,8 +25,7 @@ namespace AppXinViecWPF.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=XinViec;Integrated Security=Tr" +
-            "ue;Encrypt=False")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MSI;Initial Catalog=XinViec;Integrated Security=True;Encrypt=False")]
         public string ConnectSTR {
             get {
                 return ((string)(this["ConnectSTR"]));

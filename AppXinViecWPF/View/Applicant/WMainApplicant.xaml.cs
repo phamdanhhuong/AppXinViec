@@ -31,6 +31,7 @@ namespace AppXinViecWPF.View.Applicant
         }
         public static UCCreateCV uCCCV;
         public static UCManageCVs uCManageCVs;
+        public static UCViewCV uCViewCV;
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed)
@@ -122,11 +123,6 @@ namespace AppXinViecWPF.View.Applicant
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void btnSeachJobs_Click(object sender, RoutedEventArgs e)
         {
             UCSearchJobs uCSearchJobs = new UCSearchJobs();
@@ -150,6 +146,7 @@ namespace AppXinViecWPF.View.Applicant
             uCManageCVs = new UCManageCVs();
             uCManageCVs.btnCreate.Click += btnSampleCVs_Click;
             uCManageCVs.btnEdit.Click += Edit;
+            uCManageCVs.btnView.Click += View;
             ccMain.Content= uCManageCVs;
         }
 
@@ -157,6 +154,11 @@ namespace AppXinViecWPF.View.Applicant
         {
             uCCCV.btnSave.Click += btnManegeCVs_Click;
             ccMain.Content = uCCCV;
+        }
+
+        public void View(object sender, RoutedEventArgs e)
+        {
+            ccMain.Content = uCViewCV;
         }
 
         private void btnUploadCVs_Click(object sender, RoutedEventArgs e)

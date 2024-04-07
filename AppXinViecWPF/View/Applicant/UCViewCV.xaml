@@ -22,61 +22,11 @@
                     <Grid Margin="5">
                         <Border BorderBrush="LightGray" BorderThickness="0 0 0 1" CornerRadius="0"/>
                         <StackPanel>
-                            <TextBlock x:Name="txtNameCV" Height="40" FontSize="24" Width="230"/>
+                            <TextBlock x:Name="txtNameCV" Text="{Binding Path= TenCV}" Height="40" FontSize="24" Width="230"/>
                         </StackPanel>
                     </Grid>
                 </StackPanel>
                 <StackPanel HorizontalAlignment="Right">
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                        <StackPanel HorizontalAlignment="Right">
-                            <Button x:Name="btnClear" Grid.Column="0" Cursor="Hand" Margin="5">
-                                <Button.Template>
-                                    <ControlTemplate>
-                                        <Grid>
-                                            <Border CornerRadius="15" BorderThickness="1"  Background="#e5f7ed">
-                                                <StackPanel Margin="0 0 10 0"  HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
-                                                    <fa:IconImage Icon="TrashCan" Foreground="#12b35b" Margin="10"/>
-                                                    <TextBlock Text="Xóa tất cả" FontWeight="SemiBold" FontSize="20" Foreground="#12b35b" Width="100" TextAlignment="Center" Margin="10"/>
-                                                </StackPanel>
-                                            </Border>
-                                        </Grid>
-                                    </ControlTemplate>
-                                </Button.Template>
-                            </Button>
-                        </StackPanel>
-                        <StackPanel x:Name="pnlData" HorizontalAlignment="Right">
-                            <Button x:Name="btnData" Grid.Column="0" Cursor="Hand" Margin="5">
-                                <Button.Template>
-                                    <ControlTemplate>
-                                        <Grid>
-                                            <Border CornerRadius="15" BorderThickness="1"  Background="#e5f7ed">
-                                                <StackPanel Margin="0 0 10 0"  HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
-                                                    <fa:IconImage Icon="SdCard" Foreground="#12b35b" Margin="10"/>
-                                                    <TextBlock Text="Thông tin cũ" FontWeight="SemiBold" FontSize="15" Foreground="#12b35b" Width="100" TextAlignment="Center" Margin="10"/>
-                                                </StackPanel>
-                                            </Border>
-                                        </Grid>
-                                    </ControlTemplate>
-                                </Button.Template>
-                            </Button>
-                        </StackPanel>
-                        <StackPanel HorizontalAlignment="Right">
-                            <Button x:Name="btnSave" Grid.Column="0" Cursor="Hand" Margin="5">
-                                <Button.Template>
-                                    <ControlTemplate>
-                                        <Grid>
-                                            <Border CornerRadius="15" BorderThickness="1"  Background="#12b35b">
-                                                <StackPanel Margin="0 0 10 0"  HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
-                                                    <fa:IconImage Icon="Save" Foreground="White" Margin="10"/>
-                                                    <TextBlock Text="Lưu lại" FontWeight="SemiBold" FontSize="20" Foreground="White" Width="90" TextAlignment="Center" Margin="10"/>
-                                                </StackPanel>
-                                            </Border>
-                                        </Grid>
-                                    </ControlTemplate>
-                                </Button.Template>
-                            </Button>
-                        </StackPanel>
-                    </StackPanel>
                 </StackPanel>
             </Grid>
         </Border>
@@ -104,32 +54,12 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <Border Grid.Column="0" BorderThickness="1" BorderBrush="Gray">
-                            <Grid>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition/>
-                                    <RowDefinition Height="60"/>
-                                </Grid.RowDefinitions>
-                                <Image Grid.Row="0" x:Name="imgAvatar" Source="D:/sample.jpg"/>
-                                <Button Grid.Row="1" Cursor="Hand" Margin="5" x:Name="btnUploadAvt">
-                                    <Button.Template>
-                                        <ControlTemplate>
-                                            <Grid>
-                                                <Border CornerRadius="15" BorderThickness="1"  Background="#e5f7ed">
-                                                    <StackPanel Margin="0 0 10 0"  HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
-                                                        <fa:IconImage Icon="Image" Foreground="#12b35b" Margin="10"/>
-                                                        <TextBlock Text="Tải ảnh lên" FontWeight="SemiBold" FontSize="20" Foreground="#12b35b" Width="100" TextAlignment="Center" Margin="10"/>
-                                                    </StackPanel>
-                                                </Border>
-                                            </Grid>
-                                        </ControlTemplate>
-                                    </Button.Template>
-                                </Button>
-                            </Grid>
+                            <Image Grid.Row="0" x:Name="imgAvatar" Source="{Binding Path= Avatar}"/>
                         </Border>
                         <Grid Grid.Column="1" Margin="10">
                             <StackPanel Orientation="Vertical">
-                                <TextBlock x:Name="txtFullName" Height="48" FontSize="35" Margin="0"/>
-                                <TextBlock x:Name="txtApplyPosition" Height="32" FontSize="21" Margin="0"/>
+                                <TextBlock x:Name="txtFullName" Text="{Binding Path= HoVaTen}" Height="48" FontSize="35" Margin="0"/>
+                                <TextBlock x:Name="txtApplyPosition" Text="{Binding Path= ViTriUngTuyen}" Height="32" FontSize="21" Margin="0"/>
                             </StackPanel>
                         </Grid>
                         <Grid Grid.Column="2">
@@ -159,7 +89,7 @@
                                     </Label>
                                 </StackPanel>
                                 <StackPanel Grid.Column="1">
-                                    <TextBlock x:Name="txtPhone" Height="48" FontSize="20" Margin="10 5 0 0"/>
+                                    <TextBlock x:Name="txtPhone" Text="{Binding Path= SDT}" Height="48" FontSize="20" Margin="10 5 0 0"/>
                                 </StackPanel>
                             </Grid>
                             <Grid Grid.Row="1">
@@ -180,7 +110,7 @@
                                     </Label>
                                 </StackPanel>
                                 <StackPanel Grid.Column="1">
-                                    <TextBlock x:Name="txtGender" Height="48" FontSize="20" Margin="10 5 0 0"/>
+                                    <TextBlock x:Name="txtGender" Text="{Binding Path= GioiTinh}" Height="48" FontSize="20" Margin="10 5 0 0"/>
                                 </StackPanel>
                             </Grid>
                             <Grid Grid.Row="2">
@@ -201,7 +131,7 @@
                                     </Label>
                                 </StackPanel>
                                 <StackPanel Grid.Column="1">
-                                    <TextBlock x:Name="txtEmail" Height="48" FontSize="20" Margin="10 5 0 0"/>
+                                    <TextBlock x:Name="txtEmail" Text="{Binding Path= Email}" Height="48" FontSize="20" Margin="10 5 0 0"/>
                                 </StackPanel>
                             </Grid>
                             <Grid Grid.Row="3">
@@ -243,7 +173,7 @@
                                     </Label>
                                 </StackPanel>
                                 <StackPanel Grid.Column="1">
-                                    <TextBlock x:Name="txtLink" Height="48" FontSize="20" Margin="10 5 0 0"/>
+                                    <TextBlock x:Name="txtLink" Text="{Binding Path= TrangCaNhan}" Height="48" FontSize="20" Margin="10 5 0 0"/>
                                 </StackPanel>
                             </Grid>
                             <Grid Grid.Row="5">
@@ -264,7 +194,7 @@
                                     </Label>
                                 </StackPanel>
                                 <StackPanel Grid.Column="1">
-                                    <TextBlock x:Name="txtAddress" Height="48" FontSize="20" Margin="10 5 0 0"/>
+                                    <TextBlock x:Name="txtAddress" Text="{Binding Path= DiaChi}" Height="48" FontSize="20" Margin="10 5 0 0"/>
                                 </StackPanel>
                             </Grid>
                         </Grid>
@@ -289,10 +219,10 @@
                                     <ColumnDefinition/>
                                 </Grid.ColumnDefinitions>
                                 <Grid Grid.Column="0" Margin="10">
-                                    <TextBlock x:Name="txtMajor" Foreground="#609c14" FontWeight="Bold" Height="48" FontSize="20" Margin="10 5 10 0"/>
+                                    <TextBlock x:Name="txtMajor" Text="{Binding Path= NganhHoc}" Foreground="#609c14" FontWeight="Bold" Height="48" FontSize="20" Margin="10 5 10 0"/>
                                 </Grid>
                                 <Grid Grid.Column="1" Margin="10">
-                                    <TextBlock x:Name="txtNameSchool" Foreground="#609c14" FontWeight="Bold" Height="48" FontSize="20" Margin="10 5 10 0"/>
+                                    <TextBlock x:Name="txtNameSchool" Text="{Binding Path= TenTruong}" Foreground="#609c14" FontWeight="Bold" Height="48" FontSize="20" Margin="10 5 10 0"/>
                                 </Grid>
                             </Grid>
                             <Grid Grid.Row="1">
@@ -301,10 +231,10 @@
                                     <ColumnDefinition/>
                                 </Grid.ColumnDefinitions>
                                 <Grid Grid.Column="0" Margin="10">
-                                    <TextBlock x:Name="txtSchoolDay" Foreground="White" Height="40" Background="#95bb65" FontSize="20" Margin="10 5 180 0"/>
+                                    <TextBlock x:Name="txtSchoolDay" Text="{Binding Path= ThoiGianHoc}" Foreground="White" Height="40" Background="#95bb65" FontSize="20" Margin="10 5 180 0"/>
                                 </Grid>
                                 <Grid Grid.Column="1" Margin="10">
-                                    <TextBlock x:Name="txtSchoolAchive" Height="100" FontSize="20" Margin="10 5 10 0"/>
+                                    <TextBlock x:Name="txtSchoolAchive" Text="{Binding Path= ThanhTich}" Height="100" FontSize="20" Margin="10 5 10 0"/>
                                 </Grid>
                             </Grid>
                         </Grid>
@@ -329,10 +259,10 @@
                                     <ColumnDefinition/>
                                 </Grid.ColumnDefinitions>
                                 <Grid Grid.Column="0" Margin="10">
-                                    <TextBlock x:Name="txtNameLastJob" Foreground="#609c14" FontWeight="Bold" Height="48" FontSize="20" Margin="10 5 10 0"/>
+                                    <TextBlock x:Name="txtNameLastJob" Text="{Binding Path= CongViecCu}" Foreground="#609c14" FontWeight="Bold" Height="48" FontSize="20" Margin="10 5 10 0"/>
                                 </Grid>
                                 <Grid Grid.Column="1" Margin="10">
-                                    <TextBlock x:Name="txtNameLastCompany" Foreground="#609c14" FontWeight="Bold" Height="48" FontSize="20" Margin="10 5 10 0"/>
+                                    <TextBlock x:Name="txtNameLastCompany" Text="{Binding Path= CongTyCu}" Foreground="#609c14" FontWeight="Bold" Height="48" FontSize="20" Margin="10 5 10 0"/>
                                 </Grid>
                             </Grid>
                             <Grid Grid.Row="1">
@@ -341,10 +271,10 @@
                                     <ColumnDefinition/>
                                 </Grid.ColumnDefinitions>
                                 <Grid Grid.Column="0" Margin="10">
-                                    <TextBlock x:Name="txtWorkDay" Foreground="White" Height="40" Background="#95bb65" FontSize="20" Margin="10 5 180 0"/>
+                                    <TextBlock x:Name="txtWorkDay" Text="{Binding Path= ThoiGianLamViec}" Foreground="White" Height="40" Background="#95bb65" FontSize="20" Margin="10 5 180 0"/>
                                 </Grid>
                                 <Grid Grid.Column="1" Margin="10">
-                                    <TextBlock x:Name="txtDescriptionExp" Height="100" FontSize="20" Margin="10 5 10 0"/>
+                                    <TextBlock x:Name="txtDescriptionExp" Text="{Binding Path= MoTaKinhNghiem}" Height="100" FontSize="20" Margin="10 5 10 0"/>
                                 </Grid>
                             </Grid>
                         </Grid>
@@ -369,10 +299,10 @@
                                     <ColumnDefinition/>
                                 </Grid.ColumnDefinitions>
                                 <Grid Grid.Column="0" Margin="10">
-                                    <TextBlock x:Name="txtProjectName" Foreground="#609c14" FontWeight="Bold" Height="48" FontSize="20" Margin="10 5 10 0"/>
+                                    <TextBlock x:Name="txtProjectName" Text="{Binding Path= TenDuAn}" Foreground="#609c14" FontWeight="Bold" Height="48" FontSize="20" Margin="10 5 10 0"/>
                                 </Grid>
                                 <Grid Grid.Column="1" Margin="10">
-                                    <TextBlock x:Name="txtProjectPosition" Foreground="#609c14" FontWeight="Bold" Height="48" FontSize="20" Margin="10 5 10 0"/>
+                                    <TextBlock x:Name="txtProjectPosition" Text="{Binding Path= ViTriTrongDuAn}" Foreground="#609c14" FontWeight="Bold" Height="48" FontSize="20" Margin="10 5 10 0"/>
                                 </Grid>
                             </Grid>
                             <Grid Grid.Row="1">
@@ -381,10 +311,10 @@
                                     <ColumnDefinition/>
                                 </Grid.ColumnDefinitions>
                                 <Grid Grid.Column="0" Margin="10">
-                                    <TextBlock x:Name="txtProjectDay" Foreground="White" Height="40" Background="#95bb65" FontSize="20" Margin="10 5 180 0"/>
+                                    <TextBlock x:Name="txtProjectDay" Text="{Binding Path= ThoiGianLamDuAn}" Foreground="White" Height="40" Background="#95bb65" FontSize="20" Margin="10 5 180 0"/>
                                 </Grid>
                                 <Grid Grid.Column="1" Margin="10">
-                                    <TextBlock x:Name="txtProjectDescription" Height="100" FontSize="20" Margin="10 5 10 0"/>
+                                    <TextBlock x:Name="txtProjectDescription" Text="{Binding Path= MoTaHoatDong}" Height="100" FontSize="20" Margin="10 5 10 0"/>
                                 </Grid>
                             </Grid>
                         </Grid>
@@ -405,7 +335,7 @@
                                 <TextBlock Text="Mục tiêu nghề nghiệp" Foreground="#95bb65" FontSize="22" FontWeight="Bold" Margin="20"/>
                             </Grid>
                             <Grid Grid.Row="1">
-                                <TextBlock x:Name="txtTarget" Height="120" FontSize="20" Margin="20"/>
+                                <TextBlock x:Name="txtTarget" Text="{Binding Path= MucTieu}" Height="120" FontSize="20" Margin="20"/>
                             </Grid>
                         </Grid>
                         <Grid Grid.Column="1">
@@ -418,7 +348,7 @@
                                 <TextBlock Text="Các kĩ năng" Foreground="#95bb65" FontSize="22" FontWeight="Bold" Margin="20"/>
                             </Grid>
                             <Grid Grid.Row="1">
-                                <TextBlock x:Name="txtSkill" Height="120" FontSize="20" Margin="20"/>
+                                <TextBlock x:Name="txtSkill" Text="{Binding Path= KyNang}" Height="120" FontSize="20" Margin="20"/>
                             </Grid>
                         </Grid>
                         <Grid Grid.Column="2">
@@ -431,7 +361,7 @@
                                 <TextBlock Text="Chứng chỉ" Foreground="#95bb65" FontSize="22" FontWeight="Bold" Margin="20"/>
                             </Grid>
                             <Grid Grid.Row="1">
-                                <TextBlock x:Name="txtCertificate" Height="120" FontSize="20" Margin="20"/>
+                                <TextBlock x:Name="txtCertificate" Text="{Binding Path= ChungChi}" Height="120" FontSize="20" Margin="20"/>
                             </Grid>
                         </Grid>
                     </Grid>
@@ -450,7 +380,7 @@
                                 <TextBlock Text="Sở thích" Foreground="#95bb65" FontSize="22" FontWeight="Bold" Margin="20"/>
                             </Grid>
                             <Grid Grid.Row="1">
-                                <TextBlock x:Name="txtFav" Height="120" FontSize="20" Margin="20"/>
+                                <TextBlock x:Name="txtFav" Text="{Binding Path= SoThich}" Height="120" FontSize="20" Margin="20"/>
                             </Grid>
                         </Grid>
                         <Grid Grid.Column="1">
@@ -463,7 +393,7 @@
                                 <TextBlock Text="Thông tin thêm" Foreground="#95bb65" FontSize="22" FontWeight="Bold" Margin="20"/>
                             </Grid>
                             <Grid Grid.Row="1">
-                                <TextBlock x:Name="txtExtra" Height="120" FontSize="20" Margin="20"/>
+                                <TextBlock x:Name="txtExtra" Text="{Binding Path= ThongTinThem}" Height="120" FontSize="20" Margin="20"/>
                             </Grid>
                         </Grid>
                     </Grid>

@@ -52,5 +52,15 @@ namespace AppXinViecWPF.View.Applicant
         {
             btnEdit.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
         }
+
+        private void btnView_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        public void TriggerButtonViewClick()
+        {
+            btnView.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+        }
     }
 }

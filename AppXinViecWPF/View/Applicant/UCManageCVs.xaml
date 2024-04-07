@@ -90,6 +90,7 @@
                         </Label>
                     </StackPanel>
                     <Button x:Name="btnEdit" Visibility="Collapsed" Click="btnEdit_Click"></Button>
+                    <Button x:Name="btnView" Visibility="Collapsed" Click="btnView_Click"></Button>
                 </Grid>
             </Grid>
         </Border>

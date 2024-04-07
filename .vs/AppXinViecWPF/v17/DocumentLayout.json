@@ -1,9 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "F:\\HK2\\Lap trinh window\\\u0110\u1ED3 \u00E1n\\current\\",
+  "WorkspaceRootPath": "D:\\Project\\LapTrinhWindow\\472024\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F870E323-742A-46EE-82D7-BF2CEA025C17}|AppXinViecWPF\\AppXinViecWPF.csproj|f:\\hk2\\lap trinh window\\\u0111\u1ED3 \u00E1n\\current\\appxinviecwpf\\view\\applicant\\wjobinfo.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{F870E323-742A-46EE-82D7-BF2CEA025C17}|AppXinViecWPF\\AppXinViecWPF.csproj|d:\\project\\laptrinhwindow\\472024\\appxinviecwpf\\view\\applicant\\ucchosecv.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F870E323-742A-46EE-82D7-BF2CEA025C17}|AppXinViecWPF\\AppXinViecWPF.csproj|solutionrelative:appxinviecwpf\\view\\applicant\\ucchosecv.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F870E323-742A-46EE-82D7-BF2CEA025C17}|AppXinViecWPF\\AppXinViecWPF.csproj|D:\\Project\\LapTrinhWindow\\472024\\appxinviecwpf\\view\\applicant\\wjobinfo.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{F870E323-742A-46EE-82D7-BF2CEA025C17}|AppXinViecWPF\\AppXinViecWPF.csproj|solutionrelative:appxinviecwpf\\view\\applicant\\wjobinfo.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
@@ -14,23 +18,54 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{de1fc918-f32e-4dd7-a915-1792a051f26b}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "UCChoseCV.xaml",
+              "DocumentMoniker": "D:\\Project\\LapTrinhWindow\\472024\\AppXinViecWPF\\View\\Applicant\\UCChoseCV.xaml",
+              "RelativeDocumentMoniker": "AppXinViecWPF\\View\\Applicant\\UCChoseCV.xaml",
+              "ToolTip": "D:\\Project\\LapTrinhWindow\\472024\\AppXinViecWPF\\View\\Applicant\\UCChoseCV.xaml",
+              "RelativeToolTip": "AppXinViecWPF\\View\\Applicant\\UCChoseCV.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-07T11:47:58.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "WJobInfo.xaml",
-              "DocumentMoniker": "F:\\HK2\\Lap trinh window\\\u0110\u1ED3 \u00E1n\\current\\AppXinViecWPF\\View\\Applicant\\WJobInfo.xaml",
+              "DocumentMoniker": "D:\\Project\\LapTrinhWindow\\472024\\AppXinViecWPF\\View\\Applicant\\WJobInfo.xaml",
               "RelativeDocumentMoniker": "AppXinViecWPF\\View\\Applicant\\WJobInfo.xaml",
-              "ToolTip": "F:\\HK2\\Lap trinh window\\\u0110\u1ED3 \u00E1n\\current\\AppXinViecWPF\\View\\Applicant\\WJobInfo.xaml",
+              "ToolTip": "D:\\Project\\LapTrinhWindow\\472024\\AppXinViecWPF\\View\\Applicant\\WJobInfo.xaml",
               "RelativeToolTip": "AppXinViecWPF\\View\\Applicant\\WJobInfo.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-07T10:47:15.342Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-07T10:47:15.342Z"
             }
           ]
         }

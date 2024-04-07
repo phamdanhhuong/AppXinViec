@@ -1,26 +1,73 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "F:\\HK2\\Lap trinh window\\\u0110\u1ED3 \u00E1n\\currently\\",
+  "WorkspaceRootPath": "D:\\Project\\LapTrinhWindow\\462024\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F870E323-742A-46EE-82D7-BF2CEA025C17}|AppXinViecWPF\\AppXinViecWPF.csproj|f:\\hk2\\lap trinh window\\\u0111\u1ED3 \u00E1n\\currently\\appxinviecwpf\\view\\applicant\\uccreatecv.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
-      "RelativeMoniker": "D:0:0:{F870E323-742A-46EE-82D7-BF2CEA025C17}|AppXinViecWPF\\AppXinViecWPF.csproj|solutionrelative:appxinviecwpf\\view\\applicant\\uccreatecv.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+      "AbsoluteMoniker": "D:0:0:{F870E323-742A-46EE-82D7-BF2CEA025C17}|AppXinViecWPF\\AppXinViecWPF.csproj|d:\\project\\laptrinhwindow\\462024\\appxinviecwpf\\view\\applicant\\ucviewcv.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F870E323-742A-46EE-82D7-BF2CEA025C17}|AppXinViecWPF\\AppXinViecWPF.csproj|solutionrelative:appxinviecwpf\\view\\applicant\\ucviewcv.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F870E323-742A-46EE-82D7-BF2CEA025C17}|AppXinViecWPF\\AppXinViecWPF.csproj|F:\\HK2\\Lap trinh window\\\u0110\u1ED3 \u00E1n\\currently\\appxinviecwpf\\view\\applicant\\uccreatecv.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{F870E323-742A-46EE-82D7-BF2CEA025C17}|AppXinViecWPF\\AppXinViecWPF.csproj|D:\\Project\\LapTrinhWindow\\462024\\appxinviecwpf\\view\\applicant\\uccreatecv.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{F870E323-742A-46EE-82D7-BF2CEA025C17}|AppXinViecWPF\\AppXinViecWPF.csproj|solutionrelative:appxinviecwpf\\view\\applicant\\uccreatecv.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F870E323-742A-46EE-82D7-BF2CEA025C17}|AppXinViecWPF\\AppXinViecWPF.csproj|f:\\hk2\\lap trinh window\\\u0111\u1ED3 \u00E1n\\currently\\appxinviecwpf\\view\\applicant\\uciconcv.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "AbsoluteMoniker": "D:0:0:{F870E323-742A-46EE-82D7-BF2CEA025C17}|AppXinViecWPF\\AppXinViecWPF.csproj|D:\\Project\\LapTrinhWindow\\462024\\appxinviecwpf\\view\\applicant\\ucchosecv.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F870E323-742A-46EE-82D7-BF2CEA025C17}|AppXinViecWPF\\AppXinViecWPF.csproj|solutionrelative:appxinviecwpf\\view\\applicant\\ucchosecv.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F870E323-742A-46EE-82D7-BF2CEA025C17}|AppXinViecWPF\\AppXinViecWPF.csproj|D:\\Project\\LapTrinhWindow\\462024\\appxinviecwpf\\view\\applicant\\uccompanyinfomation.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F870E323-742A-46EE-82D7-BF2CEA025C17}|AppXinViecWPF\\AppXinViecWPF.csproj|solutionrelative:appxinviecwpf\\view\\applicant\\uccompanyinfomation.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F870E323-742A-46EE-82D7-BF2CEA025C17}|AppXinViecWPF\\AppXinViecWPF.csproj|D:\\Project\\LapTrinhWindow\\462024\\appxinviecwpf\\view\\applicant\\uciconcv.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F870E323-742A-46EE-82D7-BF2CEA025C17}|AppXinViecWPF\\AppXinViecWPF.csproj|solutionrelative:appxinviecwpf\\view\\applicant\\uciconcv.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F870E323-742A-46EE-82D7-BF2CEA025C17}|AppXinViecWPF\\AppXinViecWPF.csproj|D:\\Project\\LapTrinhWindow\\462024\\appxinviecwpf\\view\\applicant\\ucmanagecvs.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F870E323-742A-46EE-82D7-BF2CEA025C17}|AppXinViecWPF\\AppXinViecWPF.csproj|solutionrelative:appxinviecwpf\\view\\applicant\\ucmanagecvs.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F870E323-742A-46EE-82D7-BF2CEA025C17}|AppXinViecWPF\\AppXinViecWPF.csproj|D:\\Project\\LapTrinhWindow\\462024\\appxinviecwpf\\view\\applicant\\ucjob.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F870E323-742A-46EE-82D7-BF2CEA025C17}|AppXinViecWPF\\AppXinViecWPF.csproj|solutionrelative:appxinviecwpf\\view\\applicant\\ucjob.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F870E323-742A-46EE-82D7-BF2CEA025C17}|AppXinViecWPF\\AppXinViecWPF.csproj|D:\\Project\\LapTrinhWindow\\462024\\appxinviecwpf\\view\\applicant\\ucsavedjobs.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F870E323-742A-46EE-82D7-BF2CEA025C17}|AppXinViecWPF\\AppXinViecWPF.csproj|solutionrelative:appxinviecwpf\\view\\applicant\\ucsavedjobs.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F870E323-742A-46EE-82D7-BF2CEA025C17}|AppXinViecWPF\\AppXinViecWPF.csproj|D:\\Project\\LapTrinhWindow\\462024\\appxinviecwpf\\view\\applicant\\ucsearchjobs.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F870E323-742A-46EE-82D7-BF2CEA025C17}|AppXinViecWPF\\AppXinViecWPF.csproj|solutionrelative:appxinviecwpf\\view\\applicant\\ucsearchjobs.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F870E323-742A-46EE-82D7-BF2CEA025C17}|AppXinViecWPF\\AppXinViecWPF.csproj|D:\\Project\\LapTrinhWindow\\462024\\appxinviecwpf\\view\\applicant\\ucuploadcvs.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F870E323-742A-46EE-82D7-BF2CEA025C17}|AppXinViecWPF\\AppXinViecWPF.csproj|solutionrelative:appxinviecwpf\\view\\applicant\\ucuploadcvs.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F870E323-742A-46EE-82D7-BF2CEA025C17}|AppXinViecWPF\\AppXinViecWPF.csproj|D:\\Project\\LapTrinhWindow\\462024\\appxinviecwpf\\view\\applicant\\wjobinfo.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F870E323-742A-46EE-82D7-BF2CEA025C17}|AppXinViecWPF\\AppXinViecWPF.csproj|solutionrelative:appxinviecwpf\\view\\applicant\\wjobinfo.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F870E323-742A-46EE-82D7-BF2CEA025C17}|AppXinViecWPF\\AppXinViecWPF.csproj|D:\\Project\\LapTrinhWindow\\462024\\appxinviecwpf\\view\\applicant\\ucappliedjobs.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F870E323-742A-46EE-82D7-BF2CEA025C17}|AppXinViecWPF\\AppXinViecWPF.csproj|solutionrelative:appxinviecwpf\\view\\applicant\\ucappliedjobs.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F870E323-742A-46EE-82D7-BF2CEA025C17}|AppXinViecWPF\\AppXinViecWPF.csproj|D:\\Project\\LapTrinhWindow\\462024\\appxinviecwpf\\view\\applicant\\uccreatecv.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{F870E323-742A-46EE-82D7-BF2CEA025C17}|AppXinViecWPF\\AppXinViecWPF.csproj|solutionrelative:appxinviecwpf\\view\\applicant\\uccreatecv.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F870E323-742A-46EE-82D7-BF2CEA025C17}|AppXinViecWPF\\AppXinViecWPF.csproj|D:\\Project\\LapTrinhWindow\\462024\\appxinviecwpf\\view\\applicant\\uciconcv.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
       "RelativeMoniker": "D:0:0:{F870E323-742A-46EE-82D7-BF2CEA025C17}|AppXinViecWPF\\AppXinViecWPF.csproj|solutionrelative:appxinviecwpf\\view\\applicant\\uciconcv.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F870E323-742A-46EE-82D7-BF2CEA025C17}|AppXinViecWPF\\AppXinViecWPF.csproj|f:\\hk2\\lap trinh window\\\u0111\u1ED3 \u00E1n\\currently\\appxinviecwpf\\view\\applicant\\wmainapplicant.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F870E323-742A-46EE-82D7-BF2CEA025C17}|AppXinViecWPF\\AppXinViecWPF.csproj|solutionrelative:appxinviecwpf\\view\\applicant\\wmainapplicant.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|AppXinViecWPF||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F870E323-742A-46EE-82D7-BF2CEA025C17}|AppXinViecWPF\\AppXinViecWPF.csproj|f:\\hk2\\lap trinh window\\\u0111\u1ED3 \u00E1n\\currently\\appxinviecwpf\\view\\applicant\\uciconcv.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F870E323-742A-46EE-82D7-BF2CEA025C17}|AppXinViecWPF\\AppXinViecWPF.csproj|solutionrelative:appxinviecwpf\\view\\applicant\\uciconcv.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{F870E323-742A-46EE-82D7-BF2CEA025C17}|AppXinViecWPF\\AppXinViecWPF.csproj|D:\\Project\\LapTrinhWindow\\462024\\appxinviecwpf\\view\\applicant\\wmainapplicant.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F870E323-742A-46EE-82D7-BF2CEA025C17}|AppXinViecWPF\\AppXinViecWPF.csproj|solutionrelative:appxinviecwpf\\view\\applicant\\wmainapplicant.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F870E323-742A-46EE-82D7-BF2CEA025C17}|AppXinViecWPF\\AppXinViecWPF.csproj|D:\\Project\\LapTrinhWindow\\462024\\appxinviecwpf\\view\\applicant\\wmainapplicant.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F870E323-742A-46EE-82D7-BF2CEA025C17}|AppXinViecWPF\\AppXinViecWPF.csproj|solutionrelative:appxinviecwpf\\view\\applicant\\wmainapplicant.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,74 +77,222 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "WMainApplicant.xaml.cs",
-              "DocumentMoniker": "F:\\HK2\\Lap trinh window\\\u0110\u1ED3 \u00E1n\\currently\\AppXinViecWPF\\View\\Applicant\\WMainApplicant.xaml.cs",
-              "RelativeDocumentMoniker": "AppXinViecWPF\\View\\Applicant\\WMainApplicant.xaml.cs",
-              "ToolTip": "F:\\HK2\\Lap trinh window\\\u0110\u1ED3 \u00E1n\\currently\\AppXinViecWPF\\View\\Applicant\\WMainApplicant.xaml.cs",
-              "RelativeToolTip": "AppXinViecWPF\\View\\Applicant\\WMainApplicant.xaml.cs",
-              "ViewState": "AQIAAJAAAAAAAAAAAAArwKsAAAA8AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-05T13:47:13.922Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{de1fc918-f32e-4dd7-a915-1792a051f26b}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "UCIconCV.xaml.cs",
-              "DocumentMoniker": "F:\\HK2\\Lap trinh window\\\u0110\u1ED3 \u00E1n\\currently\\AppXinViecWPF\\View\\Applicant\\UCIconCV.xaml.cs",
-              "RelativeDocumentMoniker": "AppXinViecWPF\\View\\Applicant\\UCIconCV.xaml.cs",
-              "ToolTip": "F:\\HK2\\Lap trinh window\\\u0110\u1ED3 \u00E1n\\currently\\AppXinViecWPF\\View\\Applicant\\UCIconCV.xaml.cs",
-              "RelativeToolTip": "AppXinViecWPF\\View\\Applicant\\UCIconCV.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACcAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-05T13:47:40.27Z",
+              "Title": "UCChoseCV.xaml",
+              "DocumentMoniker": "D:\\Project\\LapTrinhWindow\\462024\\AppXinViecWPF\\View\\Applicant\\UCChoseCV.xaml",
+              "RelativeDocumentMoniker": "AppXinViecWPF\\View\\Applicant\\UCChoseCV.xaml",
+              "ToolTip": "D:\\Project\\LapTrinhWindow\\462024\\AppXinViecWPF\\View\\Applicant\\UCChoseCV.xaml",
+              "RelativeToolTip": "AppXinViecWPF\\View\\Applicant\\UCChoseCV.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-06T12:51:24.078Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UCViewCV.xaml",
+              "DocumentMoniker": "D:\\Project\\LapTrinhWindow\\462024\\AppXinViecWPF\\View\\Applicant\\UCViewCV.xaml",
+              "RelativeDocumentMoniker": "AppXinViecWPF\\View\\Applicant\\UCViewCV.xaml",
+              "ToolTip": "D:\\Project\\LapTrinhWindow\\462024\\AppXinViecWPF\\View\\Applicant\\UCViewCV.xaml",
+              "RelativeToolTip": "AppXinViecWPF\\View\\Applicant\\UCViewCV.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-06T12:50:40.516Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UCSearchJobs.xaml",
+              "DocumentMoniker": "D:\\Project\\LapTrinhWindow\\462024\\AppXinViecWPF\\View\\Applicant\\UCSearchJobs.xaml",
+              "RelativeDocumentMoniker": "AppXinViecWPF\\View\\Applicant\\UCSearchJobs.xaml",
+              "ToolTip": "D:\\Project\\LapTrinhWindow\\462024\\AppXinViecWPF\\View\\Applicant\\UCSearchJobs.xaml",
+              "RelativeToolTip": "AppXinViecWPF\\View\\Applicant\\UCSearchJobs.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-06T06:53:46.852Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UCUploadCVs.xaml",
+              "DocumentMoniker": "D:\\Project\\LapTrinhWindow\\462024\\AppXinViecWPF\\View\\Applicant\\UCUploadCVs.xaml",
+              "RelativeDocumentMoniker": "AppXinViecWPF\\View\\Applicant\\UCUploadCVs.xaml",
+              "ToolTip": "D:\\Project\\LapTrinhWindow\\462024\\AppXinViecWPF\\View\\Applicant\\UCUploadCVs.xaml",
+              "RelativeToolTip": "AppXinViecWPF\\View\\Applicant\\UCUploadCVs.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-06T06:53:47.941Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "UCIconCV.xaml",
-              "DocumentMoniker": "F:\\HK2\\Lap trinh window\\\u0110\u1ED3 \u00E1n\\currently\\AppXinViecWPF\\View\\Applicant\\UCIconCV.xaml",
+              "DocumentMoniker": "D:\\Project\\LapTrinhWindow\\462024\\AppXinViecWPF\\View\\Applicant\\UCIconCV.xaml",
               "RelativeDocumentMoniker": "AppXinViecWPF\\View\\Applicant\\UCIconCV.xaml",
-              "ToolTip": "F:\\HK2\\Lap trinh window\\\u0110\u1ED3 \u00E1n\\currently\\AppXinViecWPF\\View\\Applicant\\UCIconCV.xaml",
+              "ToolTip": "D:\\Project\\LapTrinhWindow\\462024\\AppXinViecWPF\\View\\Applicant\\UCIconCV.xaml",
               "RelativeToolTip": "AppXinViecWPF\\View\\Applicant\\UCIconCV.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-05T13:46:54.16Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-05T13:46:54.16Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UCCreateCV.xaml.cs",
-              "DocumentMoniker": "F:\\HK2\\Lap trinh window\\\u0110\u1ED3 \u00E1n\\currently\\AppXinViecWPF\\View\\Applicant\\UCCreateCV.xaml.cs",
-              "RelativeDocumentMoniker": "AppXinViecWPF\\View\\Applicant\\UCCreateCV.xaml.cs",
-              "ToolTip": "F:\\HK2\\Lap trinh window\\\u0110\u1ED3 \u00E1n\\currently\\AppXinViecWPF\\View\\Applicant\\UCCreateCV.xaml.cs",
-              "RelativeToolTip": "AppXinViecWPF\\View\\Applicant\\UCCreateCV.xaml.cs",
-              "ViewState": "AQIAAF4AAAAAAAAAAAD4vx0AAAA2AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-04T03:43:53.531Z",
-              "EditorCaption": ""
+              "DocumentIndex": 7,
+              "Title": "UCSavedJobs.xaml",
+              "DocumentMoniker": "D:\\Project\\LapTrinhWindow\\462024\\AppXinViecWPF\\View\\Applicant\\UCSavedJobs.xaml",
+              "RelativeDocumentMoniker": "AppXinViecWPF\\View\\Applicant\\UCSavedJobs.xaml",
+              "ToolTip": "D:\\Project\\LapTrinhWindow\\462024\\AppXinViecWPF\\View\\Applicant\\UCSavedJobs.xaml",
+              "RelativeToolTip": "AppXinViecWPF\\View\\Applicant\\UCSavedJobs.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-06T06:53:45.933Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "UCCreateCV.xaml",
-              "DocumentMoniker": "F:\\HK2\\Lap trinh window\\\u0110\u1ED3 \u00E1n\\currently\\AppXinViecWPF\\View\\Applicant\\UCCreateCV.xaml",
+              "DocumentMoniker": "D:\\Project\\LapTrinhWindow\\462024\\AppXinViecWPF\\View\\Applicant\\UCCreateCV.xaml",
               "RelativeDocumentMoniker": "AppXinViecWPF\\View\\Applicant\\UCCreateCV.xaml",
-              "ToolTip": "F:\\HK2\\Lap trinh window\\\u0110\u1ED3 \u00E1n\\currently\\AppXinViecWPF\\View\\Applicant\\UCCreateCV.xaml",
+              "ToolTip": "D:\\Project\\LapTrinhWindow\\462024\\AppXinViecWPF\\View\\Applicant\\UCCreateCV.xaml",
               "RelativeToolTip": "AppXinViecWPF\\View\\Applicant\\UCCreateCV.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-04T03:43:44.98Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-04T03:43:44.98Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UCCompanyInfomation.xaml",
+              "DocumentMoniker": "D:\\Project\\LapTrinhWindow\\462024\\AppXinViecWPF\\View\\Applicant\\UCCompanyInfomation.xaml",
+              "RelativeDocumentMoniker": "AppXinViecWPF\\View\\Applicant\\UCCompanyInfomation.xaml",
+              "ToolTip": "D:\\Project\\LapTrinhWindow\\462024\\AppXinViecWPF\\View\\Applicant\\UCCompanyInfomation.xaml",
+              "RelativeToolTip": "AppXinViecWPF\\View\\Applicant\\UCCompanyInfomation.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-06T06:53:58.734Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AppXinViecWPF",
+              "DocumentMoniker": "D:\\Project\\LapTrinhWindow\\462024\\AppXinViecWPF\\AppXinViecWPF.csproj",
+              "RelativeDocumentMoniker": "AppXinViecWPF\\AppXinViecWPF.csproj",
+              "ToolTip": "D:\\Project\\LapTrinhWindow\\462024\\AppXinViecWPF\\AppXinViecWPF.csproj",
+              "RelativeToolTip": "AppXinViecWPF\\AppXinViecWPF.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-04-06T07:03:16.266Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "WJobInfo.xaml",
+              "DocumentMoniker": "D:\\Project\\LapTrinhWindow\\462024\\AppXinViecWPF\\View\\Applicant\\WJobInfo.xaml",
+              "RelativeDocumentMoniker": "AppXinViecWPF\\View\\Applicant\\WJobInfo.xaml",
+              "ToolTip": "D:\\Project\\LapTrinhWindow\\462024\\AppXinViecWPF\\View\\Applicant\\WJobInfo.xaml",
+              "RelativeToolTip": "AppXinViecWPF\\View\\Applicant\\WJobInfo.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-06T06:53:49.054Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UCManageCVs.xaml",
+              "DocumentMoniker": "D:\\Project\\LapTrinhWindow\\462024\\AppXinViecWPF\\View\\Applicant\\UCManageCVs.xaml",
+              "RelativeDocumentMoniker": "AppXinViecWPF\\View\\Applicant\\UCManageCVs.xaml",
+              "ToolTip": "D:\\Project\\LapTrinhWindow\\462024\\AppXinViecWPF\\View\\Applicant\\UCManageCVs.xaml",
+              "RelativeToolTip": "AppXinViecWPF\\View\\Applicant\\UCManageCVs.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-06T06:53:45.18Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UCJob.xaml",
+              "DocumentMoniker": "D:\\Project\\LapTrinhWindow\\462024\\AppXinViecWPF\\View\\Applicant\\UCJob.xaml",
+              "RelativeDocumentMoniker": "AppXinViecWPF\\View\\Applicant\\UCJob.xaml",
+              "ToolTip": "D:\\Project\\LapTrinhWindow\\462024\\AppXinViecWPF\\View\\Applicant\\UCJob.xaml",
+              "RelativeToolTip": "AppXinViecWPF\\View\\Applicant\\UCJob.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-06T06:53:44.224Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UCCreateCV.xaml.cs",
+              "DocumentMoniker": "D:\\Project\\LapTrinhWindow\\462024\\AppXinViecWPF\\View\\Applicant\\UCCreateCV.xaml.cs",
+              "RelativeDocumentMoniker": "AppXinViecWPF\\View\\Applicant\\UCCreateCV.xaml.cs",
+              "ToolTip": "D:\\Project\\LapTrinhWindow\\462024\\AppXinViecWPF\\View\\Applicant\\UCCreateCV.xaml.cs",
+              "RelativeToolTip": "AppXinViecWPF\\View\\Applicant\\UCCreateCV.xaml.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAUwCAAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-04T03:43:53.531Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UCIconCV.xaml.cs",
+              "DocumentMoniker": "D:\\Project\\LapTrinhWindow\\462024\\AppXinViecWPF\\View\\Applicant\\UCIconCV.xaml.cs",
+              "RelativeDocumentMoniker": "AppXinViecWPF\\View\\Applicant\\UCIconCV.xaml.cs",
+              "ToolTip": "D:\\Project\\LapTrinhWindow\\462024\\AppXinViecWPF\\View\\Applicant\\UCIconCV.xaml.cs",
+              "RelativeToolTip": "AppXinViecWPF\\View\\Applicant\\UCIconCV.xaml.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAgwDEAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-05T13:47:40.27Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UCAppliedJobs.xaml",
+              "DocumentMoniker": "D:\\Project\\LapTrinhWindow\\462024\\AppXinViecWPF\\View\\Applicant\\UCAppliedJobs.xaml",
+              "RelativeDocumentMoniker": "AppXinViecWPF\\View\\Applicant\\UCAppliedJobs.xaml",
+              "ToolTip": "D:\\Project\\LapTrinhWindow\\462024\\AppXinViecWPF\\View\\Applicant\\UCAppliedJobs.xaml",
+              "RelativeToolTip": "AppXinViecWPF\\View\\Applicant\\UCAppliedJobs.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-06T06:53:57.618Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "WMainApplicant.xaml",
+              "DocumentMoniker": "D:\\Project\\LapTrinhWindow\\462024\\AppXinViecWPF\\View\\Applicant\\WMainApplicant.xaml",
+              "RelativeDocumentMoniker": "AppXinViecWPF\\View\\Applicant\\WMainApplicant.xaml",
+              "ToolTip": "D:\\Project\\LapTrinhWindow\\462024\\AppXinViecWPF\\View\\Applicant\\WMainApplicant.xaml",
+              "RelativeToolTip": "AppXinViecWPF\\View\\Applicant\\WMainApplicant.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-06T06:53:50.23Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "WMainApplicant.xaml.cs",
+              "DocumentMoniker": "D:\\Project\\LapTrinhWindow\\462024\\AppXinViecWPF\\View\\Applicant\\WMainApplicant.xaml.cs",
+              "RelativeDocumentMoniker": "AppXinViecWPF\\View\\Applicant\\WMainApplicant.xaml.cs",
+              "ToolTip": "D:\\Project\\LapTrinhWindow\\462024\\AppXinViecWPF\\View\\Applicant\\WMainApplicant.xaml.cs",
+              "RelativeToolTip": "AppXinViecWPF\\View\\Applicant\\WMainApplicant.xaml.cs",
+              "ViewState": "AQIAAJAAAAAAAAAAAAArwKsAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-05T13:47:13.922Z"
             }
           ]
         }

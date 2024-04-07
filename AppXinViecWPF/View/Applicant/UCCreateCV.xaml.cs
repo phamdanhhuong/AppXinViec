@@ -35,6 +35,7 @@ namespace AppXinViecWPF.View.Applicant
             Id = id;
             IsCreate = false;
             GetCV = CVDAO.Instance.GetCvById(Id);
+            loadData();
             btnClear.Click += btnClear_Click_2;
         }
         string imgAvt;
@@ -92,9 +93,38 @@ namespace AppXinViecWPF.View.Applicant
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
-            
         }
-
+        private void loadData()
+        {
+            this.txtNameCV.TxtText = GetCV.TenCV;
+            this.txtFullName.TxtText = GetCV.HoVaTen;
+            this.txtApplyPosition.TxtText = GetCV.ViTriUngTuyen;
+            this.imgAvatar.Source = new BitmapImage(new Uri(GetCV.Avatar));
+            this.imgAvt = GetCV.Avatar;
+            this.txtPhone.TxtText = GetCV.SDT;
+            this.txtGender.TxtText = GetCV.GioiTinh;
+            txtEmail.TxtText = GetCV.Email;
+            txtBirth.TxtText = GetCV.NgaySinh.Date.ToString();
+            txtLink.TxtText = GetCV.TrangCaNhan;
+            txtAddress.TxtText = GetCV.DiaChi;
+            txtMajor.TxtText = GetCV.NganhHoc;
+            txtNameSchool.TxtText = GetCV.TenTruong;
+            txtSchoolDay.TxtText = GetCV.ThoiGianHoc;
+            txtSchoolAchive.TxtText = GetCV.ThanhTich;
+            txtNameLastJob.TxtText = GetCV.CongViecCu;
+            txtNameLastCompany.TxtText = GetCV.CongTyCu;
+            txtWorkDay.TxtText = GetCV.ThoiGianLamViec;
+            txtDescriptionExp.TxtText = GetCV.MoTaKinhNghiem;
+            txtProjectName.TxtText = GetCV.TenDuAn;
+            txtProjectPosition.TxtText = GetCV.ViTriTrongDuAn;
+            txtProjectDay.TxtText = GetCV.ThoiGianLamDuAn;
+            txtProjectDescription.TxtText = GetCV.MoTaHoatDong;
+            txtTarget.TxtText = GetCV.MucTieu;
+            txtSkill.TxtText = GetCV.KyNang;
+            txtCertificate.TxtText = GetCV.ChungChi;
+            txtFav.TxtText = GetCV.SoThich;
+            txtExtra.TxtText = GetCV.ThongTinThem;
+        }
         private void btnData_Click(object sender, RoutedEventArgs e)
         {
             txtNameCV.TxtText = GetCV.TenCV;

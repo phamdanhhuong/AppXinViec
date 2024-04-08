@@ -2,16 +2,17 @@
 FF:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\App.xaml;;
 FF:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\MainWindow.xaml;;
 FF:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\View\Applicant\UCAppliedJobs.xaml;;
-FF:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\View\Applicant\UCChoseCV.xaml;;
 FF:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\View\Applicant\UCCompanyInfomation.xaml;;
 FF:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\View\Applicant\UCCreateCV.xaml;;
 FF:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\View\Applicant\UCIconCV.xaml;;
 FF:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\View\Applicant\UCJob.xaml;;
 FF:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\View\Applicant\UCManageCVs.xaml;;
+FF:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\View\Applicant\UCrbtnCV.xaml;;
 FF:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\View\Applicant\UCSavedJobs.xaml;;
 FF:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\View\Applicant\UCSearchJobs.xaml;;
 FF:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\View\Applicant\UCUploadCVs.xaml;;
 FF:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\View\Applicant\UCViewCV.xaml;;
+FF:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\View\Applicant\WChoseCV.xaml;;
 FF:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\View\Applicant\WJobInfo.xaml;;
 FF:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\View\Applicant\WMainApplicant.xaml;;
 FF:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\View\Custom\ComboBoxCustom.xaml;;
@@ -28,6 +29,4 @@ FF:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\View\Employer\WMainEmploye
 FF:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\View\Register\WEmployerRegister.xaml;;
 FF:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\View\Register\WRegister.xaml;;
 FF:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\View\WLogin.xaml;;
-FF:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\View\Applicant\UCrbtnCV.xaml;;
-FF:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\View\Applicant\WChoseCV.xaml;;
 

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AppXinViecWPF.DAO;
+using AppXinViecWPF.DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,19 @@ namespace AppXinViecWPF.View.Employer
     /// </summary>
     public partial class UCMiniCV : UserControl
     {
-        public UCMiniCV()
+        public UCMiniCV(int idPost,int idCV,DateTime date)
         {
             InitializeComponent();
+            IdCV = idCV;
+            IdPost = idPost;
+            txtDateSubmit.Text = date.ToString("d");
+            CV cv = CVDAO.Instance.GetCvById(idCV);
+            PostDTO post = PostDAO.Instance.GetPostById(idPost);
+            txtName.Text = cv.HoVaTen;
+            txtNameJob.Text = post.NameJob;
+            txtIdPost.Text = idPost.ToString();
         }
+        int IdCV;
+        int IdPost;
     }
 }

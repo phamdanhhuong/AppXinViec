@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AppXinViecWPF.DAO;
+using AppXinViecWPF.DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,20 +25,11 @@ namespace AppXinViecWPF.View.Employer
         public UCManageCV()
         {
             InitializeComponent();
-            icMain.Items.Add(new UCMiniCV());
-            icMain.Items.Add(new UCMiniCV());
-            icMain.Items.Add(new UCMiniCV());
-            icMain.Items.Add(new UCMiniCV());
-            icMain.Items.Add(new UCMiniCV());
-            icMain.Items.Add(new UCMiniCV());
-            icMain.Items.Add(new UCMiniCV());
-            icMain.Items.Add(new UCMiniCV());
-            icMain.Items.Add(new UCMiniCV());
-            icMain.Items.Add(new UCMiniCV());
-            icMain.Items.Add(new UCMiniCV());
-            icMain.Items.Add(new UCMiniCV());
-            icMain.Items.Add(new UCMiniCV());
-            icMain.Items.Add(new UCMiniCV());
+            List<ApplyCV> list = CVDAO.Instance.GetApplyCVByIdEmp(AccountDAO.UserID);    
+            foreach (ApplyCV cv in list)
+            {
+                icMain.Items.Add(new UCMiniCV(cv.IdPost,cv.IdCV,cv.SubmitDay));
+            }
         }
     }
 }

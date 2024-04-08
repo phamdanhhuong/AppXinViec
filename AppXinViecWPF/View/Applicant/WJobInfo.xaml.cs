@@ -84,7 +84,6 @@ namespace AppXinViecWPF.View.Applicant
         {
             WChoseCV wChoseCV = new WChoseCV(IdPost); 
             wChoseCV.Show();
-            this.Close();
         }
     }
 }

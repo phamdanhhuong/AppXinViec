@@ -70,6 +70,7 @@
     <Compile Include="DAO\EmployerDAO.cs" />
     <Compile Include="DAO\PostDAO.cs" />
     <Compile Include="DTO\ApplicantDTO.cs" />
+    <Compile Include="DTO\ApplyCV.cs" />
     <Compile Include="DTO\CV.cs" />
     <Compile Include="DTO\EmployerDTO.cs" />
     <Compile Include="DTO\PostDTO.cs" />

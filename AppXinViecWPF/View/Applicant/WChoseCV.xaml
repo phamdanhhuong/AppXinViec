@@ -65,7 +65,7 @@
                     <Border Grid.Row=" 0" BorderThickness="0 0 0 1" BorderBrush="LightGray">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="Ứng tuyển " FontSize="28" FontWeight="SemiBold"/>
-                            <TextBlock Text="Nodejs Developer/Tech Leader" FontSize="28" Foreground="#36bd6c" FontWeight="SemiBold"/>
+                            <TextBlock x:Name="txtNameJob" Text="Nodejs Developer/Tech Leader" FontSize="28" Foreground="#36bd6c" FontWeight="SemiBold"/>
                         </StackPanel>
                     </Border>
                     <Border Grid.Row="1" Margin="0 10 0 0" BorderThickness="0 0 0 1" BorderBrush="LightGray">
@@ -146,7 +146,7 @@
                                 </ControlTemplate>
                             </Button.Template>
                         </Button>
-                        <Button Margin="10">
+                        <Button x:Name="btnApply" Cursor="Hand" Margin="10" Click="btnApply_Click">
                             <Button.Template>
                                 <ControlTemplate>
                                     <Grid Height="40" Width="640">

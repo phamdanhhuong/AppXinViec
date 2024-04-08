@@ -449,7 +449,6 @@ F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\Style\ColorStyle.
 F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\Style\TextBoxStyle.baml
 F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\MainWindow.g.cs
 F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\UCAppliedJobs.g.cs
-F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\UCChoseCV.g.cs
 F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\UCCompanyInfomation.g.cs
 F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\UCCreateCV.g.cs
 F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\UCIconCV.g.cs
@@ -482,7 +481,6 @@ F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\AppXinViecWPF_Mar
 F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\App.baml
 F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\MainWindow.baml
 F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\UCAppliedJobs.baml
-F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\UCChoseCV.baml
 F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\UCCompanyInfomation.baml
 F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\UCCreateCV.baml
 F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\UCIconCV.baml

@@ -65,5 +65,28 @@ namespace AppXinViecWPF.DAO
             string query = string.Format("DELETE FROM Cv WHERE Id = {0}", id);
             DataProvider.Instance.ExecuteNonQuery(query);
         }
+
+        public void ApplyCV(int IdCV,int IdPost)
+        {
+            string query = string.Format("INSERT INTO ApplyCV(IdCV,IdPost,NgayNop) VALUES ({0},{1},{2})",IdCV,IdPost,DateTime.Now);
+            DataProvider.Instance.ExecuteNonQuery (query);
+        }
+
+        public List<ApplyCV> GetApplyCVByIdEmp(int Id)
+        {
+            int[] IdPost=PostDAO.Instance.GetAllIdPostById(Id);
+            List<ApplyCV> data= new List<ApplyCV>();
+            foreach (int id in IdPost)
+            {
+                string query = string.Format("SELECT * FROM ApplyCV Where IdPost = {0}", id);
+                DataTable temp = DataProvider.Instance.ExecuteQuery(query);
+                foreach (DataRow row in temp.Rows)
+                {
+                    data.Add(new ApplyCV(row));
+                }
+            }
+            return data;
+        }
+
     }
 }

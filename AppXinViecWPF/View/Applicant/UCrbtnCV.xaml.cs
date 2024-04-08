@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AppXinViecWPF.DAO;
+using AppXinViecWPF.DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,13 +18,17 @@ using System.Windows.Shapes;
 namespace AppXinViecWPF.View.Applicant
 {
     /// <summary>
-    /// Interaction logic for UCChoseCV.xaml
+    /// Interaction logic for UCrbtnCV.xaml
     /// </summary>
-    public partial class UCChoseCV : UserControl
+    public partial class UCrbtnCV : UserControl
     {
-        public UCChoseCV()
+        public UCrbtnCV(int id)
         {
             InitializeComponent();
+            CV cv = CVDAO.Instance.GetCvById(id);
+            IdCV = cv.Id;
+            txtName.Text = cv.TenCV;
         }
+        public int IdCV;
     }
 }

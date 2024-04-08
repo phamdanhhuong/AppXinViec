@@ -82,7 +82,9 @@ namespace AppXinViecWPF.View.Applicant
 
         private void btnApply_Click(object sender, RoutedEventArgs e)
         {
-
+            WChoseCV wChoseCV = new WChoseCV(IdPost); 
+            wChoseCV.Show();
+            this.Close();
         }
     }
 }

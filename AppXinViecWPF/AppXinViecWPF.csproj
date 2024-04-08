@@ -76,9 +76,6 @@
     <Compile Include="View\Applicant\UCAppliedJobs.xaml.cs">
       <DependentUpon>UCAppliedJobs.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Applicant\UCChoseCV.xaml.cs">
-      <DependentUpon>UCChoseCV.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\Applicant\UCCompanyInfomation.xaml.cs">
       <DependentUpon>UCCompanyInfomation.xaml</DependentUpon>
     </Compile>
@@ -94,6 +91,9 @@
     <Compile Include="View\Applicant\UCManageCVs.xaml.cs">
       <DependentUpon>UCManageCVs.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Applicant\UCrbtnCV.xaml.cs">
+      <DependentUpon>UCrbtnCV.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Applicant\UCSavedJobs.xaml.cs">
       <DependentUpon>UCSavedJobs.xaml</DependentUpon>
     </Compile>
@@ -105,6 +105,9 @@
     </Compile>
     <Compile Include="View\Applicant\UCViewCV.xaml.cs">
       <DependentUpon>UCViewCV.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Applicant\WChoseCV.xaml.cs">
+      <DependentUpon>WChoseCV.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Applicant\WJobInfo.xaml.cs">
       <DependentUpon>WJobInfo.xaml</DependentUpon>
@@ -182,10 +185,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Applicant\UCChoseCV.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="View\Applicant\UCCompanyInfomation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -206,6 +205,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Applicant\UCrbtnCV.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Applicant\UCSavedJobs.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -219,6 +222,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Applicant\UCViewCV.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Applicant\WChoseCV.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -36,7 +36,8 @@ namespace AppXinViecWPF.DAO
         {
             string query = string.Format("Select * from dbo.Account where Username = '{0}' and Password = '{1}'",username,password);
             DataTable dt = DataProvider.Instance.ExecuteQuery(query);
-            UserID = int.Parse(dt.Rows[0]["Id"].ToString());
+            if(dt.Rows.Count > 0)
+                UserID = int.Parse(dt.Rows[0]["Id"].ToString());
             return dt.Rows.Count > 0;
         }
         public bool IsEmployer(string username, string password)

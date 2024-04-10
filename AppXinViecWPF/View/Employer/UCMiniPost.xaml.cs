@@ -52,5 +52,11 @@ namespace AppXinViecWPF.View.Employer
         {
             PostDAO.Instance.DeletePostById(IdPost);
         }
+
+        private void btnEdit_Click(object sender, RoutedEventArgs e)
+        {
+            WCreateNewPost post = new WCreateNewPost(IdPost);
+            post.ShowDialog();
+        }
     }
 }

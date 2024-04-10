@@ -49,7 +49,8 @@
                         <Button x:Name="btnEdit"
                                 BorderBrush="Transparent" 
                                 Style="{StaticResource btnNormal}"
-                                Width="20" Height="20">
+                                Width="20" Height="20"
+                                Click="btnEdit_Click">
                             <StackPanel >
                                 <fa:IconImage Icon="Pen"/>
                             </StackPanel>

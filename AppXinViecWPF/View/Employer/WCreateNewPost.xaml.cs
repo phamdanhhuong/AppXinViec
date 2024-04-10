@@ -25,6 +25,21 @@ namespace AppXinViecWPF.View.Employer
         {
             InitializeComponent();
         }
+        public WCreateNewPost(int idPost)
+        {
+            InitializeComponent();
+            IdPost = idPost;
+            PostDTO post = PostDAO.Instance.GetPostById(idPost);
+            DataContext = post;
+            cboSalary.Text = post.Salary;
+            rtxtDescription.AppendText(post.Jd);
+            rtxtInterest.AppendText(post.Interest);
+            rtxtRequire.AppendText(post.Requirement);
+            rtxtSkill.AppendText(post.Skill);
+            btnPost.Click -= btnPost_Click;
+            btnPost.Click += btnPost_Update_Click;
+        }
+        int IdPost;
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed)
@@ -59,6 +74,18 @@ namespace AppXinViecWPF.View.Employer
             TextRange skill = new TextRange(rtxtSkill.Document.ContentStart, rtxtSkill.Document.ContentEnd);
             PostDTO post = new PostDTO(txtNameJob.Text,desciption.Text,require.Text,interest.Text,txtAddress.Text,cboSalary.Text,cboLocation.Text,cboExp.Text,cboPosition.Text,txtQuantity.Text,cboWorkMode.Text,cboGender.Text,txtCareer.Text,skill.Text,dpExpireDate.SelectedDate.Value);
             PostDAO.Instance.CreatePost(post);
+            MessageBox.Show("Đăng bài thành công");
+            this.Close();
+        }
+
+        private void btnPost_Update_Click(object sender, RoutedEventArgs e)
+        {
+            TextRange desciption = new TextRange(rtxtDescription.Document.ContentStart, rtxtDescription.Document.ContentEnd);
+            TextRange require = new TextRange(rtxtRequire.Document.ContentStart, rtxtRequire.Document.ContentEnd);
+            TextRange interest = new TextRange(rtxtInterest.Document.ContentStart, rtxtInterest.Document.ContentEnd);
+            TextRange skill = new TextRange(rtxtSkill.Document.ContentStart, rtxtSkill.Document.ContentEnd);
+            PostDTO post = new PostDTO(txtNameJob.Text, desciption.Text, require.Text, interest.Text, txtAddress.Text, cboSalary.Text, cboLocation.Text, cboExp.Text, cboPosition.Text, txtQuantity.Text, cboWorkMode.Text, cboGender.Text, txtCareer.Text, skill.Text, dpExpireDate.SelectedDate.Value,IdPost);
+            PostDAO.Instance.UpdatePost(post);
             MessageBox.Show("Đăng bài thành công");
             this.Close();
         }

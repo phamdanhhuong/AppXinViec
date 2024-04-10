@@ -73,7 +73,7 @@
                                     <RowDefinition/>
                                 </Grid.RowDefinitions>
                                 <Grid Grid.Row="0" Background="White">
-                                    <TextBox x:Name="txtNameJob" Text="" Panel.ZIndex="1" Background="Transparent" FontSize="20" FontWeight="SemiBold" BorderThickness="0" TextChanged="txtInput_TextChanged" VerticalAlignment="Center"/>
+                                    <TextBox x:Name="txtNameJob" Text="{Binding Path= NameJob}" Panel.ZIndex="1" Background="Transparent" FontSize="20" FontWeight="SemiBold" BorderThickness="0" TextChanged="txtInput_TextChanged" VerticalAlignment="Center"/>
                                     <TextBlock x:Name="tbPlaceHolder" Text="Nhập tên công việc" Panel.ZIndex="0" HorizontalAlignment="Left" FontSize="18" Margin="10 0 0 0" FontWeight="Light" Foreground="DarkGray" VerticalAlignment="Center" Width="230"/>
                                 </Grid>
                                 <Grid Grid.Row="2">
@@ -96,12 +96,16 @@
                                             </Label>
                                             <StackPanel Orientation="Vertical">
                                                 <TextBlock Text="Mức lương" Margin="3 0 0 0"/>
-                                                <ComboBox x:Name="cboSalary" Style="{StaticResource ComboBoxFlatStyle}" Width="100">
-                                                    <ComboBoxItem Content="3-5 triệu"/>
-                                                    <ComboBoxItem Content="5-7 triệu"/>
-                                                    <ComboBoxItem Content="10-15 triệu"/>
-                                                    <ComboBoxItem Content="15-20 triệu"/>
-                                                    <ComboBoxItem Content="20-25 triệu"/>
+                                                <ComboBox x:Name="cboSalary" Text="{Binding Path= Salary}" Style="{StaticResource ComboBoxFlatStyle}" Width="100">
+                                                    <ComboBoxItem Content="3 - 5 triệu"/>
+                                                    <ComboBoxItem Content="5 - 7 triệu"/>
+                                                    <ComboBoxItem Content="10 - 15 triệu"/>
+                                                    <ComboBoxItem Content="15 - 20 triệu"/>
+                                                    <ComboBoxItem Content="20 - 25 triệu"/>
+                                                    <ComboBoxItem Content="25 - 30 triệu"/>
+                                                    <ComboBoxItem Content="30 - 50 triệu"/>
+                                                    <ComboBoxItem Content="Trên 50 triệu"/>
+                                                    <ComboBoxItem Content="Thỏa thuận"/>
                                                 </ComboBox>
                                             </StackPanel>
                                         </StackPanel>
@@ -120,7 +124,7 @@
                                             </Label>
                                             <StackPanel Orientation="Vertical">
                                                 <TextBlock Text="Địa điểm" Margin="3 0 0 0"/>
-                                                <ComboBox x:Name="cboLocation" Style="{StaticResource ComboBoxFlatStyle}" Width="100">
+                                                <ComboBox x:Name="cboLocation" Text="{Binding Path= Location}" Style="{StaticResource ComboBoxFlatStyle}" Width="100">
                                                     <ComboBoxItem Content="An Giang"/>
                                                     <ComboBoxItem Content="Bà Rịa - Vũng Tàu"/>
                                                     <ComboBoxItem Content="Bạc Liêu"/>
@@ -202,7 +206,7 @@
                                             </Label>
                                             <StackPanel Orientation="Vertical">
                                                 <TextBlock Text="Kinh nghiệm" Margin="3 0 0 0"/>
-                                                <ComboBox x:Name="cboExp" Style="{StaticResource ComboBoxFlatStyle}" Width="100">
+                                                <ComboBox x:Name="cboExp" Text="{Binding Path= Experience}" Style="{StaticResource ComboBoxFlatStyle}" Width="100">
                                                     <ComboBoxItem Content="Không yêu cầu"/>
                                                     <ComboBoxItem Content="trên 1 năm"/>
                                                     <ComboBoxItem Content="trên 2 năm"/>
@@ -280,7 +284,7 @@
                                 </Grid>
                                 <Grid Grid.Row="8">
                                     <StackPanel Margin="20 0 0 0">
-                                        <TextBox x:Name="txtAddress" 
+                                        <TextBox x:Name="txtAddress" Text="{Binding Path= Address}"
                                                      Height="50"/>
                                     </StackPanel>
                                 </Grid>
@@ -320,7 +324,7 @@
                                         </Label>
                                         <StackPanel Orientation="Vertical">
                                             <TextBlock Text="Cấp bậc" Margin="5 0 0 0"/>
-                                            <ComboBox x:Name="cboPosition" Style="{StaticResource ComboBoxFlatStyle}" Width="100">
+                                            <ComboBox x:Name="cboPosition" Text="{Binding Path= Position}" Style="{StaticResource ComboBoxFlatStyle}" Width="100">
                                                 <ComboBoxItem Content="Nhân viên"/>
                                                 <ComboBoxItem Content="Trưởng nhóm"/>
                                                 <ComboBoxItem Content="Trưởng/Phó phòng"/>
@@ -346,7 +350,7 @@
                                         </Label>
                                         <StackPanel Orientation="Vertical">
                                             <TextBlock Text="Số lượng tuyển" Margin="5 0 0 0"/>
-                                            <TextBox x:Name="txtQuantity" FontWeight="Bold" FontSize="12" Margin="0 0 0 0" Width="100"/>
+                                            <TextBox x:Name="txtQuantity" Text="{Binding Path= Quantity}" FontWeight="Bold" FontSize="12" Margin="0 0 0 0" Width="100"/>
                                         </StackPanel>
                                     </StackPanel>
                                 </Grid>
@@ -364,7 +368,7 @@
                                         </Label>
                                         <StackPanel Orientation="Vertical">
                                             <TextBlock Text="Hình thức làm việc" Margin="5 0 0 0"/>
-                                            <ComboBox x:Name="cboWorkMode" Style="{StaticResource ComboBoxFlatStyle}" Width="100">
+                                            <ComboBox x:Name="cboWorkMode" Text="{Binding Path= WorkMode}" Style="{StaticResource ComboBoxFlatStyle}" Width="100">
                                                 <ComboBoxItem Content="Toàn thời gian"/>
                                                 <ComboBoxItem Content="Bán thời gian"/>
                                                 <ComboBoxItem Content="Thực tập"/>
@@ -386,7 +390,7 @@
                                         </Label>
                                         <StackPanel Orientation="Vertical">
                                             <TextBlock Text="Yêu cầu giới tính" Margin="5 0 0 0"/>
-                                            <ComboBox x:Name="cboGender" Style="{StaticResource ComboBoxFlatStyle}" Width="100">
+                                            <ComboBox x:Name="cboGender" Text="{Binding Path= Gender}" Style="{StaticResource ComboBoxFlatStyle}" Width="100">
                                                 <ComboBoxItem Content="Nam"/>
                                                 <ComboBoxItem Content="Nữ"/>
                                                 <ComboBoxItem Content="Không yêu cầu"/>
@@ -408,7 +412,7 @@
                                         </Label>
                                         <StackPanel Orientation="Vertical">
                                             <TextBlock Text="Hạn nộp hồ sơ" Margin="5 0 0 0"/>
-                                            <DatePicker x:Name="dpExpireDate" FontWeight="SemiBold" Margin="3 0 0 0"/>
+                                            <DatePicker x:Name="dpExpireDate" SelectedDate="{Binding Path= ExpireDate}" FontWeight="SemiBold" Margin="3 0 0 0"/>
                                         </StackPanel>
                                     </StackPanel>
                                 </Grid>
@@ -442,7 +446,7 @@
                                                 </Label.Template>
                                             </Label>
                                         </StackPanel>-->
-                                        <TextBox x:Name="txtCareer" 
+                                        <TextBox x:Name="txtCareer" Text="{Binding Path= Career}"
                                                      Height="50"/>
                                     </StackPanel>
                                 </Grid>

@@ -66,6 +66,10 @@ namespace AppXinViecWPF.View
                 }
                 
             }
+            else
+            {
+                MessageBox.Show("Tài khoản hoặc mật khẩu không đúng");
+            }
         }
 
         private void btnRegister_Click(object sender, RoutedEventArgs e)

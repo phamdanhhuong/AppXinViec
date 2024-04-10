@@ -138,7 +138,8 @@
                             <fa:IconImage Icon="Coins" Panel.ZIndex="1" Foreground="Gray" Height="18" HorizontalAlignment="Left" Margin="25 0 0 0"/>
                             <ComboBox x:Name="cboSalarySearch" Style="{StaticResource ComboBoxFlatStyle}" Width="230" Height="30" Margin="5 2 5 2" FontWeight="SemiBold" SelectedIndex="0">
                                 <ComboBoxItem Content="Tất cả mức lương"/>
-                                <ComboBoxItem Content="Dưới 10 triệu"/>
+                                <ComboBoxItem Content="3-5 triệu"/>
+                                <ComboBoxItem Content="5-7 triệu"/>
                                 <ComboBoxItem Content="10 - 15 triệu"/>
                                 <ComboBoxItem Content="15 - 20 triệu"/>
                                 <ComboBoxItem Content="20 - 25 triệu"/>

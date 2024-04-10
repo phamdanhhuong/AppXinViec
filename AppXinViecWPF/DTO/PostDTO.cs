@@ -51,7 +51,7 @@ namespace AppXinViecWPF.DTO
         public int Status { get => status; set => status = value; }
         public int IdEmployer { get => idEmployer; set => idEmployer = value; }
 
-        public PostDTO(string name,string jd, string requirement, string interest, string address, string salary, string location, string experience, string position, string quantity, string workMode, string gender, string career, string skill, DateTime expireDate)
+        public PostDTO(string name, string jd, string requirement, string interest, string address, string salary, string location, string experience, string position, string quantity, string workMode, string gender, string career, string skill, DateTime expireDate, int idPost = 0)
         {
             NameJob = name;
             Jd = jd;
@@ -70,8 +70,8 @@ namespace AppXinViecWPF.DTO
             Skill = skill;
             ExpireDate = expireDate;
             IdPost = idPost;
-            NameJob = nameJob;
         }
+
         public PostDTO(DataTable data)
         {
             IdPost = int.Parse(data.Rows[0]["Id"].ToString());

@@ -38,6 +38,16 @@ namespace AppXinViecWPF.DAO
             DataProvider.Instance.ExecuteNonQuery(query,new object[] { int.Parse(Id.ToString()), post.Jd, post.Requirement, post.Interest, post.Address, post.Salary, post.Location, post.Experience, post.Position, post.Quantity, post.WorkMode, post.Gender, post.Career, post.Skill });
         }
 
+        public void UpdatePost(PostDTO post)
+        {
+            //
+            string query = string.Format("UPDATE Post SET TenCongViec = @TenCongViec ,HanNopHoSo = @HanNopHoSo WHERE Id = @Id ");
+            DataProvider.Instance.ExecuteNonQuery(query, new object[] { post.NameJob, post.ExpireDate.ToString("yyyy-MM-dd") , post.IdPost});
+            //
+            query = "UPDATE PostDetail SET MoTa = @MoTa ,YeuCau = @YeuCau ,QuyenLoi = @QuyenLoi , DiaChi = @DiaChi , Luong = @Luong , KhuVuc = @KhuVuc ,KinhNghiem = @KinhNghiem , ChucVu = @ChucVu , SoLuongCanTuyen = @SoLuongCanTuyen , CheDoLamViec = @CheDoLamViec , GioiTinh = @GioiTinh , NganhNghe = @NganhNghe , KyNang = @KyNang WHERE Id = @Id ";
+            DataProvider.Instance.ExecuteNonQuery(query, new object[] { post.Jd, post.Requirement, post.Interest, post.Address, post.Salary, post.Location, post.Experience, post.Position, post.Quantity, post.WorkMode, post.Gender, post.Career, post.Skill , post.IdPost});
+        }
+
         public PostDTO GetPostById(int id) 
         {
             string query = string.Format("SELECT * FROM Post inner join PostDetail on Post.id = PostDetail.id WHERE Post.id = {0}", id);

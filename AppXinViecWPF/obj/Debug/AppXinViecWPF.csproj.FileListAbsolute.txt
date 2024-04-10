@@ -517,3 +517,5 @@ F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\UC
 F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\UCrbtnCV.baml
 F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\WChoseCV.g.cs
 F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\WChoseCV.baml
+F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Employer\WViewCV.g.cs
+F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Employer\WViewCV.baml

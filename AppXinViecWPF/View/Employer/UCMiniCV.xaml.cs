@@ -36,5 +36,11 @@ namespace AppXinViecWPF.View.Employer
         }
         int IdCV;
         int IdPost;
+
+        private void btnView_Click(object sender, RoutedEventArgs e)
+        {
+            WViewCV wViewCV = new WViewCV(IdCV);
+            wViewCV.Show();
+        }
     }
 }

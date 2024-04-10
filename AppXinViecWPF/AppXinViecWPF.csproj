@@ -149,6 +149,9 @@
     <Compile Include="View\Employer\WMainEmployer.xaml.cs">
       <DependentUpon>WMainEmployer.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Employer\WViewCV.xaml.cs">
+      <DependentUpon>WViewCV.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Register\WEmployerRegister.xaml.cs">
       <DependentUpon>WEmployerRegister.xaml</DependentUpon>
     </Compile>
@@ -279,6 +282,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Employer\WMainEmployer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Employer\WViewCV.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

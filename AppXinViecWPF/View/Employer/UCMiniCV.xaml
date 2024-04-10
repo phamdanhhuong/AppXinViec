@@ -61,7 +61,8 @@
                 <Button x:Name="btnView"
                                 BorderBrush="Transparent" 
                                 Style="{StaticResource btnNormal}"
-                                Width="20" Height="20">
+                                Width="20" Height="20"
+                        Click="btnView_Click">
                     <StackPanel >
                         <fa:IconImage Icon="Eye"/>
                     </StackPanel>

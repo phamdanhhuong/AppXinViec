@@ -50,7 +50,10 @@ namespace AppXinViecWPF.View.Employer
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
-            PostDAO.Instance.DeletePostById(IdPost);
+            if (MessageBox.Show("Bạn có muốn xóa bài viết","Cảnh báo",MessageBoxButton.OKCancel) == MessageBoxResult.OK)
+            {
+                PostDAO.Instance.DeletePostById(IdPost);
+            }
         }
 
         private void btnEdit_Click(object sender, RoutedEventArgs e)

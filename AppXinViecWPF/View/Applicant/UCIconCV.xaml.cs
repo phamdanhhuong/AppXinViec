@@ -36,7 +36,10 @@ namespace AppXinViecWPF.View.Applicant
 
         public void btnDelete_Click(object sender, RoutedEventArgs e)
         {
-            CVDAO.Instance.DeleteCvById(GetCv.Id);
+            if (MessageBox.Show("Bạn có muốn xóa CV", "Cảnh báo", MessageBoxButton.OKCancel) == MessageBoxResult.OK)
+            {
+                CVDAO.Instance.DeleteCvById(GetCv.Id);
+            }
         }
 
         private void btnView_Click(object sender, RoutedEventArgs e)

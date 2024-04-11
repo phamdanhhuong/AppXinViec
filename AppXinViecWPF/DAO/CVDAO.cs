@@ -68,7 +68,7 @@ namespace AppXinViecWPF.DAO
 
         public void ApplyCV(int IdCV,int IdPost)
         {
-            string query = string.Format("INSERT INTO ApplyCV(IdCV,IdPost,NgayNop) VALUES ({0},{1},{2})",IdCV,IdPost,DateTime.Now);
+            string query = string.Format("INSERT INTO ApplyCV(IdCV,IdPost,NgayNop) VALUES ({0},{1},'{2}')",IdCV,IdPost,DateTime.Now.ToString("yyyy-MM-dd"));
             DataProvider.Instance.ExecuteNonQuery (query);
         }
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppXinViecWPF.DAO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,14 @@ namespace AppXinViecWPF.View.Applicant
         public UCSavedJobs()
         {
             InitializeComponent();
+            int[] listJob =ApplicantDAO.Instance.GetAllFavIdJob();
+            icMain.Items.Clear();
+            foreach (int id in listJob)
+            {
+                UCJob a = new UCJob(id);
+                icMain.Items.Add(a);
+            }
+            txtNumber.Text = listJob.Length.ToString();
         }
     }
 }

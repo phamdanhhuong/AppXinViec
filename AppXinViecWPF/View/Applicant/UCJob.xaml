@@ -52,7 +52,7 @@
                     <Button x:Name="btnViewJobs" Style="{StaticResource ButtonStyle}" Click="btnViewJobs_Click" Cursor="Hand">
                         <TextBlock Text="Ứng tuyển"/>
                     </Button>
-                    <Button  Margin="5" Cursor="Hand" x:Name="btnLike" Click="btnLike_Click">
+                    <!--<Button  Margin="5" Cursor="Hand" x:Name="btnLike" Click="btnLike_Click">
                         <Button.Template>
                             <ControlTemplate>
                                 <Grid>
@@ -62,11 +62,11 @@
                                 </Grid>
                             </ControlTemplate>
                         </Button.Template>
-                    </Button>
-                    <!--<StackPanel Background="#e5f7ed" Height="30" Width="30">
-                        <fa:IconImage x:Name="btnLike_Icon" Icon="{Binding Path= NameIcon, UpdateSourceTrigger=PropertyChanged}" Foreground="#00b14f" Height="26" Width="26"/>
+                    </Button>-->
+                    <StackPanel Background="#e5f7ed" Height="30" Width="30">
+                        <fa:IconImage x:Name="btnLike_Icon" Icon="Heart" Foreground="#00b14f" Height="26" Width="26"/>
                         <Button Cursor="Hand" x:Name="btnLike" Click="btnLike_Click"/>
-                    </StackPanel>-->
+                    </StackPanel>
                 </StackPanel>
             </Grid>
         </Grid>

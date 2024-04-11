@@ -9,7 +9,7 @@
     <Grid>
         <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                 <TextBlock x:Name="txtName" Text="Lập trình viên" FontSize="18"/>
-                <Button x:Name="btnView" Cursor="Hand">
+                <!--<Button x:Name="btnView" Cursor="Hand">
                     <Button.Template>
                         <ControlTemplate>
                         <Grid>
@@ -17,7 +17,7 @@
                             </Grid>
                         </ControlTemplate>
                     </Button.Template>
-                </Button>
+                </Button>-->
         </StackPanel>
     </Grid>
 </UserControl>

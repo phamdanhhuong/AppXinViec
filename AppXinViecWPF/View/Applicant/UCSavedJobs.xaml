@@ -16,7 +16,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="180"/>
             <RowDefinition Height="60"/>
-            <RowDefinition Height="60"/>
+            <RowDefinition Height="0"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
@@ -35,11 +35,11 @@
             <Border BorderThickness="0 0 0 1" BorderBrush="LightGray"/>
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                 <TextBlock Text="Danh sách " Foreground="Black" FontSize="20" FontWeight="Normal" Margin="10 10 0 10"/>
-                <TextBlock Text="1" Foreground="Black" FontSize="20" FontWeight="Bold" Margin="0 10 0 0"/>
+                <TextBlock x:Name="txtNumber" Text="1" Foreground="Black" FontSize="20" FontWeight="Bold" Margin="0 10 0 0"/>
                 <TextBlock Text=" việc làm đã lưu" Foreground="Black" FontSize="20" FontWeight="Normal" Margin="0 10 0 10"/>
             </StackPanel>
         </Grid>
-        <Grid Grid.Row="2">
+        <Grid Grid.Row="2" Visibility="Collapsed">
             <Border BorderThickness="0 0 0 1" BorderBrush="LightGray"/>
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                 <TextBlock Text="Ưu tiên hiển thị:" FontSize="20" Foreground="Gray" Margin="10 10 30 10"/>
@@ -50,7 +50,9 @@
         </Grid>
         <Grid Grid.Row="3">
             <ScrollViewer VerticalScrollBarVisibility="Hidden">
-                
+                    <ItemsControl x:Name="icMain">
+                        
+                    </ItemsControl>
             </ScrollViewer>
         </Grid>
         </Grid>

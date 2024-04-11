@@ -30,6 +30,11 @@ namespace AppXinViecWPF.View.Applicant
         {
             InitializeComponent();
             IdPost = idPost;
+            int[] ListPostFav=ApplicantDAO.Instance.GetAllFavIdJob();
+            if (ListPostFav.Contains(idPost))
+            {
+                btnLike_Icon.Icon = IconChar.HeartCircleCheck;
+            }
         }
 
         public int IdPost { get => idPost; set => idPost = value; }
@@ -71,15 +76,21 @@ namespace AppXinViecWPF.View.Applicant
 
         private void btnLike_Click(object sender, RoutedEventArgs e)
         {
-            var btnLike_Icon = btnLike.Template.FindName("btnLike_Icon", btnLike) as IconImage;
+            //var btnLike_Icon = btnLike.Template.FindName("btnLike_Icon", btnLike) as IconImage;
             if (btnLike_Icon.Icon == IconChar.Heart)
             {
+                ApplicantDAO.Instance.AddFavJob(IdPost);
                 btnLike_Icon.Icon = IconChar.HeartCircleCheck;
             }
             else
             {
+                ApplicantDAO.Instance.DeleteFavJob(IdPost);
                 btnLike_Icon.Icon = IconChar.Heart;
             }
+        }
+        public void TriggerButton()
+        {
+            btnLike.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
         }
     }
 }

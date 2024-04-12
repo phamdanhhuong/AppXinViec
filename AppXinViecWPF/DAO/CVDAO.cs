@@ -89,6 +89,23 @@ namespace AppXinViecWPF.DAO
             }
             return data;
         }
-
+        public bool IsComfirm(int idcv,int idpost)
+        {
+            string query = string.Format("SELECT Duyet FROM ApplyCV WHERE IdCV = {0} AND IdPost = {1} ",idcv,idpost);
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            if (int.Parse(dt.Rows[0]["Duyet"].ToString())==0)
+                return false;
+            return true;
+        }
+        public void Comfirm(int idcv,int idpost)
+        {
+            string query = string.Format("UPDATE ApplyCV SET Duyet=1 WHERE IdCV = {0} AND IdPost = {1} ", idcv, idpost);
+            DataProvider.Instance.ExecuteNonQuery(query);
+        }
+        public void UnComfirm(int idcv, int idpost)
+        {
+            string query = string.Format("UPDATE ApplyCV SET Duyet=0 WHERE IdCV = {0} AND IdPost = {1} ", idcv, idpost);
+            DataProvider.Instance.ExecuteNonQuery(query);
+        }
     }
 }

@@ -33,6 +33,12 @@ namespace AppXinViecWPF.View.Employer
             txtName.Text = cv.HoVaTen;
             txtNameJob.Text = post.NameJob;
             txtIdPost.Text = idPost.ToString();
+            if (CVDAO.Instance.IsComfirm(IdCV, IdPost))
+            {
+                Icon_comfirm.Foreground = new SolidColorBrush(Colors.Green);
+                txtStatus.Text = "Đã duyệt";
+                txtStatus.Background = new SolidColorBrush(Colors.LightGreen);
+            }
         }
         int IdCV;
         int IdPost;
@@ -41,6 +47,24 @@ namespace AppXinViecWPF.View.Employer
         {
             WViewCV wViewCV = new WViewCV(IdCV);
             wViewCV.Show();
+        }
+
+        private void btnComfirm_Click(object sender, RoutedEventArgs e)
+        {
+            if (!CVDAO.Instance.IsComfirm(IdCV, IdPost))
+            {
+                CVDAO.Instance.Comfirm(IdCV, IdPost);
+                Icon_comfirm.Foreground = new SolidColorBrush(Colors.Green);
+                txtStatus.Text = "Đã duyệt";
+                txtStatus.Background = new SolidColorBrush(Colors.LightGreen);
+            }
+            else
+            {
+                CVDAO.Instance.UnComfirm(IdCV, IdPost);
+                Icon_comfirm.Foreground = new SolidColorBrush(Colors.Black);
+                txtStatus.Text = "Chưa duyệt";
+                txtStatus.Background = new SolidColorBrush(Colors.LightGray);
+            }
         }
     }
 }

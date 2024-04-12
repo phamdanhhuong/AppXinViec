@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:AppXinViecWPF.View.Employer"
              xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
              mc:Ignorable="d" 
-             d:DesignHeight="100" d:DesignWidth="700">
+             d:DesignHeight="100" d:DesignWidth="800">
     <Border CornerRadius="10" Margin="0,0,0,10">
         <Border.Background>
             <SolidColorBrush Color="{StaticResource secondaryBackColor1}"/>
@@ -17,6 +17,7 @@
                 <ColumnDefinition Width="250"/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
+                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <StackPanel Grid.Column="0" Orientation="Vertical">
                 <TextBlock x:Name="txtName" 
@@ -25,7 +26,7 @@
                            HorizontalAlignment="Left" Margin="10,10,0,0"/>
                 <TextBlock x:Name="txtStatus" 
                                Style="{StaticResource tbNormal}" 
-                               Text="Chưa xem"
+                               Text="Chưa duyệt"
                                HorizontalAlignment="Left"
                                FontWeight="Normal"
                                Background="LightGray"
@@ -74,6 +75,24 @@
                         FontSize="10"
                         HorizontalAlignment="Center"
                         TextWrapping="Wrap"/>
+            </StackPanel>
+            <StackPanel Grid.Column="4" Orientation="Vertical" VerticalAlignment="Center">
+                <Button x:Name="btnComfirm"
+                    BorderBrush="Transparent" 
+                    Style="{StaticResource btnNormal}"
+                    Width="20" Height="20"
+                    Click="btnComfirm_Click">
+                    <StackPanel>
+                        <fa:IconImage x:Name="Icon_comfirm" Icon="SquareCheck"/>
+                    </StackPanel>
+                </Button>
+                <TextBlock Text="Duyệt" 
+                            Style="{StaticResource tbNormal}"
+                            Foreground="Black"
+                            TextAlignment="Center"
+                            FontSize="10"
+                            HorizontalAlignment="Center"
+                            TextWrapping="Wrap"/>
             </StackPanel>
         </Grid>
     </Border>

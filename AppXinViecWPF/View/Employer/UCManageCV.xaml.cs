@@ -25,10 +25,30 @@ namespace AppXinViecWPF.View.Employer
         public UCManageCV()
         {
             InitializeComponent();
-            List<ApplyCV> list = CVDAO.Instance.GetApplyCVByIdEmp(AccountDAO.UserID);    
-            foreach (ApplyCV cv in list)
+            List<ApplyCV> list = CVDAO.Instance.GetApplyCVByIdEmp(AccountDAO.UserID);
+            List<int> listPost = new List<int>();
+            foreach(ApplyCV cv in list) 
             {
-                icMain.Items.Add(new UCMiniCV(cv.IdPost,cv.IdCV,cv.SubmitDay));
+                if (!listPost.Contains(cv.IdPost))
+                {
+                    listPost.Add(cv.IdPost);
+                }
+            }
+            foreach (int i in listPost)
+            {
+                PostDTO p = PostDAO.Instance.GetPostById(i);
+                TextBlock textBlock = new TextBlock();
+                textBlock.Text = $"Hồ sơ nộp cho công việc {p.NameJob}";
+                textBlock.FontWeight = FontWeights.Bold;
+                textBlock.FontSize = 16;
+                icMain.Items.Add(textBlock);
+                foreach (ApplyCV cv in list)
+                {
+                    if(cv.IdPost == i)
+                    {
+                        icMain.Items.Add(new UCMiniCV(cv.IdPost, cv.IdCV, cv.SubmitDay));
+                    }
+                }
             }
         }
     }

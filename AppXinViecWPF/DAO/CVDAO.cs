@@ -62,7 +62,9 @@ namespace AppXinViecWPF.DAO
         }
         public void DeleteCvById(int id)
         {
-            string query = string.Format("DELETE FROM Cv WHERE Id = {0}", id);
+            string query = string.Format("DELETE FROM ApplyCV WHERE IdCV = {0}", id);
+            DataProvider.Instance.ExecuteNonQuery(query);
+            query = string.Format("DELETE FROM Cv WHERE Id = {0}", id);
             DataProvider.Instance.ExecuteNonQuery(query);
         }
 

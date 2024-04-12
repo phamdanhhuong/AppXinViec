@@ -52,21 +52,11 @@
                     <Button x:Name="btnViewJobs" Style="{StaticResource ButtonStyle}" Click="btnViewJobs_Click" Cursor="Hand">
                         <TextBlock Text="Ứng tuyển"/>
                     </Button>
-                    <!--<Button  Margin="5" Cursor="Hand" x:Name="btnLike" Click="btnLike_Click">
-                        <Button.Template>
-                            <ControlTemplate>
-                                <Grid>
-                                    <Border Background="#e5f7ed" CornerRadius="8" Height="36" Width="36">
-                                        <fa:IconImage x:Name="btnLike_Icon" Icon="Heart" Foreground="#00b14f" Height="26" Width="26"/>
-                                    </Border>
-                                </Grid>
-                            </ControlTemplate>
-                        </Button.Template>
-                    </Button>-->
-                    <StackPanel Background="#e5f7ed" Height="30" Width="30">
-                        <fa:IconImage x:Name="btnLike_Icon" Icon="Heart" Foreground="#00b14f" Height="26" Width="26"/>
-                        <Button Cursor="Hand" x:Name="btnLike" Click="btnLike_Click"/>
-                    </StackPanel>
+                    <Button BorderThickness="0"  Background="#e5f7ed" Height="36" Width="36" Cursor="Hand" x:Name="btnLike" Click="btnLike_Click">
+                        <StackPanel Background="#e5f7ed" Height="30" Width="30">
+                            <fa:IconImage x:Name="btnLike_Icon" Icon="Heart" Foreground="#00b14f" Height="26" Width="26"/>
+                        </StackPanel>
+                    </Button>
                 </StackPanel>
             </Grid>
         </Grid>

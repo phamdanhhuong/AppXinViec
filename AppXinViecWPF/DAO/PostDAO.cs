@@ -148,7 +148,11 @@ namespace AppXinViecWPF.DAO
         }
         public void DeletePostById(int id)
         {
-            string query = string.Format("DELETE FROM PostDetail WHERE Id = {0}", id);
+            string query = string.Format("DELETE FROM FavJob WHERE IdPost = {0}", id);
+            DataProvider.Instance.ExecuteNonQuery(query);
+            query = string.Format("DELETE FROM ApplyCV WHERE IdPost = {0}", id);
+            DataProvider.Instance.ExecuteNonQuery(query);
+            query = string.Format("DELETE FROM PostDetail WHERE Id = {0}", id);
             DataProvider.Instance.ExecuteNonQuery(query);
             query = string.Format("DELETE FROM Post WHERE Id = {0}", id);
             DataProvider.Instance.ExecuteNonQuery(query);

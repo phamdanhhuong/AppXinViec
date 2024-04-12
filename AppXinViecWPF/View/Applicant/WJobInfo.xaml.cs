@@ -42,6 +42,12 @@ namespace AppXinViecWPF.View.Applicant
                 btnApply.Visibility = Visibility.Collapsed;
                 btnSavePost.Visibility = Visibility.Collapsed;
             }
+            int[] list = ApplicantDAO.Instance.GetAllFavIdJob();
+            if(list.Contains(idPost))
+            {
+                btnApply.Click -= btnApply_Click;
+                btnApply.Click += btnApply_2_Click;
+            }
         }
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -84,6 +90,10 @@ namespace AppXinViecWPF.View.Applicant
         {
             WChoseCV wChoseCV = new WChoseCV(IdPost); 
             wChoseCV.Show();
+        }
+        private void btnApply_2_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Bạn đã apply công việc này rồi");
         }
     }
 }

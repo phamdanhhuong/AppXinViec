@@ -13,11 +13,12 @@
         </Border.Background>
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="150"/>
                 <ColumnDefinition Width="250"/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
+                <ColumnDefinition Width="50"/>
             </Grid.ColumnDefinitions>
             <StackPanel Grid.Column="0" Orientation="Vertical">
                 <TextBlock x:Name="txtName" 
@@ -75,6 +76,24 @@
                         FontSize="10"
                         HorizontalAlignment="Center"
                         TextWrapping="Wrap"/>
+            </StackPanel>
+            <StackPanel Grid.Column="5" Orientation="Vertical" VerticalAlignment="Center">
+                <Button x:Name="btnFav"
+                        BorderBrush="Transparent" 
+                        Style="{StaticResource btnNormal}"
+                        Width="20" Height="20"
+                        Click="btnFav_Click">
+                    <StackPanel>
+                        <fa:IconImage x:Name="Icon_Fav" Icon="Heart"/>
+                    </StackPanel>
+                </Button>
+                <TextBlock Text="Yêu thích" 
+                Style="{StaticResource tbNormal}"
+                Foreground="Black"
+                TextAlignment="Center"
+                FontSize="10"
+                HorizontalAlignment="Center"
+                TextWrapping="Wrap"/>
             </StackPanel>
             <StackPanel Grid.Column="4" Orientation="Vertical" VerticalAlignment="Center">
                 <Button x:Name="btnComfirm"

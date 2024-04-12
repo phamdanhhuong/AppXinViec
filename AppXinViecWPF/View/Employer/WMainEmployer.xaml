@@ -108,6 +108,14 @@
                                     <TextBlock Text="Quản lý hồ sơ" Style="{StaticResource menuButtonText}"/>
                                 </StackPanel>
                             </RadioButton>
+                            <!--<RadioButton x:Name="btnFavCV" Style="{StaticResource menuButton}"
+                                         Tag="{StaticResource panelColor1}"
+                                         Click="btnFavCV_Click">
+                                <StackPanel Orientation="Horizontal">
+                                    <fa:IconImage Icon="FileAlt" Style="{StaticResource menuButtonIcon}"/>
+                                    <TextBlock Text="Hồ sơ yêu thích" Style="{StaticResource menuButtonText}"/>
+                                </StackPanel>
+                            </RadioButton>-->
                         </StackPanel>
                     </Border>
                     <ContentControl x:Name="ccMain" Grid.Row="2" Margin="25" Grid.Column="1">

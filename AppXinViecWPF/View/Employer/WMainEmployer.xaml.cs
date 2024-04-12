@@ -74,5 +74,10 @@ namespace AppXinViecWPF.View.Employer
             UCManageCV uCManageCV = new UCManageCV();
             ccMain.Content= uCManageCV;
         }
+
+        private void btnFavCV_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -6,6 +6,7 @@
              xmlns:local="clr-namespace:AppXinViecWPF.View.Employer"
              xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
              mc:Ignorable="d" 
+             Loaded="UserControl_Loaded"
              d:DesignHeight="450" d:DesignWidth="800"
              Background="White">
     <Grid>
@@ -48,10 +49,6 @@
                         Height="28"
                         Width="150"
                         HorizontalAlignment="Left">
-                    <ComboBoxItem Content="#1234"/>
-                    <ComboBoxItem Content="#1234"/>
-                    <ComboBoxItem Content="#1234"/>
-                    <ComboBoxItem Content="#1234"/>
                 </ComboBox> 
             </StackPanel>
             <StackPanel Grid.Column="2" Orientation="Vertical">
@@ -63,7 +60,9 @@
                         Foreground="{StaticResource plainTextColor1}"
                         Height="28"
                         Width="200"
-                        HorizontalAlignment="Left">
+                        HorizontalAlignment="Left"
+                        SelectionChanged="txtStatus_SelectionChanged">
+                    <ComboBoxItem Content=""/>
                     <ComboBoxItem Content="Đã duyệt"/>
                     <ComboBoxItem Content="Chưa duyệt"/>
                 </ComboBox>

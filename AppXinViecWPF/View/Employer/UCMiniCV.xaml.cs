@@ -39,10 +39,13 @@ namespace AppXinViecWPF.View.Employer
                 txtStatus.Text = "Đã duyệt";
                 txtStatus.Background = new SolidColorBrush(Colors.LightGreen);
             }
+            if (CVDAO.Instance.IsFavCV(IdCV))
+            {
+                Icon_Fav.Icon = FontAwesome.Sharp.IconChar.HeartCircleCheck;
+            }
         }
         int IdCV;
         int IdPost;
-
         private void btnView_Click(object sender, RoutedEventArgs e)
         {
             WViewCV wViewCV = new WViewCV(IdCV);
@@ -64,6 +67,20 @@ namespace AppXinViecWPF.View.Employer
                 Icon_comfirm.Foreground = new SolidColorBrush(Colors.Black);
                 txtStatus.Text = "Chưa duyệt";
                 txtStatus.Background = new SolidColorBrush(Colors.LightGray);
+            }
+        }
+
+        private void btnFav_Click(object sender, RoutedEventArgs e)
+        {
+            if (!CVDAO.Instance.IsFavCV(IdCV))
+            {
+                CVDAO.Instance.AddFavCV(IdCV);
+                Icon_Fav.Icon = FontAwesome.Sharp.IconChar.HeartCircleCheck;
+            }
+            else
+            {
+                CVDAO.Instance.DeleteFavCV(IdCV);
+                Icon_Fav.Icon = FontAwesome.Sharp.IconChar.Heart;
             }
         }
     }

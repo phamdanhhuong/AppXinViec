@@ -62,7 +62,9 @@ namespace AppXinViecWPF.DAO
         }
         public void DeleteCvById(int id)
         {
-            string query = string.Format("DELETE FROM ApplyCV WHERE IdCV = {0}", id);
+            string query = string.Format("DELETE FROM FavCV WHERE IdCV = {0}", id);
+            DataProvider.Instance.ExecuteNonQuery(query);
+            query = string.Format("DELETE FROM ApplyCV WHERE IdCV = {0}", id);
             DataProvider.Instance.ExecuteNonQuery(query);
             query = string.Format("DELETE FROM Cv WHERE Id = {0}", id);
             DataProvider.Instance.ExecuteNonQuery(query);
@@ -106,6 +108,24 @@ namespace AppXinViecWPF.DAO
         {
             string query = string.Format("UPDATE ApplyCV SET Duyet=0 WHERE IdCV = {0} AND IdPost = {1} ", idcv, idpost);
             DataProvider.Instance.ExecuteNonQuery(query);
+        }
+        public void AddFavCV(int idcv)
+        {
+            string query = string.Format("INSERT INTO FavCV(IdEmployer,IdCV) VALUES ({0},{1})", AccountDAO.UserID, idcv);
+            DataProvider.Instance.ExecuteNonQuery(query);
+        }
+        public void DeleteFavCV(int idcv)
+        {
+            string query = string.Format("DELETE FROM FavCV WHERE IdEmployer = {0} AND IdCV = {1}", AccountDAO.UserID, idcv);
+            DataProvider.Instance.ExecuteNonQuery(query);
+        }
+        public bool IsFavCV(int idcv)
+        {
+            string query = string.Format("SELECT * FROM FavCV WHERE IdCV = {0} AND IdEmployer = {1} ", idcv, AccountDAO.UserID);
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            if (dt.Rows.Count==0)
+                return false;
+            return true;
         }
     }
 }

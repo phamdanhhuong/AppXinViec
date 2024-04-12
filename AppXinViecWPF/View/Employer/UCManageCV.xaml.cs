@@ -51,5 +51,54 @@ namespace AppXinViecWPF.View.Employer
                 }
             }
         }
+
+        private void txtStatus_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //if(txtStatus.Text == "Đã duyệt")
+            //{
+            //    foreach (var item in icMain.Items)
+            //    {
+            //        if (item.GetType() == typeof(UCMiniCV))
+            //        {
+            //            var item_ = item as UCMiniCV;
+            //            if(item_.txtStatus.Text == "Chưa duyệt")
+            //            {
+            //                item_.Visibility = Visibility.Collapsed;
+            //            }
+            //            else
+            //            {
+            //                item_.Visibility = Visibility.Visible;
+            //            }
+            //        }
+            //    }
+            //}
+            //else if(txtStatus.Text == "Chưa duyệt")
+            //{
+            //    foreach (var item in icMain.Items)
+            //    {
+            //        if (item.GetType() == typeof(UCMiniCV))
+            //        {
+            //            var item_ = item as UCMiniCV;
+            //            if (item_.txtStatus.Text == "Đã duyệt")
+            //            {
+            //                item_.Visibility = Visibility.Collapsed;
+            //            }
+            //            else
+            //            {
+            //                item_.Visibility = Visibility.Visible;
+            //            }
+            //        }
+            //    }
+            //}
+            //else
+            //{
+            //    UserControl_Loaded(sender, e);
+            //}
+        }
+
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

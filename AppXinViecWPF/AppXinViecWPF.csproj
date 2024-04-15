@@ -75,6 +75,9 @@
     <Compile Include="DTO\CV.cs" />
     <Compile Include="DTO\EmployerDTO.cs" />
     <Compile Include="DTO\PostDTO.cs" />
+    <Compile Include="View\Applicant\UCAplliedJobsHistory.xaml.cs">
+      <DependentUpon>UCAplliedJobsHistory.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Applicant\UCAppliedJobs.xaml.cs">
       <DependentUpon>UCAppliedJobs.xaml</DependentUpon>
     </Compile>
@@ -95,6 +98,9 @@
     </Compile>
     <Compile Include="View\Applicant\UCManageCVs.xaml.cs">
       <DependentUpon>UCManageCVs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Applicant\UCPostCV.xaml.cs">
+      <DependentUpon>UCPostCV.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Applicant\UCrbtnCV.xaml.cs">
       <DependentUpon>UCrbtnCV.xaml</DependentUpon>
@@ -189,6 +195,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Applicant\UCAplliedJobsHistory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Applicant\UCAppliedJobs.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -214,6 +224,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Applicant\UCManageCVs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Applicant\UCPostCV.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

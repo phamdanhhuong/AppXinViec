@@ -601,3 +601,5 @@ C:\Users\ADMIN\Downloads\Window1542024\AppXinViecWPF\obj\Debug\AppXinViecWPF.csp
 C:\Users\ADMIN\Downloads\Window1542024\AppXinViecWPF\obj\Debug\AppXinVi.0EC4A672.Up2Date
 C:\Users\ADMIN\Downloads\Window1542024\AppXinViecWPF\obj\Debug\AppXinViecWPF.exe
 C:\Users\ADMIN\Downloads\Window1542024\AppXinViecWPF\obj\Debug\AppXinViecWPF.pdb
+C:\Users\ADMIN\Downloads\Window1542024\AppXinViecWPF\obj\Debug\View\Applicant\UCIconAppliedJobs.g.cs
+C:\Users\ADMIN\Downloads\Window1542024\AppXinViecWPF\obj\Debug\View\Applicant\UCIconAppliedJobs.baml

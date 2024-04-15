@@ -84,6 +84,9 @@
     <Compile Include="View\Applicant\UCCreateCV.xaml.cs">
       <DependentUpon>UCCreateCV.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Applicant\UCIconAppliedJobs.xaml.cs">
+      <DependentUpon>UCIconAppliedJobs.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Applicant\UCIconCV.xaml.cs">
       <DependentUpon>UCIconCV.xaml</DependentUpon>
     </Compile>
@@ -195,6 +198,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Applicant\UCCreateCV.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Applicant\UCIconAppliedJobs.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

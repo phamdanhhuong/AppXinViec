@@ -1,10 +1,34 @@
-﻿
-
-FF:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\View\Applicant\UCJob.xaml;;
-FF:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\View\Applicant\UCrbtnCV.xaml;;
-FF:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\View\Applicant\UCSavedJobs.xaml;;
-FF:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\View\Employer\UCManageCV.xaml;;
-FF:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\View\Employer\UCMiniCV.xaml;;
-FF:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\View\Employer\WMainEmployer.xaml;;
-FF:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\View\Employer\WViewCV.xaml;;
+﻿C:\Users\ADMIN\Downloads\Window1542024\AppXinViecWPF\obj\Debug\GeneratedInternalTypeHelper.g.i.cs
+FC:\Users\ADMIN\Downloads\Window1542024\AppXinViecWPF\App.xaml;;
+FC:\Users\ADMIN\Downloads\Window1542024\AppXinViecWPF\MainWindow.xaml;;
+FC:\Users\ADMIN\Downloads\Window1542024\AppXinViecWPF\View\Applicant\UCAppliedJobs.xaml;;
+FC:\Users\ADMIN\Downloads\Window1542024\AppXinViecWPF\View\Applicant\UCCompanyInfomation.xaml;;
+FC:\Users\ADMIN\Downloads\Window1542024\AppXinViecWPF\View\Applicant\UCCreateCV.xaml;;
+FC:\Users\ADMIN\Downloads\Window1542024\AppXinViecWPF\View\Applicant\UCIconAppliedJobs.xaml;;
+FC:\Users\ADMIN\Downloads\Window1542024\AppXinViecWPF\View\Applicant\UCIconCV.xaml;;
+FC:\Users\ADMIN\Downloads\Window1542024\AppXinViecWPF\View\Applicant\UCJob.xaml;;
+FC:\Users\ADMIN\Downloads\Window1542024\AppXinViecWPF\View\Applicant\UCManageCVs.xaml;;
+FC:\Users\ADMIN\Downloads\Window1542024\AppXinViecWPF\View\Applicant\UCrbtnCV.xaml;;
+FC:\Users\ADMIN\Downloads\Window1542024\AppXinViecWPF\View\Applicant\UCSavedJobs.xaml;;
+FC:\Users\ADMIN\Downloads\Window1542024\AppXinViecWPF\View\Applicant\UCSearchJobs.xaml;;
+FC:\Users\ADMIN\Downloads\Window1542024\AppXinViecWPF\View\Applicant\UCUploadCVs.xaml;;
+FC:\Users\ADMIN\Downloads\Window1542024\AppXinViecWPF\View\Applicant\UCViewCV.xaml;;
+FC:\Users\ADMIN\Downloads\Window1542024\AppXinViecWPF\View\Applicant\WChoseCV.xaml;;
+FC:\Users\ADMIN\Downloads\Window1542024\AppXinViecWPF\View\Applicant\WJobInfo.xaml;;
+FC:\Users\ADMIN\Downloads\Window1542024\AppXinViecWPF\View\Applicant\WMainApplicant.xaml;;
+FC:\Users\ADMIN\Downloads\Window1542024\AppXinViecWPF\View\Custom\ComboBoxCustom.xaml;;
+FC:\Users\ADMIN\Downloads\Window1542024\AppXinViecWPF\View\Custom\TextBoxCustom.xaml;;
+FC:\Users\ADMIN\Downloads\Window1542024\AppXinViecWPF\View\Custom\UCBorder.xaml;;
+FC:\Users\ADMIN\Downloads\Window1542024\AppXinViecWPF\View\Employer\UCAccount.xaml;;
+FC:\Users\ADMIN\Downloads\Window1542024\AppXinViecWPF\View\Employer\UCManageCV.xaml;;
+FC:\Users\ADMIN\Downloads\Window1542024\AppXinViecWPF\View\Employer\UCManagePost.xaml;;
+FC:\Users\ADMIN\Downloads\Window1542024\AppXinViecWPF\View\Employer\UCMiniCV.xaml;;
+FC:\Users\ADMIN\Downloads\Window1542024\AppXinViecWPF\View\Employer\UCMiniPost.xaml;;
+FC:\Users\ADMIN\Downloads\Window1542024\AppXinViecWPF\View\Employer\UCNews.xaml;;
+FC:\Users\ADMIN\Downloads\Window1542024\AppXinViecWPF\View\Employer\WCreateNewPost.xaml;;
+FC:\Users\ADMIN\Downloads\Window1542024\AppXinViecWPF\View\Employer\WMainEmployer.xaml;;
+FC:\Users\ADMIN\Downloads\Window1542024\AppXinViecWPF\View\Employer\WViewCV.xaml;;
+FC:\Users\ADMIN\Downloads\Window1542024\AppXinViecWPF\View\Register\WEmployerRegister.xaml;;
+FC:\Users\ADMIN\Downloads\Window1542024\AppXinViecWPF\View\Register\WRegister.xaml;;
+FC:\Users\ADMIN\Downloads\Window1542024\AppXinViecWPF\View\WLogin.xaml;;
 

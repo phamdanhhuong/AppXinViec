@@ -15,7 +15,7 @@
     <Border CornerRadius="20">
         <Border CornerRadius="20" BorderThickness="2" BorderBrush="Gray">
             <Border.Background>
-                <SolidColorBrush Color="{StaticResource primaryBackColor1}"/>
+                <SolidColorBrush Color="#f3f5f7"/>
             </Border.Background>
             <Grid>
                 <Grid.RowDefinitions>

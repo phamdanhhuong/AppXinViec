@@ -4,11 +4,37 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:AppXinViecWPF.View.Applicant"
-             mc:Ignorable="d" 
+             mc:Ignorable="d"
+             d:DesignHeight="800" d:DesignWidth="800" Background="Transparent"
             xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
-            xmlns:customControl="clr-namespace:AppXinViecWPF.View.Custom"
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
-    </Grid>
+            xmlns:customControl="clr-namespace:AppXinViecWPF.View.Custom">
+    <Border CornerRadius="10" Background="White">
+        <Grid Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="200"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock VerticalAlignment="Center" Grid.Column="0" Text="Việc làm đã ứng tuyển" FontSize="26" FontWeight="SemiBold"/>
+                <ComboBox Grid.Column="1" Style="{StaticResource ComboBoxFlatStyle}" FontSize="18" Height="36" Margin="5 2 5 2" Foreground="#aeb5b6" FontWeight="SemiBold" SelectedIndex="0">
+                    <ComboBoxItem Content="Tất cả trạng thái"/>
+                    <ComboBoxItem Content="Đã ứng tuyển"/>
+                    <ComboBoxItem Content="NTD đã xem hồ sơ"/>
+                    <ComboBoxItem Content="Hồ sơ phù hợp"/>
+                    <ComboBoxItem Content="Hồ sơ không phù hợp"/>
+                </ComboBox>
+            </Grid>
+            <Grid Grid.Row="1">
+                <ScrollViewer VerticalScrollBarVisibility="Hidden" Margin="0">
+                    <ItemsControl>
+
+                    </ItemsControl>
+                </ScrollViewer>
+            </Grid>
+        </Grid>
+    </Border>
 </UserControl>

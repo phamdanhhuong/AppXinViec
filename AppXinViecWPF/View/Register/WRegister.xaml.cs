@@ -53,13 +53,21 @@ namespace AppXinViecWPF.View.Register
 
         private void btnRegister_Click(object sender, RoutedEventArgs e)
         {
-            if (txtPass.Password == txtPassAgain.Password)
+            Account account = new Account(txtUser.Text,txtPass.Password,txtEmail.Text,0);
+            if ((txtPass.Password == txtPassAgain.Password) && account.NotNull())
             {
                 ApplicantDTO applicant = new ApplicantDTO(txtName.Text, cboGender.Text, txtPhone.Text, dpBirth.SelectedDate.Value);
-                AccountDAO.Instance.CreateAccount(txtUser.Text, txtPass.Password, 0);
-                ApplicantDAO.Instance.Add(applicant);
-                MessageBox.Show("Đăng ký thành công");
-                this.Close();
+                if (applicant.NotNull())
+                {
+                    AccountDAO.Instance.CreateAccount(account);
+                    ApplicantDAO.Instance.Add(applicant);
+                    MessageBox.Show("Đăng ký thành công");
+                    this.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("không để trống username và nhập đúng mật khẩu nhập lại");
             }
         }
 

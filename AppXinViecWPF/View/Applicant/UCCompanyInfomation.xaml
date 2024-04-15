@@ -150,7 +150,7 @@
                                     </StackPanel>
                                 </Border>
                                 <Border Grid.Row="1" CornerRadius="0 0 10 10" Background="White">
-                                    <TextBox TextWrapping="Wrap" Text="Discover a new world of English learning at our cutting-edge Teaching Center. Our system goes beyond traditional methods, embracing technology, tailored curricula, and a vibrant community. Join us to experience personalized learning, expert educators, and a global network that opens doors to success. Your journey to English fluency starts with us." Foreground="Black" FontSize="15"  Margin="10" BorderThickness="0"/>
+                                    <TextBox TextWrapping="Wrap" Text="{Binding Path= Intro}" Foreground="Black" FontSize="15"  Margin="10" BorderThickness="0"/>
                                 </Border>
                             </Grid>
                             <Grid Grid.Row="1" Margin="10">

@@ -6,6 +6,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace AppXinViecWPF.DTO
 {
@@ -92,6 +93,22 @@ namespace AppXinViecWPF.DTO
             Skill = data.Rows[0]["KyNang"].ToString();
             ExpireDate= DateTime.Parse(data.Rows[0]["HanNopHoSo"].ToString());
             Status = int.Parse(data.Rows[0]["TrangThai"].ToString());
+        }
+        public bool NotNull()
+        {
+            var properties = typeof(PostDTO).GetProperties();
+
+            foreach (var property in properties)
+            {
+                object value = property.GetValue(this);
+
+                if (value == null || value.ToString() == "")
+                {
+                    MessageBox.Show($"{property.Name} trống");
+                    return false;
+                }
+            }
+            return true;
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppXinViecWPF.DTO;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -27,9 +28,9 @@ namespace AppXinViecWPF.DAO
 
         public static int UserID { get => userID; set => userID = value; }
 
-        public void CreateAccount(string username, string password, int role)
+        public void CreateAccount(Account account)
         {
-            string sqlStr = string.Format("INSERT INTO  Account (Username,Password,Role) VALUES ('{0}','{1}',{2})",username,password,role);
+            string sqlStr = string.Format("INSERT INTO  Account (Username,Password,Email,Role) VALUES ('{0}','{1}','{2}',{3})", account.UserName,account.Password,account.Email,account.Role);
             DataProvider.Instance.ExecuteNonQuery(sqlStr);
         }
         public bool Login(string username, string password)

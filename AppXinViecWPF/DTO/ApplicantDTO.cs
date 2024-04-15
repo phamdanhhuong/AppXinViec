@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Xml.Linq;
 
 namespace AppXinViecWPF.DTO
 {
@@ -26,5 +28,39 @@ namespace AppXinViecWPF.DTO
             Birth = birth;
         }
 
+        public bool NotNull()
+        {
+            var properties = typeof(ApplicantDTO).GetProperties();
+
+            foreach (var property in properties)
+            {
+                object value = property.GetValue(this);
+                string name_=NameProp(property.Name);
+                
+                if (value == null || value.ToString() == "")
+                {
+                    MessageBox.Show($"{name_} trống");
+                    return false;
+                }
+            }
+            return true;
+        }
+        private string NameProp(string nameprop)
+        {
+            string NameProp = "";
+            switch (nameprop)
+            {
+                case "Name":
+                    NameProp = "Tên";
+                    break;
+                case "Gender":
+                    NameProp = "Giới tính";
+                    break;
+                case "Phone":
+                    NameProp = "Số điện thoại";
+                    break;
+            }
+            return NameProp;
+        }
     }
 }

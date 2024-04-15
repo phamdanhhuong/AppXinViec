@@ -64,13 +64,17 @@ namespace AppXinViecWPF.View.Register
 
         private void btnRegister_Click(object sender, RoutedEventArgs e)
         {
-            if(txtPass.Password==txtPassAgain.Password)
+            Account account = new Account(txtUser.Text, txtPass.Password, txtEmail.Text,1);
+            if ((txtPass.Password == txtPassAgain.Password) && account.NotNull())
             {
-                AccountDAO.Instance.CreateAccount(txtUser.Text, txtPass.Password, 1);
-                EmployerDTO employer = new EmployerDTO(txtName.Text,cboGender.Text,txtPhone.Text,txtPosition.Text,txtNameCompany.Text,txtAddress.Text,txtWebsite.Text,txtIdTax.Text,txtHotline.Text,txtEmailCompany.Text,cboScale.Text,certificate,logo);
-                EmployerDAO.Instance.Add(employer);
-                System.Windows.MessageBox.Show("Đăng ký thành công");
-                this.Close();
+                AccountDAO.Instance.CreateAccount(account);
+                EmployerDTO employer = new EmployerDTO(txtName.Text, cboGender.Text, txtPhone.Text, txtPosition.Text, txtNameCompany.Text, txtAddress.Text, txtWebsite.Text, txtIdTax.Text, txtHotline.Text, txtEmailCompany.Text, cboScale.Text, certificate, logo);
+                if (employer.NotNull())
+                {
+                    EmployerDAO.Instance.Add(employer);
+                    System.Windows.MessageBox.Show("Đăng ký thành công");
+                    this.Close();
+                }
             }
         }
 

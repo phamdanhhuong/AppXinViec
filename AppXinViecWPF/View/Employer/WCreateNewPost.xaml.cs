@@ -73,9 +73,12 @@ namespace AppXinViecWPF.View.Employer
             TextRange interest = new TextRange(rtxtInterest.Document.ContentStart, rtxtInterest.Document.ContentEnd);
             TextRange skill = new TextRange(rtxtSkill.Document.ContentStart, rtxtSkill.Document.ContentEnd);
             PostDTO post = new PostDTO(txtNameJob.Text,desciption.Text,require.Text,interest.Text,txtAddress.Text,cboSalary.Text,cboLocation.Text,cboExp.Text,cboPosition.Text,txtQuantity.Text,cboWorkMode.Text,cboGender.Text,txtCareer.Text,skill.Text,dpExpireDate.SelectedDate.Value);
-            PostDAO.Instance.CreatePost(post);
-            MessageBox.Show("Đăng bài thành công");
-            this.Close();
+            if (post.NotNull())
+            {
+                PostDAO.Instance.CreatePost(post);
+                MessageBox.Show("Đăng bài thành công");
+                this.Close();
+            }
         }
 
         private void btnPost_Update_Click(object sender, RoutedEventArgs e)

@@ -28,14 +28,11 @@ namespace AppXinViecWPF.View.Applicant
             Emp = EmployerDAO.Instance.GetInfoById(id);
             DataContext = Emp;
             imgLogoCompany.Source = new BitmapImage(new Uri(Emp.LogoPath));
-            ListPost = PostDAO.Instance.GetAllIdNotPause();
+            ListPost = PostDAO.Instance.GetAllIdPostById(id);
             icMain.Items.Clear();
             foreach (int idpost in ListPost)
             {
-                if (idpost == Id)
-                {
-                    icMain.Items.Add(new UCJob(idpost));
-                }
+                icMain.Items.Add(new UCJob(idpost));
             }
         }
 

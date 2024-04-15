@@ -42,7 +42,7 @@
                             VerticalAlignment="Bottom"
                             x:Name="btnChangeAvatar"
                             Click="btnChangeAvatar_Click">
-                        <TextBlock Text="Đổi ảnh đại diện" FontFamily="Monterrat" FontSize="20" Foreground="{StaticResource plainTextColor2}"/>
+                        <TextBlock Text="Đổi logo" FontFamily="Monterrat" FontSize="20" Foreground="{StaticResource plainTextColor2}"/>
                     </Button>
                 </Grid>
                 <Grid Grid.Row="1">
@@ -54,16 +54,14 @@
                               FontSize="16" 
                               Style="{StaticResource groupBox}"
                               Grid.Column="0">
-                        <TextBox x:Name="txtNameUser" Style="{StaticResource textBox}">
-                            Nguyễn Văn A
-                        </TextBox>
+                        <TextBox x:Name="txtNameUser" Style="{StaticResource textBox}" Text="{Binding Path= Name,Mode=TwoWay}"/>
                     </GroupBox>
                     <GroupBox Header="Giới tính" 
                               FontSize="16" 
                               Style="{StaticResource groupBox}"
                               Grid.Column="1"
                               BorderThickness="0">
-                        <ComboBox>
+                        <ComboBox Text="{Binding Path= Gender,Mode=TwoWay}">
                             <ComboBoxItem Content="Nam"/>
                             <ComboBoxItem Content="Nữ"/>
                         </ComboBox>
@@ -78,30 +76,14 @@
                               FontSize="16" 
                               Style="{StaticResource groupBox}"
                               Grid.Column="0">
-                        <TextBox x:Name="txtPhone" Style="{StaticResource textBox}">
-                            0369696403
-                        </TextBox>
+                        <TextBox x:Name="txtPhone" Style="{StaticResource textBox}" Text="{Binding Path= Phone,Mode=TwoWay}"/>
                     </GroupBox>
                     <GroupBox Header="Vị trí" 
                               FontSize="16" 
                               Style="{StaticResource groupBox}"
                               Grid.Column="1">
-                        <TextBox x:Name="txtPosition" Style="{StaticResource textBox}">
-                            Nhân viên
-                        </TextBox>
+                        <TextBox x:Name="txtPosition" Style="{StaticResource textBox}" Text="{Binding Path=Position,Mode=TwoWay}"/>
                     </GroupBox>
-                </Grid>
-                <Grid Grid.Row="3">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="300"/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
-                    <TextBlock HorizontalAlignment="Left" 
-                               Margin="25,0,0,0"
-                               FontFamily="Monterrat"
-                               FontSize="20">
-                        Email: Example@gmail.com
-                    </TextBlock>
                 </Grid>
                 <Grid Grid.Row="4">
                     <Grid.ColumnDefinitions>
@@ -112,7 +94,7 @@
                             Grid.Column="1" 
                             Style="{StaticResource btnNormal}"
                             Background="Green"
-                            Width="100" Height="50">
+                            Width="100" Height="50" Click="btnSave_Click">
                         <TextBlock Text="Lưu" FontFamily="Monterrat" FontSize="20" Foreground="{StaticResource plainTextColor2}"/>
                     </Button>
                 </Grid>
@@ -136,14 +118,14 @@
                         <TextBlock Text="Tên công ty" Foreground="{StaticResource plainTextColor1}" FontSize="15" FontFamily="Monterrat" FontWeight="Medium" HorizontalAlignment="Left"/>
                         <StackPanel Orientation="Horizontal">
                             <fa:IconImage Icon="Building" Width="20"/>
-                            <TextBlock x:Name="txtNameCompany" Style="{StaticResource tbNormal}" Text="Công ty TNHH ABC"/>
+                            <TextBlock x:Name="txtNameCompany" Style="{StaticResource tbNormal}" Text="{Binding Path=NameCompany}"/>
                         </StackPanel>
                     </StackPanel>
                     <StackPanel Grid.Column="1" Margin="20,0,0,0">
                         <TextBlock Text="Địa chỉ công ty" Foreground="{StaticResource plainTextColor1}" FontSize="15" FontFamily="Monterrat" FontWeight="Medium" HorizontalAlignment="Left"/>
                         <StackPanel Orientation="Horizontal">
                             <fa:IconImage Icon="LocationDot" Width="20"/>
-                            <TextBlock x:Name="txtAddress" Style="{StaticResource tbNormal}" Text="quan 1, TP HCM"/>
+                            <TextBlock x:Name="txtAddress" Style="{StaticResource tbNormal}" Text="{Binding Path= AddressCompany}"/>
                         </StackPanel>
                     </StackPanel>
                 </Grid>
@@ -156,14 +138,14 @@
                         <TextBlock Text="Website" Foreground="{StaticResource plainTextColor1}" FontSize="15" FontFamily="Monterrat" FontWeight="Medium" HorizontalAlignment="Left"/>
                         <StackPanel Orientation="Horizontal">
                             <fa:IconImage Icon="Globe" Width="20"/>
-                            <TextBlock x:Name="txtWebsite" Style="{StaticResource tbNormal}" Text="Example.com.vn"/>
+                            <TextBlock x:Name="txtWebsite" Style="{StaticResource tbNormal}" Text="{Binding Path=Website}"/>
                         </StackPanel>
                     </StackPanel>
                     <StackPanel Grid.Column="1" Margin="20,0,0,0">
                         <TextBlock Text="Mã số thuế" Foreground="{StaticResource plainTextColor1}" FontSize="15" FontFamily="Monterrat" FontWeight="Medium" HorizontalAlignment="Left"/>
                         <StackPanel Orientation="Horizontal">
                             <fa:IconImage Icon="CashRegister" Width="20"/>
-                            <TextBlock x:Name="txtIdTax" Style="{StaticResource tbNormal}" Text="08127634816"/>
+                            <TextBlock x:Name="txtIdTax" Style="{StaticResource tbNormal}" Text="{Binding Path=TaxCode}"/>
                         </StackPanel>
                     </StackPanel>
                 </Grid>
@@ -176,19 +158,25 @@
                         <TextBlock Text="Hotline công ty" Foreground="{StaticResource plainTextColor1}" FontSize="15" FontFamily="Monterrat" FontWeight="Medium" HorizontalAlignment="Left"/>
                         <StackPanel Orientation="Horizontal">
                             <fa:IconImage Icon="Tty" Width="20"/>
-                            <TextBlock x:Name="txtHotline" Style="{StaticResource tbNormal}" Text="093186344"/>
+                            <TextBlock x:Name="txtHotline" Style="{StaticResource tbNormal}" Text="{Binding Path=PhoneCompany}"/>
                         </StackPanel>
                     </StackPanel>
                     <StackPanel Grid.Column="1" Margin="20,0,0,0">
                         <TextBlock Text="Email công ty" Foreground="{StaticResource plainTextColor1}" FontSize="15" FontFamily="Monterrat" FontWeight="Medium" HorizontalAlignment="Left"/>
                         <StackPanel Orientation="Horizontal">
                             <fa:IconImage Icon="Envelope" Width="20"/>
-                            <TextBlock x:Name="txtEmailCompany" Style="{StaticResource tbNormal}" Text="Example@gmail.com"/>
+                            <TextBlock x:Name="txtEmailCompany" Style="{StaticResource tbNormal}" Text="{Binding Path=EmailCompany}"/>
                         </StackPanel>
                     </StackPanel>
                 </Grid>
-                <TextBlock Grid.Row="4" Style="{StaticResource tbNormal}" Text="Giấy phép kinh doanh"/>
-                <Image Grid.Row="5" x:Name="imgCertificate" Margin="20" Source="/Image/certificate.jpg"/>
+                <TextBlock Grid.Row="4" Style="{StaticResource tbNormal}" Text="Giới thiệu về công ty"/>
+                <Grid Grid.Row="5">
+                    <StackPanel Margin="5 0 5 0">
+                        <TextBox x:Name="txtIntro" TextWrapping="WrapWithOverflow"
+                                     Height="130" Text="{Binding Path= Intro,Mode=TwoWay}"/>
+                    </StackPanel>
+
+                </Grid>
             </Grid>
         </Grid>
     </Border>

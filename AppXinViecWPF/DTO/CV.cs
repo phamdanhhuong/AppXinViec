@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace AppXinViecWPF.DTO
 {
@@ -175,6 +176,22 @@ namespace AppXinViecWPF.DTO
             ChungChi = data.Rows[0]["ChungChi"].ToString();
             SoThich = data.Rows[0]["SoThich"].ToString();
             ThongTinThem = data.Rows[0]["ThongTinThem"].ToString();
+        }
+        public bool NotNull()
+        {
+            var properties = typeof(CV).GetProperties();
+
+            foreach (var property in properties)
+            {
+                object value = property.GetValue(this);
+
+                if (value == null || value.ToString() == "")
+                {
+                    MessageBox.Show($"{property.Name} trống");
+                    return false;
+                }
+            }
+            return true;
         }
     }
 }

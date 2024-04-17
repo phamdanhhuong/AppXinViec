@@ -603,3 +603,9 @@ C:\Users\ADMIN\Downloads\Window1542024\AppXinViecWPF\obj\Debug\AppXinViecWPF.exe
 C:\Users\ADMIN\Downloads\Window1542024\AppXinViecWPF\obj\Debug\AppXinViecWPF.pdb
 C:\Users\ADMIN\Downloads\Window1542024\AppXinViecWPF\obj\Debug\View\Applicant\UCIconAppliedJobs.g.cs
 C:\Users\ADMIN\Downloads\Window1542024\AppXinViecWPF\obj\Debug\View\Applicant\UCIconAppliedJobs.baml
+F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\UCAplliedJobsHistory.g.cs
+F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\UCIconAppliedJobs.g.cs
+F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\UCPostCV.g.cs
+F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\UCAplliedJobsHistory.baml
+F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\UCIconAppliedJobs.baml
+F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\UCPostCV.baml

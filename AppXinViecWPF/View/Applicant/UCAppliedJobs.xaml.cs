@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AppXinViecWPF.DAO;
+using AppXinViecWPF.DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,45 @@ namespace AppXinViecWPF.View.Applicant
         public UCAppliedJobs()
         {
             InitializeComponent();
+            applyCV = CVDAO.Instance.GetApplyCVByIdApplycant(AccountDAO.UserID);
+            foreach (ApplyCV cv in applyCV)
+            {
+                icMain.Items.Add(new UCIconAppliedJobs(cv.IdCV,cv.IdPost,cv.SubmitDay,cv.Comfirm));
+            }
+        }
+        List<ApplyCV> applyCV;
+
+        private void btnComfirm_Click(object sender, RoutedEventArgs e)
+        {
+            icMain.Items.Clear();
+            foreach (ApplyCV cv in applyCV)
+            {
+                if (cv.Comfirm == 1)
+                {
+                    icMain.Items.Add(new UCIconAppliedJobs(cv.IdCV, cv.IdPost, cv.SubmitDay, cv.Comfirm));
+                }
+            }
+        }
+
+        private void btnUnComfirm_Click(object sender, RoutedEventArgs e)
+        {
+            icMain.Items.Clear();
+            foreach (ApplyCV cv in applyCV)
+            {
+                if (cv.Comfirm == 0)
+                {
+                    icMain.Items.Add(new UCIconAppliedJobs(cv.IdCV, cv.IdPost, cv.SubmitDay, cv.Comfirm));
+                }
+            }
+        }
+
+        private void btnAll_Click(object sender, RoutedEventArgs e)
+        {
+            icMain.Items.Clear();
+            foreach (ApplyCV cv in applyCV)
+            {
+                icMain.Items.Add(new UCIconAppliedJobs(cv.IdCV, cv.IdPost, cv.SubmitDay, cv.Comfirm));
+            }
         }
     }
 }

@@ -12,10 +12,12 @@ namespace AppXinViecWPF.DTO
         int idCV;
         int idPost;
         DateTime submitDay;
+        int comfirm;
 
         public int IdCV { get => idCV; set => idCV = value; }
         public int IdPost { get => idPost; set => idPost = value; }
         public DateTime SubmitDay { get => submitDay; set => submitDay = value; }
+        public int Comfirm { get => comfirm; set => comfirm = value; }
 
         public ApplyCV(int idCV, int idPost, DateTime submitDay)
         {
@@ -28,6 +30,7 @@ namespace AppXinViecWPF.DTO
             IdCV = int.Parse(row["IdCV"].ToString());
             IdPost = int.Parse(row["IdPost"].ToString());
             SubmitDay = DateTime.Parse(row["NgayNop"].ToString());
+            Comfirm = int.Parse(row["Duyet"].ToString());
         }
     }
 }

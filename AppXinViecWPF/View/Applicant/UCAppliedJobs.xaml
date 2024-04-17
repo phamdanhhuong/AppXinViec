@@ -16,22 +16,41 @@
             </Grid.RowDefinitions>
             <Grid Grid.Row="0">
                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="300"/>
                     <ColumnDefinition/>
-                    <ColumnDefinition Width="200"/>
                 </Grid.ColumnDefinitions>
                 <TextBlock VerticalAlignment="Center" Grid.Column="0" Text="Việc làm đã ứng tuyển" FontSize="26" FontWeight="SemiBold"/>
-                <ComboBox Grid.Column="1" Style="{StaticResource ComboBoxFlatStyle}" FontSize="18" Height="36" Margin="5 2 5 2" Foreground="#aeb5b6" FontWeight="SemiBold" SelectedIndex="0">
-                    <ComboBoxItem Content="Tất cả trạng thái"/>
-                    <ComboBoxItem Content="Đã ứng tuyển"/>
-                    <ComboBoxItem Content="NTD đã xem hồ sơ"/>
-                    <ComboBoxItem Content="Hồ sơ phù hợp"/>
-                    <ComboBoxItem Content="Hồ sơ không phù hợp"/>
-                </ComboBox>
+                <StackPanel HorizontalAlignment="Right" Grid.Column="1" Orientation="Horizontal">
+                    <RadioButton Background="Gray" x:Name="btnAll" 
+                             Style="{StaticResource menuButtonHorizontal}"
+                             Width="70" Height="30" Margin="5,0,0,0"
+                             Click="btnAll_Click">
+                        <TextBlock Style="{StaticResource tbNormal}" 
+                               Foreground="{StaticResource plainTextColor2}"
+                               Text="Tất cả"/>
+                    </RadioButton>
+                    <RadioButton Background="Gray" x:Name="btnComfirm"
+                             Style="{StaticResource menuButtonHorizontal}"
+                             Width="170" Height="30" Margin="5,0,0,0"
+                             Click="btnComfirm_Click">
+                        <TextBlock Style="{StaticResource tbNormal}" 
+                            Foreground="{StaticResource plainTextColor2}"
+                            Text="Hồ sơ đã được duyệt"/>
+                    </RadioButton>
+                    <RadioButton Background="Gray" x:Name="btnUnComfirm"
+                            Style="{StaticResource menuButtonHorizontal}"
+                            Width="200" Height="30" Margin="5,0,0,0"
+                            Click="btnUnComfirm_Click">
+                        <TextBlock Style="{StaticResource tbNormal}" 
+                           Foreground="{StaticResource plainTextColor2}"
+                           Text="Hồ sơ chưa được duyệt"/>
+                    </RadioButton>
+                </StackPanel>
             </Grid>
             <Grid Grid.Row="1">
                 <ScrollViewer VerticalScrollBarVisibility="Hidden" Margin="0">
-                    <ItemsControl>
-
+                    <ItemsControl x:Name="icMain">
+                        
                     </ItemsControl>
                 </ScrollViewer>
             </Grid>

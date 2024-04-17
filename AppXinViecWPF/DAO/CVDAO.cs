@@ -76,6 +76,21 @@ namespace AppXinViecWPF.DAO
             DataProvider.Instance.ExecuteNonQuery (query);
         }
 
+        public List<ApplyCV> GetApplyCVByIdApplycant(int Id)
+        {
+            int[] IdCV = CVDAO.instance.GetAllIdCvById(Id);
+            List<ApplyCV> data = new List<ApplyCV>();
+            foreach (int id in IdCV)
+            {
+                string query = string.Format("SELECT * FROM ApplyCV Where IdCV = {0}", id);
+                DataTable temp = DataProvider.Instance.ExecuteQuery(query);
+                foreach (DataRow row in temp.Rows)
+                {
+                    data.Add(new ApplyCV(row));
+                }
+            }
+            return data;
+        }
         public List<ApplyCV> GetApplyCVByIdEmp(int Id)
         {
             int[] IdPost=PostDAO.Instance.GetAllIdPostById(Id);

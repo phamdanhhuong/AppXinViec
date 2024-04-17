@@ -27,13 +27,13 @@
                             <ColumnDefinition Width="4*"/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        <TextBlock Grid.Column="0" Text="Senior Front-End Engineer(Fe) - Tại Hà Nội" FontWeight="Bold" FontSize="20"/>
-                        <TextBlock Grid.Column="1" Text="Hơn 50 triệu" TextAlignment="Right" FontWeight="Bold" FontSize="20" Foreground="#00b14f"/>
+                        <TextBlock x:Name="txtNameJob" Grid.Column="0" Text="Senior Front-End Engineer(Fe) - Tại Hà Nội" FontWeight="Bold" FontSize="20"/>
+                        <TextBlock x:Name="txtSalary" Grid.Column="1" Text="Hơn 50 triệu" TextAlignment="Right" FontWeight="Bold" FontSize="20" Foreground="#00b14f"/>
                     </Grid>
-                    <TextBlock Text="Công ty TNHH CNS LG Việt Nam" Margin="0 5 5 5" FontSize="19" FontWeight="Normal" Foreground="#aeb5b6"/>
+                    <TextBlock x:Name="txtNameEmp" Text="Công ty TNHH CNS LG Việt Nam" Margin="0 5 5 5" FontSize="19" FontWeight="Normal" Foreground="#aeb5b6"/>
                     <StackPanel Orientation="Horizontal" Margin="0 5 5 5" >
                         <TextBlock Text="Thời gian ứng tuyển: " FontSize="19" FontWeight="Normal"/>
-                        <TextBlock Text="28-6-2024 10:31 AM" FontSize="19" FontWeight="Normal"/>
+                        <TextBlock x:Name="txtSubmitDay" Text="28-6-2024 10:31 AM" FontSize="19" FontWeight="Normal"/>
                     </StackPanel>
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -42,7 +42,7 @@
                         </Grid.ColumnDefinitions>
                         <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0 5 0 0">
                             <TextBlock Text="CV đã ứng tuyển: " FontSize="19" FontWeight="Normal" Foreground="#aeb5b6"/>
-                            <TextBlock Text="CV 1" FontSize="19" FontWeight="Light" Foreground="#74c6ad" TextDecorations="Underline"/>
+                            <TextBlock x:Name="txtNameCV" Text="CV 1" FontSize="19" FontWeight="Light" Foreground="#74c6ad" TextDecorations="Underline"/>
                         </StackPanel>
                         <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
                             <Button x:Name="btnChat" Click="btnChat_Click" Grid.Column="0" Cursor="Hand" Margin="5" Height="40">
@@ -85,9 +85,9 @@
                         </Grid.ColumnDefinitions>
                         <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center">
                             <TextBlock Text="Trạng thái: " FontWeight="Normal" FontSize="18"/>
-                            <TextBlock Text="Hồ sơ chưa phù hợp" FontWeight="Light" FontSize="18"/>
+                            <TextBlock Background="LightGray" x:Name="txtStatus" Text="Hồ sơ chưa được duyệt" FontWeight="Light" FontSize="18"/>
                         </StackPanel>
-                        <TextBlock Grid.Column="1" Text="Vào lúc 30-6-2024 18:56 PM" TextAlignment="Right" Margin="0 0 25 0" FontWeight="Normal" FontSize="18" Foreground="#aeb5b6"/>
+                        <!--<TextBlock x:Name="txtUpdateTime" Grid.Column="1" Text="Vào lúc 30-6-2024 18:56 PM" TextAlignment="Right" Margin="0 0 25 0" FontWeight="Normal" FontSize="18" Foreground="#aeb5b6"/>-->
                     </Grid>
                 </StackPanel>
             </Grid>

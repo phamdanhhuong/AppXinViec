@@ -222,20 +222,7 @@
                                     <RowDefinition/>
                                     <RowDefinition/>
                                 </Grid.RowDefinitions>
-                                <Label>
-                                    <Label.Template>
-                                        <ControlTemplate>
-                                            <Grid>
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Border BorderThickness="1" BorderBrush="LightGray" Margin="5">
-                                                        <Image Source="D:/sample.jpg"/>
-                                                    </Border>
-                                                    <TextBlock Text="Công ty Cổ phần công nghệ giáo dục Tata" FontWeight="SemiBold" FontSize="14" Margin="5" TextWrapping="Wrap" Width="190"/>
-                                                </StackPanel>
-                                            </Grid>
-                                        </ControlTemplate>
-                                    </Label.Template>
-                                </Label>
+                                <TextBlock x:Name="txtNameFirm" Text="Công ty Cổ phần công nghệ giáo dục Tata" FontWeight="SemiBold" FontSize="14" Margin="5" TextWrapping="Wrap" Width="190"/>
                                 <Grid Grid.Row="1">
                                     <Grid.RowDefinitions>
                                         <RowDefinition/>

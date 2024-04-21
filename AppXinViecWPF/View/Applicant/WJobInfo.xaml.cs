@@ -37,6 +37,7 @@ namespace AppXinViecWPF.View.Applicant
             Emp = EmployerDAO.Instance.GetInfoById(post.IdEmployer);
             txtExpireDate.Text = post.ExpireDate.ToString();
             txtHumanScale.Text = Emp.HumanScale;
+            txtNameFirm.Text = Emp.NameCompany;
             if (AccountDAO.Instance.IsEmployerById(AccountDAO.UserID))
             {
                 btnApply.Visibility = Visibility.Collapsed;

@@ -49,6 +49,12 @@ namespace AppXinViecWPF.View.Applicant
                 btnApply.Click -= btnApply_Click;
                 btnApply.Click += btnApply_2_Click;
             }
+            int[] idPostRelevant = PostDAO.Instance.SearchPostByCarrer(Post.Career,idPost);
+            icMain.Items.Clear();
+            foreach (int id in idPostRelevant)
+            {
+                icMain.Items.Add(new UCJob(id));
+            }
         }
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {

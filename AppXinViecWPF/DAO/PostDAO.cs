@@ -100,6 +100,20 @@ namespace AppXinViecWPF.DAO
             }
             return dt;
         }
+        //serach post by carrer with differnt id
+        public int[] SearchPostByCarrer(string carrer,int id)
+        {
+            string query = string.Format("SELECT * FROM Post inner join PostDetail on Post.id = PostDetail.id WHERE NganhNghe = N'{0}' AND Post.id != {1} ",carrer,id);
+            DataTable dataTable = DataProvider.Instance.ExecuteQuery(query);
+            int[] dt = new int[dataTable.Rows.Count];
+            int index = 0;
+            foreach (DataRow row in dataTable.Rows)
+            {
+                dt[index] = (int)row["Id"];
+                index++;
+            }
+            return dt;
+        }
         public int[] SearchPost(string NameJob,string Location,string Exp,string Salary) 
         {
             int[] result = null;

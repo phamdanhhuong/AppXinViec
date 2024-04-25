@@ -89,8 +89,15 @@ namespace AppXinViecWPF.View.Applicant
 
         private void btnApply_Click(object sender, RoutedEventArgs e)
         {
-            WChoseCV wChoseCV = new WChoseCV(IdPost); 
-            wChoseCV.Show();
+            if(Post.Status == 1)
+            {
+                WChoseCV wChoseCV = new WChoseCV(IdPost);
+                wChoseCV.Show();
+            }
+            else
+            {
+                MessageBox.Show("Công việc đã dừng tuyển dụng");
+            }
         }
         private void btnApply_2_Click(object sender, RoutedEventArgs e)
         {

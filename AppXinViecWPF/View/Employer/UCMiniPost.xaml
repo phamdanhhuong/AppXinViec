@@ -31,7 +31,7 @@
                            Margin="20,0,0,0"/>
                 <TextBlock x:Name="txtStatus" 
                            Style="{StaticResource tbNormal}" 
-                           Text="Đang hiển thị"
+                           Text="Đang tuyển dụng"
                            HorizontalAlignment="Left"
                            FontWeight="Normal"
                            Background="LightGray"
@@ -84,12 +84,13 @@
                         <Button x:Name="btnPause"
                                 BorderBrush="Transparent" 
                                 Style="{StaticResource btnNormal}"
-                                Width="20" Height="20">
-                            <StackPanel >
-                                <fa:IconImage Icon="Pause"/>
+                                Width="20" Height="20"
+                                Click="btnPause_Click">
+                            <StackPanel>
+                                <fa:IconImage x:Name="btnPause_Icon" Icon="Pause"/>
                             </StackPanel>
                         </Button>
-                        <TextBlock Text="Ngưng hiển thị" 
+                        <TextBlock x:Name="btnPause_Text" Text="Ngưng tuyển dụng" 
                                        Style="{StaticResource tbNormal}"
                                        Foreground="Black"
                                    TextAlignment="Center"

@@ -48,6 +48,12 @@ namespace AppXinViecWPF.DAO
             DataProvider.Instance.ExecuteNonQuery(query, new object[] { post.Jd, post.Requirement, post.Interest, post.Address, post.Salary, post.Location, post.Experience, post.Position, post.Quantity, post.WorkMode, post.Gender, post.Career, post.Skill , post.IdPost});
         }
 
+        public void UpdateStatusPost(int id, int status)
+        {
+            string query = string.Format("UPDATE Post SET TrangThai = {0} WHERE Id = {1}", status, id);
+            DataProvider.Instance.ExecuteNonQuery(query);
+        }
+
         public PostDTO GetPostById(int id) 
         {
             string query = string.Format("SELECT * FROM Post inner join PostDetail on Post.id = PostDetail.id WHERE Post.id = {0}", id);
@@ -71,6 +77,19 @@ namespace AppXinViecWPF.DAO
         public int[] GetAllIdNotPause()
         {
             string query = string.Format("SELECT * FROM Post Where TrangThai = 1");
+            DataTable dataTable = DataProvider.Instance.ExecuteQuery(query);
+            int[] dt = new int[dataTable.Rows.Count];
+            int index = 0;
+            foreach (DataRow row in dataTable.Rows)
+            {
+                dt[index] = (int)row["Id"];
+                index++;
+            }
+            return dt;
+        }
+        public int[] GetAllIdPost()
+        {
+            string query = string.Format("SELECT * FROM Post");
             DataTable dataTable = DataProvider.Instance.ExecuteQuery(query);
             int[] dt = new int[dataTable.Rows.Count];
             int index = 0;
@@ -157,6 +176,7 @@ namespace AppXinViecWPF.DAO
             query = string.Format("DELETE FROM Post WHERE Id = {0}", id);
             DataProvider.Instance.ExecuteNonQuery(query);
         }
+
     }
 }
 

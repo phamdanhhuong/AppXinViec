@@ -29,7 +29,7 @@ namespace AppXinViecWPF.View.Applicant
         public UCSearchJobs()
         {
             InitializeComponent();
-            ListPost = PostDAO.Instance.GetAllIdNotPause();
+            ListPost = PostDAO.Instance.GetAllIdPost();
         }
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)

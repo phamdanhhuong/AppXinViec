@@ -1,6 +1,7 @@
 ﻿using AppXinViecWPF.DAO;
 using AppXinViecWPF.DTO;
 using AppXinViecWPF.View.Applicant;
+using FontAwesome.Sharp;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -35,7 +36,9 @@ namespace AppXinViecWPF.View.Employer
             txtExpireDate.Text = post.ExpireDate.ToString();
             if(post.Status == 0) 
             {
-                txtStatus.Text = "Không hiển thị";
+                txtStatus.Text = "Không tuyển dụng";
+                btnPause_Icon.Icon = IconChar.Play;
+                btnPause_Text.Text = "Tiếp tục tuyển dụng";
             }
         }
 
@@ -60,6 +63,26 @@ namespace AppXinViecWPF.View.Employer
         {
             WCreateNewPost post = new WCreateNewPost(IdPost);
             post.ShowDialog();
+        }
+
+        private void btnPause_Click(object sender, RoutedEventArgs e)
+        {
+            if(post.Status == 1)
+            {
+                PostDAO.Instance.UpdateStatusPost(IdPost, 0);
+                Post.Status = 0;
+                txtStatus.Text = "Không tuyển dụng";
+                btnPause_Icon.Icon = IconChar.Play;
+                btnPause_Text.Text = "Tiếp tục tuyển dụng";
+            }
+            else
+            {
+                PostDAO.Instance.UpdateStatusPost(IdPost, 1);
+                Post.Status = 1;
+                txtStatus.Text = "Đang tuyển dụng";
+                btnPause_Icon.Icon = IconChar.Pause;
+                btnPause_Text.Text = "Ngưng tuyển dụng";
+            }
         }
     }
 }

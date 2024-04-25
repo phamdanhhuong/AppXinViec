@@ -159,6 +159,12 @@
     <Compile Include="View\Employer\UCNews.xaml.cs">
       <DependentUpon>UCNews.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Employer\UCRateCV.xaml.cs">
+      <DependentUpon>UCRateCV.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Employer\UCTopCV.xaml.cs">
+      <DependentUpon>UCTopCV.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Employer\WCreateNewPost.xaml.cs">
       <DependentUpon>WCreateNewPost.xaml</DependentUpon>
     </Compile>
@@ -310,6 +316,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Employer\UCNews.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Employer\UCRateCV.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Employer\UCTopCV.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

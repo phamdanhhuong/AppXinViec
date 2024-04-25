@@ -613,3 +613,7 @@ F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\UC
 F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\UCTopCompany.g.cs
 F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\UCInfoCompany.baml
 F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\UCTopCompany.baml
+F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Employer\UCRateCV.g.cs
+F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Employer\UCTopCV.g.cs
+F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Employer\UCRateCV.baml
+F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Employer\UCTopCV.baml

@@ -77,7 +77,8 @@ namespace AppXinViecWPF.View.Employer
 
         private void btnFavCV_Click(object sender, RoutedEventArgs e)
         {
-
+            UCTopCV uCTopCV = new UCTopCV();    
+            ccMain.Content = uCTopCV;
         }
     }
 }

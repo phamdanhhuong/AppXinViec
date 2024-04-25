@@ -52,7 +52,20 @@ namespace AppXinViecWPF.DAO
             }
             return dt;
         }
-
+        //get all id cv
+        public int[] GetAllIdCv()
+        {
+            string query = "SELECT * FROM Cv";
+            DataTable dataTable = DataProvider.Instance.ExecuteQuery(query);
+            int[] dt = new int[dataTable.Rows.Count];
+            int index = 0;
+            foreach (DataRow row in dataTable.Rows)
+            {
+                dt[index] = (int)row["Id"];
+                index++;
+            }
+            return dt;
+        }
         public CV GetCvById(int id)
         {
             string query = string.Format("SELECT * FROM Cv Where Id = {0}", id);

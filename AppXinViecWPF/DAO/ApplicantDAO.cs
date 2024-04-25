@@ -77,7 +77,27 @@ namespace AppXinViecWPF.DAO
                 return true;
             return false;
         }
-
+        //Confirm Apply Job
+        public void ConfirmApplyJob(int idCV, int idPost)
+        {
+            string sqlStr = string.Format("UPDATE ApplyCV SET XacNhan = 1 WHERE IdCV = {0} AND IdPost = {1}", idCV, idPost);
+            DataProvider.Instance.ExecuteNonQuery(sqlStr);
+        }
+        //unConfirm Apply Job
+        public void UnConfirmApplyJob(int idCV, int idPost)
+        {
+            string sqlStr = string.Format("UPDATE ApplyCV SET XacNhan = 0 WHERE IdCV = {0} AND IdPost = {1}", idCV, idPost);
+            DataProvider.Instance.ExecuteNonQuery(sqlStr);
+        }
+        //Is comfirm apply job
+        public bool IsComfirmApplyJob(int idCV, int idPost)
+        {
+            string query = string.Format("Select * from ApplyCV where IdCV = {0} and IdPost = {1}", idCV, idPost);
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            if (dt.Rows.Count > 0)
+                return int.Parse(dt.Rows[0]["XacNhan"].ToString()) == 1;
+            return false;
+        }
     }
 }
 

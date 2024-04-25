@@ -116,6 +116,7 @@ Create table ApplyCV
 	IdPost INT FOREIGN KEY REFERENCES Post(Id),
 	NgayNop date ,
 	Duyet int default 0, --0:chua duyet 1:da duyet
+	XacNhan int default 0,--0 la chua xac nhan, 1 la di
 	CONSTRAINT PK_ApplyCV PRIMARY KEY (IdCV,IdPost)
 )
 GO
@@ -155,7 +156,7 @@ GO
 --select * from PostDetail
 
 --Alter table EmployerInfo add GioiThieu ntext Default N'Không có'
---Alter table Account add Email NVARCHAR(100)
+--Alter table ApplyCV add 
 
 --SELECT * FROM Post inner join PostDetail on Post.id = PostDetail.id WHERE 
 

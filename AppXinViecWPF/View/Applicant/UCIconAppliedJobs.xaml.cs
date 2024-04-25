@@ -26,6 +26,7 @@ namespace AppXinViecWPF.View.Applicant
         public UCIconAppliedJobs(int idCV,int idPost,DateTime submitDay,int comfirm)
         {
             InitializeComponent();
+            IdPost = idPost;
             Post = PostDAO.Instance.GetPostById(idPost);
             Cv = CVDAO.Instance.GetCvById(idCV);
             Emp = EmployerDAO.Instance.GetInfoById(Post.IdEmployer);
@@ -38,6 +39,11 @@ namespace AppXinViecWPF.View.Applicant
             {
                 txtStatus.Text = "Hồ sơ đã được duyệt";
                 txtStatus.Background = new SolidColorBrush(Colors.LightGreen);
+                btnConfirm.Visibility = Visibility.Visible;
+                if (ApplicantDAO.Instance.IsComfirmApplyJob(idCV, idPost))
+                {
+                    btnConfirm_text.Text = "Đã xác nhận";
+                }
             }
             if (Emp.LogoPath != "")
             {
@@ -45,6 +51,7 @@ namespace AppXinViecWPF.View.Applicant
             }
         }
         PostDTO Post;
+        int IdPost;
         CV Cv;
         EmployerDTO Emp;
         private void btnViewCV_Click(object sender, RoutedEventArgs e)
@@ -56,6 +63,20 @@ namespace AppXinViecWPF.View.Applicant
         private void btnChat_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void btnConfirm_Click(object sender, RoutedEventArgs e)
+        {
+            if(ApplicantDAO.Instance.IsComfirmApplyJob(Cv.Id,IdPost))
+            {
+                ApplicantDAO.Instance.UnConfirmApplyJob(Cv.Id, IdPost);
+                btnConfirm_text.Text = "Xác nhận PV";
+            }
+            else
+            {
+                ApplicantDAO.Instance.ConfirmApplyJob(Cv.Id, IdPost);
+                btnConfirm_text.Text = "Đã xác nhận";
+            }
         }
     }
 }

@@ -86,8 +86,19 @@
                         <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center">
                             <TextBlock Text="Trạng thái: " FontWeight="Normal" FontSize="18"/>
                             <TextBlock Background="LightGray" x:Name="txtStatus" Text="Hồ sơ chưa được duyệt" FontWeight="Light" FontSize="18"/>
+                            
                         </StackPanel>
-                        <!--<TextBlock x:Name="txtUpdateTime" Grid.Column="1" Text="Vào lúc 30-6-2024 18:56 PM" TextAlignment="Right" Margin="0 0 25 0" FontWeight="Normal" FontSize="18" Foreground="#aeb5b6"/>-->
+                        <StackPanel Grid.Column="1">
+                            <Button Visibility="Collapsed" Background="Transparent" Click="btnConfirm_Click" x:Name="btnConfirm" Height="40" Width="100" HorizontalAlignment="Right">
+                                <Grid>
+                                    <Border CornerRadius="15" BorderThickness="1"  Background="#12b35b">
+                                        <StackPanel Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+                                            <TextBlock x:Name="btnConfirm_text" VerticalAlignment="Center" Text="Xác nhận PV" FontWeight="SemiBold" Foreground="White" Width="90" TextAlignment="Center"/>
+                                        </StackPanel>
+                                    </Border>
+                                </Grid>
+                            </Button>
+                        </StackPanel>
                     </Grid>
                 </StackPanel>
             </Grid>

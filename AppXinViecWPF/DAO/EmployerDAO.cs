@@ -47,5 +47,37 @@ namespace AppXinViecWPF.DAO
             EmployerDTO info = new EmployerDTO(data);
             return info;
         }
+        //get all id of employer
+        public List<int> GetAllId()
+        {
+            List<int> list = new List<int>();
+            string query = "SELECT Id FROM EmployerInfo";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                int id = int.Parse(item["Id"].ToString());
+                list.Add(id);
+            }
+            return list;
+        }
+        //count favorite company by id
+        public int CountFavCompanyById(int id)
+        {
+            string query = string.Format("SELECT COUNT(*) FROM FavCompany WHERE IdEmployer = {0} ", id);
+            return (int)DataProvider.Instance.ExecuteScalar(query);
+        }
+        //grt all id of employer sort by count favorite company
+        public List<int> GetAllIdSortByFav()
+        {
+            List<int> list = new List<int>();
+            string query = "SELECT IdEmployer FROM FavCompany GROUP BY IdEmployer ORDER BY COUNT(IdApplicant) DESC";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                int id = int.Parse(item["IdEmployer"].ToString());
+                list.Add(id);
+            }
+            return list;
+        }
     }
 }

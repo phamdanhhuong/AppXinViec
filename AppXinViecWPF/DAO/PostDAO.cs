@@ -190,7 +190,13 @@ namespace AppXinViecWPF.DAO
             query = string.Format("DELETE FROM Post WHERE Id = {0}", id);
             DataProvider.Instance.ExecuteNonQuery(query);
         }
-
+        //count post by id employer
+        public int CountPostById(int id)
+        {
+            string query = string.Format("SELECT * FROM Post Where IdEmployer = {0}", id);
+            DataTable dataTable = DataProvider.Instance.ExecuteQuery(query);
+            return dataTable.Rows.Count;
+        }
     }
 }
 

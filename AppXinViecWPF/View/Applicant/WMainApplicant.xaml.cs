@@ -175,14 +175,10 @@ namespace AppXinViecWPF.View.Applicant
             ccMain.Content = uCCreateCV;
         }
 
-        private void btnListCompany_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void btnTopCompany_Click(object sender, RoutedEventArgs e)
         {
-
+            UCTopCompany uCTopCompany = new UCTopCompany();
+            ccMain.Content = uCTopCompany;
         }
     }
 }

@@ -93,6 +93,9 @@
     <Compile Include="View\Applicant\UCIconCV.xaml.cs">
       <DependentUpon>UCIconCV.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Applicant\UCInfoCompany.xaml.cs">
+      <DependentUpon>UCInfoCompany.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Applicant\UCJob.xaml.cs">
       <DependentUpon>UCJob.xaml</DependentUpon>
     </Compile>
@@ -110,6 +113,9 @@
     </Compile>
     <Compile Include="View\Applicant\UCSearchJobs.xaml.cs">
       <DependentUpon>UCSearchJobs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Applicant\UCTopCompany.xaml.cs">
+      <DependentUpon>UCTopCompany.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Applicant\UCUploadCVs.xaml.cs">
       <DependentUpon>UCUploadCVs.xaml</DependentUpon>
@@ -219,6 +225,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Applicant\UCInfoCompany.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Applicant\UCJob.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -240,6 +250,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Applicant\UCSearchJobs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Applicant\UCTopCompany.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

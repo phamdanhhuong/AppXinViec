@@ -128,6 +128,14 @@ Create table FavJob
 )
 GO
 
+Create table FavCompany
+(
+	IdApplicant INT FOREIGN KEY REFERENCES ApplicantInfo(Id),
+	IdEmployer INT FOREIGN KEY REFERENCES EmployerInfo(Id),
+	CONSTRAINT PK_FavCompany PRIMARY KEY (IdApplicant,IdEmployer)
+)
+GO
+
 Create table FavCV
 (
 	IdEmployer INT FOREIGN KEY REFERENCES EmployerInfo(Id),
@@ -157,3 +165,6 @@ GO
 --INSERT INTO FavJob (IdApplicant,IdPost) VALUES (2,11)
 
 --UPDATE ApplyCV SET Duyet=1 WHERE IdCV = 11 AND IdPost = 13
+
+--SELECT COUNT(*) FROM FavCompany WHERE IdEmployer = 1
+--SELECT IdEmployer FROM FavCompany GROUP BY IdEmployer ORDER BY COUNT(IdApplicant) DESC

@@ -237,20 +237,6 @@
                                 </Grid>
                                 <Grid Grid.Row="6">
                                     <StackPanel x:Name="pnlCompany">
-                                        <Button x:Name="btnListCompany" Click="btnListCompany_Click" Cursor="Hand">
-                                            <Button.Template>
-                                                <ControlTemplate>
-                                                    <Grid>
-                                                        <Border CornerRadius="5"  Margin="30 0 15 0">
-                                                            <StackPanel Orientation="Horizontal">
-                                                                <fa:IconImage Icon="Paperclip" Height="25" HorizontalAlignment="Left" Foreground="White" Margin="20 10 5 10"/>
-                                                                <TextBlock Text="Danh sách công ty" Foreground="White" FontSize="24" FontWeight="SemiBold" TextAlignment="Center"  VerticalAlignment="Center" Margin="25 0 0 0"/>
-                                                            </StackPanel>
-                                                        </Border>
-                                                    </Grid>
-                                                </ControlTemplate>
-                                            </Button.Template>
-                                        </Button>
                                         <Button x:Name="btnTopCompany" Click="btnTopCompany_Click" Cursor="Hand">
                                             <Button.Template>
                                                 <ControlTemplate>

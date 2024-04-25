@@ -56,6 +56,28 @@ namespace AppXinViecWPF.DAO
             }
             return dt;
         }
+        //add fav company
+        public void AddFavCompany(int IdCompany)
+        {
+            string query = string.Format("INSERT INTO FavCompany (IdApplicant,IdEmployer) VALUES ({0},{1})", AccountDAO.UserID, IdCompany);
+            DataProvider.Instance.ExecuteNonQuery(query);
+        }
+        // delete fav company
+        public void DeleteFavCompany(int IdCompany)
+        {
+            string query = string.Format("DELETE FROM FavCompany WHERE IdEmployer = {0} AND IdApplicant = {1}", IdCompany,AccountDAO.UserID);
+            DataProvider.Instance.ExecuteNonQuery(query);
+        }
+        // is fav company
+        public bool IsFavCompany(int IdCompany)
+        {
+            string query = string.Format("SELECT * FROM FavCompany WHERE IdEmployer = {0} AND IdApplicant = {1}", IdCompany, AccountDAO.UserID);
+            DataTable dataTable = DataProvider.Instance.ExecuteQuery(query);
+            if (dataTable.Rows.Count > 0)
+                return true;
+            return false;
+        }
+
     }
 }
 

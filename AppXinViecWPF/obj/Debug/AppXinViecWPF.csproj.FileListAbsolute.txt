@@ -609,3 +609,7 @@ F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\UC
 F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\UCAplliedJobsHistory.baml
 F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\UCIconAppliedJobs.baml
 F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\UCPostCV.baml
+F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\UCInfoCompany.g.cs
+F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\UCTopCompany.g.cs
+F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\UCInfoCompany.baml
+F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\UCTopCompany.baml

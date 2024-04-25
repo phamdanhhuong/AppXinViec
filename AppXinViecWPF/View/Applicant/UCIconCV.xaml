@@ -34,6 +34,7 @@
                 <ColumnDefinition Width="60"/>
                 <ColumnDefinition Width="60"/>
                 <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="60"/>
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="0">
                 <Border BorderThickness="0 0 1 0" BorderBrush="LightGray" Margin="0 40 0 40"/>
@@ -100,6 +101,17 @@
                     </Button>
                 </Grid>
             </Grid>
+            <StackPanel Grid.Column="6" VerticalAlignment="Center" Height="70">
+                <Button BorderThickness="0" Background="Transparent" Click="btnPublic_Click" x:Name="btnPublic" Height="70" Width="60" VerticalAlignment="Center" HorizontalAlignment="Right">
+                    <Grid>
+                        <Border x:Name="btnPublic_bg" CornerRadius="15" Background="#12b35b">
+                            <StackPanel Height="70" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+                                <TextBlock x:Name="btnPublic_text" VerticalAlignment="Center" Text="Đăng CV" FontWeight="SemiBold" Width="60" Foreground="White" TextAlignment="Center" TextWrapping="WrapWithOverflow"/>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+                </Button>
+            </StackPanel>
         </Grid>
     </Border>
 </UserControl>

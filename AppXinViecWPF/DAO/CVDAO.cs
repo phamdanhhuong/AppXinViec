@@ -155,5 +155,38 @@ namespace AppXinViecWPF.DAO
                 return false;
             return true;
         }
+        public void PublicCV(int idcv)
+        {
+            string query = string.Format("UPDATE Cv SET TrangThai = 1 WHERE Id = {0}", idcv);
+            DataProvider.Instance.ExecuteNonQuery(query);
+        }
+        public void UnPublicCV(int idcv)
+        {
+            string query = string.Format("UPDATE Cv SET TrangThai = 0 WHERE Id = {0}", idcv);
+            DataProvider.Instance.ExecuteNonQuery(query);
+        }
+        //get id cv is public
+        public int[] GetAllIdCvPublic()
+        {
+            string query = "SELECT * FROM Cv WHERE TrangThai = 1";
+            DataTable dataTable = DataProvider.Instance.ExecuteQuery(query);
+            int[] dt = new int[dataTable.Rows.Count];
+            int index = 0;
+            foreach (DataRow row in dataTable.Rows)
+            {
+                dt[index] = (int)row["Id"];
+                index++;
+            }
+            return dt;
+        }
+        //is public cv
+        public bool IsPublicCV(int idcv)
+        {
+            string query = string.Format("SELECT * FROM Cv WHERE Id = {0} AND TrangThai = 1", idcv);
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            if (dt.Rows.Count == 0)
+                return false;
+            return true;
+        }
     }
 }

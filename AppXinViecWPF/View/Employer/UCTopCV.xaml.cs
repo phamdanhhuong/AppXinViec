@@ -24,7 +24,7 @@ namespace AppXinViecWPF.View.Employer
         public UCTopCV()
         {
             InitializeComponent();
-            int[] list = CVDAO.Instance.GetAllIdCv();
+            int[] list = CVDAO.Instance.GetAllIdCvPublic();
             for (int i = 0; i < list.Length; i++)
             {
                 UCRateCV uCRateCV = new UCRateCV(list[i]);

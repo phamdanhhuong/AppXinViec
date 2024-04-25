@@ -12,11 +12,11 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
-            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="45" FontWeight="Medium" Foreground="{StaticResource plainTextColor2}">
+            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="45" FontWeight="Medium" Foreground="Black">
                 Top CV
             </TextBlock>
         </Grid>
-        <Grid Grid.Row="1">
+        <Grid Grid.Row="1" Background="LightGray">
             <ContentControl x:Name="ccCompanyList">
                 <ScrollViewer VerticalScrollBarVisibility="Hidden">
                     <ItemsControl x:Name="listCv">

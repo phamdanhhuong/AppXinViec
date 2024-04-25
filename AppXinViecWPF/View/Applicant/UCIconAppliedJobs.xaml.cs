@@ -42,7 +42,8 @@ namespace AppXinViecWPF.View.Applicant
                 btnConfirm.Visibility = Visibility.Visible;
                 if (ApplicantDAO.Instance.IsComfirmApplyJob(idCV, idPost))
                 {
-                    btnConfirm_text.Text = "Đã xác nhận";
+                    btnConfirm_text.Text = "Hủy PV";
+                    btnConfirm_bg.Background = new SolidColorBrush(Colors.Red);
                 }
             }
             if (Emp.LogoPath != "")
@@ -71,11 +72,13 @@ namespace AppXinViecWPF.View.Applicant
             {
                 ApplicantDAO.Instance.UnConfirmApplyJob(Cv.Id, IdPost);
                 btnConfirm_text.Text = "Xác nhận PV";
+                btnConfirm_bg.Background = new SolidColorBrush(Colors.Green);
             }
             else
             {
                 ApplicantDAO.Instance.ConfirmApplyJob(Cv.Id, IdPost);
-                btnConfirm_text.Text = "Đã xác nhận";
+                btnConfirm_text.Text = "Hủy PV";
+                btnConfirm_bg.Background = new SolidColorBrush(Colors.Red);
             }
         }
     }

@@ -106,7 +106,8 @@ Create table Cv
 	KyNang NVARCHAR(150),
 	ChungChi NVARCHAR(150),
 	SoThich NVARCHAR(150),
-	ThongTinThem NVARCHAR(150)
+	ThongTinThem NVARCHAR(150),
+	TrangThai INT DEFAULT 0 --0: ko cong khai, 1 : cong khai
 )
 GO
 
@@ -156,7 +157,7 @@ GO
 --select * from PostDetail
 
 --Alter table EmployerInfo add GioiThieu ntext Default N'Không có'
---Alter table ApplyCV add 
+--Alter table Cv add TrangThai INT DEFAULT 0
 
 --SELECT * FROM Post inner join PostDetail on Post.id = PostDetail.id WHERE 
 
@@ -169,3 +170,5 @@ GO
 
 --SELECT COUNT(*) FROM FavCompany WHERE IdEmployer = 1
 --SELECT IdEmployer FROM FavCompany GROUP BY IdEmployer ORDER BY COUNT(IdApplicant) DESC
+
+Select * from ApplyJob where IdCV = 11 and IdPost = 13

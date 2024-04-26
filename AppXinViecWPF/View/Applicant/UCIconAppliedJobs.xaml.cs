@@ -48,7 +48,8 @@ namespace AppXinViecWPF.View.Applicant
             }
             if (Emp.LogoPath != "")
             {
-                imgLogoCompany.Source = new BitmapImage(new Uri(Emp.LogoPath));
+                string imagePath = System.IO.Path.Combine(Environment.CurrentDirectory, Emp.LogoPath);
+                imgLogoCompany.Source = new BitmapImage(new Uri(imagePath));
             }
         }
         PostDTO Post;

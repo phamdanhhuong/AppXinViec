@@ -27,7 +27,8 @@ namespace AppXinViecWPF.View.Applicant
             InitializeComponent();
             Emp = EmployerDAO.Instance.GetInfoById(idEmp);
             IdEmp = idEmp;
-            imgLogo.Source = new BitmapImage(new Uri(Emp.LogoPath));
+            string imagePath = System.IO.Path.Combine(Environment.CurrentDirectory, Emp.LogoPath);
+            imgLogo.Source = new BitmapImage(new Uri(imagePath));
             txtNameJob.Text = Emp.NameCompany;
             txtAddress.Text = Emp.AddressCompany;
             txtDes.Text = Emp.Intro;

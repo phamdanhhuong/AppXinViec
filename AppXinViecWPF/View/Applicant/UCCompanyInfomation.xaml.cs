@@ -27,7 +27,8 @@ namespace AppXinViecWPF.View.Applicant
             Id=id;
             Emp = EmployerDAO.Instance.GetInfoById(id);
             DataContext = Emp;
-            imgLogoCompany.Source = new BitmapImage(new Uri(Emp.LogoPath));
+            string imagePath = System.IO.Path.Combine(Environment.CurrentDirectory, Emp.LogoPath);
+            imgLogoCompany.Source = new BitmapImage(new Uri(imagePath));
             ListPost = PostDAO.Instance.GetAllIdPostById(id);
             icMain.Items.Clear();
             foreach (int idpost in ListPost)

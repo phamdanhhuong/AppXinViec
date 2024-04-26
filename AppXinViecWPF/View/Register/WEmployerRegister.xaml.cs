@@ -57,8 +57,14 @@ namespace AppXinViecWPF.View.Register
             open.FilterIndex = 1;
             if (open.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
+                string selectedImagePath = open.FileName;
+                string targetDirectory = "Image";
+                string targetPath = System.IO.Path.Combine(targetDirectory, System.IO.Path.GetFileName(selectedImagePath));
+                string projectDirectory = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+                string destinationPath = System.IO.Path.Combine(projectDirectory, targetPath);
+                System.IO.File.Copy(selectedImagePath, destinationPath, true);
+                Certificate = targetPath;
                 imgCertificate.Source = new BitmapImage(new Uri(open.FileName));
-                Certificate = open.FileName;
             }
         }
 
@@ -85,8 +91,14 @@ namespace AppXinViecWPF.View.Register
             open.FilterIndex = 1;
             if (open.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
+                string selectedImagePath = open.FileName;
+                string targetDirectory = "Image";
+                string targetPath = System.IO.Path.Combine(targetDirectory, System.IO.Path.GetFileName(selectedImagePath));
+                string projectDirectory = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+                string destinationPath = System.IO.Path.Combine(projectDirectory, targetPath);
+                System.IO.File.Copy(selectedImagePath, destinationPath, true);
+                Logo = targetPath;
                 imgLogo.Source = new BitmapImage(new Uri(open.FileName));
-                Logo = open.FileName;
             }
         }
     }

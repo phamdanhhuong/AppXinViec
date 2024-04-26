@@ -27,6 +27,8 @@ namespace AppXinViecWPF.View.Employer
             Cv = CVDAO.Instance.GetCvById(id);
             DataContext = Cv;
             txtBirth.Text = Cv.NgaySinh.Date.ToString("d");
+            string imagePath = System.IO.Path.Combine(Environment.CurrentDirectory, Cv.Avatar);
+            imgAvatar.Source = new BitmapImage(new Uri(imagePath));
         }
 
         CV cv;

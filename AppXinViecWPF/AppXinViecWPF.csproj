@@ -388,6 +388,14 @@
   <ItemGroup>
     <Resource Include="Image\certificate.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Image\Ton_hoa_sen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Screenshot-4431-1024x640.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

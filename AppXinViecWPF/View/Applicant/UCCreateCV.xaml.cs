@@ -52,10 +52,16 @@ namespace AppXinViecWPF.View.Applicant
             OpenFileDialog open = new OpenFileDialog();
             open.Filter = "Image files|*.bmp;*.png;*.jpg";
             open.FilterIndex = 1;
-            if (open.ShowDialog() == DialogResult.OK)
+            if (open.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
+                string selectedImagePath = open.FileName;
+                string targetDirectory = "Image";
+                string targetPath = System.IO.Path.Combine(targetDirectory, System.IO.Path.GetFileName(selectedImagePath));
+                string projectDirectory = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+                string destinationPath = System.IO.Path.Combine(projectDirectory, targetPath);
+                System.IO.File.Copy(selectedImagePath, destinationPath, true);
+                ImgAvt = targetPath;
                 imgAvatar.Source = new BitmapImage(new Uri(open.FileName));
-                ImgAvt = open.FileName;
             }
         }
 
@@ -99,7 +105,8 @@ namespace AppXinViecWPF.View.Applicant
             this.txtNameCV.TxtText = GetCV.TenCV;
             this.txtFullName.TxtText = GetCV.HoVaTen;
             this.txtApplyPosition.TxtText = GetCV.ViTriUngTuyen;
-            this.imgAvatar.Source = new BitmapImage(new Uri(GetCV.Avatar));
+            string imagePath = System.IO.Path.Combine(Environment.CurrentDirectory, GetCV.Avatar);
+            this.imgAvatar.Source = new BitmapImage(new Uri(imagePath));
             this.imgAvt = GetCV.Avatar;
             this.txtPhone.TxtText = GetCV.SDT;
             this.txtGender.TxtText = GetCV.GioiTinh;
@@ -130,7 +137,8 @@ namespace AppXinViecWPF.View.Applicant
             txtNameCV.TxtText = GetCV.TenCV;
             txtFullName.TxtText = GetCV.HoVaTen;
             txtApplyPosition.TxtText = GetCV.ViTriUngTuyen;
-            imgAvatar.Source = new BitmapImage(new Uri(GetCV.Avatar));
+            string imagePath = System.IO.Path.Combine(Environment.CurrentDirectory, GetCV.Avatar);
+            imgAvatar.Source = new BitmapImage(new Uri(imagePath));
             imgAvt = GetCV.Avatar;
             txtPhone.TxtText = GetCV.SDT;
             txtGender.TxtText = GetCV.GioiTinh;

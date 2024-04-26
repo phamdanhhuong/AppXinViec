@@ -57,7 +57,8 @@ namespace AppXinViecWPF.View.Applicant
             txtLocation.Text = post.Location;
             if (Emp.LogoPath !="")
             {
-                imgLogo.Source = new BitmapImage(new Uri(Emp.LogoPath));
+                string imagePath = System.IO.Path.Combine(Environment.CurrentDirectory, Emp.LogoPath);
+                imgLogo.Source = new BitmapImage(new Uri(imagePath));
             }
             if (GetExpDays().Days > 0) 
             {

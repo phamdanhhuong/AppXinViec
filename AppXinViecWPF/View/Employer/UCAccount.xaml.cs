@@ -29,7 +29,8 @@ namespace AppXinViecWPF.View.Employer
             EmployerDTO employer = EmployerDAO.Instance.GetInfoById(AccountDAO.UserID);
             Employer = employer;
             DataContext = Employer;
-            imgAvatar.Source = new BitmapImage(new Uri(employer.LogoPath));
+            string imagePath = System.IO.Path.Combine(Environment.CurrentDirectory, employer.LogoPath);
+            imgAvatar.Source = new BitmapImage(new Uri(imagePath));
         }
         EmployerDTO Employer;
         private void btnChangeAvatar_Click(object sender, RoutedEventArgs e)
@@ -39,8 +40,14 @@ namespace AppXinViecWPF.View.Employer
             open.FilterIndex = 1;
             if (open.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
+                string selectedImagePath = open.FileName;
+                string targetDirectory = "Image";
+                string targetPath = System.IO.Path.Combine(targetDirectory, System.IO.Path.GetFileName(selectedImagePath));
+                string projectDirectory = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+                string destinationPath = System.IO.Path.Combine(projectDirectory, targetPath);
+                System.IO.File.Copy(selectedImagePath, destinationPath, true);
+                Employer.LogoPath = targetPath;
                 imgAvatar.Source = new BitmapImage(new Uri(open.FileName));
-                Employer.LogoPath = open.FileName;
             }
         }
 

@@ -81,15 +81,14 @@
                                 </Grid.RowDefinitions>
                                 <Border Grid.Row="0" Margin="20" CornerRadius="10" Background="White">
                                     <StackPanel Grid.Row="0" Orientation="Horizontal">
-                                        <Grid Margin="20">
-                                            <Ellipse Width="80" Stroke="Gray" Height="80" Fill="White"/>
-                                            <Image x:Name="imgApplicant" Width="80" Height="80" Stretch="UniformToFill">
-                                                <Image.OpacityMask>
-                                                    <VisualBrush Stretch="Fill" Visual="{Binding ElementName=ellipse}" />
-                                                </Image.OpacityMask>
-                                            </Image>
-                                        </Grid>
-                                        <TextBlock Text="Lê Đăng Hiếu" FontWeight="SemiBold" FontSize="20" TextAlignment="Left" VerticalAlignment="Center"/>
+                                        <Border Grid.Column="0" Width="100" Height="100" CornerRadius="50" BorderThickness="2" BorderBrush="gray">
+                                            <Border.Clip>
+                                                <EllipseGeometry Center="50,50" RadiusX="48" RadiusY="48"/>
+                                            </Border.Clip>
+                                            <!-- avatar -->
+                                            <Image x:Name="imgAvatar" Source="/Image/no_avatar.jpg" Stretch="UniformToFill" HorizontalAlignment="Center"/>
+                                        </Border>
+                                        <TextBlock x:Name="txtNameUser" Text="Lê Đăng Hiếu" FontWeight="SemiBold" FontSize="20" TextAlignment="Left" VerticalAlignment="Center"/>
                                     </StackPanel>
                                 </Border>
                                 <Border Grid.Row="0" BorderThickness="0 0 0 3" BorderBrush="White" Margin="20 0 20 0"/>

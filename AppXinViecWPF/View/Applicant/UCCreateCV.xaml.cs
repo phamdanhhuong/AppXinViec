@@ -79,22 +79,46 @@ namespace AppXinViecWPF.View.Applicant
 
         private void AddCv()
         {
-            CV cV = new CV(AccountDAO.UserID, txtNameCV.TxtText, txtFullName.TxtText, txtApplyPosition.TxtText, ImgAvt,
+            try
+            {
+                DateTime.Parse(txtBirth.TxtText);
+                CV cV = new CV(AccountDAO.UserID, txtNameCV.TxtText, txtFullName.TxtText, txtApplyPosition.TxtText, ImgAvt,
                 txtPhone.TxtText, txtGender.TxtText, txtEmail.TxtText, DateTime.Parse(txtBirth.TxtText)
                 , txtLink.TxtText, txtAddress.TxtText, txtMajor.TxtText, txtNameSchool.TxtText, txtSchoolDay.TxtText, txtSchoolAchive.TxtText,
                 txtNameLastJob.TxtText, txtNameLastCompany.TxtText, txtWorkDay.TxtText, txtDescriptionExp.TxtText, txtProjectName.TxtText, txtProjectPosition.TxtText,
                 txtProjectDay.TxtText, txtProjectDescription.TxtText, txtTarget.TxtText, txtSkill.TxtText, txtCertificate.TxtText, txtFav.TxtText, txtExtra.TxtText);
-            CVDAO.Instance.CreateCV(cV);
+                if (cV.NotNull())
+                {
+                    CVDAO.Instance.CreateCV(cV);
+                    TriggerButtonClick();
+                }
+            }
+            catch (Exception)
+            {
+                System.Windows.MessageBox.Show("Ngày sinh không hợp lệ");
+            }
         }
 
         private void EditCv()
         {
-            CV cV = new CV(Id, AccountDAO.UserID, txtNameCV.TxtText, txtFullName.TxtText, txtApplyPosition.TxtText, ImgAvt,
+            try
+            {
+                DateTime.Parse(txtBirth.TxtText);
+                CV cV = new CV(AccountDAO.UserID, txtNameCV.TxtText, txtFullName.TxtText, txtApplyPosition.TxtText, ImgAvt,
                 txtPhone.TxtText, txtGender.TxtText, txtEmail.TxtText, DateTime.Parse(txtBirth.TxtText)
                 , txtLink.TxtText, txtAddress.TxtText, txtMajor.TxtText, txtNameSchool.TxtText, txtSchoolDay.TxtText, txtSchoolAchive.TxtText,
                 txtNameLastJob.TxtText, txtNameLastCompany.TxtText, txtWorkDay.TxtText, txtDescriptionExp.TxtText, txtProjectName.TxtText, txtProjectPosition.TxtText,
                 txtProjectDay.TxtText, txtProjectDescription.TxtText, txtTarget.TxtText, txtSkill.TxtText, txtCertificate.TxtText, txtFav.TxtText, txtExtra.TxtText);
-            CVDAO.Instance.EditCV(cV);
+                if (cV.NotNull())
+                {
+                    CVDAO.Instance.EditCV(cV);
+                    TriggerButtonClick();
+                }
+            }
+            catch (Exception)
+            {
+                System.Windows.MessageBox.Show("Ngày sinh không hợp lệ");
+            }
         }
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
@@ -174,6 +198,15 @@ namespace AppXinViecWPF.View.Applicant
         {
             WMainApplicant.uCCCV = new UCCreateCV(Id);
             WMainApplicant.uCManageCVs.TriggerButtonClick();
+        }
+
+        private void btnLoad_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        public void TriggerButtonClick()
+        {
+            btnLoad.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
         }
     }
 }

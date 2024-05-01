@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,6 +27,13 @@ namespace AppXinViecWPF.DTO
             Gender = gender;    
             Phone = phone;
             Birth = birth;
+        }
+        public ApplicantDTO(DataTable dt)
+        {
+            Name = dt.Rows[0]["Ten"].ToString();
+            Gender = dt.Rows[0]["GioiTinh"].ToString();
+            Phone = dt.Rows[0]["SDT"].ToString();
+            Birth = DateTime.Parse(dt.Rows[0]["NgaySinh"].ToString());
         }
 
         public bool NotNull()

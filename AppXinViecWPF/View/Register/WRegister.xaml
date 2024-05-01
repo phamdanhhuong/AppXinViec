@@ -224,7 +224,7 @@
                                 <TextBlock Text="Ngày sinh" Foreground="{StaticResource plainTextColor1}" FontSize="15" FontFamily="Monterrat" FontWeight="Medium" HorizontalAlignment="Left"/>
                                 <StackPanel Orientation="Horizontal">
                                     <fa:IconImage Icon="Calendar" Width="20"/>
-                                    <DatePicker x:Name="dpBirth"/>
+                                    <DatePicker x:Name="dpBirth" Text="1/1/1996"/>
                                 </StackPanel>
                             </StackPanel>
                         </Grid>

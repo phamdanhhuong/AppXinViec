@@ -76,6 +76,7 @@
                                 </Button.Template>
                             </Button>
                         </StackPanel>
+                        <Button Visibility="Collapsed" x:Name="btnLoad" Click="btnLoad_Click"/>
                     </StackPanel>
                 </StackPanel>
             </Grid>

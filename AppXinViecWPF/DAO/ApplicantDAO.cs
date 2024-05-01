@@ -33,6 +33,13 @@ namespace AppXinViecWPF.DAO
             string sqlStr = string.Format("INSERT INTO  ApplicantInfo (Id,Ten,GioiTinh,SDT,NgaySinh) VALUES ({0},'{1}','{2}','{3}','{4}')",int.Parse(Id.ToString()),applicant.Name,applicant.Gender,applicant.Phone,applicant.Birth.ToString("yyyy-MM-dd"));
             DataProvider.Instance.ExecuteNonQuery(sqlStr);
         }
+        //get info applicant
+        public ApplicantDTO GetInfo()
+        {
+            string query = string.Format("SELECT * FROM ApplicantInfo WHERE Id = {0}", AccountDAO.UserID);
+            DataTable dataTable = DataProvider.Instance.ExecuteQuery(query);
+            return new ApplicantDTO(dataTable);
+        }
         public void AddFavJob(int IdJob)
         {
             string query = string.Format("INSERT INTO FavJob (IdApplicant,IdPost) VALUES ({0},{1})",AccountDAO.UserID,IdJob);

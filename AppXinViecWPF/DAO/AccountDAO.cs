@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace AppXinViecWPF.DAO
 {
@@ -28,10 +29,19 @@ namespace AppXinViecWPF.DAO
 
         public static int UserID { get => userID; set => userID = value; }
 
-        public void CreateAccount(Account account)
+        public bool CreateAccount(Account account)
         {
+            //check if username is existed
+            string query = string.Format("Select * from dbo.Account where Username = '{0}'", account.UserName);
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            if (dt.Rows.Count > 0)
+            {
+                MessageBox.Show("Username is existed");
+                return false;
+            }
             string sqlStr = string.Format("INSERT INTO  Account (Username,Password,Email,Role) VALUES ('{0}','{1}','{2}',{3})", account.UserName,account.Password,account.Email,account.Role);
             DataProvider.Instance.ExecuteNonQuery(sqlStr);
+            return true;
         }
         public bool Login(string username, string password)
         {

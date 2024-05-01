@@ -1,4 +1,6 @@
-﻿using AppXinViecWPF.View.Employer;
+﻿using AppXinViecWPF.DAO;
+using AppXinViecWPF.DTO;
+using AppXinViecWPF.View.Employer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,11 +29,14 @@ namespace AppXinViecWPF.View.Applicant
             gridMyCV.Height = new GridLength(0);
             gridCompany.Height = new GridLength(0);
             UCSearchJobs uCSearchJobs = new UCSearchJobs();
-            //ccMain.Content = uCSearchJobs;
+            ccMain.Content = uCSearchJobs;
+            applicant = ApplicantDAO.Instance.GetInfo();
+            txtNameUser.Text = applicant.Name;
         }
         public static UCCreateCV uCCCV;
         public static UCManageCVs uCManageCVs;
         public static UCViewCV uCViewCV;
+        ApplicantDTO applicant;
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed)
@@ -170,7 +175,7 @@ namespace AppXinViecWPF.View.Applicant
         private void btnSampleCVs_Click(object sender, RoutedEventArgs e)
         {
             UCCreateCV uCCreateCV = new UCCreateCV();
-            uCCreateCV.btnSave.Click += btnManegeCVs_Click;
+            uCCreateCV.btnLoad.Click += btnManegeCVs_Click;
             uCCreateCV.btnClear.Click += btnSampleCVs_Click;
             ccMain.Content = uCCreateCV;
         }

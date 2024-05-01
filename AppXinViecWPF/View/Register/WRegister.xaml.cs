@@ -59,10 +59,12 @@ namespace AppXinViecWPF.View.Register
                 ApplicantDTO applicant = new ApplicantDTO(txtName.Text, cboGender.Text, txtPhone.Text, dpBirth.SelectedDate.Value);
                 if (applicant.NotNull())
                 {
-                    AccountDAO.Instance.CreateAccount(account);
-                    ApplicantDAO.Instance.Add(applicant);
-                    MessageBox.Show("Đăng ký thành công");
-                    this.Close();
+                    if (AccountDAO.Instance.CreateAccount(account))
+                    {
+                        ApplicantDAO.Instance.Add(applicant);
+                        MessageBox.Show("Đăng ký thành công");
+                        this.Close();
+                    }
                 }
             }
             else

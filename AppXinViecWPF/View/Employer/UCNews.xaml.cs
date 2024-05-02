@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AppXinViecWPF.DAO;
+using AppXinViecWPF.DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,21 @@ namespace AppXinViecWPF.View.Employer
         public UCNews()
         {
             InitializeComponent();
+            List<ApplyCV> list = CVDAO.Instance.GetApplyCVByIdEmp(AccountDAO.UserID);
+            int count = 0;
+            foreach (ApplyCV cv in list)
+            {
+                if (cv.Comfirm == 1)
+                {
+                    count++;
+                }
+            }
+            txtConfirmCV.Text = count.ToString();
+            txtNewCV.Text = (list.Count - count).ToString();
+            int[] IdPosts = PostDAO.Instance.GetAllIdPostById(AccountDAO.UserID);
+            txtPost.Text = IdPosts.Length.ToString();
+            EmployerDTO emp = EmployerDAO.Instance.GetInfoById(AccountDAO.UserID);
+            txtName.Text = emp.Name;
         }
     }
 }

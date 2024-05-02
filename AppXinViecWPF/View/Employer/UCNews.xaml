@@ -101,7 +101,7 @@
                            FontWeight="Normal"
                            TextWrapping="Wrap"
                            Foreground="Green">
-                                CV Đã tiếp nhận
+                                CV đã duyệt
                         </TextBlock>
                         <TextBlock Style="{StaticResource tbNormal}"
                            HorizontalAlignment="Left" 
@@ -167,7 +167,7 @@
                            FontWeight="Normal"
                            TextWrapping="Wrap"
                            Foreground="White">
-                                Số bài tuyển dụng đang hiển thị
+                                Số bài tuyển dụng 
                         </TextBlock>
                         <TextBlock Style="{StaticResource tbNormal}"
                            HorizontalAlignment="Left" 

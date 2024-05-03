@@ -13,7 +13,9 @@
                 <ColumnDefinition/>
                 <ColumnDefinition Width="200"/>
             </Grid.ColumnDefinitions>
-            <Grid Margin="10">
+
+            <Border BorderBrush="LightGray" BorderThickness="0 0 1 0" Grid.Column="0" Margin="0 20 0 20"/>
+            <Grid Margin="10" Grid.Column="0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="140"/>
                     <RowDefinition/>
@@ -82,7 +84,7 @@
                     </StackPanel>
                 </Grid>
             </Grid>
-            <StackPanel Grid.Column="1">
+            <StackPanel Grid.Column="1" HorizontalAlignment="Center">
                 <Button x:Name="btnInfo" Click="btnInfo_Click" Grid.Column="0" Cursor="Hand" Margin="15" Width="160" Height="50">
                     <Button.Template>
                         <ControlTemplate>
@@ -96,9 +98,9 @@
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
-                <Button HorizontalAlignment="Left" Margin="20" BorderThickness="0"  Background="#e5f7ed" Height="36" Width="100" Cursor="Hand" x:Name="btnLike" Click="btnLike_Click">
+                <Button HorizontalAlignment="Center" Margin="20" BorderThickness="0"  Background="#e5f7ed" Height="36" Width="100" Cursor="Hand" x:Name="btnLike" Click="btnLike_Click">
                     <StackPanel Orientation="Horizontal" Background="#e5f7ed" Height="30" Width="100">
-                        <fa:IconImage x:Name="btnLike_Icon" Icon="Heart" Foreground="#00b14f" Height="26" Width="26"/>
+                        <fa:IconImage x:Name="btnLike_Icon" Icon="Heart" Foreground="#00b14f" Height="26" Width="26" Margin="5 0 0 0"/>
                         <TextBlock Text="Yêu thích" FontSize="14" FontWeight="SemiBold" Foreground="#00b14f" Margin="5"/>
                     </StackPanel>
                 </Button>

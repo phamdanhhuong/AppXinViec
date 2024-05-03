@@ -43,7 +43,7 @@
                 </StackPanel>
             </Border>
         </StackPanel>
-        <Grid Grid.Row="1">
+        <Grid Grid.Row="1" Background="White">
             <ContentControl x:Name="ccCompanyList">
                 <ScrollViewer  VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Hidden">
                     <ItemsControl x:Name="menuCompany">

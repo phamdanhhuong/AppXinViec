@@ -81,11 +81,17 @@
     <Compile Include="View\Applicant\UCAppliedJobs.xaml.cs">
       <DependentUpon>UCAppliedJobs.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Applicant\UCChoseInterviewDay.xaml.cs">
+      <DependentUpon>UCChoseInterviewDay.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Applicant\UCCompanyInfomation.xaml.cs">
       <DependentUpon>UCCompanyInfomation.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Applicant\UCCreateCV.xaml.cs">
       <DependentUpon>UCCreateCV.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Applicant\UCDayInterviewPreview.xaml.cs">
+      <DependentUpon>UCDayInterviewPreview.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Applicant\UCIconAppliedJobs.xaml.cs">
       <DependentUpon>UCIconAppliedJobs.xaml</DependentUpon>
@@ -162,6 +168,12 @@
     <Compile Include="View\Employer\UCRateCV.xaml.cs">
       <DependentUpon>UCRateCV.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Employer\UCSetDayInterview.xaml.cs">
+      <DependentUpon>UCSetDayInterview.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Employer\UCSetDayInterviewPreview.xaml.cs">
+      <DependentUpon>UCSetDayInterviewPreview.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Employer\UCTopCV.xaml.cs">
       <DependentUpon>UCTopCV.xaml</DependentUpon>
     </Compile>
@@ -215,11 +227,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Applicant\UCChoseInterviewDay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Applicant\UCCompanyInfomation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Applicant\UCCreateCV.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Applicant\UCDayInterviewPreview.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -320,6 +340,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Employer\UCRateCV.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Employer\UCSetDayInterview.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Employer\UCSetDayInterviewPreview.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

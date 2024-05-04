@@ -44,6 +44,7 @@ namespace AppXinViecWPF.View.Applicant
                 {
                     btnConfirm_text.Text = "Hủy PV";
                     btnConfirm_bg.Background = new SolidColorBrush(Colors.Red);
+                    btnViewPVDay.Visibility = Visibility.Visible;
                 }
             }
             if (Emp.LogoPath != "")
@@ -59,7 +60,7 @@ namespace AppXinViecWPF.View.Applicant
         private void btnViewCV_Click(object sender, RoutedEventArgs e)
         {
             WViewCV viewCV = new WViewCV(Cv.Id);
-            viewCV.Show();
+            viewCV.ShowDialog();
         }
 
         private void btnChat_Click(object sender, RoutedEventArgs e)
@@ -74,13 +75,26 @@ namespace AppXinViecWPF.View.Applicant
                 ApplicantDAO.Instance.UnConfirmApplyJob(Cv.Id, IdPost);
                 btnConfirm_text.Text = "Xác nhận PV";
                 btnConfirm_bg.Background = new SolidColorBrush(Colors.Green);
+                PVDayDAO.Instance.UpdatePick(PVDayDAO.Instance.GetPickedByIdPostAndIdCV(IdPost, Cv.Id).Id, 0);
+                btnViewPVDay.Visibility = Visibility.Collapsed;
             }
             else
             {
-                ApplicantDAO.Instance.ConfirmApplyJob(Cv.Id, IdPost);
-                btnConfirm_text.Text = "Hủy PV";
-                btnConfirm_bg.Background = new SolidColorBrush(Colors.Red);
+                UCChoseInterviewDay uCChoseInterviewDay = new UCChoseInterviewDay(IdPost, Cv.Id);
+                if (uCChoseInterviewDay.ShowDialog() == true)
+                {
+                    ApplicantDAO.Instance.ConfirmApplyJob(Cv.Id, IdPost);
+                    btnConfirm_text.Text = "Hủy PV";
+                    btnConfirm_bg.Background = new SolidColorBrush(Colors.Red);
+                    btnViewPVDay.Visibility = Visibility.Visible;
+                }
             }
+        }
+
+        private void btnViewPVDay_Click(object sender, RoutedEventArgs e)
+        {
+            WViewPVDay pVDay = new WViewPVDay(PVDayDAO.Instance.GetPickedByIdPostAndIdCV(IdPost, Cv.Id).Id);
+            pVDay.Show();
         }
     }
 }

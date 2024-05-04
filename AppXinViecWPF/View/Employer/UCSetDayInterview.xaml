@@ -40,11 +40,11 @@
                 </Grid.ColumnDefinitions>
                 <StackPanel Grid.Column="0" Margin="10 5 10 5" VerticalAlignment="Center" Orientation="Horizontal">
                     <TextBlock Text="Chọn ngày phỏng vấn: " FontSize="20" TextAlignment="Center" VerticalAlignment="Center"/>
-                    <DatePicker FontSize="20" BorderThickness="0" FontWeight="SemiBold" Margin="3 0 0 0"/>
+                    <DatePicker x:Name="dpPVDay" FontSize="20" BorderThickness="0" FontWeight="SemiBold" Margin="3 0 0 0"/>
                 </StackPanel>
                 <Border Grid.Column="0" BorderBrush="LightGray" BorderThickness="0 0 1 0"/>
                 <Grid Grid.Column="1" Margin="20 5 10 5">
-                    <customControl:TextBoxCustom Height="40" PlaceHolder="Nhập thời gian diễn ra phỏng vấn" PlaceHolderFSize="20" InputFSize="20" PlaceHolderFColor="Gray" PlaceHolderFWeight="Light" BorderThickness="0"/>
+                    <customControl:TextBoxCustom x:Name="txtTime" Height="40" PlaceHolder="Nhập thời gian diễn ra phỏng vấn" PlaceHolderFSize="20" InputFSize="20" PlaceHolderFColor="Gray" PlaceHolderFWeight="Light" BorderThickness="0"/>
                 </Grid>
             </Grid>
             <Grid Grid.Row="1" Margin="10 0 10 0">
@@ -53,11 +53,11 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <StackPanel Grid.Column="0" Margin="10 5 10 5" VerticalAlignment="Center" Orientation="Horizontal">
-                    <customControl:TextBoxCustom Height="40" PlaceHolder="Nhập địa điểm diễn ra phỏng vấn" PlaceHolderFSize="20" InputFSize="20" PlaceHolderFColor="Gray" PlaceHolderFWeight="Light" BorderThickness="0"/>
+                    <customControl:TextBoxCustom x:Name="txtAddress" Height="40" PlaceHolder="Nhập địa điểm diễn ra phỏng vấn" PlaceHolderFSize="20" InputFSize="20" PlaceHolderFColor="Gray" PlaceHolderFWeight="Light" BorderThickness="0"/>
                 </StackPanel>
                 <Border Grid.Column="0" BorderBrush="LightGray" BorderThickness="0 0 1 0"/>
                 <Grid Grid.Column="1" Margin="10 5 10 5">
-                    <Button x:Name="btnAdd" Cursor="Hand" Margin="10" Click="btnApply_Click">
+                    <Button x:Name="btnAdd" Cursor="Hand" Margin="10" Click="btnAdd_Click">
                         <Button.Template>
                             <ControlTemplate>
                                 <Grid Height="40" Width="240">
@@ -75,14 +75,14 @@
         <Grid Grid.Row="2" Background="White">
             <ScrollViewer Margin="20 10 20 10" VerticalScrollBarVisibility="Hidden">
                 <ItemsControl x:Name="listDay">
-                    
+
                 </ItemsControl>
             </ScrollViewer>
         </Grid>
         <Border Grid.Row="3" BorderBrush="LightGray" BorderThickness="0 1 0 0" Margin="20 5 20 5"/>
         <Grid Grid.Row="3" Background="White">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <Button Margin="10">
+                <Button Margin="10" x:Name="btnCancel" Click="btnCancel_Click">
                     <Button.Template>
                         <ControlTemplate>
                             <Grid Height="40" Width="80">

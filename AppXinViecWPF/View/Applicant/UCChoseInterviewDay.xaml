@@ -12,7 +12,7 @@
         WindowStartupLocation="CenterScreen" 
         AllowsTransparency="True"
         Background="Transparent">
-    <Border CornerRadius="8" Background="#f3f5f7">
+    <Border CornerRadius="8" Background="#f3f5f7" BorderThickness="2" BorderBrush="Black">
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="100"/>
@@ -31,7 +31,7 @@
             <Border Grid.Row="1" BorderBrush="LightGray" BorderThickness="0 1 0 0" Margin="20 5 20 5"/>
             <Grid Grid.Row="2">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <Button Margin="10">
+                    <Button x:Name="btnCancel" Click="btnCancel_Click" Cursor="Hand" Margin="10">
                         <Button.Template>
                             <ControlTemplate>
                                 <Grid Height="40" Width="80">

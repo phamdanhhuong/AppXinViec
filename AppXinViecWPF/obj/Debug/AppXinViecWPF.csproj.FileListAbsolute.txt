@@ -713,3 +713,13 @@ D:\DaAnWin\AppXinViecWPF\obj\Debug\AppXinViecWPF.csproj.CoreCompileInputs.cache
 D:\DaAnWin\AppXinViecWPF\obj\Debug\AppXinVi.0EC4A672.Up2Date
 D:\DaAnWin\AppXinViecWPF\obj\Debug\AppXinViecWPF.exe
 D:\DaAnWin\AppXinViecWPF\obj\Debug\AppXinViecWPF.pdb
+F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\UCChoseInterviewDay.g.cs
+F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\UCDayInterviewPreview.g.cs
+F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Employer\UCSetDayInterview.g.cs
+F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Employer\UCSetDayInterviewPreview.g.cs
+F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\UCChoseInterviewDay.baml
+F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\UCDayInterviewPreview.baml
+F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Employer\UCSetDayInterview.baml
+F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Employer\UCSetDayInterviewPreview.baml
+F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\WViewPVDay.g.cs
+F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\WViewPVDay.baml

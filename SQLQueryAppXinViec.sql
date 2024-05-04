@@ -122,6 +122,18 @@ Create table ApplyCV
 )
 GO
 
+Create table PVDay
+(
+	Id INT IDENTITY PRIMARY KEY,
+	Chon int default 0, -- 0 la khong duoc chon, 1 la duoc chon
+	IdCV INT FOREIGN KEY REFERENCES Cv(Id),
+	IdPost INT FOREIGN KEY REFERENCES Post(Id),
+	Ngay date ,
+	ThoiGian NVARCHAR(150),
+	DiaDiem NVARCHAR(150)
+)
+GO
+
 Create table FavJob
 (
 	IdApplicant INT FOREIGN KEY REFERENCES ApplicantInfo(Id),
@@ -171,4 +183,4 @@ GO
 --SELECT COUNT(*) FROM FavCompany WHERE IdEmployer = 1
 --SELECT IdEmployer FROM FavCompany GROUP BY IdEmployer ORDER BY COUNT(IdApplicant) DESC
 
-Select * from ApplyJob where IdCV = 11 and IdPost = 13
+--Select * from PVDay 

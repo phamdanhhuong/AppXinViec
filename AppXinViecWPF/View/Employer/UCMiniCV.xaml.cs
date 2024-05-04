@@ -1,5 +1,6 @@
 ﻿using AppXinViecWPF.DAO;
 using AppXinViecWPF.DTO;
+using AppXinViecWPF.View.Applicant;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -56,17 +57,31 @@ namespace AppXinViecWPF.View.Employer
         {
             if (!CVDAO.Instance.IsComfirm(IdCV, IdPost))
             {
-                CVDAO.Instance.Comfirm(IdCV, IdPost);
-                Icon_comfirm.Foreground = new SolidColorBrush(Colors.Green);
-                txtStatus.Text = "Đã duyệt";
-                txtStatus.Background = new SolidColorBrush(Colors.LightGreen);
+                UCSetDayInterview uCSetDayInterview = new UCSetDayInterview(IdPost,IdCV);
+                if(uCSetDayInterview.ShowDialog() == true)
+                {
+                    MessageBox.Show("Đã thêm lịch phỏng vấn");
+                    CVDAO.Instance.Comfirm(IdCV, IdPost);
+                    Icon_comfirm.Foreground = new SolidColorBrush(Colors.Green);
+                    txtStatus.Text = "Đã duyệt";
+                    txtStatus.Background = new SolidColorBrush(Colors.LightGreen);
+                }
+                else
+                {
+                    MessageBox.Show("Chưa thêm lịch phỏng vấn");
+                }
             }
             else
             {
-                CVDAO.Instance.UnComfirm(IdCV, IdPost);
-                Icon_comfirm.Foreground = new SolidColorBrush(Colors.Black);
-                txtStatus.Text = "Chưa duyệt";
-                txtStatus.Background = new SolidColorBrush(Colors.LightGray);
+                if(MessageBox.Show("Bạn có muốn xóa lịch phỏng vấn","Cảnh báo",MessageBoxButton.OKCancel) == MessageBoxResult.OK)
+                {
+                    PVDayDAO.Instance.DeletePVDayByIdPostAndIdCV(IdPost,IdCV);
+                    CVDAO.Instance.UnComfirm(IdCV, IdPost);
+                    ApplicantDAO.Instance.UnConfirmApplyJob(IdCV, IdPost);
+                    Icon_comfirm.Foreground = new SolidColorBrush(Colors.Black);
+                    txtStatus.Text = "Chưa duyệt";
+                    txtStatus.Background = new SolidColorBrush(Colors.LightGray);
+                }
             }
         }
 

@@ -6,42 +6,44 @@
              xmlns:local="clr-namespace:AppXinViecWPF.View.Applicant"
              mc:Ignorable="d" 
              d:DesignHeight="140" d:DesignWidth="400" Background="Transparent" Margin="10">
-    <Border CornerRadius="8" Background="White" BorderThickness="1">
-        <Border.BorderBrush>
-            <DrawingBrush Viewport="0,0,8,8" ViewportUnits="Absolute" TileMode="Tile">
-                <DrawingBrush.Drawing>
-                    <DrawingGroup>
-                        <GeometryDrawing Brush="Gray">
-                            <GeometryDrawing.Geometry>
-                                <GeometryGroup>
-                                    <RectangleGeometry Rect="0,0,50,50" />
-                                    <RectangleGeometry Rect="50,50,50,50" />
-                                </GeometryGroup>
-                            </GeometryDrawing.Geometry>
-                        </GeometryDrawing>
-                    </DrawingGroup>
-                </DrawingBrush.Drawing>
-            </DrawingBrush>
-        </Border.BorderBrush>
-        <Grid VerticalAlignment="Center" Margin="10">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            <Border Grid.Row="0" BorderBrush="LightGray" BorderThickness="0 0 1 0" Margin="0"/>
-            <Border Grid.Row="1" BorderBrush="LightGray" BorderThickness="0 0 1 0" Margin="0"/>
-            <Border Grid.Row="2" BorderBrush="LightGray" BorderThickness="0 0 1 0" Margin="0"/>
-            <TextBlock Grid.Column="0" Grid.Row="0" Text="Ngày phỏng vấn:" Margin="10,10,0,0" FontSize="16" FontWeight="Bold"/>
-            <TextBlock Grid.Column="1" Grid.Row="0" Text="19/6/2024" Margin="0,10,10,0" FontSize="16" FontWeight="Normal" HorizontalAlignment="Right"/>
-            <TextBlock Grid.Column="0" Grid.Row="1" Text="Thời gian:" Margin="10,10,0,0" FontSize="16" FontWeight="Bold"/>
-            <TextBlock Grid.Column="1" Grid.Row="1" Text="13:00 - 15:00" Margin="0,10,10,0" FontSize="16" FontWeight="Normal" HorizontalAlignment="Right"/>
-            <TextBlock Grid.Column="0" Grid.Row="2" Text="Địa điểm:" Margin="10,10,0,10" FontSize="16" FontWeight="Bold"/>
-            <TextBlock Grid.Column="1" Grid.Row="2" Text="Ho Chi Minh" Margin="0,10,10,10" FontSize="16" FontWeight="Normal" HorizontalAlignment="Right"/>
-        </Grid>
+    <Border x:Name="ucBorder" CornerRadius="8" BorderThickness="0" BorderBrush="Green">
+        <Border CornerRadius="8" Background="White" BorderThickness="1">
+            <Border.BorderBrush>
+                <DrawingBrush Viewport="0,0,8,8" ViewportUnits="Absolute" TileMode="Tile">
+                    <DrawingBrush.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="Gray">
+                                <GeometryDrawing.Geometry>
+                                    <GeometryGroup>
+                                        <RectangleGeometry Rect="0,0,50,50" />
+                                        <RectangleGeometry Rect="50,50,50,50" />
+                                    </GeometryGroup>
+                                </GeometryDrawing.Geometry>
+                            </GeometryDrawing>
+                        </DrawingGroup>
+                    </DrawingBrush.Drawing>
+                </DrawingBrush>
+            </Border.BorderBrush>
+            <Grid VerticalAlignment="Center" Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Border Grid.Row="0" BorderBrush="LightGray" BorderThickness="0 0 1 0" Margin="0"/>
+                <Border Grid.Row="1" BorderBrush="LightGray" BorderThickness="0 0 1 0" Margin="0"/>
+                <Border Grid.Row="2" BorderBrush="LightGray" BorderThickness="0 0 1 0" Margin="0"/>
+                <TextBlock Grid.Column="0" Grid.Row="0" Text="Ngày phỏng vấn:" Margin="10,10,0,0" FontSize="16" FontWeight="Bold"/>
+                <TextBlock x:Name="txtDate" Grid.Column="1" Grid.Row="0" Text="19/6/2024" Margin="0,10,10,0" FontSize="16" FontWeight="Normal" HorizontalAlignment="Right"/>
+                <TextBlock Grid.Column="0" Grid.Row="1" Text="Thời gian:" Margin="10,10,0,0" FontSize="16" FontWeight="Bold"/>
+                <TextBlock x:Name="txtTime" Grid.Column="1" Grid.Row="1" Text="13:00 - 15:00" Margin="0,10,10,0" FontSize="16" FontWeight="Normal" HorizontalAlignment="Right"/>
+                <TextBlock Grid.Column="0" Grid.Row="2" Text="Địa điểm:" Margin="10,10,0,10" FontSize="16" FontWeight="Bold"/>
+                <TextBlock x:Name="txtAddress" Grid.Column="1" Grid.Row="2" Text="Ho Chi Minh" Margin="0,10,10,10" FontSize="16" FontWeight="Normal" HorizontalAlignment="Right"/>
+            </Grid>
+        </Border>
     </Border>
 </UserControl>

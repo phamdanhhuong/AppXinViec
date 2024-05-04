@@ -69,12 +69,14 @@
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\EmployerDAO.cs" />
     <Compile Include="DAO\PostDAO.cs" />
+    <Compile Include="DAO\PVDayDAO.cs" />
     <Compile Include="DTO\Account.cs" />
     <Compile Include="DTO\ApplicantDTO.cs" />
     <Compile Include="DTO\ApplyCV.cs" />
     <Compile Include="DTO\CV.cs" />
     <Compile Include="DTO\EmployerDTO.cs" />
     <Compile Include="DTO\PostDTO.cs" />
+    <Compile Include="DTO\PVDay.cs" />
     <Compile Include="View\Applicant\UCAplliedJobsHistory.xaml.cs">
       <DependentUpon>UCAplliedJobsHistory.xaml</DependentUpon>
     </Compile>
@@ -137,6 +139,9 @@
     </Compile>
     <Compile Include="View\Applicant\WMainApplicant.xaml.cs">
       <DependentUpon>WMainApplicant.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Applicant\WViewPVDay.xaml.cs">
+      <DependentUpon>WViewPVDay.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Custom\ComboBoxCustom.xaml.cs">
       <DependentUpon>ComboBoxCustom.xaml</DependentUpon>
@@ -300,6 +305,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Applicant\WMainApplicant.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Applicant\WViewPVDay.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -19,9 +19,42 @@ namespace AppXinViecWPF.View.Employer
     /// </summary>
     public partial class UCSetDayInterview : Window
     {
-        public UCSetDayInterview()
+        public UCSetDayInterview(int idpost, int idcv)
         {
             InitializeComponent();
+            IdPost = idpost;
+            IdCV = idcv;
+        }
+        int IdPost;
+        int IdCV;
+        //List<UCSetDayInterviewPreview> listUC = new List<UCSetDayInterviewPreview>();
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                UCSetDayInterviewPreview uc = new UCSetDayInterviewPreview(IdPost, IdCV, dpPVDay.SelectedDate.Value, txtTime.TxtText, txtAddress.TxtText);
+                listDay.Items.Add(uc);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Chưa nhập ngày");
+            }
+        }
+
+        private void btnApply_Click(object sender, RoutedEventArgs e)
+        {
+            foreach (UCSetDayInterviewPreview uc in listDay.Items)
+            {
+                uc.AddPVDay();
+            }
+            DialogResult = true;
+            this.Close();
+        }
+
+        private void btnCancel_Click(object sender, RoutedEventArgs e)
+        {
+            DialogResult = false;
+            this.Close();
         }
     }
 }

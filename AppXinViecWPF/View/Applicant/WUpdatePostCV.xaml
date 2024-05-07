@@ -1,0 +1,81 @@
+﻿<Window x:Class="AppXinViecWPF.View.Applicant.WUpdatePostCV"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppXinViecWPF.View.Applicant"
+        xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
+        mc:Ignorable="d"
+            Title="WCreatePost" Height="550" Width="800"        
+    WindowStyle="None" Background="Transparent" AllowsTransparency="True" WindowStartupLocation="CenterScreen">
+    <Border BorderBrush="Black" BorderThickness="2" Background="White" CornerRadius="8">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="300"/>
+                </Grid.ColumnDefinitions>
+
+                <Border Grid.Column="0" BorderBrush="LightGray" Margin="40 0 0 0" Width="200" HorizontalAlignment="Left" BorderThickness="0 0 0 1" CornerRadius="0">
+                    <TextBox x:Name="txtTitle" BorderThickness="0" Width="200" Height="40" FontSize="24" TextAlignment="Center"/>
+                </Border>
+                <StackPanel  Grid.Column="1" Orientation="Horizontal">
+                    <Button x:Name="btnCancel" Click="btnCancel_Click" Cursor="Hand" Margin="10" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Right">
+                        <Button.Template>
+                            <ControlTemplate>
+                                <Grid Height="40" Width="100">
+                                    <Border CornerRadius="5" Background="#f34541"/>
+                                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
+                                        <fa:IconImage Icon="Cancel" Height="24" Margin="0"/>
+                                        <TextBlock Text="Cancel" FontSize="18" FontWeight="SemiBold" Margin="5 0 0 0"/>
+                                    </StackPanel>
+                                </Grid>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                    <Button x:Name="btnSave" Click="btnSave_Click" Cursor="Hand" Margin="5">
+                        <Button.Template>
+                            <ControlTemplate>
+                                <Grid>
+                                    <Border CornerRadius="15" BorderThickness="1"  Background="#12b35b">
+                                        <StackPanel Margin="0 0 10 0"  HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+                                            <fa:IconImage Icon="Save" Foreground="White" Margin="10"/>
+                                            <TextBlock Text="Lưu lại" FontWeight="SemiBold" FontSize="20" Foreground="White" Width="90" TextAlignment="Center" Margin="10"/>
+                                        </StackPanel>
+                                    </Border>
+                                </Grid>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="300"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <StackPanel Margin="20">
+                        <TextBlock Text="Nội dung" FontSize="20" FontWeight="SemiBold"/>
+                        <RichTextBox x:Name="rtxtContent" Height="220" Margin="0 5 0 0"/>
+                    </StackPanel>
+                </Grid>
+                <Border Grid.Row="0" BorderThickness="0 0 0 1" BorderBrush="LightGray" Margin="20 0 20 0"/>
+                <Grid Grid.Row="1">
+                    <StackPanel Margin="20">
+                        <TextBlock Text="Đính kèm CV" FontSize="20" FontWeight="SemiBold"/>
+                        <ScrollViewer VerticalScrollBarVisibility="Hidden" Margin="10 20 10 0" Height="100">
+                            <ItemsControl x:Name="listCV">
+
+                            </ItemsControl>
+                        </ScrollViewer>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Border>
+</Window>

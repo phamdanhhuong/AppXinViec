@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              
              xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
-             d:DesignHeight="100" d:DesignWidth="800" Background="Transparent" Padding="6">
+             d:DesignHeight="100" d:DesignWidth="800" Background="Transparent" Padding="6" Loaded="UserControl_Loaded">
     <Border CornerRadius="12" BorderThickness="1" Background="White">
         <Border.BorderBrush>
             <DrawingBrush Viewport="0,0,8,8" ViewportUnits="Absolute" TileMode="Tile">
@@ -29,14 +29,13 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="2*"/>
                 <ColumnDefinition Width="3*"/>
-                <ColumnDefinition Width="4*"/>
                 <ColumnDefinition Width="60"/>
                 <ColumnDefinition Width="60"/>
                 <ColumnDefinition Width="60"/>
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="0">
                 <Border BorderThickness="0 0 1 0" BorderBrush="LightGray" Margin="0 40 0 40"/>
-                <TextBlock Text="{Binding Path = TenPost }" FontSize="20" FontWeight="SemiBold" VerticalAlignment="Center" Margin="20 10 10 10"/>
+                <TextBlock Text="{Binding Path = Title }" FontSize="20" FontWeight="SemiBold" VerticalAlignment="Center" Margin="20 10 10 10"/>
             </Grid>
             <Grid Grid.Column="1">
                 <Border BorderThickness="0 0 1 0" BorderBrush="LightGray" Margin="0 40 0 40"/>
@@ -44,12 +43,8 @@
             </Grid>
             <Grid Grid.Column="2">
                 <Border BorderThickness="0 0 1 0" BorderBrush="LightGray" Margin="0 40 0 40"/>
-                <TextBlock x:Name="txtEditDay" Text="Lần chỉnh sửa cuối: " FontSize="20" FontWeight="SemiBold" VerticalAlignment="Center" Margin="10"/>
-            </Grid>
-            <Grid Grid.Column="3">
-                <Border BorderThickness="0 0 1 0" BorderBrush="LightGray" Margin="0 40 0 40"/>
                 <Grid>
-                    <Button x:Name="btnEdit" Height="50" Grid.Column="0" Cursor="Hand" Margin="5" Click="btnEdit_Click">
+                    <Button x:Name="btnEdit" Click="btnEdit_Click" Height="50" Grid.Column="0" Cursor="Hand" Margin="5">
                         <Button.Template>
                             <ControlTemplate>
                                 <Grid>
@@ -64,10 +59,10 @@
                     </Button>
                 </Grid>
             </Grid>
-            <Grid Grid.Column="4">
+            <Grid Grid.Column="3">
                 <Border BorderThickness="0 0 1 0" BorderBrush="LightGray" Margin="0 40 0 40"/>
                 <Grid>
-                    <Button x:Name="btnView" Height="50" Grid.Column="0" Cursor="Hand" Margin="5" Click="btnView_Click">
+                    <Button x:Name="btnView" Click="btnView_Click" Height="50" Grid.Column="0" Cursor="Hand" Margin="5" >
                         <Button.Template>
                             <ControlTemplate>
                                 <Grid>
@@ -82,9 +77,9 @@
                     </Button>
                 </Grid>
             </Grid>
-            <Grid Grid.Column="5">
+            <Grid Grid.Column="4">
                 <Grid>
-                    <Button x:Name="btnDelete" Height="50" Grid.Column="0" Cursor="Hand" Margin="5" Click="btnDelete_Click">
+                    <Button x:Name="btnDelete" Click="btnDelete_Click" Height="50" Grid.Column="0" Cursor="Hand" Margin="5">
                         <Button.Template>
                             <ControlTemplate>
                                 <Grid>

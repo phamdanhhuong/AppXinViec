@@ -605,10 +605,8 @@ C:\Users\ADMIN\Downloads\Window1542024\AppXinViecWPF\obj\Debug\View\Applicant\UC
 C:\Users\ADMIN\Downloads\Window1542024\AppXinViecWPF\obj\Debug\View\Applicant\UCIconAppliedJobs.baml
 F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\UCAplliedJobsHistory.g.cs
 F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\UCIconAppliedJobs.g.cs
-F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\UCPostCV.g.cs
 F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\UCAplliedJobsHistory.baml
 F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\UCIconAppliedJobs.baml
-F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\UCPostCV.baml
 F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\UCInfoCompany.g.cs
 F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\UCTopCompany.g.cs
 F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\UCInfoCompany.baml
@@ -731,3 +729,13 @@ D:\DaAnWin\AppXinViecWPF\obj\Debug\View\Employer\UCNewFeedCVs.g.cs
 D:\DaAnWin\AppXinViecWPF\obj\Debug\View\Employer\UCSetDayInterview.g.cs
 D:\DaAnWin\AppXinViecWPF\obj\Debug\View\Employer\UCSetDayInterviewPreview.g.cs
 D:\DaAnWin\AppXinViecWPF\obj\Debug\View\Applicant\UCManagePost.g.cs
+F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\UCIconPostedCV.g.cs
+F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\WCreatePost.g.cs
+F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\UCIconPostedCV.baml
+F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\WCreatePost.baml
+F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\UCManagePostCV.g.cs
+F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\UCManagePostCV.baml
+F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Employer\WViewPostCV.g.cs
+F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Employer\WViewPostCV.baml
+F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\WUpdatePostCV.g.cs
+F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\WUpdatePostCV.baml

@@ -110,7 +110,7 @@ namespace AppXinViecWPF.View.Applicant
             else
             {
                 pnlMyCV.Visibility = Visibility.Visible;
-                gridMyCV.Height = new GridLength(150);
+                gridMyCV.Height = new GridLength(200);
             }
         }
 
@@ -184,6 +184,17 @@ namespace AppXinViecWPF.View.Applicant
         {
             UCTopCompany uCTopCompany = new UCTopCompany();
             ccMain.Content = uCTopCompany;
+        }
+
+        private void btnMangePost_Click(object sender, RoutedEventArgs e)
+        {
+            UCManagePostCV uCManagePostCV = new UCManagePostCV();
+            ccMain.Content = uCManagePostCV;
+        }
+
+        private void btnExit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

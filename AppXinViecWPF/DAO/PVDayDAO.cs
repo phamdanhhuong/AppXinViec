@@ -28,6 +28,11 @@ namespace AppXinViecWPF.DAO
             string query = string.Format("INSERT INTO PVDay(IdPost, IdCV, Ngay, ThoiGian, DiaDiem) VALUES ({0},{1},'{2}','{3}','{4}')", pVDay.IdPost,pVDay.IdCV,pVDay.Date.ToString("yyyy-MM-dd"), pVDay.Time,pVDay.Address);
             DataProvider.Instance.ExecuteNonQuery(query);
         }
+        public void AddPVDay_2(PVDay pVDay)
+        {
+            string query = string.Format("INSERT INTO PVDay(IdPostCV, IdEmployer, Ngay, ThoiGian, DiaDiem) VALUES ({0},{1},'{2}','{3}','{4}')", pVDay.IdPostCV, pVDay.IdEmployer, pVDay.Date.ToString("yyyy-MM-dd"), pVDay.Time, pVDay.Address);
+            DataProvider.Instance.ExecuteNonQuery(query);
+        }
         public void UpdatePVDay(PVDay pVDay)
         {
             string query = string.Format("UPDATE PVDay SET Ngay = '{0}', ThoiGian = '{1}', DiaDiem = '{2}' WHERE Id = {3}", pVDay.Date.ToString("yyyy-MM-dd"), pVDay.Time,pVDay.Address,pVDay.Id);

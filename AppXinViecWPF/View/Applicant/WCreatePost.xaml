@@ -9,7 +9,7 @@
         mc:Ignorable="d"
         Title="WCreatePost" Height="550" Width="800"        
         WindowStyle="None" Background="Transparent" AllowsTransparency="True" WindowStartupLocation="CenterScreen">
-    <Border Background="White" CornerRadius="8">
+    <Border BorderBrush="Black" BorderThickness="2" Background="White" CornerRadius="8">
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="60"/>
@@ -25,20 +25,20 @@
                     <customControl:TextBoxCustom x:Name="txtPostName" Width="200" Height="40" PlaceHolder="Nhập tiêu đề POST" PlaceHolderFSize="24" InputFSize="24" PlaceHolderFColor="Gray" PlaceHolderFWeight="Light" BorderThickness="0"/>
                 </Border>
                 <StackPanel  Grid.Column="1" Orientation="Horizontal">
-                    <Button x:Name="btnDelete" Cursor="Hand" Click="btnDelete_Click" Margin="10" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Right">
+                    <Button x:Name="btnCancel" Click="btnCancel_Click" Cursor="Hand" Margin="10" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Right">
                         <Button.Template>
                             <ControlTemplate>
-                                <Grid Height="40" Width="80">
+                                <Grid Height="40" Width="100">
                                     <Border CornerRadius="5" Background="#f34541"/>
                                     <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
-                                        <fa:IconImage Icon="TrashCan" Height="24" Margin="0"/>
-                                        <TextBlock Text="Xóa" FontSize="18" FontWeight="SemiBold" Margin="5 0 0 0"/>
+                                        <fa:IconImage Icon="Cancel" Height="24" Margin="0"/>
+                                        <TextBlock Text="Cancel" FontSize="18" FontWeight="SemiBold" Margin="5 0 0 0"/>
                                     </StackPanel>
                                 </Grid>
                             </ControlTemplate>
                         </Button.Template>
                     </Button>
-                    <Button x:Name="btnSave" Cursor="Hand" Margin="5" Click="btnSave_Click">
+                    <Button x:Name="btnSave" Click="btnSave_Click" Cursor="Hand" Margin="5">
                         <Button.Template>
                             <ControlTemplate>
                                 <Grid>
@@ -62,7 +62,7 @@
                 <Grid Grid.Row="0">
                     <StackPanel Margin="20">
                         <TextBlock Text="Nội dung" FontSize="20" FontWeight="SemiBold"/>
-                        <RichTextBox Height="220" Margin="0 5 0 0"/>
+                        <RichTextBox x:Name="rtxtContent" Height="220" Margin="0 5 0 0"/>
                     </StackPanel>
                 </Grid>
                 <Border Grid.Row="0" BorderThickness="0 0 0 1" BorderBrush="LightGray" Margin="20 0 20 0"/>

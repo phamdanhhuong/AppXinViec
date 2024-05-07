@@ -7,44 +7,46 @@
              xmlns:local="clr-namespace:AppXinViecWPF.View.Employer"
              mc:Ignorable="d" 
              d:DesignHeight="140" d:DesignWidth="800">
-    <Border CornerRadius="8" Background="White" BorderThickness="2" Margin="10">
+    <Border CornerRadius="8" BorderBrush="Black" Background="White" BorderThickness="2" Margin="10">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="250"/>
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="0">
                 <TextBlock x:Name="txtName"  Text="Nguyễn Văn A" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"/>
             </Grid>
             <Grid Grid.Column="1">
-                <TextBlock x:Name="txtNameCV" Text="Lập trình viên" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"/>
-            </Grid>
-            <Grid Grid.Column="2">
-                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
-                    <TextBlock Text="Số lượt thích: " HorizontalAlignment="Center" FontSize="20"/>
-                    <TextBlock Text="0" HorizontalAlignment="Center" FontSize="20" Foreground="#00a46e"/>
-                </StackPanel>
+                <TextBlock x:Name="txtNamePostCV" Text="Lập trình viên" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"/>
             </Grid>
             <Grid Grid.Column="3">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                     <Button x:Name="btnView" Click="btnView_Click" Grid.Column="0" Cursor="Hand" Margin="5" Height="80" Background="White" BorderThickness="0">
                         <StackPanel>
                             <Grid Height="40">
-                                <Ellipse Fill="#00a46e" Margin="4"/>
+                                <Ellipse Fill="gray" Margin="4"/>
                                 <fa:IconImage Icon="Eye" Foreground="White" Margin="10"/>
                             </Grid>
                             <TextBlock Margin="5" HorizontalAlignment="Center"  Text="Xem" FontSize="18" FontWeight="Normal"/>
                         </StackPanel>
                     </Button>
-                    <Button x:Name="btnLike" Click="btnLike_Click" Background="White" Grid.Column="0" BorderThickness="0" Cursor="Hand" Margin="5" Height="80">
+                    <Button Visibility="Collapsed" x:Name="btnLike" Click="btnLike_Click" Background="White" Grid.Column="0" BorderThickness="0" Cursor="Hand" Margin="5" Height="80">
                         <StackPanel>
                             <Grid Height="40" Width="40">
-                                <Ellipse Fill="#00a46e" Margin="4"/>
+                                <Ellipse Fill="gray" Margin="4"/>
                                 <fa:IconImage x:Name="btnLike_Icon" Icon="Heart" Foreground="White" Margin="10"/>
                             </Grid>
                             <TextBlock Margin="5" HorizontalAlignment="Center"  Text="Thích" FontSize="18" FontWeight="Normal"/>
+                        </StackPanel>
+                    </Button>
+                    <Button Visibility="Collapsed" x:Name="btnConfirm" Click="btnConfirm_Click" Background="White" Grid.Column="0" BorderThickness="0" Cursor="Hand" Margin="5" Height="80">
+                        <StackPanel>
+                            <Grid Height="40" Width="40">
+                                <Ellipse x:Name="el_BG" Fill="gray" Margin="4"/>
+                                <fa:IconImage x:Name="btnConfirm_Icon" Icon="Check" Foreground="White" Margin="10"/>
+                            </Grid>
+                            <TextBlock Margin="5" HorizontalAlignment="Center" x:Name="txtConfirm" Text="Duyệt" FontSize="18" FontWeight="Normal"/>
                         </StackPanel>
                     </Button>
                 </StackPanel>

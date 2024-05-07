@@ -29,11 +29,6 @@ namespace AppXinViecWPF.View.Applicant
             DataContext = GetCv;
             txtCreatDay.Text += GetCv.NgayTao.ToString();
             txtEditDay.Text += GetCv.NgaySua.ToString();
-            if(CVDAO.Instance.IsPublicCV(GetCv.Id))
-            {
-                btnPublic_bg.Background = Brushes.Red;
-                btnPublic_text.Text = "Hủy công khai";
-            }
         }
 
         CV getCv;
@@ -57,22 +52,6 @@ namespace AppXinViecWPF.View.Applicant
         {
             WMainApplicant.uCCCV = new UCCreateCV(GetCv.Id);
             WMainApplicant.uCManageCVs.TriggerButtonClick();
-        }
-
-        private void btnPublic_Click(object sender, RoutedEventArgs e)
-        {
-            if(CVDAO.Instance.IsPublicCV(GetCv.Id))
-            {
-                CVDAO.Instance.UnPublicCV(GetCv.Id);
-                btnPublic_bg.Background = Brushes.Green;
-                btnPublic_text.Text = "Đăng CV";
-            }
-            else
-            {
-                CVDAO.Instance.PublicCV(GetCv.Id);
-                btnPublic_bg.Background = Brushes.Red;
-                btnPublic_text.Text = "Hủy công khai";
-            }
         }
     }
 }

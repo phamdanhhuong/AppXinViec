@@ -68,6 +68,7 @@
     <Compile Include="DAO\CVDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\EmployerDAO.cs" />
+    <Compile Include="DAO\PostCVDAO.cs" />
     <Compile Include="DAO\PostDAO.cs" />
     <Compile Include="DAO\PVDayDAO.cs" />
     <Compile Include="DTO\Account.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="DTO\ApplyCV.cs" />
     <Compile Include="DTO\CV.cs" />
     <Compile Include="DTO\EmployerDTO.cs" />
+    <Compile Include="DTO\PostCV.cs" />
     <Compile Include="DTO\PostDTO.cs" />
     <Compile Include="DTO\PVDay.cs" />
     <Compile Include="View\Applicant\UCAplliedJobsHistory.xaml.cs">
@@ -113,8 +115,8 @@
     <Compile Include="View\Applicant\UCManageCVs.xaml.cs">
       <DependentUpon>UCManageCVs.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Applicant\UCManagePost.xaml.cs">
-      <DependentUpon>UCManagePost.xaml</DependentUpon>
+    <Compile Include="View\Applicant\UCManagePostCV.xaml.cs">
+      <DependentUpon>UCManagePostCV.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Applicant\UCrbtnCV.xaml.cs">
       <DependentUpon>UCrbtnCV.xaml</DependentUpon>
@@ -146,6 +148,9 @@
     <Compile Include="View\Applicant\WMainApplicant.xaml.cs">
       <DependentUpon>WMainApplicant.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Applicant\WUpdatePostCV.xaml.cs">
+      <DependentUpon>WUpdatePostCV.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Applicant\WViewPVDay.xaml.cs">
       <DependentUpon>WViewPVDay.xaml</DependentUpon>
     </Compile>
@@ -161,9 +166,6 @@
     <Compile Include="View\Employer\UCAccount.xaml.cs">
       <DependentUpon>UCAccount.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Employer\UCIconPostCV.xaml.cs">
-      <DependentUpon>UCIconPostCV.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\Employer\UCManageCV.xaml.cs">
       <DependentUpon>UCManageCV.xaml</DependentUpon>
     </Compile>
@@ -175,9 +177,6 @@
     </Compile>
     <Compile Include="View\Employer\UCMiniPost.xaml.cs">
       <DependentUpon>UCMiniPost.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\Employer\UCNewFeedCVs.xaml.cs">
-      <DependentUpon>UCNewFeedCVs.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Employer\UCNews.xaml.cs">
       <DependentUpon>UCNews.xaml</DependentUpon>
@@ -202,6 +201,9 @@
     </Compile>
     <Compile Include="View\Employer\WViewCV.xaml.cs">
       <DependentUpon>WViewCV.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Employer\WViewPostCV.xaml.cs">
+      <DependentUpon>WViewPostCV.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Register\WEmployerRegister.xaml.cs">
       <DependentUpon>WEmployerRegister.xaml</DependentUpon>
@@ -284,7 +286,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Applicant\UCManagePost.xaml">
+    <Page Include="View\Applicant\UCManagePostCV.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -328,6 +330,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Applicant\WUpdatePostCV.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Applicant\WViewPVDay.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -348,10 +354,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Employer\UCIconPostCV.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="View\Employer\UCManageCV.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -365,10 +367,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Employer\UCMiniPost.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\Employer\UCNewFeedCVs.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -401,6 +399,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Employer\WViewCV.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Employer\WViewPostCV.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -458,9 +460,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Image\download.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Image\Screenshot-4431-1024x640.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

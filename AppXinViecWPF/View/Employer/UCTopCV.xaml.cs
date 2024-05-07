@@ -1,4 +1,5 @@
 ﻿using AppXinViecWPF.DAO;
+using AppXinViecWPF.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,11 +25,10 @@ namespace AppXinViecWPF.View.Employer
         public UCTopCV()
         {
             InitializeComponent();
-            int[] list = CVDAO.Instance.GetAllIdCvPublic();
-            for (int i = 0; i < list.Length; i++)
+            List<PostCV> list = PostCVDAO.Instance.getAllPostCV();
+            foreach (PostCV item in list)
             {
-                UCRateCV uCRateCV = new UCRateCV(list[i]);
-                listCv.Items.Add(uCRateCV);
+                newFeedList.Items.Add(new UCRateCV(item.Id));
             }
         }
     }

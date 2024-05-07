@@ -158,6 +158,27 @@ Create table FavCV
 )
 GO
 
+Create table PostCV
+(
+	Id INT IDENTITY PRIMARY KEY,
+	IdCV INT FOREIGN KEY REFERENCES Cv(Id),
+	TieuDe ntext,
+	NoiDung ntext,
+	NgayDang date
+)
+GO
+
+--Create table PVDay_2
+--(
+--	Id INT IDENTITY PRIMARY KEY,
+--	Chon int default 0, -- 0 la khong duoc chon, 1 la duoc chon
+--	IdPostCV INT FOREIGN KEY REFERENCES PostCV(Id),
+--	IdEmployer INT FOREIGN KEY REFERENCES EmployerInfo(Id),
+--	Ngay date,
+--	ThoiGian NVARCHAR(150),
+--	DiaDiem NVARCHAR(150)
+--)
+--GO
 
 --INSERT INTO Cv (IdApplicant, NgayTao, NgaySua, TenCV, HoVaTen, ViTriUngTuyen, Avatar, SDT, GioiTinh, Email, NgaySinh, TrangCaNhan, DiaChi, NganhHoc, TenTruong, ThoiGianHoc, ThanhTich, CongViecCu, CongTyCu, ThoiGianLamViec, MoTaKinhNghiem, TenDuAn, ViTriTrongDuAn, ThoiGianLamDuAn, MoTaHoatDong, MucTieu, KyNang, ChungChi, SoThich,ThongTinThem)
 --SELECT * FROM EmployerInfo WHERE Id = @Id

@@ -77,6 +77,8 @@ namespace AppXinViecWPF.DAO
         {
             string query = string.Format("DELETE FROM FavCV WHERE IdCV = {0}", id);
             DataProvider.Instance.ExecuteNonQuery(query);
+            query = string.Format("DELETE FROM PostCV WHERE IdCV = {0}", id);
+            DataProvider.Instance.ExecuteNonQuery(query);
             query = string.Format("DELETE FROM PVDay WHERE IdCV = {0}", id);
             DataProvider.Instance.ExecuteNonQuery(query);
             query = string.Format("DELETE FROM ApplyCV WHERE IdCV = {0}", id);

@@ -22,38 +22,30 @@ namespace AppXinViecWPF.View.Employer
     /// </summary>
     public partial class UCRateCV : UserControl
     {
-        public UCRateCV(int idCV)
+        public UCRateCV(int idpostcv)
         {
             InitializeComponent();
-            IdCV= idCV;
-            CV =CVDAO.Instance.GetCvById(idCV);
-            txtName.Text = CV.HoVaTen;
-            txtNameCV.Text = CV.TenCV;
-            if(CVDAO.Instance.IsFavCV(idCV))
-            {
-                btnLike_Icon.Icon = FontAwesome.Sharp.IconChar.HeartCircleCheck;
-            }
+            PostCV = PostCVDAO.Instance.getPostCVById(idpostcv);
+            Cv = CVDAO.Instance.GetCvById(PostCV.IdCV);
+            txtNamePostCV.Text = PostCV.Title;
+            txtName.Text = Cv.HoVaTen;
         }
-        CV CV;
-        int IdCV;
+        PostCV PostCV;
+        CV Cv;
         private void btnLike_Click(object sender, RoutedEventArgs e)
         {
-            if (!CVDAO.Instance.IsFavCV(IdCV))
-            {
-                CVDAO.Instance.AddFavCV(IdCV);
-                btnLike_Icon.Icon = FontAwesome.Sharp.IconChar.HeartCircleCheck;
-            }
-            else
-            {
-                CVDAO.Instance.DeleteFavCV(IdCV);
-                btnLike_Icon.Icon = FontAwesome.Sharp.IconChar.Heart;
-            }
+           
         }
 
         private void btnView_Click(object sender, RoutedEventArgs e)
         {
-            WViewCV wViewCV = new WViewCV(IdCV);
-            wViewCV.Show();
+            WViewPostCV wViewPostCV = new WViewPostCV(PostCV.Id);
+            wViewPostCV.ShowDialog();
+        }
+
+        private void btnConfirm_Click(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:AppXinViecWPF.View.Applicant"
         xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
         mc:Ignorable="d"
-        Title="WMainApplicant" Height="800" Width="1600"
+        Title="WMainApplicant" Height="850" Width="1600"
         WindowStyle="None"
         WindowStartupLocation="CenterScreen" 
         AllowsTransparency="True"
@@ -215,7 +215,7 @@
                                                 </ControlTemplate>
                                             </Button.Template>
                                         </Button>
-                                        <Button x:Name="btnMangePost" Click="btnSampleCVs_Click" Cursor="Hand">
+                                        <Button x:Name="btnMangePost" Click="btnMangePost_Click" Cursor="Hand">
                                             <Button.Template>
                                                 <ControlTemplate>
                                                     <Grid>
@@ -268,7 +268,7 @@
                                 </Grid>
                                 <Grid Grid.Row="7">
                                     <StackPanel VerticalAlignment="Bottom">
-                                        <Button x:Name="btnExit" Cursor="Hand">
+                                        <Button x:Name="btnExit" Click="btnExit_Click" Cursor="Hand">
                                             <Button.Template>
                                                 <ControlTemplate>
                                                     <Grid>

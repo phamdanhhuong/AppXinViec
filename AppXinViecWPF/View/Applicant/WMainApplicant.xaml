@@ -74,7 +74,7 @@
                                     <RowDefinition Height="80"/>
                                     <RowDefinition Height="150" x:Name="gridSearchJob"/>
                                     <RowDefinition Height="80"/>
-                                    <RowDefinition Height="150" x:Name="gridMyCV"/>
+                                    <RowDefinition Height="190" x:Name="gridMyCV"/>
                                     <RowDefinition Height="80"/>
                                     <RowDefinition Height="100" x:Name="gridCompany"/>
                                     <RowDefinition/>
@@ -209,6 +209,20 @@
                                                             <StackPanel Orientation="Horizontal">
                                                                 <fa:IconImage Icon="FileCode" Height="25" HorizontalAlignment="Left" Foreground="White" Margin="20 10 5 10"/>
                                                                 <TextBlock Text="Mẫu CV" Foreground="White" FontSize="24" FontWeight="SemiBold" TextAlignment="Center"  VerticalAlignment="Center" Margin="25 0 0 0"/>
+                                                            </StackPanel>
+                                                        </Border>
+                                                    </Grid>
+                                                </ControlTemplate>
+                                            </Button.Template>
+                                        </Button>
+                                        <Button x:Name="btnMangePost" Click="btnSampleCVs_Click" Cursor="Hand">
+                                            <Button.Template>
+                                                <ControlTemplate>
+                                                    <Grid>
+                                                        <Border CornerRadius="5"  Margin="30 0 15 0">
+                                                            <StackPanel Orientation="Horizontal">
+                                                                <fa:IconImage Icon="InternetExplorer" Height="25" HorizontalAlignment="Left" Foreground="White" Margin="20 10 5 10"/>
+                                                                <TextBlock Text="Quản lý post" Foreground="White" FontSize="24" FontWeight="SemiBold" TextAlignment="Center"  VerticalAlignment="Center" Margin="25 0 0 0"/>
                                                             </StackPanel>
                                                         </Border>
                                                     </Grid>

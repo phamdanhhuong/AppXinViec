@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\
+D:\DaAnWin\AppXinViecWPF\obj\Debug\
 AppXinViecWPF
 none
 false
 DEBUG;TRACE
-F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\App.xaml
-45-1491921262
+D:\DaAnWin\AppXinViecWPF\App.xaml
+48-731373110
 
-60-1342251549
-171262491640
-MainWindow.xaml;Style\ButtonStyle.xaml;Style\ColorStyle.xaml;Style\TextBoxStyle.xaml;View\Applicant\UCAplliedJobsHistory.xaml;View\Applicant\UCAppliedJobs.xaml;View\Applicant\UCChoseInterviewDay.xaml;View\Applicant\UCCompanyInfomation.xaml;View\Applicant\UCCreateCV.xaml;View\Applicant\UCDayInterviewPreview.xaml;View\Applicant\UCIconAppliedJobs.xaml;View\Applicant\UCIconCV.xaml;View\Applicant\UCInfoCompany.xaml;View\Applicant\UCJob.xaml;View\Applicant\UCManageCVs.xaml;View\Applicant\UCPostCV.xaml;View\Applicant\UCrbtnCV.xaml;View\Applicant\UCSavedJobs.xaml;View\Applicant\UCSearchJobs.xaml;View\Applicant\UCTopCompany.xaml;View\Applicant\UCUploadCVs.xaml;View\Applicant\UCViewCV.xaml;View\Applicant\WChoseCV.xaml;View\Applicant\WJobInfo.xaml;View\Applicant\WMainApplicant.xaml;View\Applicant\WViewPVDay.xaml;View\Custom\ComboBoxCustom.xaml;View\Custom\TextBoxCustom.xaml;View\Custom\UCBorder.xaml;View\Employer\UCAccount.xaml;View\Employer\UCManageCV.xaml;View\Employer\UCManagePost.xaml;View\Employer\UCMiniCV.xaml;View\Employer\UCMiniPost.xaml;View\Employer\UCNews.xaml;View\Employer\UCRateCV.xaml;View\Employer\UCSetDayInterview.xaml;View\Employer\UCSetDayInterviewPreview.xaml;View\Employer\UCTopCV.xaml;View\Employer\WCreateNewPost.xaml;View\Employer\WMainEmployer.xaml;View\Employer\WViewCV.xaml;View\Register\WEmployerRegister.xaml;View\Register\WRegister.xaml;View\WLogin.xaml;
+63-2039169553
+17-809330126
+MainWindow.xaml;Style\ButtonStyle.xaml;Style\ColorStyle.xaml;Style\TextBoxStyle.xaml;View\Applicant\UCAplliedJobsHistory.xaml;View\Applicant\UCAppliedJobs.xaml;View\Applicant\UCChoseInterviewDay.xaml;View\Applicant\UCCompanyInfomation.xaml;View\Applicant\UCCreateCV.xaml;View\Applicant\UCDayInterviewPreview.xaml;View\Applicant\UCIconAppliedJobs.xaml;View\Applicant\UCIconCV.xaml;View\Applicant\UCInfoCompany.xaml;View\Applicant\UCJob.xaml;View\Applicant\UCManageCVs.xaml;View\Applicant\UCManagePost.xaml;View\Applicant\UCPostCV.xaml;View\Applicant\UCrbtnCV.xaml;View\Applicant\UCSavedJobs.xaml;View\Applicant\UCSearchJobs.xaml;View\Applicant\UCTopCompany.xaml;View\Applicant\UCUploadCVs.xaml;View\Applicant\UCViewCV.xaml;View\Applicant\WChoseCV.xaml;View\Applicant\WJobInfo.xaml;View\Applicant\WMainApplicant.xaml;View\Applicant\WViewPVDay.xaml;View\Custom\ComboBoxCustom.xaml;View\Custom\TextBoxCustom.xaml;View\Custom\UCBorder.xaml;View\Employer\UCAccount.xaml;View\Employer\UCIconPostCV.xaml;View\Employer\UCManageCV.xaml;View\Employer\UCManagePost.xaml;View\Employer\UCMiniCV.xaml;View\Employer\UCMiniPost.xaml;View\Employer\UCNewFeedCVs.xaml;View\Employer\UCNews.xaml;View\Employer\UCRateCV.xaml;View\Employer\UCSetDayInterview.xaml;View\Employer\UCSetDayInterviewPreview.xaml;View\Employer\UCTopCV.xaml;View\Employer\WCreateNewPost.xaml;View\Employer\WMainEmployer.xaml;View\Employer\WViewCV.xaml;View\Register\WEmployerRegister.xaml;View\Register\WRegister.xaml;View\WLogin.xaml;
 
-False
+True
 

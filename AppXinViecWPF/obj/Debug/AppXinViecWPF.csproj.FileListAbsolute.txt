@@ -723,3 +723,11 @@ F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Employer\UCS
 F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Employer\UCSetDayInterviewPreview.baml
 F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\WViewPVDay.g.cs
 F:\HK2\Lap trinh window\Đồ án\curr\AppXinViecWPF\obj\Debug\View\Applicant\WViewPVDay.baml
+D:\DaAnWin\AppXinViecWPF\obj\Debug\View\Applicant\UCChoseInterviewDay.g.cs
+D:\DaAnWin\AppXinViecWPF\obj\Debug\View\Applicant\UCDayInterviewPreview.g.cs
+D:\DaAnWin\AppXinViecWPF\obj\Debug\View\Applicant\WViewPVDay.g.cs
+D:\DaAnWin\AppXinViecWPF\obj\Debug\View\Employer\UCIconPostCV.g.cs
+D:\DaAnWin\AppXinViecWPF\obj\Debug\View\Employer\UCNewFeedCVs.g.cs
+D:\DaAnWin\AppXinViecWPF\obj\Debug\View\Employer\UCSetDayInterview.g.cs
+D:\DaAnWin\AppXinViecWPF\obj\Debug\View\Employer\UCSetDayInterviewPreview.g.cs
+D:\DaAnWin\AppXinViecWPF\obj\Debug\View\Applicant\UCManagePost.g.cs

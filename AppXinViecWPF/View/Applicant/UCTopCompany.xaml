@@ -43,10 +43,10 @@
                 </StackPanel>
             </Border>
         </StackPanel>
-        <Grid Grid.Row="1" Background="White">
+        <Grid Grid.Row="1" Background="White" Margin="5">
             <ContentControl x:Name="ccCompanyList">
                 <ScrollViewer  VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Hidden">
-                    <ItemsControl x:Name="menuCompany">
+                    <ItemsControl Width="1000" x:Name="menuCompany">
                         
                     </ItemsControl>
                 </ScrollViewer>

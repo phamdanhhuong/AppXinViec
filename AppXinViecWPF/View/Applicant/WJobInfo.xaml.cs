@@ -43,11 +43,19 @@ namespace AppXinViecWPF.View.Applicant
                 btnApply.Visibility = Visibility.Collapsed;
                 btnSavePost.Visibility = Visibility.Collapsed;
             }
-            int[] list = ApplicantDAO.Instance.GetAllFavIdJob();
-            if(list.Contains(idPost))
+            
+            List<ApplyCV> list = CVDAO.Instance.GetApplyCVByIdEmp(post.IdEmployer);
+            int[] listIdCV = CVDAO.Instance.GetAllIdCv();
+            foreach (int id in listIdCV)
             {
-                btnApply.Click -= btnApply_Click;
-                btnApply.Click += btnApply_2_Click;
+                foreach (ApplyCV applyCV in list)
+                {
+                    if (id == applyCV.IdCV)
+                    {
+                        btnApply.Click -= btnApply_Click;
+                        btnApply.Click += btnApply_2_Click;
+                    }
+                }
             }
             int[] idPostRelevant = PostDAO.Instance.SearchPostByCarrer(Post.Career,idPost);
             icMain.Items.Clear();

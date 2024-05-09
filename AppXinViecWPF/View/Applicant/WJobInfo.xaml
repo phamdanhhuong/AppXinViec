@@ -179,7 +179,7 @@
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="40"/>
-                                    <RowDefinition Height="700"/>
+                                    <RowDefinition Height="1000"/>
                                     <RowDefinition  Height="500"/>
                                 </Grid.RowDefinitions>
                                 <Grid Grid.Row="0">

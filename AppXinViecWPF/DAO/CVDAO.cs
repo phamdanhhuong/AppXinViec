@@ -123,6 +123,17 @@ namespace AppXinViecWPF.DAO
             }
             return data;
         }
+        public List<ApplyCV> GetApplyCVByIdPost(int Id)
+        {
+            string query = string.Format("SELECT * FROM ApplyCV Where IdPost = {0}", Id);
+            DataTable temp = DataProvider.Instance.ExecuteQuery(query);
+            List<ApplyCV> data = new List<ApplyCV>();
+            foreach (DataRow row in temp.Rows)
+            {
+                data.Add(new ApplyCV(row));
+            }
+            return data;
+        }
         public bool IsComfirm(int idcv,int idpost)
         {
             string query = string.Format("SELECT Duyet FROM ApplyCV WHERE IdCV = {0} AND IdPost = {1} ",idcv,idpost);

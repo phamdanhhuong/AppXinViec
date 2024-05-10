@@ -44,7 +44,7 @@ namespace AppXinViecWPF.View.Applicant
                 btnSavePost.Visibility = Visibility.Collapsed;
             }
             
-            List<ApplyCV> list = CVDAO.Instance.GetApplyCVByIdEmp(post.IdEmployer);
+            List<ApplyCV> list = CVDAO.Instance.GetApplyCVByIdPost(idPost);
             int[] listIdCV = CVDAO.Instance.GetAllIdCv();
             foreach (int id in listIdCV)
             {

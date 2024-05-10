@@ -109,6 +109,7 @@ namespace AppXinViecWPF.View.Applicant
                 , txtLink.TxtText, txtAddress.TxtText, txtMajor.TxtText, txtNameSchool.TxtText, txtSchoolDay.TxtText, txtSchoolAchive.TxtText,
                 txtNameLastJob.TxtText, txtNameLastCompany.TxtText, txtWorkDay.TxtText, txtDescriptionExp.TxtText, txtProjectName.TxtText, txtProjectPosition.TxtText,
                 txtProjectDay.TxtText, txtProjectDescription.TxtText, txtTarget.TxtText, txtSkill.TxtText, txtCertificate.TxtText, txtFav.TxtText, txtExtra.TxtText);
+                cV.Id = Id;
                 if (cV.NotNull())
                 {
                     CVDAO.Instance.EditCV(cV);

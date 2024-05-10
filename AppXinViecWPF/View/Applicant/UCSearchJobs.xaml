@@ -121,14 +121,12 @@
                             <fa:IconImage Icon="Hourglass" Panel.ZIndex="1" Foreground="Gray" Height="18" HorizontalAlignment="Left" Margin="28 0 0 0"/>
                             <ComboBox x:Name="cboExperienceSearch" Style="{StaticResource ComboBoxFlatStyle}" Width="230" Height="36" Margin="5 2 5 2" FontWeight="SemiBold" SelectedIndex="0">
                                 <ComboBoxItem Content="Tất cả kinh nghiệm"/>
-                                <ComboBoxItem Content="Chưa có kinh nghiệm"/>
-                                <ComboBoxItem Content="Dưới 1 năm"/>
-                                <ComboBoxItem Content="1 năm"/>
-                                <ComboBoxItem Content="2 năm"/>
-                                <ComboBoxItem Content="3 năm"/>
-                                <ComboBoxItem Content="4 năm"/>
-                                <ComboBoxItem Content="5 năm"/>
-                                <ComboBoxItem Content="Trên 5 năm"/>
+                                <ComboBoxItem Content="Không yêu cầu"/>
+                                <ComboBoxItem Content="trên 1 năm"/>
+                                <ComboBoxItem Content="trên 2 năm"/>
+                                <ComboBoxItem Content="trên 3 năm"/>
+                                <ComboBoxItem Content="trên 5 năm"/>
+                                <ComboBoxItem Content="trên 10 năm"/>
                             </ComboBox>
                         </Grid>
                     </Border>

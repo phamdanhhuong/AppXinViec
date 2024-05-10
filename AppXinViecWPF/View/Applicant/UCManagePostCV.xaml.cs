@@ -36,6 +36,7 @@ namespace AppXinViecWPF.View.Applicant
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
+            listPost.Items.Clear();
             postCVs = PostCVDAO.Instance.getAllPostCVByUserId();
             foreach (PostCV postCV in postCVs)
             {
